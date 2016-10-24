@@ -48,7 +48,7 @@
         </nav>
     </div>
     
-    <img class="size-large" src="img/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi" alt="home">
+    <img class="size-large" src="img/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi.png" alt="home">
 
     <img id="logo" src="img/logo.png" alt="logo ruralis magazine" />
 
