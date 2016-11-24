@@ -2,12 +2,139 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta name="description" content="Ruralis Magazine ambitionne de donner à voir les transformations des territoires ruraux en participant de façon volontariste et délibérément optimiste à la réflexion du devenir des campagnes et de leur nouvelle gouvernance."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>{% block title %}Ruralis magazine{% endblock %}</title>
+        {% block stylesheets %}
+            <!--Import Google Icon Font-->
+            <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+            <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>-->
+            <!--Let browser know website is optimized for mobile-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/ruralis/sass/style.css') }}"/>
+        {% endblock %}
+        <link rel="icon" type="image/png" href="bundles/ruralis/images/logo.png"/>
     </head>
     <body>
+
+    <header>
+        <div class="ancre" name="top" id="top"></div>
+        <div class="navbar-fixed">
+            <nav>
+                <a href="https://twitter.com/Ruralismagazine" target="_blank"><img class="logotwitter" src="bundles/ruralis/images/twitter.png" alt="twitter" /></a>
+                <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/" target="_blank"><img class="logofb" src="bundles/ruralis/images/facebook.png" alt="facebook" /></a>
+                <a href="http://www.instagram.com" target="_blank"><img class="logoinsta" src="bundles/ruralis/images/instagram.png" alt="instaram" /></a>
+                <div class="nav-wrapper z-depth-1">
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre1.png" alt="Logo arbre1"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre2.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre3.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre4.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre5.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre6.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre7.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre8.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre9.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre10.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre11.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre12.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre13.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre14.png" alt="Logo arbre"/>
+                    <img class="hidden" src="bundles/ruralis/images/logoarbre15.png" alt="Logo arbre"/>
+                    <img src="bundles/ruralis/images/logoarbre1.png" id="animation" alt="Logo arbre"/>
+                    <!-- Next image is used for first frame, before scroll -->
+                    <!--<img src="img/logoarbre1.png" />-->
+                    <div id="bottommark"></div>
+
+                    <ul class="left hide-on-med-and-down">
+                        <li><a href="#top">Ruralis</a></li>
+                        <li><a href="#valeurs">Valeurs</a></li>
+                        <li><a href="#editoriale">Ligne éditoriale</a></li>
+                        <li><a href="#objectifs">Objectifs</a></li>
+                        <li><a href="#abonnements">Abonnements</a></li>
+                        <li><a href="#equipe">Notre Equipe</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
         {% block body %}{% endblock %}
+
+        <div class="row">
+            <footer>
+                <div class="col m6">
+                    <img id="logowcs" src="bundles/ruralis/images/logo.png" alt="logo">
+                </div>
+                <div class="col m6">
+                    <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="bundles/ruralis/images/logowcs.png" alt="logo de la Wild Code School" /></a>
+                </div>
+
+            </footer>
+        </div>
+
+
+        <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+        <script>
+
+            <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                var offset2 = $(document).height();
+                var lineHF = offset2 - $("#bottommark").position().top;
+                $(window).scroll(function(){
+                    var offset1 = $(document).height() - window.screen.availHeight;
+                    var offset = $(window).scrollTop();
+                    var lineH = offset1 - $("#bottommark").position().top - offset;
+                    var lineHpart = lineHF/15;
+                    $("span").html(lineH);
+                    if (lineH > lineHpart*15) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre1.png");
+                    }
+                    if ((lineH < lineHpart*14) && (lineH > lineHpart*13)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/ogoarbre2.png");
+                    }
+                    if ((lineH < lineHpart*13) && (lineH > lineHpart*12)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre3.png");
+                    }
+                    if ((lineH < lineHpart*12) && (lineH > lineHpart*11)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre4.png");
+                    }
+                    if ((lineH < lineHpart*11) && (lineH > lineHpart*10)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre5.png");
+                    }
+                    if ((lineH < lineHpart*10) && (lineH > lineHpart*9)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre6.png");
+                    }
+                    if ((lineH < lineHpart*9) && (lineH > lineHpart*8)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre7.png");
+                    }
+                    if ((lineH < lineHpart*8) && (lineH > lineHpart*7)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre8.png");
+                    }
+                    if ((lineH < lineHpart*7) && (lineH > lineHpart*6)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre9.png");
+                    }
+                    if ((lineH < lineHpart*6) && (lineH > lineHpart*5)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre10.png");
+                    }
+                    if ((lineH < lineHpart*5) && (lineH > lineHpart*4)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre11.png");
+                    }
+                    if ((lineH < lineHpart*4) && (lineH > lineHpart*3)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre12.png");
+                    }
+                    if ((lineH < lineHpart*3) && (lineH > lineHpart*2)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre13.png");
+                    }
+                    if ((lineH < lineHpart*2) && (lineH > lineHpart*1)) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre14.png");
+                    }
+                    if (lineH < lineHpart) {
+                        $("#animation").attr("src", "bundles/ruralis/images/logoarbre15.png");
+                    }
+                });
+            });
+        </script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
