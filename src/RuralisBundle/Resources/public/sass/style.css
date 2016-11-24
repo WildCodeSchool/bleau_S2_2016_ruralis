@@ -28,8 +28,8 @@ html{
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0; 
-    text-align: center; 
+    left: 0;
+    text-align: center;
     overflow-x: hidden;
 }
 
@@ -79,7 +79,7 @@ LES TROIS IMAGE POUR UN CSS OPTIMAL
 nav{
     height: 10%;
     line-height: 455%;
-    
+
 }
 
 .navbar-fixed{
@@ -189,7 +189,6 @@ header div{
 }
 
 #editorial p{
-
     font-family: 'Time New Roman';
     font-size: 14pt;
     line-height: 18pt;
@@ -197,7 +196,6 @@ header div{
 }
 
 #arpenteurs{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,18 +205,15 @@ header div{
 }
 
 #magazine{
-
-    width: 20%; 
+    width: 20%;
 }
 
 #textarp{
-
     width: 40%;
     padding-left: 80px;
 }
 
 #textarp h5{
-
     font-family: 'Sakkal Majalla Bold';
     font-size: 18pt;
     line-height: 18pt;
@@ -226,42 +221,34 @@ header div{
 }
 
 #textarp p{
-
     font-family: 'Time New Roman';
     font-size: 14pt;
     line-height: 18pt;
 }
 
-
 #objectifs{
-
     position: relative;
     display: inline-block;
     height: 60%;
-
 }
 
 #para{
-
     padding-top: 9%;
 }
 
 #objectifs p{
-
     font-family: 'Time New Roman';
     font-size: 14pt;
     line-height: 25pt;
     width: 52%;
-    margin: auto;    
+    margin: auto;
 }
 
 .txtorange{
-
     color: #EA640C;
 }
 
 #flexabonnes{
-
     margin-top: 70px;
     width: 100%;
     display: flex;
@@ -270,7 +257,6 @@ header div{
 }
 
 #nbabonnes{
-
     padding-right: 5px;
     width: 40%;
     text-align: center;
@@ -280,7 +266,6 @@ header div{
 }
 
 #nbabonnes p{
-
     display: inline-block;
     margin-top: 2.5%;
     width: 100%;
@@ -298,22 +283,18 @@ header div{
 }
 
 strong{
-
     color: #EA640C;
     font-size: 23px;
     font-weight: bold;
 }
 
 #flexabonnes img{
-
     width: 5%;
     margin: 0 2%;
     align-self: center;
 }
 
-
 #txtobjectif p{
-
     display: inline-block;
     text-align: center;
     margin-top: 3.4%;
@@ -322,11 +303,9 @@ strong{
     font-size: 150%;
     font-family: 'courier new', sans-serif;
     font-weight: bold;
-
 }
 
 #nb{
-
     color: #EA640C;
 }
 
@@ -346,17 +325,13 @@ strong{
     transition: 0.5s;
 }
 
-
-
 #savoir:hover{
-
     background-color: #ffffff;
     transition: 0.5s;
     color : rgb(234,100,12);
 }
 
 #abonnement{
-
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -371,7 +346,6 @@ strong{
 }
 
 #abonnement p{
-
     width: 100%;
     margin: 20px 5px;
     text-align: center;
@@ -382,14 +356,11 @@ strong{
     z-index: 1;
 }
 
-
 #abonnement a{
-
-    width: 30%;  
+    width: 30%;
 }
 
 #citation{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -397,66 +368,55 @@ strong{
     font-size: 120%;
     width: 100%;
     color: #EA640C;
-
 }
 
 #citation div{
-
     width: 40%;
 }
 
 #img1{
-
     margin-right: 30px;
     width: 7%;
     align-self: center;
 }
 
 #img2{
-
     margin-left: 30px;
     width: 7%;
     align-self: center;
 }
 
-
 #auteur{
-
     font-size: 80%;
     color: black;
 }
 
 .hidden {
-
     position: absolute;
     top: -9999999px;
 }
 
 #bottommark {
-
     position: absolute;
     bottom: 0;
     width: 0;
 }
 
-#animation { 
-
+#animation {
     background-repeat: no-repeat;
-    position : fixed; 
+    position : fixed;
     width: 6%;
     left: 0.5%;
     top: -0.5%;
 }
 
 .logoabt{
-
     position: relative;
     width: 70%;
     z-index: 2;
 }
 
 #trombi{
-
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -464,31 +424,26 @@ strong{
     align-items: baseline;
     width: 100%;
 }
+
 #trombi>img{
     width: 100%;
 }
 
-
 #trombi div{
-
     text-align: center;
     width: 20%;
     padding: 15px;
 }
 
 #trombi h6{
-
     color: #EA640C;
-
 }
 
 #trombi p{
-
     width: 100%;
     font-family: 'courier new', sans-serif;
     color: black;
     font-size: 12px;
-
 }
 
 footer{
@@ -508,4 +463,3 @@ footer .col{
 .img_header{
     width: 100%;
 }
-
