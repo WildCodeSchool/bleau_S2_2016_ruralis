@@ -1,0 +1,18 @@
+RuralisBundle\Entity\Image:
+    type: entity
+    table: null
+    repositoryClass: RuralisBundle\Repository\ImageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        alt:
+            type: string
+            length: 255
+        file:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

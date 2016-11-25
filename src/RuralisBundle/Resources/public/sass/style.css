@@ -46,8 +46,6 @@ body{
 
 header{
     position: relative;
-    height: 100%;
-
 }
 
 /*================================================================
@@ -417,22 +415,22 @@ strong{
 }
 
 #trombi{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 0;
-    align-items: baseline;
-    width: 100%;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*flex-wrap: wrap;*/
+    /*padding: 50px 0;*/
+    /*align-items: baseline;*/
+    /*width: 100%;*/
 }
 
 #trombi>img{
-    width: 100%;
+    /*width: 100%;*/
 }
 
 #trombi div{
-    text-align: center;
-    width: 20%;
-    padding: 15px;
+    /*text-align: center;*/
+    /*width: 20%;*/
+    /*padding: 15px;*/
 }
 
 #trombi h6{
@@ -440,10 +438,10 @@ strong{
 }
 
 #trombi p{
-    width: 100%;
-    font-family: 'courier new', sans-serif;
-    color: black;
-    font-size: 12px;
+    /*width: 100%;*/
+    /*font-family: 'courier new', sans-serif;*/
+    /*color: black;*/
+    /*font-size: 12px;*/
 }
 
 footer{

@@ -1,3 +1,7 @@
+ruralis_article:
+    resource: "@RuralisBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
 ruralis_homepage:
     path:     /
     defaults: { _controller: RuralisBundle:Default:index }

@@ -1,0 +1,24 @@
+RuralisBundle\Entity\Article:
+    type: entity
+    table: null
+    repositoryClass: RuralisBundle\Repository\ArticleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        descriptif:
+            type: text
+        contenu:
+            type: text
+        auteur:
+            type: string
+            length: 255
+        date:
+            type: datetime
+    lifecycleCallbacks: {  }
