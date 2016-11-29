@@ -10,7 +10,16 @@
     {% block stylesheets %}
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+        <!-- Compiled and minified Materialize -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"/>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
         <!--Let browser know website is optimized for mobile-->
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/ruralis/sass/style.css') }}"/>
     {% endblock %}
@@ -32,13 +41,14 @@
                 <!--<img src="img/logoarbre1.png" />-->
                 <div id="bottommark"></div>
 
+
+    {#  INSERER LES LIENS VERS LES PAGES DANS LE MENU    #}
                 <ul class="left hide-on-med-and-down">
-                    <li><a href="#top">Ruralis</a></li>
-                    <li><a href="#valeurs">Valeurs</a></li>
-                    <li><a href="#editoriale">Ligne éditoriale</a></li>
-                    <li><a href="#objectifs">Objectifs</a></li>
-                    <li><a href="#abonnements">Abonnements</a></li>
-                    <li><a href="#equipe">Notre Equipe</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Ruralis</a></li>
+                    <li><a href="#">S'abonner</a></li>
+                    <li><a href="#">Partenaires</a></li>
+                    <li><a href="#">Newsletter</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,8 +71,8 @@
     </div>
 
 
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    {#<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>#}
+    {#<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>#}
     <script>
         $(document).ready(function(){
             var offset2 = $(document).height();
@@ -121,6 +131,7 @@
             });
         });
     </script>
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+    {% endblock %}
 </body>
 </html>
