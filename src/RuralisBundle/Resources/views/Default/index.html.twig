@@ -8,98 +8,77 @@
 
 {#      CARD DE UNE      #}
 
-<div class="card large">
+<div class="row">
+<div class="card large col offset-l1 l10 offset-m1 m10 s12">
     <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="{{ asset('bundles/ruralis/images/Editing_Culture_bandeau.png') }}">
     </div>
 
     <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Titre de Une<i class="material-icons right">more_vert</i></span>
+        <div class="card-title activator grey-text text-darken-4">Titre de Une<i class="material-icons right">more_vert</i></div>
         <p><a href="#">Ceci est un lien</a></p>
     </div>
-
-{#    Information about the article revealed once clicked on      #}
+    {#    Information about the News revealed once clicked on      #}
     <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Titre de la Une
+        <div class="card-title grey-text text-darken-4">Titre de la Une
             <i class="material-icons right">close</i>
-        </span>
+        </div>
         <p>
             Cet article est la une du journal Ruralis de ce trimestre.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis deserunt distinctio et eum eveniet fugit laboriosam nostrum quisquam veniam.
         </p>
     </div>
 </div>
-
-{#      CARDS BLOG      #}
-
-<div class="row">
-    <div class="col offset-l1 l4 offset-m1 m4 s12">
-        <div class="card sticky-action">
-            <div class="card-image">
-                <img src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}">
-                <span class="card-title">Titre de l'article</span>
-            </div>
-            <div class="card-content">
-                <p>Article 1 du blog : court résumé de l'article.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Titre de l'article
-                    <i class="material-icons right">close</i>
-                </span>
-                <p>Article 1 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus adipisci aspernatur autem corporis cupiditate dolor dolorem esse ex, inventore iste modi, perspiciatis, temporibus voluptatum.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col offset-l1 l4 offset-m1 m4 s12">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">
-                <span class="card-title">Titre de mon article</span>
-            </div>
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
-        </div>
-    </div>
 </div>
 
+{#      CARDS BLOG      #}
+    {# First card #}
+
 <div class="row">
-    <div class="col offset-l1 l4 offset-m1 m4 s12">
+    <div class="col offset-l1 l4 offset-m1 m5 s12">
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+                <div class="card-title activator grey-text text-darken-4">
+                    Article 1
+                    <i class="material-icons right">more_vert</i>
+                </div>
+                <p><a href="#">Lien vers l'article 1</a></p>
             </div>
+            {#    Information about the article 1 revealed once clicked on      #}
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                <div class="card-title grey-text text-darken-4">
+                    Article 1
+                    <i class="material-icons right">close</i>
+                </div>
+                <p>Here is some more information about the article 1 that is only revealed once clicked on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi, porro quae soluta tempore unde!</p>
             </div>
         </div>
     </div>
 
-    <div class="col offset-l1 l4 offset-m1 m4 s12">
+    {# Second card #}
+
+    <div class="col offset-l2 l4 m5 s12">
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+                <div class="card-title activator grey-text text-darken-4">
+                    Article 2
+                    <i class="material-icons right">more_vert</i>
+                </div>
+                <p><a href="#">Lien vers article 2</a></p>
             </div>
+            {#    Information about the article 2 revealed once clicked on      #}
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                <div class="card-title grey-text text-darken-4">
+                    Article 2
+                    <i class="material-icons right">close</i>
+                </div>
+                <p>Here is some more information about the article 1 that is only revealed once clicked on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi, porro quae soluta tempore unde!</p>
             </div>
         </div>
     </div>
