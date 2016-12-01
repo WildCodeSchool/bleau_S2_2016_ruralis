@@ -33,12 +33,6 @@ class Article
     private $auteur;
 
     /**
-     * @var \DateTime
-     */
-    private $date;
-
-
-    /**
      * Get id
      *
      * @return int
@@ -145,29 +139,6 @@ class Article
     }
 
     /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return Article
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-    /**
      * @var \RuralisBundle\Entity\Image
      */
     private $image;
@@ -224,5 +195,34 @@ class Article
     public function getTypeAffichage()
     {
         return $this->typeAffichage;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Article
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
     }
 }

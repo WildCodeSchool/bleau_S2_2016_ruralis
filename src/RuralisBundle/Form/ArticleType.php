@@ -18,30 +18,23 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('typeAffichage', EntityType::class, array(
-                'class' => 'RuralisBundle:TypeAffichage',
-                'choice_label' => 'nom',
-                'placeholder' => 'Selectionnez un type',
-                'required' => true
-            ))
-
+            ->add('typeAffichage')
             ->add('nom')
             ->add('descriptif')
             ->add('contenu')
             ->add('auteur')
-            ->add('date', DateType::class, array(
-                'widget' => 'single_text',
-                'input' => 'datetime',
-                // do not render as type="date", to avoid HTML5 date pickers
-                'html5' => false,
-                'format' => 'yyyy-MM-dd',
-                // add a class that can be selected in JavaScript
-                'attr' => ['class' => 'js-datepicker'],
-            ))
-            ->add('image', FileType::class, array(
+            /*->add('date', DateType::class, array(
+                    'widget' => 'single_text',
+                    'attr' => array(
+                        'class' => 'datepicker'
+                    )
+                )
+            )*/
+           /* ->add('image', FileType::class, array(
         'label' => 'image à télécharger : ',
         'data_class' => null
-    ));
+    ))*/
+           ;
     }
     
     /**

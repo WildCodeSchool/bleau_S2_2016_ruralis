@@ -1,0 +1,519 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*Theme Name: Ruralis
+Theme URI: http://themeisle.com/themes/zerif-lite/
+Author: Alex; Benjamin, Valentin
+Author URI: http://themeisle.com
+Description: It's perfect for web agency business,corporate business,personal and parallax business portfolio, photography sites and freelancer.Is built on BootStrap with parallax support, is responsive, clean, modern, flat and minimal. Zerif Lite is ecommerce (WooCommerce) Compatible, WPML, RTL, Retina-Ready, SEO Friendly and with parallax, full screen image is one of the best business themes.
+Version: 1.8.3.5
+License: GNU General Public License version 3
+License URI: license.txt
+Domain Path: /languages/
+Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, photoblogging
+*/
+/* line 15, ../sass/_general.scss */
+* {
+  margin: 0;
+  padding: 0;
+  /*border: 0.1px solid blue;*/
+}
+
+/* line 21, ../sass/_general.scss */
+.ancre {
+  width: 0;
+  height: 0;
+}
+
+/* line 26, ../sass/_general.scss */
+html {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* line 36, ../sass/_general.scss */
+body {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 47, ../sass/_general.scss */
+header {
+  position: relative;
+}
+
+/*================================================================
+LES TROIS IMAGE POUR UN CSS OPTIMAL
+=================================================================*/
+/*image d'en-tete*/
+/* line 55, ../sass/_general.scss */
+.size-large {
+  /*prendre TAILLE GRANDE pour la changer WORDPRESS*/
+  width: 100%;
+  height: 720px;
+}
+
+/*imges du Territoire et du Peuple des campagnes*/
+/* line 61, ../sass/_general.scss */
+.size-full {
+  /*prendre TAILLE ORIGINALE pour la changer WORDPRESS*/
+  height: auto;
+  width: 19.5%;
+  margin: 0;
+}
+
+/*image logo dans pied de page*/
+/* line 68, ../sass/_general.scss */
+.size-thumbnail {
+  /*prendre TAILLE MINIATURE pour la changer WORDPRESS*/
+  margin-top: 0.5%;
+  height: 80%;
+  width: auto;
+  margin: 0 10px;
+}
+
+/*FIN DES IMAGES GERER DANS WORDPRESS
+====================================================*/
+/* line 77, ../sass/_general.scss */
+nav {
+  height: 10%;
+  line-height: 455%;
+}
+
+/* line 83, ../sass/_general.scss */
+.navbar-fixed {
+  background-color: transparent;
+  width: 60%;
+}
+
+/* line 89, ../sass/_general.scss */
+header div {
+  width: 100%;
+  height: 50px;
+  background-color: #ea640c;
+}
+
+/* line 96, ../sass/_general.scss */
+.nav-wrapper {
+  padding-left: 6%;
+}
+
+/* line 101, ../sass/_general.scss */
+.logotwitter {
+  z-index: 1;
+  width: 4%;
+  position: absolute;
+  right: 9.6%;
+  top: 19%;
+}
+
+/* line 110, ../sass/_general.scss */
+.logofb {
+  z-index: 1;
+  width: 4%;
+  position: absolute;
+  right: 6%;
+  top: 16%;
+}
+
+/* line 119, ../sass/_general.scss */
+.logoinsta {
+  z-index: 1;
+  position: absolute;
+  top: 28%;
+  width: 3.1%;
+  right: 2.5%;
+}
+
+/* line 128, ../sass/_general.scss */
+#logo {
+  position: relative;
+  width: 25%;
+  margin: 50px 0;
+  bottom: 600px;
+}
+
+/* line 136, ../sass/_general.scss */
+#description {
+  width: 100%;
+  padding-top: 20%;
+}
+
+/* line 143, ../sass/_general.scss */
+#description p {
+  display: inline-block;
+  width: 55%;
+  font-size: 14pt;
+  font-family: 'Time New Roman', sans-serif;
+  line-height: 18pt;
+  color: #EA640C;
+}
+
+/* line 152, ../sass/_general.scss */
+#territoire, #peuple {
+  margin-top: 170px;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 157, ../sass/_general.scss */
+#territoire h4, #peuple h4 {
+  padding: 15px 0;
+  width: 100%;
+  font-family: 'Arial Bold';
+}
+
+/* line 165, ../sass/_general.scss */
+#editorial {
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* line 173, ../sass/_general.scss */
+.edit {
+  width: 50%;
+  padding: 2%;
+  width: 30%;
+}
+
+/* line 180, ../sass/_general.scss */
+#editorial h5 {
+  text-align: center;
+  font-family: 'Sakkal Majalla Bold';
+  font-size: 18pt;
+  line-height: 18pt;
+  color: #EA640C;
+}
+
+/* line 189, ../sass/_general.scss */
+#editorial p {
+  font-family: 'Time New Roman';
+  font-size: 14pt;
+  line-height: 18pt;
+  text-align: center;
+}
+
+/* line 196, ../sass/_general.scss */
+#arpenteurs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  margin-top: 7%;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+/* line 205, ../sass/_general.scss */
+#magazine {
+  width: 20%;
+}
+
+/* line 209, ../sass/_general.scss */
+#textarp {
+  width: 40%;
+  padding-left: 80px;
+}
+
+/* line 214, ../sass/_general.scss */
+#textarp h5 {
+  font-family: 'Sakkal Majalla Bold';
+  font-size: 18pt;
+  line-height: 18pt;
+  color: #EA640C;
+}
+
+/* line 221, ../sass/_general.scss */
+#textarp p {
+  font-family: 'Time New Roman';
+  font-size: 14pt;
+  line-height: 18pt;
+}
+
+/* line 227, ../sass/_general.scss */
+#objectifs {
+  position: relative;
+  display: inline-block;
+  height: 60%;
+}
+
+/* line 233, ../sass/_general.scss */
+#para {
+  padding-top: 9%;
+}
+
+/* line 237, ../sass/_general.scss */
+#objectifs p {
+  font-family: 'Time New Roman';
+  font-size: 14pt;
+  line-height: 25pt;
+  width: 52%;
+  margin: auto;
+}
+
+/* line 245, ../sass/_general.scss */
+.txtorange {
+  color: #EA640C;
+}
+
+/* line 249, ../sass/_general.scss */
+#flexabonnes {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* line 257, ../sass/_general.scss */
+#nbabonnes {
+  padding-right: 5px;
+  width: 40%;
+  text-align: center;
+  font-family: 'courier new', sans-serif;
+  font-weight: bold;
+  font-size: 200%;
+}
+
+/* line 266, ../sass/_general.scss */
+#nbabonnes p {
+  display: inline-block;
+  margin-top: 2.5%;
+  width: 100%;
+  text-align: center;
+  font-family: 'courier new', sans-serif;
+  font-weight: bold;
+  font-size: 75%;
+  /*display: block;
+  width: 100%;
+  font-size: 80%;
+  padding-top: 4%;
+  margin-bottom: 5%;
+  font-family: 'courier new', sans-serif;
+  font-weight: bold;*/
+}
+
+/* line 283, ../sass/_general.scss */
+strong {
+  color: #EA640C;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+/* line 289, ../sass/_general.scss */
+#flexabonnes img {
+  width: 5%;
+  margin: 0 2%;
+  align-self: center;
+}
+
+/* line 295, ../sass/_general.scss */
+#txtobjectif p {
+  display: inline-block;
+  text-align: center;
+  margin-top: 3.4%;
+  margin-bottom: 1.5%;
+  width: 100%;
+  font-size: 150%;
+  font-family: 'courier new', sans-serif;
+  font-weight: bold;
+}
+
+/* line 306, ../sass/_general.scss */
+#nb {
+  color: #EA640C;
+}
+
+/* line 310, ../sass/_general.scss */
+#savoir {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  background-color: #ea640c;
+  padding: 15px 0;
+  margin-top: 3.6%;
+  margin-left: 6%;
+  width: 16%;
+  font-family: 'courier new', sans-serif;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+/* line 326, ../sass/_general.scss */
+#savoir:hover {
+  background-color: #ffffff;
+  transition: 0.5s;
+  color: #ea640c;
+}
+
+/* line 332, ../sass/_general.scss */
+#abonnement {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 400px;
+  margin-top: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+/* line 346, ../sass/_general.scss */
+#abonnement p {
+  width: 100%;
+  margin: 20px 5px;
+  text-align: center;
+  font-family: 'courier new', sans-serif;
+  font-size: 200%;
+  color: #ea640c;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* line 357, ../sass/_general.scss */
+#abonnement a {
+  width: 30%;
+}
+
+/* line 361, ../sass/_general.scss */
+#citation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 120%;
+  width: 100%;
+  color: #EA640C;
+}
+
+/* line 371, ../sass/_general.scss */
+#citation div {
+  width: 40%;
+}
+
+/* line 375, ../sass/_general.scss */
+#img1 {
+  margin-right: 30px;
+  width: 7%;
+  align-self: center;
+}
+
+/* line 381, ../sass/_general.scss */
+#img2 {
+  margin-left: 30px;
+  width: 7%;
+  align-self: center;
+}
+
+/* line 387, ../sass/_general.scss */
+#auteur {
+  font-size: 80%;
+  color: black;
+}
+
+/* line 392, ../sass/_general.scss */
+.hidden {
+  position: absolute;
+  top: -9999999px;
+}
+
+/* line 397, ../sass/_general.scss */
+#bottommark {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+/* line 403, ../sass/_general.scss */
+#animation {
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 6%;
+  left: 0.5%;
+  top: -0.5%;
+}
+
+/* line 411, ../sass/_general.scss */
+.logoabt {
+  position: relative;
+  width: 70%;
+  z-index: 2;
+}
+
+/* line 417, ../sass/_general.scss */
+#trombi {
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*flex-wrap: wrap;*/
+  /*padding: 50px 0;*/
+  /*align-items: baseline;*/
+  /*width: 100%;*/
+}
+
+/* line 426, ../sass/_general.scss */
+#trombi > img {
+  /*width: 100%;*/
+}
+
+/* line 430, ../sass/_general.scss */
+#trombi div {
+  /*text-align: center;*/
+  /*width: 20%;*/
+  /*padding: 15px;*/
+}
+
+/* line 436, ../sass/_general.scss */
+#trombi h6 {
+  color: #EA640C;
+}
+
+/* line 440, ../sass/_general.scss */
+#trombi p {
+  /*width: 100%;*/
+  /*font-family: 'courier new', sans-serif;*/
+  /*color: black;*/
+  /*font-size: 12px;*/
+}
+
+/* line 447, ../sass/_general.scss */
+footer {
+  height: 60px !important;
+  background-color: #ea640c;
+}
+
+/* line 452, ../sass/_general.scss */
+footer .col {
+  height: 60px !important;
+}
+
+/* line 456, ../sass/_general.scss */
+#logowcs {
+  margin-top: 0.5%;
+  height: 90%;
+}
+
+/* line 461, ../sass/_general.scss */
+.img_header {
+  width: 100%;
+}
+
+/*
+select {
+  display : block !important;
+}*/

@@ -7,10 +7,6 @@ namespace RuralisBundle\Entity;
  */
 class TypeAffichage
 {
-    public function __toString()
-    {
-        return $this->getNom();
-    }
     /**
      * @var int
      */

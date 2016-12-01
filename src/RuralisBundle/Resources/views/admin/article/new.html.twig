@@ -13,15 +13,16 @@
         {{ form_widget(form.nom) }}
     </div>
     <div>
-{#        <div class="input-field col s12">
-            <label>Choix affichage</label>
+        <div class="input-field col s12">
+            <label>
+                {{ form_label(form.typeAffichage) }}
+            </label>
             <select>
                 <option value="" disabled selected>Choisissez le type d'affichage</option>
                 <option value="1">Petite image</option>
                 <option value="2">Grande image</option>
             </select>
-        </div>#}
-        {{ form_label(form.typeAffichage) }}
+        </div>
         {{ form_errors(form.typeAffichage) }}
         {{ form_widget(form.typeAffichage) }}
     </div>
@@ -41,14 +42,14 @@
         {{ form_widget(form.auteur) }}
     </div>
     <div>
-        {{ form_label(form.date) }}
+{#        {{ form_label(form.date) }}
         {{ form_errors(form.date) }}
-        {{ form_widget(form.date) }}
+        {{ form_widget(form.date) }}#}
+
     </div>
     <div>
-        {{ form_label(form.image) }}
-        {{ form_errors(form.image) }}
-        {{ form_widget(form.image) }}
+{#        {{ form_label(form.image) }}
+        {{ form_widget(form.image) }}#}
     </div>
    <input type="submit" value="Ajouter un article" />
     {{ form_end(form) }}
@@ -60,16 +61,15 @@
     </ul>
 {% endblock %}
 
-{% block javascript %}
+{% block javascripts %}
+{{ parent() }}
     <script>
-/*        $(document).ready(function() {
-            $('.js-datepicker').datepicker({
-                format: 'yyyy-mm-dd'
-            });
-        });*/
-
-    $(document).ready(function() {
-    $('select').material_select();
-    });
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+        $(document).ready(function() {
+            $('select').material_select();
+        });
 </script>
 {% endblock %}

@@ -11,10 +11,8 @@
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link rel="stylesheet" href="{{ asset('bundles/ruralis/materialize/css/materialize.css') }}"/>
-        <!-- Compiled and minified JavaScript -->
-        <script type="text/javascript" src="{{ asset('bundles/ruralis/javascript/jquery-3.1.1.min.js') }}"></script>
-        <script src="{{ asset('bundles/ruralis/materialize/js/materialize.js') }}"></script>        <!--Let browser know website is optimized for mobile-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/ruralis/sass/style.css') }}"/>
+        <!--Let browser know website is optimized for mobile-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/ruralis/stylesheets/main.css') }}"/>
     {% endblock %}
 
     <link rel="icon" type="image/png" href="{{ asset('bundles/ruralis/images/logo.png') }}"/>
@@ -123,6 +121,10 @@
             });
         });
     </script>
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+        <!-- Compiled and minified JavaScript -->
+        <script type="text/javascript" src="{{ asset('bundles/ruralis/javascript/jquery-3.1.1.min.js') }}"></script>
+        <script src="{{ asset('bundles/ruralis/materialize/js/materialize.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
