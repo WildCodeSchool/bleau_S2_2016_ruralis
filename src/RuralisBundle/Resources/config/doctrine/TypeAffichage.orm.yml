@@ -12,4 +12,5 @@ RuralisBundle\Entity\TypeAffichage:
         nom:
             type: string
             length: 255
+            nullable: true;
     lifecycleCallbacks: {  }

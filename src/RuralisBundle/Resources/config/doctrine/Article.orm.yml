@@ -21,4 +21,10 @@ RuralisBundle\Entity\Article:
             length: 255
         date:
             type: datetime
+    oneToOne:
+        image:
+            targetEntity: Image
+    manyToOne:
+        typeAffichage:
+            targetEntity: TypeAffichage
     lifecycleCallbacks: {  }

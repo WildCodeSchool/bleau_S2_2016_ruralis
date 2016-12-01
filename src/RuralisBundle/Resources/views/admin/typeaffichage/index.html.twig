@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Typeaffichages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for typeAffichage in typeAffichages %}
+            <tr>
+                <td><a href="{{ path('typeaffichage_show', { 'id': typeAffichage.id }) }}">{{ typeAffichage.id }}</a></td>
+                <td>{{ typeAffichage.nom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('typeaffichage_show', { 'id': typeAffichage.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

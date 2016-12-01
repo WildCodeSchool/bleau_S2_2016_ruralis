@@ -4,16 +4,72 @@
 
     </header>
 
-    <h1>Article creation</h1>
+    <h1>Nouvel article</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    <div>
+        {{ form_label(form.nom) }}
+        {{ form_errors(form.nom) }}
+        {{ form_widget(form.nom) }}
+    </div>
+    <div>
+{#        <div class="input-field col s12">
+            <label>Choix affichage</label>
+            <select>
+                <option value="" disabled selected>Choisissez le type d'affichage</option>
+                <option value="1">Petite image</option>
+                <option value="2">Grande image</option>
+            </select>
+        </div>#}
+        {{ form_label(form.typeAffichage) }}
+        {{ form_errors(form.typeAffichage) }}
+        {{ form_widget(form.typeAffichage) }}
+    </div>
+    <div>
+        {{ form_label(form.descriptif) }}
+        {{ form_errors(form.descriptif) }}
+        {{ form_widget(form.descriptif) }}
+    </div>
+    <div>
+        {{ form_label(form.contenu) }}
+        {{ form_errors(form.contenu) }}
+        {{ form_widget(form.contenu) }}
+    </div>
+    <div>
+        {{ form_label(form.auteur) }}
+        {{ form_errors(form.auteur) }}
+        {{ form_widget(form.auteur) }}
+    </div>
+    <div>
+        {{ form_label(form.date) }}
+        {{ form_errors(form.date) }}
+        {{ form_widget(form.date) }}
+    </div>
+    <div>
+        {{ form_label(form.image) }}
+        {{ form_errors(form.image) }}
+        {{ form_widget(form.image) }}
+    </div>
+   <input type="submit" value="Ajouter un article" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('article_index') }}">Back to the list</a>
+            <a href="{{ path('article_index') }}">Liste des articles</a>
         </li>
     </ul>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+/*        $(document).ready(function() {
+            $('.js-datepicker').datepicker({
+                format: 'yyyy-mm-dd'
+            });
+        });*/
+
+    $(document).ready(function() {
+    $('select').material_select();
+    });
+</script>
 {% endblock %}
