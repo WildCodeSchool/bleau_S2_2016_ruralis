@@ -465,5 +465,9 @@ footer .col{
 }
 
 #bodytop {
-    margin-top: 50px;
+    margin-top: 17px;
+}
+
+a {
+    color: #EA640C !important;
 }
