@@ -463,3 +463,7 @@ footer .col{
 .img_header{
     width: 90%;
 }
+
+#bodytop {
+    margin-top: 50px;
+}
