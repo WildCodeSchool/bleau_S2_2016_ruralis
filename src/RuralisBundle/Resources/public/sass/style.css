@@ -24,21 +24,20 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
 }
 
 html{
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
     text-align: center;
     overflow-x: hidden;
 }
 
 body{
 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
     position: absolute;
     text-align: center;
     width: 100%;
@@ -49,23 +48,26 @@ header{
 }
 
 /*================================================================
-LES TROIS IMAGE POUR UN CSS OPTIMAL
+LES TROIS IMAGES POUR UN CSS OPTIMAL
 =================================================================*/
-/*image d'en-tete*/
-.size-large{/*prendre TAILLE GRANDE pour la changer WORDPRESS*/
+/*  image d'en-tete */
+/*  prendre TAILLE GRANDE pour la changer WORDPRESS */
+.size-large{
     width: 100%;
     height: 720px;
 }
 
-/*imges du Territoire et du Peuple des campagnes*/
-.size-full{ /*prendre TAILLE ORIGINALE pour la changer WORDPRESS*/
+/*  imgaes du Territoire et du Peuple des campagnes */
+/*    prendre TAILLE ORIGINALE pour la changer WORDPRESS    */
+.size-full{
     height: auto;
     width: 19.5%;
     margin: 0;
 }
 
-/*image logo dans pied de page*/
-.size-thumbnail{/*prendre TAILLE MINIATURE pour la changer WORDPRESS*/
+/*  image logo dans pied de page*/
+/*  prendre TAILLE MINIATURE pour la changer WORDPRESS  */
+.size-thumbnail{
     margin-top: 0.5%;
     height: 80%;
     width: auto;
@@ -459,5 +461,13 @@ footer .col{
 }
 
 .img_header{
-    width: 100%;
+    width: 90%;
+}
+
+#bodytop {
+    margin-top: 17px;
+}
+
+a {
+    color: #EA640C !important;
 }
