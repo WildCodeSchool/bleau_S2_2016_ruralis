@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Typeaffichage</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ typeAffichage.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ typeAffichage.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('typeaffichage_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
