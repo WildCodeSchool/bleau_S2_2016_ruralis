@@ -24,8 +24,6 @@
                 <td>{{ article.nom }}</td>
                 <td>{{ article.descriptif }}</td>
                 <td>{{ article.contenu }}</td>
-
-                </td>
                 <td>{{ article.auteur }}</td>
                 <td><img src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
                 <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
