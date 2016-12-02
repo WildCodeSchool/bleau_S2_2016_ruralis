@@ -7,8 +7,9 @@ namespace RuralisBundle\Entity;
  */
 class Article
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -33,9 +34,25 @@ class Article
     private $auteur;
 
     /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @var \RuralisBundle\Entity\Image
+     */
+    private $image;
+
+    /**
+     * @var \RuralisBundle\Entity\TypeAffichage
+     */
+    private $typeAffichage;
+
+
+    /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -139,15 +156,28 @@ class Article
     }
 
     /**
-     * @var \RuralisBundle\Entity\Image
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Article
      */
-    private $image;
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
 
     /**
-     * @var \RuralisBundle\Entity\TypeAffichage
+     * Get date
+     *
+     * @return \DateTime
      */
-    private $typeAffichage;
-
+    public function getDate()
+    {
+        return $this->date;
+    }
 
     /**
      * Set image
@@ -195,34 +225,5 @@ class Article
     public function getTypeAffichage()
     {
         return $this->typeAffichage;
-    }
-    /**
-     * @var \DateTime
-     */
-    private $date;
-
-
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return Article
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
     }
 }

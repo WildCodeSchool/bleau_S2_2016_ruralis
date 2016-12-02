@@ -47,9 +47,21 @@
         {{ form_widget(form.date) }}#}
 
     </div>
-    <div>
-{#        {{ form_label(form.image) }}
-        {{ form_widget(form.image) }}#}
+    <div class="row file-field input-field">
+        <div class="btn">
+            <span>Image</span>
+            {{ form_widget(form.image.file) }}
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Cliquez pour ajouter votre image" required>
+        </div>
+        {{ form_errors(form.image.file) }}
+    </div>
+
+    <div class="row input-field">
+        {{ form_label(form.image.alt) }}
+        {{ form_widget(form.image.alt) }}
+        {{ form_errors(form.image.alt) }}
     </div>
    <input type="submit" value="Ajouter un article" />
     {{ form_end(form) }}

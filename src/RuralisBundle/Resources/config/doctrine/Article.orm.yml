@@ -25,6 +25,7 @@ RuralisBundle\Entity\Article:
     oneToOne:
         image:
             targetEntity: Image
+            cascade: ["persist", "remove"]
     manyToOne:
         typeAffichage:
             targetEntity: TypeAffichage
