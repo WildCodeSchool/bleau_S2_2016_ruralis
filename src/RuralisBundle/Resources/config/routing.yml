@@ -9,3 +9,7 @@ ruralis_typeaffichage:
 ruralis_homepage:
     path:     /
     defaults: { _controller: RuralisBundle:Default:index }
+
+ruralis_presentation:
+    path:     /ruralis
+    defaults: { _controller: RuralisBundle:Ruralis:index }
