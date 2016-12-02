@@ -27,7 +27,7 @@
 
                 </td>
                 <td>{{ article.auteur }}</td>
-                <td><img src="{{ asset('bundles/ruralis/images/') }}{{ article.image }}" alt="{{ article.image.alt }}"></td>
+                <td><img src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
                 <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
                 <td><a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a></td>
             </tr>

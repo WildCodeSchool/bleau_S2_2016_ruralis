@@ -51,11 +51,11 @@ class ArticleController extends Controller
      */
     public function showAction(Article $article)
     {
-        $em = $this->getDoctrine()->getManager();
-        $image = $em->getRepository('RuralisBundle:Image')->findOneById($article->getImage()->getId());
+        $deleteForm = $this->createDeleteForm($article);
 
         return $this->render('@Ruralis/admin/article/show.html.twig', array(
             'article' => $article,
+            'delete_form' => $deleteForm->createView(),
         ));
 
     }

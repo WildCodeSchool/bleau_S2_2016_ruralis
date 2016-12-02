@@ -20,19 +20,25 @@
 <body>
 
     <header>
-        <div class="ancre" name="top" id="top"></div>
+        <div class="ancre" id="top"></div>
         <div class="navbar-fixed">
             <nav>
-                <a href="https://twitter.com/Ruralismagazine" target="_blank"><img class="logotwitter" src="{{ asset('bundles/ruralis/images/twitter.png') }}" alt="twitter" /></a>
-                <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/" target="_blank"><img class="logofb" src="{{ asset('bundles/ruralis/images/facebook.png') }}" alt="facebook" /></a>
-                <a href="http://www.instagram.com" target="_blank"><img class="logoinsta" src="{{ asset('bundles/ruralis/images/instagram.png') }}" alt="instaram" /></a>
+                <a href="https://twitter.com/Ruralismagazine" target="_blank">
+                    <img class="logotwitter" src="{{ asset('bundles/ruralis/images/twitter.png') }}" alt="twitter" />
+                </a>
+                <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/" target="_blank">
+                    <img class="logofb" src="{{ asset('bundles/ruralis/images/facebook.png') }}" alt="facebook" />
+                </a>
+                <a href="http://www.instagram.com" target="_blank">
+                    <img class="logoinsta" src="{{ asset('bundles/ruralis/images/instagram.png') }}" alt="instaram" />
+                </a>
                 <div class="nav-wrapper z-depth-1">
                     <img src="{{ asset('bundles/ruralis/images/logoarbre1.png') }}" id="animation" alt="Logo arbre16"/>
-<!-- Next image is used for first frame, before scroll -->
-<!--<img src="img/logoarbre1.png" />-->
+                    <!-- Next image is used for first frame, before scroll -->
+                    <!--<img src="img/logoarbre1.png" />-->
                     <div id="bottommark"></div>
 
-{#  INSERER LES LIENS VERS LES PAGES DANS LE MENU    #}
+                    {#  INSERER LES LIENS VERS LES PAGES DANS LE MENU    #}
                     <ul class="left hide-on-med-and-down">
                         <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
                         <li><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
@@ -58,15 +64,14 @@
                 <img id="logowcs" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo">
             </div>
             <div class="col m6">
-                <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" /></a>
+                <a href="http://www.wildcodeschool.fr" target="_blank">
+                    <img id="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
+                </a>
             </div>
 
         </footer>
     </div>
 
-
-<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
             var offset2 = $(document).height();
@@ -76,7 +81,6 @@
                 var offset = $(window).scrollTop();
                 var lineH = offset1 - $("#bottommark").position().top - offset;
                 var lineHpart = lineHF/15;
-                $("span").html(lineH);
                 if (lineH > lineHpart*15) {
                     $("#animation").attr("src", "bundles/ruralis/images/logoarbre1.png");
                 }
