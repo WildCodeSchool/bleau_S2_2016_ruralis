@@ -1,0 +1,12 @@
+typeaffichage_index:
+    path:     /
+    defaults: { _controller: "RuralisBundle:TypeAffichage:index" }
+    methods:  GET
+
+typeaffichage_show:
+    path:     /{id}/show
+    defaults: { _controller: "RuralisBundle:TypeAffichage:show" }
+    methods:  GET
+
+
+
