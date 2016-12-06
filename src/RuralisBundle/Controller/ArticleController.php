@@ -57,25 +57,34 @@ class ArticleController extends Controller
             'article' => $article,
             'delete_form' => $deleteForm->createView(),
         ));
-
     }
+
     /**
      * Displays a form to edit an existing article entity.
      *
      */
     public function editAction(Request $request, Article $article)
     {
+        $em = $this->getDoctrine()->getManager();
+        $image = $em->getRepository('RuralisBundle:Image')->findOneById($article->getImage()->getId());
+        $deleteForm = $this->createDeleteForm($article);
         $editForm = $this->createForm('RuralisBundle\Form\ArticleType', $article);
         $editForm->handleRequest($request);
+
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-            return $this->redirectToRoute('article_edit', array('id' => $article->getId()));
+            $em = $this->getDoctrine()->getManager();
+            $image->preUpload();
+            $em->persist($article);
+            $em->flush();
+            return $this->redirectToRoute('article_show', array('id' => $article->getId()));
         }
         return $this->render('@Ruralis/admin/article/edit.html.twig', array(
             'article' => $article,
             'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
         ));
     }
+
     /**
      * Deletes a Article entity.
      *
