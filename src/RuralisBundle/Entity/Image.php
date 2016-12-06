@@ -19,7 +19,7 @@ class Image
      * @Assert\Image(
      *     maxSize = "1k",
      *     mimeTypes = {"image/*"},
-     *     maxSizeMessage = "The maxmimum allowed file size is 1MB.",
+     *     maxSizeMessage = "The maximum allowed file size is 1MB.",
      *     mimeTypesMessage = "Please upload a valid Image.")
      */
     public $file;
@@ -87,7 +87,6 @@ class Image
 
 
     /*---------------GENERATED CODE---------------------*/
-
 
     /**
      * @var integer

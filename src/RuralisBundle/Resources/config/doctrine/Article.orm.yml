@@ -22,11 +22,11 @@ RuralisBundle\Entity\Article:
         date:
             type: date
             nullable: true
+        typeAffichage:
+            type: string
+            length: 25
+            nullable: false
     oneToOne:
         image:
             targetEntity: Image
             cascade: ["persist", "remove"]
-    manyToOne:
-        typeAffichage:
-            targetEntity: TypeAffichage
-    lifecycleCallbacks: {  }

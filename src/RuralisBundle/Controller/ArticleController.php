@@ -37,8 +37,7 @@ class ArticleController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
             $em->flush();
-            return $this->redirectToRoute('article_show', array('id' => $article->getId())
-            );
+            return $this->redirectToRoute('article_index');
         }
         return $this->render('@Ruralis/admin/article/new.html.twig', array(
             'article' => $article,
@@ -51,11 +50,8 @@ class ArticleController extends Controller
      */
     public function showAction(Article $article)
     {
-        $deleteForm = $this->createDeleteForm($article);
-
         return $this->render('@Ruralis/admin/article/show.html.twig', array(
             'article' => $article,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -67,7 +63,6 @@ class ArticleController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $image = $em->getRepository('RuralisBundle:Image')->findOneById($article->getImage()->getId());
-        $deleteForm = $this->createDeleteForm($article);
         $editForm = $this->createForm('RuralisBundle\Form\ArticleType', $article);
         $editForm->handleRequest($request);
 
@@ -81,7 +76,6 @@ class ArticleController extends Controller
         return $this->render('@Ruralis/admin/article/edit.html.twig', array(
             'article' => $article,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -91,6 +85,7 @@ class ArticleController extends Controller
      */
     public function deleteAction($id)
     {
+//        Si l'$id est définie alors :
         if ($id) {
             $em = $this->getDoctrine()->getManager();
             // Recherche L'ARTICLE à supprimer parmi LES ARTICLES
@@ -106,21 +101,4 @@ class ArticleController extends Controller
         } else
             return $this->redirectToRoute('article_index');
     }
-    /**
-     * Creates a form to delete a article entity.
-     *
-     * @param Article $article The article entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-
-    private function createDeleteForm(Article $article)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('article_delete', array('id' => $article->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
-    }
-
 }

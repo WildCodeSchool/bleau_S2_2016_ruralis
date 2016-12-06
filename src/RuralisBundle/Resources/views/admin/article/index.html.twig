@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Articles de blog</h1>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <h1>Articles de blog</h1>
 
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
@@ -15,27 +17,26 @@
                 <th>Date</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>
-                <td>{{ article.typeAffichage }}</td>
-                <td>{{ article.nom }}</td>
-                <td>{{ article.descriptif }}</td>
-                <td>{{ article.contenu }}</td>
-                <td>{{ article.auteur }}</td>
-                <td><img src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
-                <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
-                <td><a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a></td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-                <td>
-                    <ul>
-                        <li>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>
+                    <td>{{ article.typeAffichage }}</td>
+                    <td>{{ article.nom }}</td>
+                    <td>{{ article.descriptif }}</td>
+                    <td>{{ article.contenu }}</td>
+                    <td>{{ article.auteur }}</td>
+                    <td><img width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
+                    <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
+                    <td><a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a></td>
+                    <td><a href="{{ path('article_delete', { 'id': article.id }) }}">supprimer</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 
     <ul>
         <li>
