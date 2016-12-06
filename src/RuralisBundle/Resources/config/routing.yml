@@ -2,10 +2,6 @@ ruralis_article:
     resource: "@RuralisBundle/Resources/config/routing/article.yml"
     prefix:   /admin/article
 
-ruralis_typeaffichage:
-    resource: "@RuralisBundle/Resources/config/routing/typeaffichage.yml"
-    prefix:   /admin/typeaffichage
-
 ruralis_homepage:
     path:     /
     defaults: { _controller: RuralisBundle:Default:index }

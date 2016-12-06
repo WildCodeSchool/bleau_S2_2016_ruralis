@@ -24,11 +24,8 @@
                 <td>{{ article.nom }}</td>
                 <td>{{ article.descriptif }}</td>
                 <td>{{ article.contenu }}</td>
-
-                </td>
                 <td>{{ article.auteur }}</td>
-                <td>{{ article.image }}</td>
-                <td>{% if article.date %}{{ article.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td><img src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
                 <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
                 <td><a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a></td>
             </tr>

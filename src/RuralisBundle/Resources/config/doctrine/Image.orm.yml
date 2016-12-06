@@ -12,7 +12,12 @@ RuralisBundle\Entity\Image:
         alt:
             type: string
             length: 255
-        file:
-            type: string
-            length: 255
-    lifecycleCallbacks: {  }
+        url:
+            type: text
+
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]
