@@ -9,3 +9,7 @@ ruralis_homepage:
 ruralis_presentation:
     path:     /ruralis
     defaults: { _controller: RuralisBundle:Ruralis:index }
+
+ruralis_abonnement:
+    path:     /abonnement
+    defaults: { _controller: RuralisBundle:Abonnement:index }

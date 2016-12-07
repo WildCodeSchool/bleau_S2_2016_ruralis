@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+	<div class="col l8 offset-l2"> // div générale
+		<div class="col l12 lecteur">
+			<h1>Abonnez-vous ! Soutenez-nous ! </h1>
+			<div class="col s8">
+				<p>Cher(ère) lecteur(trice), acteur(trices) des territoires ruraux, citoyens engagés, amoureux (...) de la campagne</p>
+			</div>
+			<div class="col s4">
+				<img src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>		
+			</div>
+			<div class="col s6">
+				Ce projet fait sens pour vous, 
+				<ul>
+					<li>
+						devenez donateur
+					</li>
+					<li>
+						devenez ambassadeur
+					</li>
+				</ul>
+			</div>
+			<div class="col s6">
+				Faire un don
+			</div>
+		</div>
+		<div class="co l12 cadeau">
+			<p>
+				Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.
+			</p>
+		</div>
+		<div class="col l12 donateur">
+			<div class="col l4">
+				<img src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}"/>		
+			</div>
+			<div class="col l8">
+				Je m'abonne et deviens donateur
+			</div>
+			<div class="col l8">
+				Devenir Ambassadeur
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
