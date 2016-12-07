@@ -20,8 +20,11 @@ class ArticleType extends AbstractType
             ->add('typeAffichage', ChoiceType::class, array (
                 'placeholder' => "Type d'affichage",
                 'choices' => array (
-                    '1' => 'Grande image',
-                    '2' => 'Petite image',
+                    '1' => 'Une',
+                    '2' => 'Carré',
+                    '3' => 'Rectangle + lien abonnement',
+                    '4' => 'Rectangle+ contenu',
+                    '5' => 'Rectangle + lien article complet',
                 )
             ))
             ->add('nom')
