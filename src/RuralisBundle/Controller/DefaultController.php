@@ -8,6 +8,10 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('RuralisBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $articles = $em->getRepository('RuralisBundle:Article')->findAll();
+        return $this->render('RuralisBundle:Default:index.html.twig', array(
+            'articles' => $articles,
+        ));
     }
 }

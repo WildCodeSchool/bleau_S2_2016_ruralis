@@ -39,14 +39,14 @@ class Article
     private $date;
 
     /**
+     * @var string
+     */
+    private $typeAffichage;
+
+    /**
      * @var \RuralisBundle\Entity\Image
      */
     private $image;
-
-    /**
-     * @var \RuralisBundle\Entity\TypeAffichage
-     */
-    private $typeAffichage;
 
 
     /**
@@ -180,6 +180,30 @@ class Article
     }
 
     /**
+     * Set typeAffichage
+     *
+     * @param string $typeAffichage
+     *
+     * @return Article
+     */
+    public function setTypeAffichage($typeAffichage)
+    {
+        $this->typeAffichage = $typeAffichage;
+
+        return $this;
+    }
+
+    /**
+     * Get typeAffichage
+     *
+     * @return string
+     */
+    public function getTypeAffichage()
+    {
+        return $this->typeAffichage;
+    }
+
+    /**
      * Set image
      *
      * @param \RuralisBundle\Entity\Image $image
@@ -201,29 +225,5 @@ class Article
     public function getImage()
     {
         return $this->image;
-    }
-
-    /**
-     * Set typeAffichage
-     *
-     * @param \RuralisBundle\Entity\TypeAffichage $typeAffichage
-     *
-     * @return Article
-     */
-    public function setTypeAffichage(\RuralisBundle\Entity\TypeAffichage $typeAffichage = null)
-    {
-        $this->typeAffichage = $typeAffichage;
-
-        return $this;
-    }
-
-    /**
-     * Get typeAffichage
-     *
-     * @return \RuralisBundle\Entity\TypeAffichage
-     */
-    public function getTypeAffichage()
-    {
-        return $this->typeAffichage;
     }
 }

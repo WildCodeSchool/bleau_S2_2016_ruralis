@@ -21,4 +21,4 @@ article_edit:
 article_delete:
     path:     /{id}/delete
     defaults: { _controller: "RuralisBundle:Article:delete" }
-    methods:  DELETE
+    methods:  GET
