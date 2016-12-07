@@ -1,0 +1,66 @@
+.row .col {
+  padding:0;
+}
+
+.lecteur img, .donateur img, .ambassadeur2 img{
+  width:150px;
+  height:150px;
+}
+
+.lecteur, .donateur, .ambassadeur, .cadeau {
+  border-style:solid;
+  border-width:2px;
+}
+
+.lecteur{
+  background-color: rgb(0,184,43);
+}
+
+.lecteur2{
+  display: flex;
+  border-style:solid;
+  border-width:2px;
+  height:120px;
+}
+
+.cadeau{
+  padding:40px;
+}
+
+.don{
+  display: flex;
+  border-style:solid;
+  border-width:2px;
+  height:80px;
+  margin-top:40px;
+}
+
+.don button{
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+.donateur{
+  background-color: rgb(239,255,0);
+}
+
+.donateur2, .donateur3{
+  display:flex;
+  border-style:solid;
+  border-width:2px;
+  height:200px;
+}
+
+.ambassadeur{
+  background-color:rgb(239,94,0);
+}
+
+.ambassadeur3{
+  display:flex;
+  border-style:solid;
+  border-width:2px;
+  height:160px;
+  margin-top:100px;
+  margin-bottom:40px;
+  margin-left: 16.1rem !important;
+}

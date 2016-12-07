@@ -3,16 +3,23 @@
 {% block body %}
 
 <div class="row">
-	<div class="col l8 offset-l2"> // div générale
-		<div class="col l12 lecteur">
-			<h1>Abonnez-vous ! Soutenez-nous ! </h1>
+	<div class="col s8 offset-s2"> {#div générale#}
+		<div class="col s12 lecteur">
+			<div class="row">
+				<div class="col s1">
+					<i class="material-icons">add</i>
+				</div>
+				<div class="col offset-s1 s10">
+					<h3>Abonnez-vous ! Soutenez-nous ! </h3>
+				</div>
+			</div>
 			<div class="col s8">
 				<p>Cher(ère) lecteur(trice), acteur(trices) des territoires ruraux, citoyens engagés, amoureux (...) de la campagne</p>
 			</div>
 			<div class="col s4">
-				<img src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>		
+				<img src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>
 			</div>
-			<div class="col s6">
+			<div class="col s7 lecteur2">
 				Ce projet fait sens pour vous, 
 				<ul>
 					<li>
@@ -23,24 +30,39 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col s6">
+			<div class="col s5 don">
 				Faire un don
+				<button><a href="#">Faire un don en ligne</a></button>
 			</div>
 		</div>
-		<div class="co l12 cadeau">
+		<div class="col s12 cadeau">
 			<p>
 				Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.
 			</p>
 		</div>
-		<div class="col l12 donateur">
-			<div class="col l4">
+		<div class="col s12 donateur">
+			<div class="col s5">
+				<div class="col s1">
+					<i class="material-icons">add</i>
+				</div>
 				<img src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}"/>		
 			</div>
-			<div class="col l8">
+			<div class="col s7 donateur2">
 				Je m'abonne et deviens donateur
 			</div>
-			<div class="col l8">
+			<div class="offset-s5 col s7 donateur3">
 				Devenir Ambassadeur
+			</div>
+		</div>
+		<div class="col s12 ambassadeur">
+			<div class="col s4 ambassadeur2">
+				<div class="col s1">
+					<i class="material-icons">add</i>
+				</div>
+				<img src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}"/>
+			</div>
+			<div class="col s8 ambassadeur3">
+				Je m'abonne et deviens ambassadeur
 			</div>
 		</div>
 	</div>
