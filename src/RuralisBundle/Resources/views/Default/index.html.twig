@@ -7,31 +7,29 @@
 <body>
 
 {#      CARD DE UNE      #}
-{{  dump (articles) }}
 
-    {#{% for article in articles %}#}
-
+    {% for article in articles %}
+        {% if article.typeAffichage == '1' %}
 <div class="row">
     <div class="card large col offset-l1 l10 offset-m1 m10 s12 hoverable">
         <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="{{ asset('bundles/ruralis/images/Editing_Culture_bandeau.png') }}">
+            <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
         </div>
 
         <div class="card-content">
             <div class="card-title activator grey-text text-darken-4">
-                Titre de Une
+                {{ article.nom }}
                 <i class="material-icons right">more_vert</i>
             </div>
             <p><a href="#" class="cardLink">Lien vers la Une</a></p>
         </div>
         {#    Information about the News revealed once clicked on      #}
         <div class="card-reveal">
-            <div class="card-title grey-text text-darken-4">Titre de la Une
+            <div class="card-title grey-text text-darken-4">{{ article.nom }}
                 <i class="material-icons right">close</i>
             </div>
             <p>
-                Cet article est la une du journal Ruralis de ce trimestre.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates? Ad asperiores at consectetur consequuntur corporis minima nobis nulla officia sint tempore! Facere, nemo. Animi asperiores, at consectetur dolorem explicabo minus modi nam nesciunt non obcaecati omnis pariatur perferendis quae qui saepe, voluptate, voluptatem! Assumenda cum ea iure numquam similique! Enim fugit nisi sapiente? Accusantium blanditiis consequuntur eligendi et iusto nemo nihil placeat quidem recusandae sed, temporibus voluptates? Ab accusamus aspernatur assumenda, dolor eos est laudantium nostrum nulla quod ratione, sed sit voluptas, voluptates.Earum, itaque, perspiciatis. Accusamus assumenda at atque consectetur culpa dignissimos eaque, eius eveniet expedita facere illum in iste minima minus odit porro quam, quod reiciendis rem reprehenderit ut vel, vero. Accusamus asperiores autem dicta doloribus eos iusto laborum, recusandae sed sunt veritatis? Ab adipisci dolorum facilis illo, maxime nemo nihil? Animi atque culpa error incidunt non odit praesentium rerum sapiente? Accusantium architecto, commodi dolore ea eligendi esse eveniet exercitationem explicabo, id libero magnam maxime molestiae nihil nobis nulla perferendis perspiciatis, quasi quibusdam ratione sed suscipit tempora temporibus vero voluptatem voluptatum. Aliquam aspernatur cupiditate dolor eligendi expedita nostrum officia perspiciatis voluptatem. At aut autem facilis inventore ipsa iusto, obcaecati odio quo ratione repellat rerum voluptas? Expedita iste quia quibusdam repellat voluptatem. Aspernatur assumenda distinctio eaque harum labore magnam necessitatibus numquam repellat saepe tempora, tempore vel. Alias aut blanditiis consequatur dolorum, impedit iusto labore libero, possimus recusandae sit soluta, veritatis vitae voluptatem! Accusamus amet cum debitis, illo nisi quia quidem sint velit voluptates. A, architecto aut dicta, eum, facilis iste laboriosam libero magni nam nesciunt nulla quia quibusdam saepe soluta unde voluptate. Alias atque ex illum unde vitae? Ad amet atque debitis distinctio dolorum, exercitationem libero officiis placeat quam quibusdam, quisquam quos ratione sapiente soluta tempore ut veniam, vero voluptatibus. Dolores, veritatis! Ab accusamus ad autem, cumque dolorum est facere facilis fugit iste non nostrum officia quae quia reprehenderit, similique suscipit unde veritatis vero! Blanditiis cumque deleniti fugiat labore molestiae non perferendis. Minima nostrum quibusdam quod repellat repellendus sapiente suscipit? Architecto consectetur, debitis expedita illum in ipsam laboriosam neque possimus quasi quod temporibus vel! Autem ipsum labore perferendis, quod tempore vel vero! Ad assumenda beatae commodi dignissimos eligendi eos esse et exercitationem expedita fuga laboriosam maxime minima modi obcaecati officiis optio quae quos reiciendis repellat tempora velit veniam vitae, voluptas! Hic, numquam. Asperiores ipsam labore nam natus praesentium quae, sapiente. Nostrum perferendis, qui. Aut blanditiis distinctio dolor, dolore doloribus eum fuga harum ipsa magnam nesciunt, omnis quam rem voluptatibus? Assumenda dolorum, ipsa! Consectetur distinctio, ducimus inventore laborum maiores minus nesciunt quo reprehenderit! Commodi ea exercitationem harum nam nulla reiciendis ullam ut velit. Adipisci aspernatur consequatur cum eaque ipsum mollitia obcaecati, quasi reiciendis. A animi asperiores aut autem blanditiis corporis eaque explicabo fuga hic illum ipsa libero minus modi mollitia necessitatibus nihil numquam omnis optio perferendis quia quibusdam quod ratione reiciendis, similique voluptate! Cum dolores facere incidunt iure laborum recusandae repudiandae soluta tenetur velit veritatis. Accusamus fuga pariatur quo similique suscipit! Alias aut earum esse facere fuga magni minus mollitia quisquam voluptatem voluptatibus? Consequatur corporis, dignissimos ducimus fugiat iure laudantium nisi optio pariatur porro quidem sequi suscipit ut voluptate. Atque consequatur cum, dolores doloribus, ea explicabo nobis obcaecati quia reprehenderit totam veritatis voluptatibus. Accusantium delectus deleniti dicta eos eum hic ipsum iusto molestiae neque, porro quasi quod ratione? Adipisci amet asperiores delectus dicta, fugit id nam possimus provident, reprehenderit saepe sint tempora voluptas. Accusamus ad aliquam aliquid at corporis cum dolores enim eum exercitationem facere facilis id inventore ipsam, neque nesciunt numquam odio quaerat qui ratione rem, rerum similique, suscipit tempore ullam unde! Aut cum dolor dolorem, ea exercitationem iure laborum laudantium neque non optio, placeat provident quam reiciendis rerum similique sunt vel vero?
+                {{ article.contenu }}
             </p>
         </div>
     </div>
@@ -39,57 +37,59 @@
 
 {#      CARDS BLOG      #}
 
+                {% elseif article.typeAffichage == '2' %}
 <div class="row">
     {# First card #}
     <div class="col offset-l1 l4 offset-m1 m5 s12 hoverable">
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}">
+                <img class="activator" width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
             </div>
             <div class="card-content">
                 <div class="card-title activator grey-text text-darken-4">
-                    Article 1
+                    {{ article.nom }}
                     <i class="material-icons right">more_vert</i>
                 </div>
                 <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
             </div>
             {#    Information about the article 1 revealed once clicked on      #}
-            <div class="card-reveal">
-                <div class="card-title grey-text text-darken-4">
-                    Article 1
-                    <i class="material-icons right">close</i>
+            <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
+                <div class="row card-title grey-text text-darken-4">
+                   {{ article.contenu }}
                 </div>
-                <p>Here is some more information about the article 1 that is only revealed once clicked on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi, porro quae soluta tempore unde!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates? Ad asperiores at consectetur consequuntur corporis minima nobis nulla officia sint tempore! Facere, nemo. Animi asperiores, at consectetur dolorem explicabo minus modi nam nesciunt non obcaecati omnis pariatur perferendis quae qui saepe, voluptate, voluptatem! Assumenda cum ea iure numquam similique! Enim fugit nisi sapiente? Accusantium blanditiis consequuntur eligendi et iusto nemo nihil placeat quidem recusandae sed, temporibus voluptates? Ab accusamus aspernatur assumenda, dolor eos est laudantium nostrum nulla quod ratione, sed sit voluptas, voluptates.Earum, itaque, perspiciatis. Accusamus assumenda at atque consectetur culpa dignissimos eaque, eius eveniet expedita facere illum in iste minima minus odit porro quam, quod reiciendis rem reprehenderit ut vel, vero. Accusamus asperiores autem dicta doloribus eos iusto laborum, recusandae sed sunt veritatis? Ab adipisci dolorum facilis illo, maxime nemo nihil? Animi atque culpa error incidunt non odit praesentium rerum sapiente? Accusantium architecto, commodi dolore ea eligendi esse eveniet exercitationem explicabo, id libero magnam maxime molestiae nihil nobis nulla perferendis perspiciatis, quasi quibusdam ratione sed suscipit tempora temporibus vero voluptatem voluptatum. Aliquam aspernatur cupiditate dolor eligendi expedita nostrum officia perspiciatis voluptatem. At aut autem facilis inventore ipsa iusto, obcaecati odio quo ratione repellat rerum voluptas? Expedita iste quia quibusdam repellat voluptatem. Aspernatur assumenda distinctio eaque harum labore magnam necessitatibus numquam repellat saepe tempora, tempore vel. Alias aut blanditiis consequatur dolorum, impedit iusto labore libero, possimus recusandae sit soluta, veritatis vitae voluptatem! Accusamus amet cum debitis, illo nisi quia quidem sint velit voluptates. A, architecto aut dicta, eum, facilis iste laboriosam libero magni nam nesciunt nulla quia quibusdam saepe soluta unde voluptate. Alias atque ex illum unde vitae? Ad amet atque debitis distinctio dolorum, exercitationem libero officiis placeat quam quibusdam, quisquam quos ratione sapiente soluta tempore ut veniam, vero voluptatibus. Dolores, veritatis! Ab accusamus ad autem, cumque dolorum est facere facilis fugit iste non nostrum officia quae quia reprehenderit, similique suscipit unde veritatis vero! Blanditiis cumque deleniti fugiat labore molestiae non perferendis. Minima nostrum quibusdam quod repellat repellendus sapiente suscipit? Architecto consectetur, debitis expedita illum in ipsam laboriosam neque possimus quasi quod temporibus vel! Autem ipsum labore perferendis, quod tempore vel vero! Ad assumenda beatae commodi dignissimos eligendi eos esse et exercitationem expedita fuga laboriosam maxime minima modi obcaecati officiis optio quae quos reiciendis repellat tempora velit veniam vitae, voluptas! Hic, numquam. Asperiores ipsam labore nam natus praesentium quae, sapiente. Nostrum perferendis, qui. Aut blanditiis distinctio dolor, dolore doloribus eum fuga harum ipsa magnam nesciunt, omnis quam rem voluptatibus? Assumenda dolorum, ipsa! Consectetur distinctio, ducimus inventore laborum maiores minus nesciunt quo reprehenderit! Commodi ea exercitationem harum nam nulla reiciendis ullam ut velit. Adipisci aspernatur consequatur cum eaque ipsum mollitia obcaecati, quasi reiciendis. A animi asperiores aut autem blanditiis corporis eaque explicabo fuga hic illum ipsa libero minus modi mollitia necessitatibus nihil numquam omnis optio perferendis quia quibusdam quod ratione reiciendis, similique voluptate! Cum dolores facere incidunt iure laborum recusandae repudiandae soluta tenetur velit veritatis. Accusamus fuga pariatur quo similique suscipit! Alias aut earum esse facere fuga magni minus mollitia quisquam voluptatem voluptatibus? Consequatur corporis, dignissimos ducimus fugiat iure laudantium nisi optio pariatur porro quidem sequi suscipit ut voluptate. Atque consequatur cum, dolores doloribus, ea explicabo nobis obcaecati quia reprehenderit totam veritatis voluptatibus. Accusantium delectus deleniti dicta eos eum hic ipsum iusto molestiae neque, porro quasi quod ratione? Adipisci amet asperiores delectus dicta, fugit id nam possimus provident, reprehenderit saepe sint tempora voluptas. Accusamus ad aliquam aliquid at corporis cum dolores enim eum exercitationem facere facilis id inventore ipsam, neque nesciunt numquam odio quaerat qui ratione rem, rerum similique, suscipit tempore ullam unde! Aut cum dolor dolorem, ea exercitationem iure laborum laudantium neque non optio, placeat provident quam reiciendis rerum similique sunt vel vero?</p>
+
             </div>
         </div>
     </div>
+{%  endif %}
+        {% endfor %}
 
     {# Second card #}
-    <div class="col offset-l2 l4 m5 s12 hoverable">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">
-            </div>
-            <div class="card-content">
-                <div class="card-title activator grey-text text-darken-4">
-                    Article 2
-                    <i class="material-icons right">more_vert</i>
-                </div>
-                <p><a href="#" class="cardLink">Lien vers article 2</a></p>
-            </div>
+    {#<div class="col offset-l2 l4 m5 s12 hoverable">#}
+        {#<div class="card">#}
+            {#<div class="card-image waves-effect waves-block waves-light">#}
+                {#<img class="activator" src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">#}
+            {#</div>#}
+            {#<div class="card-content">#}
+                {#<div class="card-title activator grey-text text-darken-4">#}
+                    {#Article 2#}
+                    {#<i class="material-icons right">more_vert</i>#}
+                {#</div>#}
+                {#<p><a href="#" class="cardLink">Lien vers article 2</a></p>#}
+            {#</div>#}
             {#    Information about the article 2 revealed once clicked on      #}
-            <div class="card-reveal">
-                <div class="card-title grey-text text-darken-4">
-                    Article 2
-                    <i class="material-icons right">close</i>
-                </div>
-                <p>Here is some more information about the article 1 that is only revealed once clicked on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi, porro quae soluta tempore unde!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates? Ad asperiores at consectetur consequuntur corporis minima nobis nulla officia sint tempore! Facere, nemo. Animi asperiores, at consectetur dolorem explicabo minus modi nam nesciunt non obcaecati omnis pariatur perferendis quae qui saepe, voluptate, voluptatem! Assumenda cum ea iure numquam similique! Enim fugit nisi sapiente? Accusantium blanditiis consequuntur eligendi et iusto nemo nihil placeat quidem recusandae sed, temporibus voluptates? Ab accusamus aspernatur assumenda, dolor eos est laudantium nostrum nulla quod ratione, sed sit voluptas, voluptates.Earum, itaque, perspiciatis. Accusamus assumenda at atque consectetur culpa dignissimos eaque, eius eveniet expedita facere illum in iste minima minus odit porro quam, quod reiciendis rem reprehenderit ut vel, vero.</p>
-            </div>
-        </div>
-    </div>
-</div>
+            {#<div class="card-reveal">#}
+                {#<div class="card-title grey-text text-darken-4">#}
+                    {#Article 2#}
+                    {#<i class="material-icons right">close</i>#}
+                {#</div>#}
+                {#<p>Here is some more information about the article 1 that is only revealed once clicked on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi, porro quae soluta tempore unde!</p>#}
+                {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates? Ad asperiores at consectetur consequuntur corporis minima nobis nulla officia sint tempore! Facere, nemo. Animi asperiores, at consectetur dolorem explicabo minus modi nam nesciunt non obcaecati omnis pariatur perferendis quae qui saepe, voluptate, voluptatem! Assumenda cum ea iure numquam similique! Enim fugit nisi sapiente? Accusantium blanditiis consequuntur eligendi et iusto nemo nihil placeat quidem recusandae sed, temporibus voluptates? Ab accusamus aspernatur assumenda, dolor eos est laudantium nostrum nulla quod ratione, sed sit voluptas, voluptates.Earum, itaque, perspiciatis. Accusamus assumenda at atque consectetur culpa dignissimos eaque, eius eveniet expedita facere illum in iste minima minus odit porro quam, quod reiciendis rem reprehenderit ut vel, vero.</p>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+{#</div>#}
+
 
 <div class="row">
 
