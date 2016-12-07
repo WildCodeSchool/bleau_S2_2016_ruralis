@@ -4,11 +4,18 @@
 
 </header>
 
-<body>
+<body xmlns="http://www.w3.org/1999/html">
 
 {#      CARD DE UNE      #}
 
-    {% for article in articles %}
+    {% set is_row = false %}
+    {% for index, article in articles %}
+        {% if article.typeAffichage != '2' and is_row %}
+            </div>
+            <p>fin de row</p>
+            {% set is_row = false %}
+        {% endif %}
+
         {% if article.typeAffichage == '1' %}
             <div class="row">
                 <div class="card large col offset-l1 l10 offset-m1 m10 s12 hoverable">
@@ -37,98 +44,108 @@
 
 {#      CARDS BLOG      #}
 
-        <div class="row">
-        {% elseif article.typeAffichage == '2' %}
-            {# First card #}
-            <div class="col offset-l1 l4 offset-m1 m5 s12 hoverable">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title activator grey-text text-darken-4">
-                            {{ article.nom }}
-                            <i class="material-icons right">more_vert</i>
+            {% elseif article.typeAffichage == '2'%}
+                {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
+                    <div class="row red">
+                    {% set is_row = true %}
+                {%  endif %}
+                    <div class="card large col offset-l1 l4 offset-m1 m10 s12 hoverable">
+                        {# First card #}
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title activator grey-text text-darken-4">
+                                    {{ article.nom }}
+                                    <i class="material-icons right">more_vert</i>
+                                </div>
+                                <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
+                            </div>
+                            {#    Information about the article 1 revealed once clicked on      #}
+                            <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
+                                <div class="row card-title grey-text text-darken-4">
+                                   {{ article.contenu }}
+                                </div>
+                             </div>
                         </div>
-                        <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
                     </div>
-                    {#    Information about the article 1 revealed once clicked on      #}
-                    <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
-                        <div class="row card-title grey-text text-darken-4">
-                           {{ article.contenu }}
-                        </div>
 
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
+
             {% elseif article.typeAffichage == '3' %}
                 {# Second card #}
-                <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
-                    <h4 class="header">
-                        {{ article.nom }}
-                    </h4>
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>{{ article.descriptif}}</p>
+                <div class="row">
+                    <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
+                        <h4 class="header">
+                            {{ article.nom }}
+                        </h4>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                             </div>
-                            <div class="card-action">
-                                <a href="{{ path('article_index') }}" class="cardLink">Pour en savoir plus abonnez-vous</a>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{ article.descriptif}}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="{{ path('article_index') }}" class="cardLink">Pour en savoir plus abonnez-vous</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        <div class="row">
+
             {% elseif article.typeAffichage == '4' %}
                 {# Third card #}
-                <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
-                    <h4 class="header">
-                        {{ article.nom  }}
-                    </h4>
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>{{ article.contenu }}</p>
+                <div class="row">
+                    <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
+                        <h4 class="header">
+                            {{ article.nom  }}
+                        </h4>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{ article.contenu }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        <div class="row">
+
             {% elseif article.typeAffichage == '5' %}
                 {# fourth card #}
-                <div class="col offset-l3 l8 offset-m1 m5 s12 hoverable">
-                    <h4 class="header">
-                        {{ article.nom  }}
-                    </h4>
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>{{ article.descriptif }}</p>
+                <div class="row">
+                    <div class="col offset-l3 l8 offset-m1 m5 s12 hoverable">
+                        <h4 class="header">
+                            {{ article.nom  }}
+                        </h4>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                             </div>
-                            <div class="card-action">
-                                <a href="{{ path('article_index') }}" class="cardLink">Lire l'article complet</a>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{ article.descriptif }}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="{{ path('article_index') }}" class="cardLink">Lire l'article complet</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
         {%  endif %}
     {% endfor %}
+    {% if is_row %}
+        </div>
+        {% set is_row = false %}
+    {% endif %}
 
 {% endblock %}
