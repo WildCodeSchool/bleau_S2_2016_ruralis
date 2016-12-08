@@ -25,10 +25,10 @@
                 <th>Auteur</th>
                 <td>{{ article.auteur }}</td>
             </tr>
-{#            <tr>
+            <tr>
                 <th>Date</th>
-                <td>{% if article.date %}{{ article.date|date('Y-m-d') }}{% endif %}</td>
-            </tr>#}
+                <td>{{ article.date }}</td>
+            </tr>
             <tr>
                 <th>Image</th>
                 <td><img src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>

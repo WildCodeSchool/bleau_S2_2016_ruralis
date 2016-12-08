@@ -16,16 +16,7 @@
         </div>
 
         <div>
-            <div class="input-field col s12">
-                <label>
-                    {{ form_label(edit_form.typeAffichage) }}
-                </label>
-                {#<select>#}
-                    {#<option value="" disabled selected>Choisissez le type d'affichage</option>#}
-                    {#<option value="1">Petite image</option>#}
-                    {#<option value="2">Grande image</option>#}
-                {#</select>#}
-            </div>
+            {{ form_label(edit_form.typeAffichage) }}
             {{ form_errors(edit_form.typeAffichage) }}
             {{ form_widget(edit_form.typeAffichage) }}
         </div>
@@ -52,7 +43,6 @@
             {{ form_label(edit_form.date) }}
             {{ form_errors(edit_form.date) }}
             {{ form_widget(edit_form.date) }}
-
         </div>
 
         <div class="row file-field input-field">

@@ -20,7 +20,8 @@ RuralisBundle\Entity\Article:
             type: string
             length: 255
         date:
-            type: date
+            type: string
+            length: 255
             nullable: true
         typeAffichage:
             type: string
