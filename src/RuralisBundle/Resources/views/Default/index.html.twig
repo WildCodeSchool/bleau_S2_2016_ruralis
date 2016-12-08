@@ -12,13 +12,12 @@
     {% for index, article in articles %}
         {% if article.typeAffichage != '2' and is_row %}
             </div>
-            <p>fin de row</p>
             {% set is_row = false %}
         {% endif %}
 
         {% if article.typeAffichage == '1' %}
             <div class="row">
-                <div class="card large col offset-l1 l10 offset-m1 m10 s12 hoverable">
+                <div class="card large col offset-l3 l9 offset-m1 m10 s12 hoverable la_une">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                     </div>
@@ -46,10 +45,10 @@
 
             {% elseif article.typeAffichage == '2'%}
                 {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
-                    <div class="row red">
+                    <div class="row">
                     {% set is_row = true %}
                 {%  endif %}
-                    <div class="card large col offset-l1 l4 offset-m1 m10 s12 hoverable">
+                    <div class="card large col offset-l3 l3 offset-m1 m10 s12 hoverable">
                         {# First card #}
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">

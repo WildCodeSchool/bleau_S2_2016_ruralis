@@ -513,13 +513,17 @@ footer .col {
   width: 100%;
 }
 
-/* line 468, ../sass/_general.scss */
+/*
+select {
+  display : block !important;
+}*/
+/* line 3, ../sass/_blog.scss */
 .card.large {
   height: 33.3333333333%;
   width: 33.3333333333%;
 }
 
-/*
-select {
-  display : block !important;
-}*/
+/* line 8, ../sass/_blog.scss */
+.la_une {
+  margin-top: 40px;
+}
