@@ -10,6 +10,7 @@
 .lecteur, .donateur, .ambassadeur, .cadeau {
   border-style:solid;
   border-width:2px;
+  margin:auto;
 }
 
 .lecteur{
@@ -17,10 +18,14 @@
 }
 
 .lecteur2{
-  display: flex;
   border-style:solid;
   border-width:2px;
   height:120px;
+}
+
+.lecteur2 img, .donateur3 img{
+  width:5%;
+  height:5%;
 }
 
 .cadeau{
@@ -33,11 +38,6 @@
   border-width:2px;
   height:80px;
   margin-top:40px;
-}
-
-.don button{
-  margin-bottom:20px;
-  margin-top:20px;
 }
 
 .donateur{
@@ -59,8 +59,13 @@
   display:flex;
   border-style:solid;
   border-width:2px;
-  height:160px;
-  margin-top:100px;
+  height:140px;
+  margin-top:40px;
   margin-bottom:40px;
-  margin-left: 16.1rem !important;
+}
+
+.hoverable a, .hoverable, .lecteur2 a{
+  border-color: black;
+  color:white !important;
+  text-align:center !important;
 }
