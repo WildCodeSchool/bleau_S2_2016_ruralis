@@ -517,6 +517,92 @@ footer .col {
 select {
   display : block !important;
 }*/
+<<<<<<< HEAD
+/* line 1, ../sass/_abonnement.scss */
+.row .col {
+  padding: 0;
+}
+
+/* line 5, ../sass/_abonnement.scss */
+.lecteur img, .donateur img, .ambassadeur2 img {
+  width: 150px;
+  height: 150px;
+}
+
+/* line 10, ../sass/_abonnement.scss */
+.lecteur, .donateur, .ambassadeur, .cadeau {
+  border-style: solid;
+  border-width: 2px;
+  margin: auto;
+}
+
+/* line 16, ../sass/_abonnement.scss */
+.lecteur {
+  background-color: #00b82b;
+}
+
+/* line 20, ../sass/_abonnement.scss */
+.lecteur2 {
+  border-style: solid;
+  border-width: 2px;
+  height: 120px;
+}
+
+/* line 26, ../sass/_abonnement.scss */
+.lecteur2 img, .donateur3 img {
+  width: 5%;
+  height: 5%;
+}
+
+/* line 31, ../sass/_abonnement.scss */
+.cadeau {
+  padding: 40px;
+}
+
+/* line 35, ../sass/_abonnement.scss */
+.don {
+  display: flex;
+  border-style: solid;
+  border-width: 2px;
+  height: 80px;
+  margin-top: 40px;
+}
+
+/* line 43, ../sass/_abonnement.scss */
+.donateur {
+  background-color: #efff00;
+}
+
+/* line 47, ../sass/_abonnement.scss */
+.donateur2, .donateur3 {
+  display: flex;
+  border-style: solid;
+  border-width: 2px;
+  height: 200px;
+}
+
+/* line 54, ../sass/_abonnement.scss */
+.ambassadeur {
+  background-color: #ef5e00;
+}
+
+/* line 58, ../sass/_abonnement.scss */
+.ambassadeur3 {
+  display: flex;
+  border-style: solid;
+  border-width: 2px;
+  height: 140px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 67, ../sass/_abonnement.scss */
+.hoverable a, .hoverable, .lecteur2 a {
+  border-color: black;
+  color: white !important;
+  text-align: center !important;
+}
+=======
 /* line 3, ../sass/_blog.scss */
 .card.large {
   height: 33.3333333333%;
@@ -527,3 +613,4 @@ select {
 .la_une {
   margin-top: 40px;
 }
+>>>>>>> d446ddbe0315cad0e8e3253a1fbf53e419b18593
