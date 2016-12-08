@@ -4,214 +4,147 @@
 
 </header>
 
-<body>
+<body xmlns="http://www.w3.org/1999/html">
 
 {#      CARD DE UNE      #}
 
-    {% for article in articles %}
-        {% if article.typeAffichage == '1' %}
-<div class="row">
-    <div class="card large col offset-l1 l10 offset-m1 m10 s12 hoverable">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-        </div>
+    {% set is_row = false %}
+    {% for index, article in articles %}
+        {% if article.typeAffichage != '2' and is_row %}
+            </div>
+            {% set is_row = false %}
+        {% endif %}
 
-        <div class="card-content">
-            <div class="card-title activator grey-text text-darken-4">
-                {{ article.nom }}
-                <i class="material-icons right">more_vert</i>
+        {% if article.typeAffichage == '1' %}
+            <div class="row">
+                <div class="card large col offset-l3 l9 offset-m1 m10 s12 hoverable la_une">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-title activator grey-text text-darken-4">
+                            {{ article.nom }}
+                            <i class="material-icons right">more_vert</i>
+                        </div>
+                        <p><a href="#" class="cardLink">Lien vers la Une</a></p>
+                    </div>
+                    {#    Information about the News revealed once clicked on      #}
+                    <div class="card-reveal">
+                        <div class="card-title grey-text text-darken-4">{{ article.nom }}
+                            <i class="material-icons right">close</i>
+                        </div>
+                        <p>
+                            {{ article.contenu }}
+                        </p>
+                    </div>
+                </div>
             </div>
-            <p><a href="#" class="cardLink">Lien vers la Une</a></p>
-        </div>
-        {#    Information about the News revealed once clicked on      #}
-        <div class="card-reveal">
-            <div class="card-title grey-text text-darken-4">{{ article.nom }}
-                <i class="material-icons right">close</i>
-            </div>
-            <p>
-                {{ article.contenu }}
-            </p>
-        </div>
-    </div>
-</div>
 
 {#      CARDS BLOG      #}
 
-                {% elseif article.typeAffichage == '2' %}
-<div class="row">
-    {# First card #}
-    <div class="col offset-l1 l4 offset-m1 m5 s12 hoverable">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-            </div>
-            <div class="card-content">
-                <div class="card-title activator grey-text text-darken-4">
-                    {{ article.nom }}
-                    <i class="material-icons right">more_vert</i>
-                </div>
-                <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
-            </div>
-            {#    Information about the article 1 revealed once clicked on      #}
-            <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
-                <div class="row card-title grey-text text-darken-4">
-                   {{ article.contenu }}
+            {% elseif article.typeAffichage == '2'%}
+                {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
+                    <div class="row">
+                    {% set is_row = true %}
+                {%  endif %}
+                    <div class="card large col offset-l3 l3 offset-m1 m10 s12 hoverable">
+                        {# First card #}
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title activator grey-text text-darken-4">
+                                    {{ article.nom }}
+                                    <i class="material-icons right">more_vert</i>
+                                </div>
+                                <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
+                            </div>
+                            {#    Information about the article 1 revealed once clicked on      #}
+                            <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
+                                <div class="row card-title grey-text text-darken-4">
+                                   {{ article.contenu }}
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+
+
+
+            {% elseif article.typeAffichage == '3' %}
+                {# Second card #}
+                <div class="row">
+                    <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
+                        <h4 class="header">
+                            {{ article.nom }}
+                        </h4>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{ article.descriptif}}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="{{ path('article_index') }}" class="cardLink">Pour en savoir plus abonnez-vous</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
+
+            {% elseif article.typeAffichage == '4' %}
+                {# Third card #}
+                <div class="row">
+                    <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
+                        <h4 class="header">
+                            {{ article.nom  }}
+                        </h4>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{ article.contenu }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            {% elseif article.typeAffichage == '5' %}
+                {# fourth card #}
+                <div class="row">
+                    <div class="col offset-l3 l8 offset-m1 m5 s12 hoverable">
+                        <h4 class="header">
+                            {{ article.nom  }}
+                        </h4>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img width=20% src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{ article.descriptif }}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="{{ path('article_index') }}" class="cardLink">Lire l'article complet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        {%  endif %}
+    {% endfor %}
+    {% if is_row %}
         </div>
-    </div>
-{%  endif %}
-        {% endfor %}
-
-    {# Second card #}
-    {#<div class="col offset-l2 l4 m5 s12 hoverable">#}
-        {#<div class="card">#}
-            {#<div class="card-image waves-effect waves-block waves-light">#}
-                {#<img class="activator" src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">#}
-            {#</div>#}
-            {#<div class="card-content">#}
-                {#<div class="card-title activator grey-text text-darken-4">#}
-                    {#Article 2#}
-                    {#<i class="material-icons right">more_vert</i>#}
-                {#</div>#}
-                {#<p><a href="#" class="cardLink">Lien vers article 2</a></p>#}
-            {#</div>#}
-            {#    Information about the article 2 revealed once clicked on      #}
-            {#<div class="card-reveal">#}
-                {#<div class="card-title grey-text text-darken-4">#}
-                    {#Article 2#}
-                    {#<i class="material-icons right">close</i>#}
-                {#</div>#}
-                {#<p>Here is some more information about the article 1 that is only revealed once clicked on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi, porro quae soluta tempore unde!</p>#}
-                {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates? Ad asperiores at consectetur consequuntur corporis minima nobis nulla officia sint tempore! Facere, nemo. Animi asperiores, at consectetur dolorem explicabo minus modi nam nesciunt non obcaecati omnis pariatur perferendis quae qui saepe, voluptate, voluptatem! Assumenda cum ea iure numquam similique! Enim fugit nisi sapiente? Accusantium blanditiis consequuntur eligendi et iusto nemo nihil placeat quidem recusandae sed, temporibus voluptates? Ab accusamus aspernatur assumenda, dolor eos est laudantium nostrum nulla quod ratione, sed sit voluptas, voluptates.Earum, itaque, perspiciatis. Accusamus assumenda at atque consectetur culpa dignissimos eaque, eius eveniet expedita facere illum in iste minima minus odit porro quam, quod reiciendis rem reprehenderit ut vel, vero.</p>#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}
-{#</div>#}
-
-
-<div class="row">
-
-    {# Third card #}
-    <div class="col offset-l1 l4 offset-m1 m5 s12 hoverable">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}">
-                <div class="card-title">
-                    Article 3
-                </div>
-            </div>
-
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates? Ad asperiores at consectetur consequuntur corporis minima nobis nulla officia sint tempore! Facere, nemo.</p>
-            </div>
-
-            <div class="card-action">
-               <a href="#" class="cardLink">Lien vers l'article 3</a>
-            </div>
-        </div>
-    </div>
-
-    {# Fourth card #}
-    <div class="col offset-l2 l4 m5 s12 hoverable">
-        <div class="card">
-            <div class="card-image">
-                <img class="activator" src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">
-                <div class="card-title">
-                    Article 4
-                </div>
-            </div>
-
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut corporis ipsa iure magni maiores possimus quod sapiente vel, vitae. Ab animi aspernatur delectus eveniet inventore iure, magnam quasi qui? Aliquam doloribus explicabo illum, ipsa, magnam neque optio pariatur quas quo ratione sed tenetur ullam voluptates?/p>
-            </div>
-
-            <div class="card-action">
-                <a href="#" class="cardLink">Lien vers l'article 4</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-
-    {# Fifth card #}
-    <div class="col offset-l1 l5 offset-m1 m5 s12 hoverable">
-        <h4 class="header">Article 5</h4>
-        <div class="card horizontal">
-            <div class="card-image">
-                <img src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}">
-            </div>
-            <div class="card-stacked">
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#" class="cardLink">Lien vers l'article 5</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {# Sixth card #}
-    <div class="col l5 m5 s12 hoverable">
-        <h4 class="header">Article 6</h4>
-        <div class="card horizontal">
-            <div class="card-image">
-                <img src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}">
-            </div>
-            <div class="card-stacked">
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#" class="cardLink">Lien vers l'article 6</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-
-    {# Seventh Card #}
-    <div class="col offset-l1 l5 offset-m1 m5 s12 hoverable">
-        <div class="card darken-3">
-            <div class="card-content dark-text">
-                <div class="card-title">
-                    Article 7
-                </div>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aliquid aspernatur aut commodi cum ducimus et harum hic impedit itaque laudantium nesciunt, quo repellat sequi soluta temporibus ut voluptas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur culpa cumque illo, in iure laboriosam minima neque obcaecati officia sapiente sint vel! Deserunt distinctio eveniet, in quia quibusdam voluptate.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="cardLink">Lien vers l'article 7</a>
-            </div>
-        </div>
-    </div>
-
-    {# Eighth Card #}
-    <div class="col l5 m5 s12 hoverable">
-        <div class="card darken-3">
-            <div class="card-content dark-text">
-                <div class="card-title">
-                    Article 8
-                </div>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aliquid aspernatur aut commodi cum ducimus et harum hic impedit itaque laudantium nesciunt, quo repellat sequi soluta temporibus ut voluptas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur culpa cumque illo, in iure laboriosam minima neque obcaecati officia sapiente sint vel! Deserunt distinctio eveniet, in quia quibusdam voluptate.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="cardLink">Lien vers l'article 8</a>
-            </div>
-        </div>
-    </div>
-</div>
+        {% set is_row = false %}
+    {% endif %}
 
 {% endblock %}
