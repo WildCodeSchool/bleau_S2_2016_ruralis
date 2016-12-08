@@ -517,6 +517,7 @@ footer .col {
 select {
   display : block !important;
 }*/
+<<<<<<< HEAD
 /* line 1, ../sass/_abonnement.scss */
 .row .col {
   padding: 0;
@@ -601,3 +602,15 @@ select {
   color: white !important;
   text-align: center !important;
 }
+=======
+/* line 3, ../sass/_blog.scss */
+.card.large {
+  height: 33.3333333333%;
+  width: 33.3333333333%;
+}
+
+/* line 8, ../sass/_blog.scss */
+.la_une {
+  margin-top: 40px;
+}
+>>>>>>> d446ddbe0315cad0e8e3253a1fbf53e419b18593

@@ -1,21 +1,103 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Article edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+</header>
+    <div class="row">
+        <div class="col m8 offset-m2">
+            <h1>Editer {{ article.nom }}</h1>
 
-    <ul>
-        <li>
-            <a href="{{ path('article_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        {{ form_start(edit_form) }}
+
+        <div>
+            {{ form_label(edit_form.nom) }}
+            {{ form_errors(edit_form.nom) }}
+            {{ form_widget(edit_form.nom) }}
+        </div>
+
+        <div>
+            <div class="input-field col s12">
+                <label>
+                    {{ form_label(edit_form.typeAffichage) }}
+                </label>
+                {#<select>#}
+                    {#<option value="" disabled selected>Choisissez le type d'affichage</option>#}
+                    {#<option value="1">Petite image</option>#}
+                    {#<option value="2">Grande image</option>#}
+                {#</select>#}
+            </div>
+            {{ form_errors(edit_form.typeAffichage) }}
+            {{ form_widget(edit_form.typeAffichage) }}
+        </div>
+
+        <div>
+            {{ form_label(edit_form.descriptif) }}
+            {{ form_errors(edit_form.descriptif) }}
+            {{ form_widget(edit_form.descriptif) }}
+        </div>
+
+        <div>
+            {{ form_label(edit_form.contenu) }}
+            {{ form_errors(edit_form.contenu) }}
+            {{ form_widget(edit_form.contenu) }}
+        </div>
+
+        <div>
+            {{ form_label(edit_form.auteur) }}
+            {{ form_errors(edit_form.auteur) }}
+            {{ form_widget(edit_form.auteur) }}
+        </div>
+
+        <div>
+            {{ form_label(edit_form.date) }}
+            {{ form_errors(edit_form.date) }}
+            {{ form_widget(edit_form.date) }}
+
+        </div>
+
+        <div class="row file-field input-field">
+            <div class="btn">
+                <div>Image</div>
+                {{ form_widget(edit_form.image.file) }}
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Cliquez pour ajouter votre image" required>
+            </div>
+            {{ form_errors(edit_form.image.file) }}
+        </div>
+
+        <div class="row input-field">
+            {{ form_label(edit_form.image.alt) }}
+            {{ form_widget(edit_form.image.alt) }}
+            {{ form_errors(edit_form.image.alt) }}
+        </div>
+
+        <input type="submit" value="Modifier l'article" />
+
+        {{ form_end(edit_form) }}
+    </div>
+</div>
+
+<ul>
+    <li>
+        <a href="{{ path('article_index') }}">Liste des articles</a>
+    </li>
+</ul>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $('.datepicker').pickadate({
+//            selectMonths: true, // Creates a dropdown to control month
+//            selectYears: 15 // Creates a dropdown of 15 years to control year
+            format: 'dd mmmm yyyy',
+            formatSubmit: 'mm/dd/yyyy'
+        });
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}
+
+
