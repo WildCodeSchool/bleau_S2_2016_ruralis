@@ -14,7 +14,7 @@
 }
 
 .lecteur{
-  background-color: rgb(0,184,43);
+  background-color: rgba(0, 184, 43, 0.62);
 }
 
 .lecteur2{
@@ -33,7 +33,6 @@
 }
 
 .don{
-  display: flex;
   border-style:solid;
   border-width:2px;
   height:80px;
@@ -41,22 +40,20 @@
 }
 
 .donateur{
-  background-color: rgb(239,255,0);
+  background-color: rgba(239, 255, 0, 0.59);
 }
 
 .donateur2, .donateur3{
-  display:flex;
   border-style:solid;
   border-width:2px;
   height:200px;
 }
 
 .ambassadeur{
-  background-color:rgb(239,94,0);
+  background-color: rgba(239, 94, 0, 0.75);
 }
 
 .ambassadeur3{
-  display:flex;
   border-style:solid;
   border-width:2px;
   height:140px;
@@ -66,6 +63,5 @@
 
 .hoverable a, .hoverable, .lecteur2 a{
   border-color: black;
-  color:white !important;
-  text-align:center !important;
+  color: rgba(1, 0, 1, 0.55);
 }
