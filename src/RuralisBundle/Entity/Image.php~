@@ -88,6 +88,7 @@ class Image
 
     /*---------------GENERATED CODE---------------------*/
 
+
     /**
      * @var integer
      */

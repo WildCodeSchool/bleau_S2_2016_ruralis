@@ -35,6 +35,7 @@ class ArticleController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $article->setDate(new \DateTime());
             $em->persist($article);
             $em->flush();
             return $this->redirectToRoute('article_index');

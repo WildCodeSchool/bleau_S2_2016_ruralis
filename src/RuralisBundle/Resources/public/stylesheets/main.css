@@ -517,7 +517,6 @@ footer .col {
 select {
   display : block !important;
 }*/
-<<<<<<< HEAD
 /* line 1, ../sass/_abonnement.scss */
 .row .col {
   padding: 0;
@@ -599,10 +598,10 @@ select {
 /* line 67, ../sass/_abonnement.scss */
 .hoverable a, .hoverable, .lecteur2 a {
   border-color: black;
-  color: white !important;
+  color: white;
   text-align: center !important;
 }
-=======
+
 /* line 3, ../sass/_blog.scss */
 .card.large {
   height: 33.3333333333%;
@@ -613,4 +612,13 @@ select {
 .la_une {
   margin-top: 40px;
 }
->>>>>>> d446ddbe0315cad0e8e3253a1fbf53e419b18593
+
+/* line 12, ../sass/_blog.scss */
+h4, .card-content {
+  color: black;
+}
+
+/* line 16, ../sass/_blog.scss */
+a.cardLink {
+  color: #ffd8a6;
+}
