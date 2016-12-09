@@ -31,17 +31,6 @@ class ArticleType extends AbstractType
             ->add('descriptif')
             ->add('contenu')
             ->add('auteur')
-            ->add('date'
-
-                /*, DateType::class, array(
-                    'widget' => 'single_text',
-/*                    'format' => 'dd/MM/yyyy',*/
-
-                    /*'attr' => array(
-                        'class' => 'datepicker'
-                    )
-                ) */
-            )
             ->add('image', ImageType::class)
            ;
     }

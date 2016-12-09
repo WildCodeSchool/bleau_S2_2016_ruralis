@@ -7,16 +7,10 @@ namespace RuralisBundle\Entity;
  */
 class Article
 {
-/*    public function __toString()
-    {
-        return $this->getDate();
-    }
 
-*/
 
     /* ----------------------------------GENERATED CODE------------------------------------ */
-
-  
+    
     /**
      * @var integer
      */
@@ -43,7 +37,7 @@ class Article
     private $auteur;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     private $date;
 
@@ -167,7 +161,7 @@ class Article
     /**
      * Set date
      *
-     * @param string $date
+     * @param \DateTime $date
      *
      * @return Article
      */
@@ -181,7 +175,7 @@ class Article
     /**
      * Get date
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDate()
     {

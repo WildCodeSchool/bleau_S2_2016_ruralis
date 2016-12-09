@@ -33,9 +33,9 @@ class ArticleController extends Controller
         $article = new Article();
         $form = $this->createForm('RuralisBundle\Form\ArticleType', $article);
         $form->handleRequest($request);
-        var_dump($article);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $article->setDate(new \DateTime());
             $em->persist($article);
             $em->flush();
             return $this->redirectToRoute('article_index');

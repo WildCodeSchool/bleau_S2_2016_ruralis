@@ -7,14 +7,13 @@ namespace RuralisBundle\Entity;
  */
 class Article
 {
-    public function __toString()
+/*    public function __toString()
     {
         return $this->getDate();
     }
 
-
+*/
 
     /* ----------------------------------GENERATED CODE------------------------------------ */
-
-  
+    
 }

@@ -617,3 +617,8 @@ select {
 h4, .card-content {
   color: black;
 }
+
+/* line 16, ../sass/_blog.scss */
+a.cardLink {
+  color: #ffd8a6;
+}

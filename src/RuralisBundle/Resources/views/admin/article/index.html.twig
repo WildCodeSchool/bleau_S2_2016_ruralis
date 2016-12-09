@@ -26,7 +26,7 @@
                     <td>{{ article.descriptif }}</td>
                     <td>{{ article.contenu }}</td>
                     <td>{{ article.auteur }}</td>
-                    <td>{{ article.date }}</td>
+                    <td>{{ article.date|date('d M Y') }}</td>
                     <td><img width="30%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
                     <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
                     <td><a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a></td>
