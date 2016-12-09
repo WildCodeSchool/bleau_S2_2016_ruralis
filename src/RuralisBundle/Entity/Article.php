@@ -8,6 +8,9 @@ namespace RuralisBundle\Entity;
 class Article
 {
 
+
+    /* ----------------------------------GENERATED CODE------------------------------------ */
+    
     /**
      * @var integer
      */

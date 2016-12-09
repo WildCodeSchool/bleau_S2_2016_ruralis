@@ -595,6 +595,13 @@ select {
   margin-bottom: 20px;
 }
 
+/* line 81, ../sass/_abonnement.scss */
+.hoverable a, .hoverable, .lecteur2 a {
+  border-color: black;
+  color: white;
+  text-align: center !important;
+}
+
 /* line 3, ../sass/_blog.scss */
 .card.large {
   height: 33.3333333333%;
@@ -604,4 +611,14 @@ select {
 /* line 8, ../sass/_blog.scss */
 .la_une {
   margin-top: 40px;
+}
+
+/* line 12, ../sass/_blog.scss */
+h4, .card-content {
+  color: black;
+}
+
+/* line 16, ../sass/_blog.scss */
+a.cardLink {
+  color: #ffd8a6;
 }
