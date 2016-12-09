@@ -1,0 +1,3 @@
+ruralis:
+    resource: "@RuralisBundle/Resources/config/routing.yml"
+    prefix:   /

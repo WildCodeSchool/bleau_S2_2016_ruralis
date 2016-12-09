@@ -1,0 +1,19 @@
+<?php
+
+namespace RuralisBundle\Entity;
+
+/**
+ * Article
+ */
+class Article
+{
+/*    public function __toString()
+    {
+        return $this->getDate();
+    }
+
+*/
+
+    /* ----------------------------------GENERATED CODE------------------------------------ */
+    
+}
