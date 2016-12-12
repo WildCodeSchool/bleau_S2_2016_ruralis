@@ -52,4 +52,5 @@
                 $("#animation").attr("src", "bundles/ruralis/images/logoarbre15.png");
             }
         });
+        $(".button-collapse").sideNav();
     });
