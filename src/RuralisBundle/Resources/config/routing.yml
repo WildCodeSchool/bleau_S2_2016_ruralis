@@ -3,8 +3,8 @@ ruralis_article:
     prefix:   /admin/article
 
 ruralis_homepage:
-    path:     /{page}
-    defaults: { _controller: RuralisBundle:Default:index, page: 1 } }
+    path:     /
+    defaults: { _controller: RuralisBundle:Default:index, page:1 }
 
 ruralis_presentation:
     path:     /ruralis

@@ -5,7 +5,7 @@ namespace RuralisBundle\Controller;
 use RuralisBundle\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use RuralisBundle\Form\ArticleType;
+
 /**
  * Article controller.
  *
@@ -25,6 +25,7 @@ class ArticleController extends Controller
             'articles' => $articles,
         ));
     }
+
     /**
      * Creates a new article entity.
      *

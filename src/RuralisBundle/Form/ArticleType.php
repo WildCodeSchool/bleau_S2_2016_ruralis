@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
@@ -29,7 +30,10 @@ class ArticleType extends AbstractType
             ))
             ->add('nom')
             ->add('descriptif')
-            ->add('contenu')
+            ->add('contenu', CKEditorType::class, array(
+                'config' => array(
+                    'config_name' => 'my_config',
+                    'uiColor' => '#ffffff')))
             ->add('auteur')
             ->add('image', ImageType::class)
            ;

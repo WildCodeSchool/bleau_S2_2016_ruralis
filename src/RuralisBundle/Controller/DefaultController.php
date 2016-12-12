@@ -2,16 +2,27 @@
 
 namespace RuralisBundle\Controller;
 
+use RuralisBundle\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $articles = $em->getRepository('RuralisBundle:Article')->findAll();
+        $dql = "SELECT a FROM RuralisBundle:Article a";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1),
+            10);
+        /*limit per page*/
+
         return $this->render('RuralisBundle:Default:index.html.twig', array(
-            'articles' => $articles,
+            'articles' => $pagination,
         ));
     }
 }
