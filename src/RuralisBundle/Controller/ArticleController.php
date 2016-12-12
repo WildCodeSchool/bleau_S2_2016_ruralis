@@ -19,7 +19,8 @@ class ArticleController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $articles = $em->getRepository('RuralisBundle:Article')->findAll();
+        $articles = $em->getRepository('RuralisBundle:Article')->findBy(array(),array('date' => 'DESC'));
+
         return $this->render('@Ruralis/admin/article/index.html.twig', array(
             'articles' => $articles,
         ));

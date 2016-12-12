@@ -17,9 +17,14 @@ a.cardLink{
   color:#ffd8a6;
 }
 
-.fixed {
+.fixed .row{
   position:fixed;
-  top:50%;
-width:120px;
+  top:40%;
+  width:120px;
   color:red;
+  margin-left:40px;
+}
+
+.fixed div img{
+  width:40px;
 }

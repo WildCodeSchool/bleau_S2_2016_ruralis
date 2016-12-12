@@ -624,9 +624,15 @@ a.cardLink {
 }
 
 /* line 20, ../sass/_blog.scss */
-.fixed {
+.fixed .row {
   position: fixed;
-  top: 50%;
+  top: 40%;
   width: 120px;
   color: red;
+  margin-left: 40px;
+}
+
+/* line 28, ../sass/_blog.scss */
+.fixed div img {
+  width: 40px;
 }
