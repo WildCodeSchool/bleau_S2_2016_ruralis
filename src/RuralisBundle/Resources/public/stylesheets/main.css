@@ -622,3 +622,11 @@ h4, .card-content {
 a.cardLink {
   color: #ffd8a6;
 }
+
+/* line 20, ../sass/_blog.scss */
+.fixed {
+  position: fixed;
+  top: 50%;
+  width: 120px;
+  color: red;
+}
