@@ -8,27 +8,27 @@
         <h1>Nouvel article</h1>
 
         {{ form_start(form) }}
-        <div>
+        <div class="row input-field">
             {{ form_label(form.nom) }}
             {{ form_errors(form.nom) }}
             {{ form_widget(form.nom) }}
         </div>
-        <div>
+        <div class="row left-align">
             {{ form_label(form.typeAffichage) }}
             {{ form_widget(form.typeAffichage) }}
             {{ form_errors(form.typeAffichage) }}
         </div>
-        <div>
+        <div class="row input-field">
             {{ form_label(form.descriptif) }}
             {{ form_errors(form.descriptif) }}
             {{ form_widget(form.descriptif) }}
         </div>
-        <div>
+        <div class="row input-field">
             {{ form_label(form.contenu) }}
             {{ form_errors(form.contenu) }}
             {{ form_widget(form.contenu) }}
         </div>
-        <div>
+        <div class="row input-field">
             {{ form_label(form.auteur) }}
             {{ form_errors(form.auteur) }}
             {{ form_widget(form.auteur) }}
@@ -49,13 +49,24 @@
             {{ form_widget(form.image.alt) }}
             {{ form_errors(form.image.alt) }}
         </div>
-       <input type="submit" value="Ajouter un article" />
+
+        <div class="row boutons article">
+            <div class="col m4">
+                <input type="submit" value="Ajouter un article" />
+            </div>
+        </div>
         {{ form_end(form) }}
+            <div class="col offset-m2 m4">
+                <a href="{{ path('article_index') }}">
+                    <input type="submit" value="Liste des articles" />
+                </a>
+            </div>
     </div>
 </div>
-    <ul>
-        <li>
-            <a href="{{ path('article_index') }}">Liste des articles</a>
-        </li>
-    </ul>
+
+    {#<ul>#}
+        {#<li>#}
+
+        {#</li>#}
+    {#</ul>#}
 {% endblock %}

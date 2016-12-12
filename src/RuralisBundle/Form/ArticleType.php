@@ -18,7 +18,7 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('typeAffichage', ChoiceType::class, array (
-                'placeholder' => "Type d'affichage",
+                'placeholder' => "",
                 'choices' => array (
                     '1' => 'Une',
                     '2' => 'Carré',
