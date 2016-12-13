@@ -2,3 +2,52 @@
 select {
   display : block !important;
 }*/
+.nouvel_article{
+  color:#00B82B;
+}
+
+.btn{
+  background-color: #00B82B;
+}
+
+.btn:hover{
+  background-color: #47d9bc;
+}
+
+.adminmodel {
+  max-width: 90%;
+  background-color: rgba(117, 207, 80, 0.75);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.container .row {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
+input[type="text"] {
+  border-bottom-color: white;
+}
+
+.input-field label {
+  color: white;
+  left: 4px;
+}
+
+label{
+  color:white;
+}
+
+.select-wrapper input.select-dropdown{
+  border-bottom-color:white;
+}
+
+.select-dropdown{
+  color: #00B82B;
+}
+
+.file-path {
+  color:white;
+}
