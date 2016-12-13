@@ -4,7 +4,7 @@ ruralis_article:
 
 ruralis_homepage:
     path:     /
-    defaults: { _controller: RuralisBundle:Default:index }
+    defaults: { _controller: RuralisBundle:Default:index, page:1 }
 
 ruralis_presentation:
     path:     /ruralis

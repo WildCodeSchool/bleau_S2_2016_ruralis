@@ -569,30 +569,56 @@ select {
 }
 
 /* line 3, ../sass/_blog.scss */
+.hoverable.header, .hoverable.card {
+  height: 2% !important;
+}
+
+/* line 7, ../sass/_blog.scss */
 .card.large {
   height: 33.3333333333%;
   width: 33.3333333333%;
 }
 
-/* line 8, ../sass/_blog.scss */
+/* line 12, ../sass/_blog.scss */
+.row .col .s12 {
+  width: 95%;
+}
+
+/* line 16, ../sass/_blog.scss */
+.row > .card {
+  height: 20%;
+}
+
+/* line 20, ../sass/_blog.scss */
 .la_une {
   margin-top: 40px;
 }
 
-/* line 12, ../sass/_blog.scss */
+/* line 24, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 16, ../sass/_blog.scss */
+/* line 28, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 20, ../sass/_blog.scss */
-.fixed {
+/* line 32, ../sass/_blog.scss */
+.fixed .row {
   position: fixed;
-  top: 50%;
+  top: 40%;
   width: 120px;
   color: red;
+  margin-left: 40px;
+}
+
+/* line 40, ../sass/_blog.scss */
+.fixed div img {
+  width: 40px;
+}
+
+/* line 44, ../sass/_blog.scss */
+.current a {
+  background-color: rgba(234, 100, 12, 0.8) !important;
 }

@@ -30,7 +30,7 @@
         <div>
             {{ form_label(edit_form.contenu) }}
             {{ form_errors(edit_form.contenu) }}
-            {{ form_widget(edit_form.contenu) }}
+            {{ form_widget(edit_form.contenu|raw) }}
         </div>
 
         <div>
