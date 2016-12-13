@@ -636,3 +636,8 @@ a.cardLink {
 .fixed div img {
   width: 40px;
 }
+
+/* line 32, ../sass/_blog.scss */
+.current {
+  background-color: green !important;
+}
