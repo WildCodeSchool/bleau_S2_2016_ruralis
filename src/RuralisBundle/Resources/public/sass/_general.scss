@@ -55,38 +55,72 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
 /* ----------------------- BARRE DE NAVIGATION ----------------------- */
 /*==================================================================== */
 
-nav {
-  background-color: mediumvioletred;
+.fixed_nav {
+  position: fixed;
+  top: 0%;
+  width: 100%;
 }
-
 header div{
   list-style-type: none;
   //display: inline;
 }
 
+.whitebckg {
+  background-color: rgba(255,255,255,0.75);
+}
 header .row .col {
   //display: flex;
-  width: 100%;
+  //width: 100%;
 }
 header a {
+  color : rgb(234,100,12);
+}
+//
+//.img_header{
+//  width: 100%;
+//}
 
-  color : rgb(234,100,12) !important;
+.orangebckg {
+  background-color: rgb(234,100,12);
+  max-height: 56px;
 }
 
-.img_header{
-  width: 100%;
+.navigation .row .col.offset-s1 {
+  margin-left: 9.333%;
 }
 
-header ul li{
-  //float: left;
-  //display: inline;
+.ruralismag {
+  position: fixed;
+  max-height: 161px;
+  left: 1%;
+  top: -10%;
 }
 
 .nl {
   margin-top: 40px;
 }
 
+.nl button {
+  margin-top: -19px;
+  background-color: rgb(234,100,12);
+}
 
+.nl button:hover {
+  background-color: rgb(255, 132, 54);
+}
+
+.nav_2line {
+  margin-top: -5px;
+}
+
+.navigation .input-field label{
+  color: #ea640c;;
+  top: 1.8rem;
+}
+
+.navigation input[type="email"] {
+  border-bottom: 1px solid #ea640c;
+}
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
@@ -391,15 +425,6 @@ strong{
   margin-left: 30px;
   width: 7%;
   align-self: center;
-}
-
-
-#animation {
-  background-repeat: no-repeat;
-  position : fixed;
-  width: 5%;
-  left: 0.5%;
-  top: -1.5%;
 }
 
 
