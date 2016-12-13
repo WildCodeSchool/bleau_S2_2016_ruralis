@@ -16,13 +16,20 @@ class ArticleController extends Controller
      * Lists all article entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $articles = $em->getRepository('RuralisBundle:Article')->findBy(array(),array('date' => 'DESC'));
+        $dql = "SELECT a FROM RuralisBundle:Article a ORDER BY a.date DESC";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1),
+            10)/*limit per page*/;
 
         return $this->render('@Ruralis/admin/article/index.html.twig', array(
-            'articles' => $articles,
+            'articles' => $pagination,
         ));
     }
 

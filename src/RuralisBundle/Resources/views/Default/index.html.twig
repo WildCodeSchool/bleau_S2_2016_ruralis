@@ -126,7 +126,7 @@
                         {% elseif article.typeAffichage == '4' %}
                             {# Third card #}
                             <div class="row">
-                                <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
+                                <div class="col {#offset-l3 l8 offset-m1 m8 #}s12 hoverable">
                                     <h4 class="header">
                                         {{ article.nom  }}
                                     </h4>
@@ -147,7 +147,7 @@
                         {% elseif article.typeAffichage == '5' %}
                             {# fourth card #}
                             <div class="row">
-                                <div class="col offset-l3 l8 offset-m1 m8 s12 hoverable">
+                                <div class="col {#offset-l3 l8 offset-m1 m8 #}s12 hoverable">
                                     <h4 class="header">
                                         {{ article.nom  }}
                                     </h4>
@@ -177,20 +177,9 @@
             <div class="navigation">
                 {{ knp_pagination_render(articles) }}
             </div>
-{#            <ul class="pagination">
-                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                <li class="active"><a href="#!">1</a></li>
-                <li class="waves-effect"><a href="#!">2</a></li>
-                <li class="waves-effect"><a href="#!">3</a></li>
-                <li class="waves-effect"><a href="#!">4</a></li>
-                <li class="waves-effect"><a href="#!">5</a></li>
-                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>#}
-
         </div>
     {% block javascripts %}
         {{ parent() }}
-
         <script>
                 $('.carre').each(function (index){
                     if (index % 2 == 0)
