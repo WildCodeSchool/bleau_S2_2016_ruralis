@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    </header>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <h1>Nouvel article</h1>
+
+        {{ form_start(form) }}
+        <div>
+            {{ form_label(form.nom) }}
+            {{ form_errors(form.nom) }}
+            {{ form_widget(form.nom) }}
+        </div>
+        <div>
+            {{ form_label(form.typeAffichage) }}
+            {{ form_widget(form.typeAffichage) }}
+            {{ form_errors(form.typeAffichage) }}
+        </div>
+        <div>
+            {{ form_label(form.descriptif) }}
+            {{ form_errors(form.descriptif) }}
+            {{ form_widget(form.descriptif) }}
+        </div>
+        <div>
+            {{ form_label(form.contenu) }}
+            {{ form_errors(form.contenu) }}
+            {{ form_widget(form.contenu) }}
+        </div>
+        <div>
+            {{ form_label(form.auteur) }}
+            {{ form_errors(form.auteur) }}
+            {{ form_widget(form.auteur) }}
+        </div>
+        <div class="row file-field input-field">
+            <div class="btn">
+                <div>Image</div>
+                {{ form_widget(form.image.file) }}
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Cliquez pour ajouter votre image" required>
+            </div>
+            {{ form_errors(form.image.file) }}
+        </div>
+
+        <div class="row input-field">
+            {{ form_label(form.image.alt) }}
+            {{ form_widget(form.image.alt) }}
+            {{ form_errors(form.image.alt) }}
+        </div>
+       <input type="submit" value="Ajouter un article" />
+        {{ form_end(form) }}
+    </div>
+</div>
+    <ul>
+        <li>
+            <a href="{{ path('article_index') }}">Liste des articles</a>
+        </li>
+    </ul>
+{% endblock %}
