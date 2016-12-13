@@ -23,7 +23,7 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
 
 
 /*==================================================================== */
-/* ----------------LES TROIS IMAGE POUR UN CSS OPTIMAL --------------- */
+/* ----------------LES TROIS IMAGES POUR UN CSS OPTIMAL --------------- */
 /*==================================================================== */
 
 /*image d'en-tete*/
@@ -43,12 +43,12 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
 
 /*image logo dans pied de page*/
 /*prendre TAILLE MINIATURE pour la changer WORDPRESS*/
-.size-thumbnail{
-  margin-top: 0.5%;
-  height: 80%;
-  width: auto;
-  margin: 0 10px;
-}
+//.size-thumbnail{
+//  //margin-top: 0.5%;
+//  height: 80%;
+//  width: auto;
+//  margin: 0 10px;
+//}
 
 
 /*==================================================================== */
@@ -68,12 +68,32 @@ header div{
 .whitebckg {
   background-color: rgba(255,255,255,0.75);
 }
-header .row .col {
+
+header {
+  margin-bottom: 155px;
+}
+
+.navigation .row .col {
   //display: flex;
   //width: 100%;
 }
-header a {
+
+.navigation a {
   color : rgb(234,100,12);
+  font-weight: 800;
+}
+
+.navigation li{
+  text-align: center;
+}
+
+.navigation li:hover {
+  background-color : rgba(234, 100, 12, 0.48);
+  color : rgb(234, 76, 10);
+}
+
+.mailbox:hover{
+  background-color: snow !important;
 }
 //
 //.img_header{
@@ -91,9 +111,9 @@ header a {
 
 .ruralismag {
   position: fixed;
-  max-height: 161px;
-  left: 1%;
-  top: -10%;
+  max-height: 142px;
+  left: 0;
+  top: 0;
 }
 
 .nl {
@@ -402,7 +422,10 @@ strong{
 /*==================================================================== */
 
 #logo{
-  max-height: 50%;
+  position: relative;
+  width: 25%;
+  margin: 50px 0;
+  bottom: 600px;
 }
 
 .logoabt{
