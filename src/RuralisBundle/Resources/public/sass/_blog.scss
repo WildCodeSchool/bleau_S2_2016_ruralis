@@ -1,8 +1,20 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
 
+.hoverable.header, .hoverable.card{
+  height:2% !important;
+}
+
 .card.large {
   height : 33.3333333333%;
   width : 33.3333333333%;
+}
+
+.row .col .s12{
+  width:95%;
+}
+
+.row>.card{
+  height:20%;
 }
 
 .la_une {
@@ -17,9 +29,18 @@ a.cardLink{
   color:#ffd8a6;
 }
 
-.fixed {
+.fixed .row{
   position:fixed;
-  top:50%;
-width:120px;
+  top:40%;
+  width:120px;
   color:red;
+  margin-left:40px;
+}
+
+.fixed div img{
+  width:40px;
+}
+
+.current a {
+  background-color: rgba(234, 100, 12, 0.8) !important;
 }

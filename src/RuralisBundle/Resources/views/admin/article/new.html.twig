@@ -26,7 +26,7 @@
         <div class="row input-field">
             {{ form_label(form.contenu) }}
             {{ form_errors(form.contenu) }}
-            {{ form_widget(form.contenu) }}
+            {{ form_widget(form.contenu|raw) }}
         </div>
         <div class="row input-field">
             {{ form_label(form.auteur) }}
