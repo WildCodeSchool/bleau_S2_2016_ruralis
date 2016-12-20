@@ -17,21 +17,7 @@
             <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/" target="_blank"><img class="logofb" src="img/facebook.png" alt="facebook" /></a>
             <a href="http://www.instagram.com" target="_blank"><img class="logoinsta" src="img/instagram.png" alt="instaram" /></a>
             <div class="nav-wrapper z-depth-1">
-                <img class="hidden" src="img/logoarbre1.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre2.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre3.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre4.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre5.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre6.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre7.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre8.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre9.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre10.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre11.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre12.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre13.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre14.png" alt="Logo arbre"/>
-                <img class="hidden" src="img/logoarbre15.png" alt="Logo arbre"/>
+
                 <img src="img/logoarbre1.png" id="animation" alt="Logo arbre"/>
                 <!-- Next image is used for first frame, before scroll -->
                 <!--<img src="img/logoarbre1.png" />-->
@@ -49,7 +35,7 @@
         </nav>
     </div>
     
-    <img class="size-large" src="img/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi.png" alt="home">
+    <img id="image_header" class="size-large" src="img/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi.png" alt="home">
 
     <img id="logo" src="img/logo.png" alt="logo ruralis magazine" />
 
@@ -123,19 +109,19 @@
 
                 <img src="img/fleche.png" alt="fleche" />
 
-                <a id="savoir" href="img/Business_plan_Ruralis_Magazine" target="_blank">en savoir plus</a>
+                <a id="savoir" href="img/Business_plan_Ruralis_Magazine.pdf" target="_blank">en savoir plus</a>
             </div>
         </section>
 
 
         <section id="abonnement"> 
-            <a href="img/abonnement_de_lecteur.pdf" target="_blank">
+            <a href="img/abonnement_groupe.pdf" target="_blank">
                 <img class="logoabt" src="img/bouton-vert%20.png" alt="logo48"  />
             </a>
-            <a href="img/abonnement_de_soutien" target="_blank">
+            <a href="img/abonnement_groupe.pdf" target="_blank">
                 <img class="logoabt" src="img/bouton-jaune%20.png" alt="logo150"  />
             </a>
-            <a href="img/abonnement_ambassadeur" target="_blank">
+            <a href="img/abonnement_groupe.pdf" target="_blank">
                 <img class="logoabt" src="img/bouton-orange%20.png" alt="logo250"  />
             </a>
         </section>
@@ -175,23 +161,53 @@
             </div>
         </section>
 
-<div class="row">
-        <footer>
-        <div class="col m6">
-            <img id="logowcs" src="img/logo.png" alt="logo">
-</div>
-<div class="col m6">
-            <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="img/logowcs.png" alt="logo de la Wild Code School" /></a>
-            </div>
-            <?php
-            // $queried_post = get_post(73);
-            // echo $queried_post->post_content;
-            ?>
-        </footer>
-</div>
+        <div class="row footer_web">
+            <footer>
+                <div class="col s4">
+                    <img id="logoruralis" src="img/logo_mini.png" alt="logo">
+                </div>
+                <div class="col s4">
+                    <p>NOUS CONTACTER</p>
+                    <p>Association APRIORI / Ruralis Magazine</p>
+                    <p>12, rue du Four-Dieu</p>
+                    <p>45200 Montargis</p>
+                    <p>06 80 73 88 34</p>
+                    <p>contact@ruralismagazine.fr</p>
+                </div>
+                <div class="col s4">
+                    <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="img/logowcs.png" alt="logo de la Wild Code School" /></a>
+                </div>
+                    <?php
+                    // $queried_post = get_post(73);
+                    // echo $queried_post->post_content;
+                    ?>
+            </footer>
+        </div>
+        <div class="row footer_mobile">
+            <footer>
+                <div class="row">
+                    <div class="col s6">
+                        <img id="logoruralis" src="img/logo_mini.png" alt="logo">
+                    </div>
+                    <div class="col s6">
+                        <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="img/logowcs.png" alt="logo de la Wild Code School" /></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s10 offset-s1">
+                        <p>NOUS CONTACTER</p>
+                        <p>Association APRIORI / Ruralis Magazine</p>
+                        <p>12, rue du Four-Dieu</p>
+                        <p>45200 Montargis</p>
+                        <p>06 80 73 88 34</p>
+                        <p>contact@ruralismagazine.fr</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </body>
 
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
             var offset2 = $(document).height();
@@ -250,5 +266,8 @@
                 }
             });
         });
+
+        var height_img_header = $("#image_header").height();
+        $("header").css("height", height_img_header + 30);
     </script>
 </html>
