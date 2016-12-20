@@ -96,7 +96,7 @@
 
         <section id="objectifs">
             <p id="para">Pour vous garantir, chers(ères) lecteurs (trices), le respect à la lettre de notre charte éditoriale, nous avons fait le choix du statut associatif dans l’esprit novateur de l’entreprise solidaire de presse d’information qui permet d’encourager </br>l’émergence et la diversité de nouveaux médias.</p>
-            <a id="bilan" href="img/Business%20plan%20Ruralis%20Magazine.pdf" target="_blank"><p class="txtorange">Objectif : 5000 abonné(e)s</p></a>
+            <a id="bilan" href="img/Business_plan_Ruralis_Magazine.pdf" target="_blank"><p class="txtorange">Objectif : 5000 abonné(e)s</p></a>
             <p>Elus des territoires ruraux, acteurs du monde agricole, citoyens engagés sur le terrain, dans l’action associative ou simple amoureux des paysages de la campagne française, le pouvoir de nous faire exister est désormais entre vos mains.</p>
 
             <div class="ancre" name="abonnements" id="abonnements"></div>
