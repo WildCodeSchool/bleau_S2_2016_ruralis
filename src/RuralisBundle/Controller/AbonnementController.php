@@ -8,6 +8,6 @@ class AbonnementController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@RuralisBundle/Resources/views/user/abonnement.html.twig');
+        return $this->render('@Ruralis/user/abonnement.html.twig');
     }
 }

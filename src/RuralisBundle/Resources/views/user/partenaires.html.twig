@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="row abonnement">
+            <div class="col s12">
+                {% for index, partenaire in partenaires %}
+                    {{ partenaire.nom }}
+                    {{ partenaire.descriptif }}
+                    {{ partenaire.image }}
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock body %}

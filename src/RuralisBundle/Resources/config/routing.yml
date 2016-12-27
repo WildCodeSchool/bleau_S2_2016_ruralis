@@ -13,3 +13,11 @@ ruralis_presentation:
 ruralis_abonnement:
     path:     /abonnement
     defaults: { _controller: RuralisBundle:Abonnement:index }
+
+ruralis_partenaire:
+    path:     /partenaires
+    defaults: { _controller: RuralisBundle:Partenaires:index }
+
+ruralis_admin_partenaire:
+    resource: "@RuralisBundle/Resources/config/routing/partenaire.yml"
+    prefix:   /admin/partenaire
