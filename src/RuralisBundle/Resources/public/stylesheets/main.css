@@ -641,42 +641,38 @@ a {
 }
 
 /* line 6, ../sass/_blog.scss */
-.card {
+.article {
   max-height: 200px;
   overflow: none;
+  margin-bottom: 70px;
 }
 
-/* line 11, ../sass/_blog.scss */
+/* line 12, ../sass/_blog.scss */
 .card-image > img, .card-content {
   max-height: 190px;
   width: auto;
-}
-
-/* line 16, ../sass/_blog.scss */
-.article {
-  margin-bottom: 50px;
 }
 
 /*.card.large {
   height : 33.3333333333%;
   width : 33.3333333333%;
 }*/
-/* line 25, ../sass/_blog.scss */
+/* line 22, ../sass/_blog.scss */
 .la_une {
   margin-top: 40px;
 }
 
-/* line 29, ../sass/_blog.scss */
+/* line 26, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 33, ../sass/_blog.scss */
+/* line 30, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 37, ../sass/_blog.scss */
+/* line 34, ../sass/_blog.scss */
 .fixed .row {
   position: fixed;
   top: 40%;
@@ -686,17 +682,17 @@ a.cardLink {
   text-align: center;
 }
 
-/* line 46, ../sass/_blog.scss */
+/* line 43, ../sass/_blog.scss */
 .fixed div img {
   width: 40px;
 }
 
-/* line 50, ../sass/_blog.scss */
+/* line 47, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
 
-/* line 54, ../sass/_blog.scss */
+/* line 51, ../sass/_blog.scss */
 .blogTop {
   margin-top: 12%;
 }

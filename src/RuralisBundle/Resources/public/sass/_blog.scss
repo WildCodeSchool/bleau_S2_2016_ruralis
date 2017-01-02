@@ -3,18 +3,15 @@
 .hoverable.header, .hoverable.card{
   height:2% !important;
 }
-.card {
+.article {
   max-height: 200px;
   overflow: none;
+  margin-bottom:70px;
 }
 
 .card-image > img, .card-content{
     max-height: 190px;
     width: auto;
-}
-
-.article{
-  margin-bottom:50px;
 }
 
 /*.card.large {
