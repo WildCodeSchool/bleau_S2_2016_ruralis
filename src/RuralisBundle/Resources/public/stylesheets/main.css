@@ -544,6 +544,14 @@ label {
   color: white;
 }
 
+/*---------------------------------------------*/
+/****************Page Partenaire***************/
+/*-------------------------------------------*/
+/* line 60, ../sass/_admin.scss */
+.adminPart {
+  margin-top: 150px;
+}
+
 /* line 3, ../sass/_abonnement.scss */
 .abonnement .row .col {
   padding: 0;
@@ -682,4 +690,22 @@ a.cardLink {
 /* line 44, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
+}
+
+/* line 1, ../sass/_partenaire.scss */
+.partenaire {
+  text-align: center;
+}
+/* line 4, ../sass/_partenaire.scss */
+.partenaire .partenaireTop {
+  margin-top: 150px;
+}
+/* line 8, ../sass/_partenaire.scss */
+.partenaire .nomPart {
+  font-weight: bold;
+  color: #EF651B;
+}
+/* line 13, ../sass/_partenaire.scss */
+.partenaire img {
+  height: 150px;
 }
