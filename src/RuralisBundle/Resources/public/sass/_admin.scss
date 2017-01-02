@@ -2,7 +2,7 @@
 select {
   display : block !important;
 }*/
-.nouvel_article{
+.adminmodel h1{
   color:#00B82B;
 }
 
@@ -20,6 +20,7 @@ select {
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
+  margin-top:12%;
 }
 
 .container .row {
@@ -52,11 +53,6 @@ label{
   color:white;
 }
 
-
-/*---------------------------------------------*/
-/****************Page Partenaire***************/
-/*-------------------------------------------*/
-
-.adminPart{
-  margin-top:150px;
+a {
+  color: #00B82B;
 }

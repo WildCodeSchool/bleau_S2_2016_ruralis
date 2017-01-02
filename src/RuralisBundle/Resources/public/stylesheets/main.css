@@ -484,7 +484,7 @@ select {
   display : block !important;
 }*/
 /* line 5, ../sass/_admin.scss */
-.nouvel_article {
+.adminmodel h1 {
   color: #00B82B;
 }
 
@@ -505,51 +505,49 @@ select {
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
+  margin-top: 12%;
 }
 
-/* line 25, ../sass/_admin.scss */
+/* line 26, ../sass/_admin.scss */
 .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
 
-/* line 30, ../sass/_admin.scss */
+/* line 31, ../sass/_admin.scss */
 input[type="text"] {
   border-bottom-color: white;
 }
 
-/* line 34, ../sass/_admin.scss */
+/* line 35, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 39, ../sass/_admin.scss */
+/* line 40, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 43, ../sass/_admin.scss */
+/* line 44, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 47, ../sass/_admin.scss */
+/* line 48, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 51, ../sass/_admin.scss */
+/* line 52, ../sass/_admin.scss */
 .file-path {
   color: white;
 }
 
-/*---------------------------------------------*/
-/****************Page Partenaire***************/
-/*-------------------------------------------*/
-/* line 60, ../sass/_admin.scss */
-.adminPart {
-  margin-top: 150px;
+/* line 56, ../sass/_admin.scss */
+a {
+  color: #00B82B;
 }
 
 /* line 3, ../sass/_abonnement.scss */
@@ -642,54 +640,65 @@ label {
   height: 2% !important;
 }
 
-/* line 7, ../sass/_blog.scss */
-.card.large {
-  height: 33.3333333333%;
-  width: 33.3333333333%;
+/* line 6, ../sass/_blog.scss */
+.card {
+  max-height: 200px;
+  overflow: none;
 }
 
-/* line 12, ../sass/_blog.scss */
-.row .col .s12 {
-  width: 95%;
+/* line 11, ../sass/_blog.scss */
+.card-image > img, .card-content {
+  max-height: 190px;
+  width: auto;
 }
 
 /* line 16, ../sass/_blog.scss */
-.row > .card {
-  height: 20%;
+.article {
+  margin-bottom: 50px;
 }
 
-/* line 20, ../sass/_blog.scss */
+/*.card.large {
+  height : 33.3333333333%;
+  width : 33.3333333333%;
+}*/
+/* line 25, ../sass/_blog.scss */
 .la_une {
   margin-top: 40px;
 }
 
-/* line 24, ../sass/_blog.scss */
+/* line 29, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 28, ../sass/_blog.scss */
+/* line 33, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 32, ../sass/_blog.scss */
+/* line 37, ../sass/_blog.scss */
 .fixed .row {
   position: fixed;
   top: 40%;
   width: 120px;
   color: red;
   margin-left: 40px;
+  text-align: center;
 }
 
-/* line 40, ../sass/_blog.scss */
+/* line 46, ../sass/_blog.scss */
 .fixed div img {
   width: 40px;
 }
 
-/* line 44, ../sass/_blog.scss */
+/* line 50, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
+}
+
+/* line 54, ../sass/_blog.scss */
+.blogTop {
+  margin-top: 12%;
 }
 
 /* line 1, ../sass/_partenaire.scss */

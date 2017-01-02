@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row adminPart">
+<div class="row adminmodel">
     <div class="col m8 offset-m2">
         <h1>Liste des partenaires</h1>
 
@@ -17,7 +17,7 @@
             <tbody>
             {% for partenaire in partenaires %}
                 <tr>
-                    <td>{{ partenaire.nom }}</td>
+                    <td class="nomPart">{{ partenaire.nom }}</td>
                     <td>{{ partenaire.descriptif }}</td>
                     <td><img width="30%" src="{{ asset('/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
                     <td>

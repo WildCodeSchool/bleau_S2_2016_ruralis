@@ -1,14 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Article</h1>
+<div class="row adminmodel">
+    <div class="col m8 offset-m2">
+        <h1>{{ article.nom }}</h1>
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
             <tr>
                 <th>Nom</th>
                 <td>{{ article.nom }}</td>
@@ -38,10 +36,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('article_index') }}">Back to the list</a>
+            <a href="{{ path('article_index') }}">Retourner à la liste des articles</a>
         </li>
         <li>
-            <a href="{{ path('article_edit', { 'id': article.id }) }}">Edit</a>
+            <a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a>
         </li>
     </ul>
 {% endblock %}

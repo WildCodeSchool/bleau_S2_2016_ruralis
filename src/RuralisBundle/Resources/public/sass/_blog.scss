@@ -3,19 +3,24 @@
 .hoverable.header, .hoverable.card{
   height:2% !important;
 }
+.card {
+  max-height: 200px;
+  overflow: none;
+}
 
-.card.large {
+.card-image > img, .card-content{
+    max-height: 190px;
+    width: auto;
+}
+
+.article{
+  margin-bottom:50px;
+}
+
+/*.card.large {
   height : 33.3333333333%;
   width : 33.3333333333%;
-}
-
-.row .col .s12{
-  width:95%;
-}
-
-.row>.card{
-  height:20%;
-}
+}*/
 
 .la_une {
   margin-top: 40px;
@@ -35,6 +40,7 @@ a.cardLink{
   width:120px;
   color:red;
   margin-left:40px;
+  text-align:center;
 }
 
 .fixed div img{
@@ -43,4 +49,8 @@ a.cardLink{
 
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
+}
+
+.blogTop{
+  margin-top:12%;
 }
