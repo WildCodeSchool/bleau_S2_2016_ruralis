@@ -28,9 +28,9 @@
                     <td>{{ article.auteur }}</td>
                     <td>{{ article.date|date('d M Y') }}</td>
                     <td><img width="30%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
-                    <td><a href="{{ path('article_show', { 'id': article.id }) }}">show</a></td>
-                    <td><a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a></td>
-                    <td><a href="{{ path('article_delete', { 'id': article.id }) }}">supprimer</a></td>
+                    <td><a href="{{ path('article_show', { 'id': article.id }) }}">Voir</a></td>
+                    <td><a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a></td>
+                    <td><a href="{{ path('article_delete', { 'id': article.id }) }}">Supprimer</a></td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -43,7 +43,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('article_new') }}">Create a new article</a>
+            <a href="{{ path('article_new') }}">Ajouter un article</a>
         </li>
     </ul>
 {% endblock %}

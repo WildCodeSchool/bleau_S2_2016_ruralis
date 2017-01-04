@@ -39,20 +39,28 @@
             {{ form_widget(edit_form.auteur) }}
         </div>
         <div class="row file-field input-field">
+                <div class="col s4 middleText">
+                    Image actuelle
+                </div>
+                <div class="col s4">
+                    <img class="imageAdmin" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                </div>
+        </div>
+        <div class="row file-field input-field">
             <div class="btn">
-                <div>Image</div>
+                <span>Changer l'image</span>
                 {{ form_widget(edit_form.image.file) }}
             </div>
             <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Cliquez pour ajouter votre image" required>
+                <input class="file-path validate" type="text" placeholder="Cliquez pour modifier votre image.">
             </div>
             {{ form_errors(edit_form.image.file) }}
         </div>
-
-        <div class="row input-field">
-            {{ form_label(edit_form.image.alt) }}
-            {{ form_widget(edit_form.image.alt) }}
-            {{ form_errors(edit_form.image.alt) }}
+           <div class="row">
+               Description de l'image
+               {{ form_widget(edit_form.image.alt) }}
+               {{ form_errors(edit_form.image.alt) }}
+           </div>
         </div>
 
         <input type="submit" value="Modifier l'article" />

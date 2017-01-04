@@ -72,12 +72,12 @@
                         {# CARD CARRE #}
                         {% elseif article.typeAffichage == '2'%}
                             {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
-                                <div class="row article">
+                                <div class="row article rowCustom">
                                 {% set is_row = true %}
                             {%  endif %}
-                                    <div class="col offset-s2 s5 carre card large hoverable">
+                                    <div class="col offset-s2 s5 carre card hoverable colCustom">
                                         {# First card #}
-                                        <div class="card">
+                                        <div class="card cardCarre">
                                             <div class="card-image waves-effect waves-block waves-light">
                                                 <img class="activator" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                                             </div>
@@ -166,47 +166,25 @@
                                     </div>
                                 </div>
                             </div>
-
-                        {# VIDEO #}
-                        {%  elseif article.typeAffichage == '6' %}
-                        <div class="row">
-                            <div class="col s12 hoverable">
-                                <h4 class="header">
-                                    {{ article.nom }}
-                                </h4>
-                                <div class="card horizontal">
-                                    <div class="car-image">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lJIrF4YjHfQ" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="card-stacked">
-                                        <div class="card-content">
-                                            <p>{{ article.descriptif }}</p>
-                                        </div>
-                                        <div class="card-action">
-                                            <a href="{{ path('article_index') }}" class="cardLink">Lire l'article complet</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>>
-
-                            </div>
-
                     {%  endif %}
                 {% endfor %}
                 {% if is_row %}
                     </div>
                     {% set is_row = false %}
                 {% endif %}
+            <div class="row">
+                <div class="col offset-s5 s3 navigation">
+                    {{ knp_pagination_render(articles) }}
+                </div>
             </div>
-            <div class="navigation">
-                {{ knp_pagination_render(articles) }}
             </div>
         </div>
+
     {% block javascripts %}
         {{ parent() }}
         <script>
                 $('.carre').each(function (index){
-                    if (index % 2 != 0)
+                    if (index % 2 == 0)
                     {
                         $(this).removeClass("offset-s2");
                     }

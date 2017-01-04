@@ -23,7 +23,7 @@ RuralisBundle\Entity\Article:
             type: datetime
         typeAffichage:
             type: string
-            length: 25
+            length: 50
             nullable: false
     oneToOne:
         image:

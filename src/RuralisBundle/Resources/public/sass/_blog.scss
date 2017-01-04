@@ -19,8 +19,24 @@
   width : 33.3333333333%;
 }*/
 
-.la_une {
-  margin-top: 40px;
+.la_une .card-image img, {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:230px;
+  max-height:200px;
+  width: auto;
+  height: auto;
+}
+
+.carre .card-image img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:100px;
+  max-height:100px;
+  width: auto;
+  height: auto;
 }
 
 h4, .card-content{
@@ -51,3 +67,28 @@ a.cardLink{
 .blogTop{
   margin-top:12%;
 }
+
+/****************************/
+/*        row  & col        */
+/****************************/
+
+.rowCustom {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.colCustom {
+  padding:0px !important;
+  margin:0px;
+}
+
+/*
+.cardCarre{
+  height: 100%;
+  overflow: visible;
+  max-width: 100%;
+}
+
+.cardCarre img{
+  max-width: 50%;
+}*/

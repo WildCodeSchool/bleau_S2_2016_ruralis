@@ -63,33 +63,33 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
   width: 100%;
 }
 
-/* line 63, ../sass/_general.scss */
+/* line 64, ../sass/_general.scss */
 header div {
   list-style-type: none;
 }
 
-/* line 68, ../sass/_general.scss */
+/* line 69, ../sass/_general.scss */
 .whitebckg {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-/* line 75, ../sass/_general.scss */
+/* line 76, ../sass/_general.scss */
 header a {
   color: #ea640c;
 }
 
-/* line 83, ../sass/_general.scss */
+/* line 84, ../sass/_general.scss */
 .orangebckg {
   background-color: #ea640c;
   max-height: 56px;
 }
 
-/* line 88, ../sass/_general.scss */
+/* line 89, ../sass/_general.scss */
 .navigation .row .col.offset-s1 {
   margin-left: 9.333%;
 }
 
-/* line 92, ../sass/_general.scss */
+/* line 93, ../sass/_general.scss */
 .ruralismag {
   position: fixed;
   max-height: 161px;
@@ -97,34 +97,34 @@ header a {
   top: -10%;
 }
 
-/* line 99, ../sass/_general.scss */
+/* line 100, ../sass/_general.scss */
 .nl {
   margin-top: 40px;
 }
 
-/* line 103, ../sass/_general.scss */
+/* line 104, ../sass/_general.scss */
 .nl button {
   margin-top: -19px;
   background-color: #ea640c;
 }
 
-/* line 108, ../sass/_general.scss */
+/* line 109, ../sass/_general.scss */
 .nl button:hover {
   background-color: #ff8436;
 }
 
-/* line 112, ../sass/_general.scss */
+/* line 113, ../sass/_general.scss */
 .nav_2line {
   margin-top: -5px;
 }
 
-/* line 116, ../sass/_general.scss */
+/* line 117, ../sass/_general.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 121, ../sass/_general.scss */
+/* line 122, ../sass/_general.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
@@ -132,13 +132,13 @@ header a {
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
-/* line 131, ../sass/_general.scss */
+/* line 132, ../sass/_general.scss */
 #description {
   width: 100%;
   padding-top: 20%;
 }
 
-/* line 136, ../sass/_general.scss */
+/* line 137, ../sass/_general.scss */
 #description p {
   display: inline-block;
   width: 55%;
@@ -148,21 +148,21 @@ header a {
   color: #EA640C;
 }
 
-/* line 148, ../sass/_general.scss */
+/* line 149, ../sass/_general.scss */
 #territoire, #peuple {
   margin-top: 170px;
   padding: 0;
   width: 100%;
 }
 
-/* line 153, ../sass/_general.scss */
+/* line 154, ../sass/_general.scss */
 #territoire h4, #peuple h4 {
   padding: 15px 0;
   width: 100%;
   font-family: 'Arial Bold';
 }
 
-/* line 162, ../sass/_general.scss */
+/* line 163, ../sass/_general.scss */
 #editorial {
   margin-top: 7%;
   display: flex;
@@ -170,14 +170,14 @@ header a {
   flex-wrap: wrap;
 }
 
-/* line 170, ../sass/_general.scss */
+/* line 171, ../sass/_general.scss */
 .edit {
   width: 50%;
   padding: 2%;
   width: 30%;
 }
 
-/* line 176, ../sass/_general.scss */
+/* line 177, ../sass/_general.scss */
 #editorial h5 {
   text-align: center;
   font-family: 'Sakkal Majalla Bold';
@@ -186,7 +186,7 @@ header a {
   color: #EA640C;
 }
 
-/* line 184, ../sass/_general.scss */
+/* line 185, ../sass/_general.scss */
 #editorial p {
   font-family: 'Time New Roman';
   font-size: 14pt;
@@ -194,14 +194,14 @@ header a {
   text-align: center;
 }
 
-/* line 193, ../sass/_general.scss */
+/* line 194, ../sass/_general.scss */
 #objectifs {
   position: relative;
   display: inline-block;
   height: 60%;
 }
 
-/* line 199, ../sass/_general.scss */
+/* line 200, ../sass/_general.scss */
 #objectifs p {
   font-family: 'Time New Roman';
   font-size: 14pt;
@@ -210,7 +210,7 @@ header a {
   margin: auto;
 }
 
-/* line 207, ../sass/_general.scss */
+/* line 208, ../sass/_general.scss */
 #txtobjectif p {
   display: inline-block;
   text-align: center;
@@ -222,7 +222,7 @@ header a {
   font-weight: bold;
 }
 
-/* line 220, ../sass/_general.scss */
+/* line 221, ../sass/_general.scss */
 #flexabonnes {
   margin-top: 70px;
   width: 100%;
@@ -231,7 +231,7 @@ header a {
   align-content: center;
 }
 
-/* line 228, ../sass/_general.scss */
+/* line 229, ../sass/_general.scss */
 #nbabonnes {
   padding-right: 5px;
   width: 40%;
@@ -241,7 +241,7 @@ header a {
   font-size: 200%;
 }
 
-/* line 237, ../sass/_general.scss */
+/* line 238, ../sass/_general.scss */
 #nbabonnes p {
   display: inline-block;
   margin-top: 2.5%;
@@ -252,14 +252,14 @@ header a {
   font-size: 75%;
 }
 
-/* line 247, ../sass/_general.scss */
+/* line 248, ../sass/_general.scss */
 #flexabonnes img {
   width: 5%;
   margin: 0 2%;
   align-self: center;
 }
 
-/* line 256, ../sass/_general.scss */
+/* line 257, ../sass/_general.scss */
 #abonnement {
   background-color: white;
   display: flex;
@@ -274,7 +274,7 @@ header a {
   background-color: rgba(211, 211, 211, 0.5);
 }
 
-/* line 270, ../sass/_general.scss */
+/* line 271, ../sass/_general.scss */
 #abonnement p {
   width: 100%;
   margin: 20px 5px;
@@ -286,12 +286,12 @@ header a {
   z-index: 1;
 }
 
-/* line 281, ../sass/_general.scss */
+/* line 282, ../sass/_general.scss */
 #abonnement a {
   width: 30%;
 }
 
-/* line 287, ../sass/_general.scss */
+/* line 288, ../sass/_general.scss */
 #savoir {
   height: 100%;
   position: relative;
@@ -308,14 +308,14 @@ header a {
   transition: 0.5s;
 }
 
-/* line 303, ../sass/_general.scss */
+/* line 304, ../sass/_general.scss */
 #savoir:hover {
   background-color: #ffffff;
   transition: 0.5s;
   color: #ea640c;
 }
 
-/* line 312, ../sass/_general.scss */
+/* line 313, ../sass/_general.scss */
 #citation {
   display: flex;
   justify-content: center;
@@ -326,24 +326,24 @@ header a {
   color: #EA640C;
 }
 
-/* line 322, ../sass/_general.scss */
+/* line 323, ../sass/_general.scss */
 #citation div {
   width: 40%;
 }
 
-/* line 329, ../sass/_general.scss */
+/* line 330, ../sass/_general.scss */
 strong {
   color: #EA640C;
   font-size: 23px;
   font-weight: bold;
 }
 
-/* line 335, ../sass/_general.scss */
+/* line 336, ../sass/_general.scss */
 .txtorange {
   color: #EA640C;
 }
 
-/* line 339, ../sass/_general.scss */
+/* line 340, ../sass/_general.scss */
 #arpenteurs {
   display: flex;
   justify-content: center;
@@ -353,18 +353,18 @@ strong {
   background-color: rgba(211, 211, 211, 0.5);
 }
 
-/* line 348, ../sass/_general.scss */
+/* line 349, ../sass/_general.scss */
 #magazine {
   width: 20%;
 }
 
-/* line 352, ../sass/_general.scss */
+/* line 353, ../sass/_general.scss */
 #textarp {
   width: 40%;
   padding-left: 80px;
 }
 
-/* line 357, ../sass/_general.scss */
+/* line 358, ../sass/_general.scss */
 #textarp h5 {
   font-family: 'Sakkal Majalla Bold';
   font-size: 18pt;
@@ -372,42 +372,42 @@ strong {
   color: #EA640C;
 }
 
-/* line 364, ../sass/_general.scss */
+/* line 365, ../sass/_general.scss */
 #textarp p {
   font-family: 'Time New Roman';
   font-size: 14pt;
   line-height: 18pt;
 }
 
-/* line 370, ../sass/_general.scss */
+/* line 371, ../sass/_general.scss */
 #para {
   padding-top: 9%;
 }
 
-/* line 373, ../sass/_general.scss */
+/* line 374, ../sass/_general.scss */
 #nb {
   color: #EA640C;
 }
 
-/* line 377, ../sass/_general.scss */
+/* line 378, ../sass/_general.scss */
 #auteur {
   font-size: 80%;
   color: black;
 }
 
-/* line 383, ../sass/_general.scss */
+/* line 384, ../sass/_general.scss */
 #trombi div {
   /*text-align: center;*/
   /*width: 20%;*/
   /*padding: 15px;*/
 }
 
-/* line 389, ../sass/_general.scss */
+/* line 390, ../sass/_general.scss */
 #trombi h6 {
   color: #EA640C;
 }
 
-/* line 393, ../sass/_general.scss */
+/* line 394, ../sass/_general.scss */
 #trombi p {
   /*width: 100%;*/
   /*font-family: 'courier new', sans-serif;*/
@@ -418,38 +418,38 @@ strong {
 /*==================================================================== */
 /* -------------------- GESTION DES IMAGES ---------------------- */
 /*==================================================================== */
-/* line 404, ../sass/_general.scss */
+/* line 405, ../sass/_general.scss */
 #logo {
   max-height: 50%;
 }
 
-/* line 408, ../sass/_general.scss */
+/* line 409, ../sass/_general.scss */
 .logoabt {
   position: relative;
   width: 70%;
   z-index: 2;
 }
 
-/* line 414, ../sass/_general.scss */
+/* line 415, ../sass/_general.scss */
 #trombi > img {
   /*width: 100%;*/
 }
 
-/* line 418, ../sass/_general.scss */
+/* line 419, ../sass/_general.scss */
 #img1 {
   margin-right: 30px;
   width: 7%;
   align-self: center;
 }
 
-/* line 424, ../sass/_general.scss */
+/* line 425, ../sass/_general.scss */
 #img2 {
   margin-left: 30px;
   width: 7%;
   align-self: center;
 }
 
-/* line 431, ../sass/_general.scss */
+/* line 432, ../sass/_general.scss */
 #trombi {
   /*display: flex;*/
   /*justify-content: space-around;*/
@@ -462,18 +462,18 @@ strong {
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 444, ../sass/_general.scss */
+/* line 445, ../sass/_general.scss */
 footer {
   height: 60px !important;
   background-color: #ea640c;
 }
 
-/* line 449, ../sass/_general.scss */
+/* line 450, ../sass/_general.scss */
 footer .col {
   height: 60px !important;
 }
 
-/* line 453, ../sass/_general.scss */
+/* line 454, ../sass/_general.scss */
 #logowcs {
   margin-top: 0.5%;
   height: 90%;
@@ -486,19 +486,20 @@ select {
 /* line 5, ../sass/_admin.scss */
 .adminmodel h1 {
   color: #00B82B;
+  text-align: center;
 }
 
-/* line 9, ../sass/_admin.scss */
+/* line 10, ../sass/_admin.scss */
 .btn {
   background-color: #00B82B;
 }
 
-/* line 13, ../sass/_admin.scss */
+/* line 14, ../sass/_admin.scss */
 .btn:hover {
   background-color: #47d9bc;
 }
 
-/* line 17, ../sass/_admin.scss */
+/* line 18, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: rgba(117, 207, 80, 0.75);
@@ -508,46 +509,56 @@ select {
   margin-top: 12%;
 }
 
-/* line 26, ../sass/_admin.scss */
+/* line 27, ../sass/_admin.scss */
 .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
 
-/* line 31, ../sass/_admin.scss */
+/* line 32, ../sass/_admin.scss */
 input[type="text"] {
   border-bottom-color: white;
 }
 
-/* line 35, ../sass/_admin.scss */
+/* line 36, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 40, ../sass/_admin.scss */
+/* line 41, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 44, ../sass/_admin.scss */
+/* line 45, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 48, ../sass/_admin.scss */
+/* line 49, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 52, ../sass/_admin.scss */
+/* line 53, ../sass/_admin.scss */
 .file-path {
   color: white;
 }
 
-/* line 56, ../sass/_admin.scss */
+/* line 57, ../sass/_admin.scss */
 a {
   color: #00B82B;
+}
+
+/* line 61, ../sass/_admin.scss */
+.imageAdmin {
+  height: 150px;
+}
+
+/* line 65, ../sass/_admin.scss */
+.middleText {
+  margin-top: 75px;
 }
 
 /* line 3, ../sass/_abonnement.scss */
@@ -658,21 +669,38 @@ a {
   width : 33.3333333333%;
 }*/
 /* line 22, ../sass/_blog.scss */
-.la_une {
-  margin-top: 40px;
+.la_une .card-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 230px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
 }
 
-/* line 26, ../sass/_blog.scss */
+/* line 32, ../sass/_blog.scss */
+.carre .card-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+/* line 42, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 30, ../sass/_blog.scss */
+/* line 46, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 34, ../sass/_blog.scss */
+/* line 50, ../sass/_blog.scss */
 .fixed .row {
   position: fixed;
   top: 40%;
@@ -682,21 +710,46 @@ a.cardLink {
   text-align: center;
 }
 
-/* line 43, ../sass/_blog.scss */
+/* line 59, ../sass/_blog.scss */
 .fixed div img {
   width: 40px;
 }
 
-/* line 47, ../sass/_blog.scss */
+/* line 63, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
 
-/* line 51, ../sass/_blog.scss */
+/* line 67, ../sass/_blog.scss */
 .blogTop {
   margin-top: 12%;
 }
 
+/****************************/
+/*        row  & col        */
+/****************************/
+/* line 75, ../sass/_blog.scss */
+.rowCustom {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+/* line 80, ../sass/_blog.scss */
+.colCustom {
+  padding: 0px !important;
+  margin: 0px;
+}
+
+/*
+.cardCarre{
+  height: 100%;
+  overflow: visible;
+  max-width: 100%;
+}
+
+.cardCarre img{
+  max-width: 50%;
+}*/
 /* line 1, ../sass/_partenaire.scss */
 .partenaire {
   text-align: center;
