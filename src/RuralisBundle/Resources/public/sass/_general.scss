@@ -1,14 +1,7 @@
 /*Theme Name: Ruralis
-Theme URI: http://themeisle.com/themes/zerif-lite/
-Author: Alex; Benjamin, Valentin
-Author URI: http://themeisle.com
-Description: It's perfect for web agency business,corporate business,personal and parallax business portfolio, photography sites and freelancer.Is built on BootStrap with parallax support, is responsive, clean, modern, flat and minimal. Zerif Lite is ecommerce (WooCommerce) Compatible, WPML, RTL, Retina-Ready, SEO Friendly and with parallax, full screen image is one of the best business themes.
-Version: 1.8.3.5
-License: GNU General Public License version 3
-License URI: license.txt
-Domain Path: /languages/
-Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, photoblogging
+Author: Marielle Lautrou and Aurore David
 */
+
 
 
 /*==================================================================== */
@@ -18,48 +11,19 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
 *{
   margin: 0;
   padding: 0;
-  /*border: 0.1px solid blue;*/
 }
 
 
 /*==================================================================== */
-/* ----------------LES TROIS IMAGES POUR UN CSS OPTIMAL --------------- */
-/*==================================================================== */
-
-/*image d'en-tete*/
-/*prendre TAILLE GRANDE pour la changer WORDPRESS*/
-.size-large{
-  width: 100%;
-  height: 720px;
-}
-
-/*imges du Territoire et du Peuple des campagnes*/
-/*prendre TAILLE ORIGINALE pour la changer WORDPRESS*/
-.size-full{
-  height: auto;
-  width: 19.5%;
-  margin: 0;
-}
-
-/*image logo dans pied de page*/
-/*prendre TAILLE MINIATURE pour la changer WORDPRESS*/
-//.size-thumbnail{
-//  //margin-top: 0.5%;
-//  height: 80%;
-//  width: auto;
-//  margin: 0 10px;
-//}
-
-
-/*==================================================================== */
-/* ----------------------- BARRE DE NAVIGATION ----------------------- */
+/* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
 
 .fixed_nav {
   position: fixed;
-  top: 0%;
+  top: 0;
   width: 100%;
 }
+
 header div{
   list-style-type: none;
   //display: inline;
@@ -71,11 +35,6 @@ header div{
 
 header {
   margin-bottom: 155px;
-}
-
-.navigation .row .col {
-  //display: flex;
-  //width: 100%;
 }
 
 .navigation a {
@@ -92,13 +51,13 @@ header {
   color : rgb(234, 76, 10);
 }
 
+nav .row .col{
+  padding: 0;
+}
+
 .mailbox:hover{
   background-color: snow !important;
 }
-//
-//.img_header{
-//  width: 100%;
-//}
 
 .orangebckg {
   background-color: rgb(234,100,12);
@@ -141,6 +100,60 @@ header {
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
+
+
+/*==================================================================== */
+/* -------------------------- THREE BIG IMAGES ----------------------- */
+/*==================================================================== */
+
+
+/*Top image*/
+
+.size-large{
+  width: 100%;
+  height: 720px;
+  //max-width: 1859px;
+}
+div .row .ruralisimgtop {
+ margin-bottom: 0;
+}
+
+.topruralis{
+  max-width: 99.99%;
+}
+
+
+/* Images Territoire */
+
+.size-full{
+  height: auto;
+  width: 19.5%;
+  margin: 0;
+}
+
+
+/*==================================================================== */
+/* -------------------- GESTION DES IMAGES ---------------------- */
+/*==================================================================== */
+//
+
+// Logo on Top Image Ruralis (.logotopruralis)
+#logo{
+  position: relative;
+  bottom: 565px;
+  margin-bottom: -320px;
+}
+
+.logoabt{
+  position: relative;
+  z-index: 2;
+}
+
+#img1, #img2{
+  width: 7%;
+}
+
+
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
@@ -150,77 +163,113 @@ header {
 
 #description{
   width: 100%;
-  padding-top: 20%;
+  text-align: center;
+  margin-top: -20px;
+  padding-top: -20px;
 }
 
 #description p{
-
   display: inline-block;
-  width: 55%;
+  //width: 55%;
   font-size: 14pt;
   font-family: 'Time New Roman', sans-serif;
   line-height: 18pt;
   color: #EA640C;
 }
 
+
 // Territoire
 
-#territoire, #peuple{
-  margin-top: 170px;
+#territoire{
+  //margin-top: 170px;
   padding: 0;
   width: 100%;
 }
-#territoire h4, #peuple h4{
 
+#territoire h4, #peuple h4{
   padding: 15px 0;
   width: 100%;
   font-family: 'Arial Bold';
 }
 
+
 // Editorial
 
-#editorial{
-
-  margin-top: 7%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.edit{
-  width: 50%;
-  padding: 2%;
-  width: 30%;
-}
-
-#editorial h5{
+#editorial {
   text-align: center;
+  line-height: 18pt;
+}
+#editorial h5{
   font-family: 'Sakkal Majalla Bold';
   font-size: 18pt;
-  line-height: 18pt;
   color: #EA640C;
 }
 
 #editorial p{
   font-family: 'Time New Roman';
   font-size: 14pt;
-  line-height: 18pt;
+}
+
+
+// ARPENTEURS
+#arpenteurs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  margin-top: 7%;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+#magazine{
+  max-width: 60%;
+}
+
+#textarp{
+  margin-left: -120px;
   text-align: center;
 }
 
-// Objectifs
-
-#objectifs{
-  position: relative;
-  display: inline-block;
-  height: 60%;
+#textarp h5{
+  font-family: 'Sakkal Majalla Bold';
+  font-size: 18pt;
+  line-height: 18pt;
+  color: #EA640C;
 }
 
-#objectifs p{
+#textarp p{
+  font-family: 'Time New Roman';
+  font-size: 14pt;
+  line-height: 18pt;
+}
+
+
+// Peuples
+
+.peuple {
+  text-align: center;
+}
+
+.peuple img{
+  max-height: 362.493px;
+  max-width: 236.522px;
+}
+
+
+// Objectifs
+
+.objectifs{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  //height: 60%;
+}
+
+.objectifs p{
   font-family: 'Time New Roman';
   font-size: 14pt;
   line-height: 25pt;
-  width: 52%;
+  //width: 52%;
   margin: auto;
 }
 
@@ -234,6 +283,7 @@ header {
   font-family: 'courier new', sans-serif;
   font-weight: bold;
 }
+
 
 // Abonnees
 
@@ -271,46 +321,15 @@ header {
 }
 
 
-// Abonnement
-
-#abonnement{
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 400px;
-  margin-top: 200px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: rgba(211, 211, 211, 0.5);
-}
-
-#abonnement p{
-  width: 100%;
-  margin: 20px 5px;
-  text-align: center;
-  font-family: 'courier new', sans-serif;
-  font-size: 200%;
-  color: rgb(234,100,12);
-  font-weight: bold;
-  z-index: 1;
-}
-
-#abonnement a{
-  width: 30%;
-}
-
-
 // Savoir
+
 #savoir{
   height: 100%;
   position: relative;
   display: inline-block;
   background-color: rgb(234,100,12);
   padding: 15px 0;
-  margin-top: 3.6%;
+  margin-top: 52px;
   margin-left: 6%;
   width: 16%;
   font-family: 'courier new', sans-serif;
@@ -327,20 +346,21 @@ header {
 }
 
 
+// Abonnement
+
+#abonnement{
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+
 // Citation
 
 #citation{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  font-size: 120%;
+  text-align: center;
+  font-size: 14pt;
   width: 100%;
   color: #EA640C;
-}
-
-#citation div{
-  width: 40%;
 }
 
 
@@ -356,40 +376,6 @@ strong{
   color: #EA640C;
 }
 
-#arpenteurs{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 0;
-  margin-top: 7%;
-  background-color: rgba(211, 211, 211, 0.5);
-}
-
-#magazine{
-  width: 20%;
-}
-
-#textarp{
-  width: 40%;
-  padding-left: 80px;
-}
-
-#textarp h5{
-  font-family: 'Sakkal Majalla Bold';
-  font-size: 18pt;
-  line-height: 18pt;
-  color: #EA640C;
-}
-
-#textarp p{
-  font-family: 'Time New Roman';
-  font-size: 14pt;
-  line-height: 18pt;
-}
-
-#para{
-  padding-top: 9%;
-}
 #nb{
   color: #EA640C;
 }
@@ -399,65 +385,12 @@ strong{
   color: black;
 }
 
-
-#trombi div{
-  /*text-align: center;*/
-  /*width: 20%;*/
-  /*padding: 15px;*/
+#trombi .row .col.l2{
+  margin-left: 40px;
 }
 
 #trombi h6{
   color: #EA640C;
-}
-
-#trombi p{
-  /*width: 100%;*/
-  /*font-family: 'courier new', sans-serif;*/
-  /*color: black;*/
-  /*font-size: 12px;*/
-}
-
-/*==================================================================== */
-/* -------------------- GESTION DES IMAGES ---------------------- */
-/*==================================================================== */
-
-#logo{
-  position: relative;
-  width: 25%;
-  margin: 50px 0;
-  bottom: 600px;
-}
-
-.logoabt{
-  position: relative;
-  width: 70%;
-  z-index: 2;
-}
-
-#trombi>img{
-  /*width: 100%;*/
-}
-
-#img1{
-  margin-right: 30px;
-  width: 7%;
-  align-self: center;
-}
-
-#img2{
-  margin-left: 30px;
-  width: 7%;
-  align-self: center;
-}
-
-
-#trombi{
-  /*display: flex;*/
-  /*justify-content: space-around;*/
-  /*flex-wrap: wrap;*/
-  /*padding: 50px 0;*/
-  /*align-items: baseline;*/
-  /*width: 100%;*/
 }
 
 /*==================================================================== */
