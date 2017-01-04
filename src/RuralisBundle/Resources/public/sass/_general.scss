@@ -147,6 +147,7 @@ div .row .ruralisimgtop {
 .logoabt{
   position: relative;
   z-index: 2;
+mi-width: 200px;
 }
 
 #img1, #img2{
@@ -393,20 +394,31 @@ strong{
   color: #EA640C;
 }
 
+#trombi p{
+  font-family: 'courier new', sans-serif;
+  font-size: 12px;
+}
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
 
 footer{
-  height: 60px !important;
+  min-height: 170px !important;
   background-color: rgb(234,100,12);
+  padding: 20px;
+  bottom: 0;
 }
 
-footer .col{
-  height: 60px !important;
-}
+//footer .col{
+//  height: 60px !important;
+//}
 
 #logowcs{
+  margin-top: 4.5%;
+  width: 120px;
+}
+
+#logoruralis {
   margin-top: 0.5%;
-  height: 90%;
+  width: 120px;
 }
