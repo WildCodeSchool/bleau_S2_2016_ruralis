@@ -15,17 +15,25 @@
             </div>
             <div class="row">
                 {% for partenaire in partenaires %}
-                    <div class="col s3">
-                        <div class="row nomPart">
-                            {{ partenaire.nom }}
+                    <div class="col s3 part1">
+                        <div class="row">
+                            <div class="col offset-s2 s10 nomPart">
+                                {{ partenaire.nom }}
+                            </div>
                         </div>
-                        <div class="row photoPart">
-                            <img width=100% src="{{ asset('/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
+                        <div class="row">
+                            <div class="col s12 photoPart">
+                                <img src="{{ asset('/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
+                            </div>
                         </div>
-                        <div class="row descPart">
-                            {{ partenaire.descriptif }}
+                        <div class="row">
+                            <div class="col offset-s2 s10 descPart">
+                                {{ partenaire.descriptif }}
+                            </div>
                         </div>
+
                     </div>
+
                 {% endfor %}
             </div>
         </div>
