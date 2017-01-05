@@ -3,214 +3,286 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*Theme Name: Ruralis
-Theme URI: http://themeisle.com/themes/zerif-lite/
-Author: Alex; Benjamin, Valentin
-Author URI: http://themeisle.com
-Description: It's perfect for web agency business,corporate business,personal and parallax business portfolio, photography sites and freelancer.Is built on BootStrap with parallax support, is responsive, clean, modern, flat and minimal. Zerif Lite is ecommerce (WooCommerce) Compatible, WPML, RTL, Retina-Ready, SEO Friendly and with parallax, full screen image is one of the best business themes.
-Version: 1.8.3.5
-License: GNU General Public License version 3
-License URI: license.txt
-Domain Path: /languages/
-Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, photoblogging
+Author: Marielle Lautrou and Aurore David
 */
 /*==================================================================== */
 /* ----------------------- GENERAL CSS ----------------------- */
 /*==================================================================== */
-/* line 18, ../sass/_general.scss */
+/* line 11, ../sass/_general.scss */
 * {
   margin: 0;
   padding: 0;
-  /*border: 0.1px solid blue;*/
 }
 
 /*==================================================================== */
-/* ----------------LES TROIS IMAGE POUR UN CSS OPTIMAL --------------- */
+/* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
-/*image d'en-tete*/
-/*prendre TAILLE GRANDE pour la changer WORDPRESS*/
-/* line 31, ../sass/_general.scss */
+/* line 21, ../sass/_general.scss */
+.fixed_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* line 27, ../sass/_general.scss */
+header div {
+  list-style-type: none;
+}
+
+/* line 32, ../sass/_general.scss */
+.whitebckg {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 36, ../sass/_general.scss */
+header {
+  margin-bottom: 155px;
+}
+
+/* line 40, ../sass/_general.scss */
+.navigation a {
+  color: #ea640c;
+  font-weight: 800;
+}
+
+/* line 45, ../sass/_general.scss */
+.navigation li {
+  text-align: center;
+}
+
+/* line 49, ../sass/_general.scss */
+.navigation li:hover {
+  background-color: rgba(234, 100, 12, 0.48);
+  color: #ea4c0a;
+}
+
+/* line 54, ../sass/_general.scss */
+nav .row .col {
+  padding: 0;
+}
+
+/* line 58, ../sass/_general.scss */
+.mailbox:hover {
+  background-color: snow !important;
+}
+
+/* line 62, ../sass/_general.scss */
+.orangebckg {
+  background-color: #ea640c;
+  max-height: 56px;
+}
+
+/* line 67, ../sass/_general.scss */
+.navigation .row .col.offset-s1 {
+  margin-left: 9.333%;
+}
+
+/* line 71, ../sass/_general.scss */
+.ruralismag {
+  position: fixed;
+  max-height: 142px;
+  left: 0;
+  top: 0;
+}
+
+/* line 78, ../sass/_general.scss */
+.nl {
+  margin-top: 40px;
+}
+
+/* line 82, ../sass/_general.scss */
+.nl button {
+  margin-top: -19px;
+  background-color: #ea640c;
+}
+
+/* line 87, ../sass/_general.scss */
+.nl button:hover {
+  background-color: #ff8436;
+}
+
+/* line 91, ../sass/_general.scss */
+.nav_2line {
+  margin-top: -5px;
+}
+
+/* line 95, ../sass/_general.scss */
+.navigation .input-field label {
+  color: #ea640c;
+  top: 1.8rem;
+}
+
+/* line 100, ../sass/_general.scss */
+.navigation input[type="email"] {
+  border-bottom: 1px solid #ea640c;
+}
+
+/*==================================================================== */
+/* -------------------------- THREE BIG IMAGES ----------------------- */
+/*==================================================================== */
+/*Top image*/
+/* line 112, ../sass/_general.scss */
 .size-large {
   width: 100%;
   height: 720px;
 }
 
-/*imges du Territoire et du Peuple des campagnes*/
-/*prendre TAILLE ORIGINALE pour la changer WORDPRESS*/
-/* line 38, ../sass/_general.scss */
+/* line 117, ../sass/_general.scss */
+div .row .ruralisimgtop {
+  margin-bottom: 0;
+}
+
+/* line 121, ../sass/_general.scss */
+.topruralis {
+  max-width: 99.99%;
+}
+
+/* Images Territoire */
+/* line 128, ../sass/_general.scss */
 .size-full {
   height: auto;
   width: 19.5%;
   margin: 0;
 }
 
-/*image logo dans pied de page*/
-/*prendre TAILLE MINIATURE pour la changer WORDPRESS*/
-/* line 46, ../sass/_general.scss */
-.size-thumbnail {
-  margin-top: 0.5%;
-  height: 80%;
-  width: auto;
-  margin: 0 10px;
-}
-
 /*==================================================================== */
-/* ----------------------- BARRE DE NAVIGATION ----------------------- */
+/* -------------------- GESTION DES IMAGES ---------------------- */
 /*==================================================================== */
-/* line 58, ../sass/_general.scss */
-.fixed_nav {
-  position: fixed;
-  top: 0%;
-  width: 100%;
+/* line 141, ../sass/_general.scss */
+#logo {
+  position: relative;
+  bottom: 565px;
+  margin-bottom: -320px;
 }
 
-/* line 64, ../sass/_general.scss */
-header div {
-  list-style-type: none;
+/* line 147, ../sass/_general.scss */
+.logoabt {
+  position: relative;
+  z-index: 2;
+  mi-width: 200px;
 }
 
-/* line 69, ../sass/_general.scss */
-.whitebckg {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-/* line 76, ../sass/_general.scss */
-header a {
-  color: #ea640c;
-}
-
-/* line 84, ../sass/_general.scss */
-.orangebckg {
-  background-color: #ea640c;
-  max-height: 56px;
-}
-
-/* line 89, ../sass/_general.scss */
-.navigation .row .col.offset-s1 {
-  margin-left: 9.333%;
-}
-
-/* line 93, ../sass/_general.scss */
-.ruralismag {
-  position: fixed;
-  max-height: 161px;
-  left: 1%;
-  top: -10%;
-}
-
-/* line 100, ../sass/_general.scss */
-.nl {
-  margin-top: 40px;
-}
-
-/* line 104, ../sass/_general.scss */
-.nl button {
-  margin-top: -19px;
-  background-color: #ea640c;
-}
-
-/* line 109, ../sass/_general.scss */
-.nl button:hover {
-  background-color: #ff8436;
-}
-
-/* line 113, ../sass/_general.scss */
-.nav_2line {
-  margin-top: -5px;
-}
-
-/* line 117, ../sass/_general.scss */
-.navigation .input-field label {
-  color: #ea640c;
-  top: 1.8rem;
-}
-
-/* line 122, ../sass/_general.scss */
-.navigation input[type="email"] {
-  border-bottom: 1px solid #ea640c;
+/* line 153, ../sass/_general.scss */
+#img1, #img2 {
+  width: 7%;
 }
 
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
-/* line 132, ../sass/_general.scss */
+
+/* line 165, ../sass/_general.scss */
 #description {
   width: 100%;
-  padding-top: 20%;
+  text-align: center;
+  margin-top: -20px;
+  padding-top: -20px;
 }
 
-/* line 137, ../sass/_general.scss */
+/* line 172, ../sass/_general.scss */
 #description p {
   display: inline-block;
-  width: 55%;
   font-size: 14pt;
   font-family: 'Time New Roman', sans-serif;
   line-height: 18pt;
   color: #EA640C;
 }
 
-/* line 149, ../sass/_general.scss */
-#territoire, #peuple {
-  margin-top: 170px;
+/* line 184, ../sass/_general.scss */
+#territoire {
   padding: 0;
   width: 100%;
 }
 
-/* line 154, ../sass/_general.scss */
+/* line 190, ../sass/_general.scss */
 #territoire h4, #peuple h4 {
   padding: 15px 0;
   width: 100%;
   font-family: 'Arial Bold';
 }
 
-/* line 163, ../sass/_general.scss */
+/* line 199, ../sass/_general.scss */
 #editorial {
-  margin-top: 7%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-/* line 171, ../sass/_general.scss */
-.edit {
-  width: 50%;
-  padding: 2%;
-  width: 30%;
-}
-
-/* line 177, ../sass/_general.scss */
-#editorial h5 {
   text-align: center;
+  line-height: 18pt;
+}
+
+/* line 203, ../sass/_general.scss */
+#editorial h5 {
+  font-family: 'Sakkal Majalla Bold';
+  font-size: 18pt;
+  color: #EA640C;
+}
+
+/* line 209, ../sass/_general.scss */
+#editorial p {
+  font-family: 'Time New Roman';
+  font-size: 14pt;
+}
+
+/* line 216, ../sass/_general.scss */
+#arpenteurs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  margin-top: 7%;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+/* line 225, ../sass/_general.scss */
+#magazine {
+  max-width: 60%;
+}
+
+/* line 229, ../sass/_general.scss */
+#textarp {
+  margin-left: -120px;
+  text-align: center;
+}
+
+/* line 234, ../sass/_general.scss */
+#textarp h5 {
   font-family: 'Sakkal Majalla Bold';
   font-size: 18pt;
   line-height: 18pt;
   color: #EA640C;
 }
 
-/* line 185, ../sass/_general.scss */
-#editorial p {
+/* line 241, ../sass/_general.scss */
+#textarp p {
   font-family: 'Time New Roman';
   font-size: 14pt;
   line-height: 18pt;
+}
+
+/* line 250, ../sass/_general.scss */
+.peuple {
   text-align: center;
 }
 
-/* line 194, ../sass/_general.scss */
-#objectifs {
-  position: relative;
-  display: inline-block;
-  height: 60%;
+/* line 254, ../sass/_general.scss */
+.peuple img {
+  max-height: 362.493px;
+  max-width: 236.522px;
 }
 
-/* line 200, ../sass/_general.scss */
-#objectifs p {
+/* line 262, ../sass/_general.scss */
+.objectifs {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 269, ../sass/_general.scss */
+.objectifs p {
   font-family: 'Time New Roman';
   font-size: 14pt;
   line-height: 25pt;
-  width: 52%;
   margin: auto;
 }
 
-/* line 208, ../sass/_general.scss */
+/* line 277, ../sass/_general.scss */
 #txtobjectif p {
   display: inline-block;
   text-align: center;
@@ -222,7 +294,7 @@ header a {
   font-weight: bold;
 }
 
-/* line 221, ../sass/_general.scss */
+/* line 291, ../sass/_general.scss */
 #flexabonnes {
   margin-top: 70px;
   width: 100%;
@@ -231,7 +303,7 @@ header a {
   align-content: center;
 }
 
-/* line 229, ../sass/_general.scss */
+/* line 299, ../sass/_general.scss */
 #nbabonnes {
   padding-right: 5px;
   width: 40%;
@@ -241,7 +313,7 @@ header a {
   font-size: 200%;
 }
 
-/* line 238, ../sass/_general.scss */
+/* line 308, ../sass/_general.scss */
 #nbabonnes p {
   display: inline-block;
   margin-top: 2.5%;
@@ -252,53 +324,21 @@ header a {
   font-size: 75%;
 }
 
-/* line 248, ../sass/_general.scss */
+/* line 318, ../sass/_general.scss */
 #flexabonnes img {
   width: 5%;
   margin: 0 2%;
   align-self: center;
 }
 
-/* line 257, ../sass/_general.scss */
-#abonnement {
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 400px;
-  margin-top: 200px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: rgba(211, 211, 211, 0.5);
-}
-
-/* line 271, ../sass/_general.scss */
-#abonnement p {
-  width: 100%;
-  margin: 20px 5px;
-  text-align: center;
-  font-family: 'courier new', sans-serif;
-  font-size: 200%;
-  color: #ea640c;
-  font-weight: bold;
-  z-index: 1;
-}
-
-/* line 282, ../sass/_general.scss */
-#abonnement a {
-  width: 30%;
-}
-
-/* line 288, ../sass/_general.scss */
+/* line 327, ../sass/_general.scss */
 #savoir {
   height: 100%;
   position: relative;
   display: inline-block;
   background-color: #ea640c;
   padding: 15px 0;
-  margin-top: 3.6%;
+  margin-top: 52px;
   margin-left: 6%;
   width: 16%;
   font-family: 'courier new', sans-serif;
@@ -308,175 +348,88 @@ header a {
   transition: 0.5s;
 }
 
-/* line 304, ../sass/_general.scss */
+/* line 343, ../sass/_general.scss */
 #savoir:hover {
   background-color: #ffffff;
   transition: 0.5s;
   color: #ea640c;
 }
 
-/* line 313, ../sass/_general.scss */
+/* line 352, ../sass/_general.scss */
+#abonnement {
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+/* line 360, ../sass/_general.scss */
 #citation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  font-size: 120%;
+  text-align: center;
+  font-size: 14pt;
   width: 100%;
   color: #EA640C;
 }
 
-/* line 323, ../sass/_general.scss */
-#citation div {
-  width: 40%;
-}
-
-/* line 330, ../sass/_general.scss */
+/* line 370, ../sass/_general.scss */
 strong {
   color: #EA640C;
   font-size: 23px;
   font-weight: bold;
 }
 
-/* line 336, ../sass/_general.scss */
+/* line 376, ../sass/_general.scss */
 .txtorange {
   color: #EA640C;
 }
 
-/* line 340, ../sass/_general.scss */
-#arpenteurs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 0;
-  margin-top: 7%;
-  background-color: rgba(211, 211, 211, 0.5);
-}
-
-/* line 349, ../sass/_general.scss */
-#magazine {
-  width: 20%;
-}
-
-/* line 353, ../sass/_general.scss */
-#textarp {
-  width: 40%;
-  padding-left: 80px;
-}
-
-/* line 358, ../sass/_general.scss */
-#textarp h5 {
-  font-family: 'Sakkal Majalla Bold';
-  font-size: 18pt;
-  line-height: 18pt;
-  color: #EA640C;
-}
-
-/* line 365, ../sass/_general.scss */
-#textarp p {
-  font-family: 'Time New Roman';
-  font-size: 14pt;
-  line-height: 18pt;
-}
-
-/* line 371, ../sass/_general.scss */
-#para {
-  padding-top: 9%;
-}
-
-/* line 374, ../sass/_general.scss */
+/* line 380, ../sass/_general.scss */
 #nb {
   color: #EA640C;
 }
 
-/* line 378, ../sass/_general.scss */
+/* line 384, ../sass/_general.scss */
 #auteur {
   font-size: 80%;
   color: black;
 }
 
-/* line 384, ../sass/_general.scss */
-#trombi div {
-  /*text-align: center;*/
-  /*width: 20%;*/
-  /*padding: 15px;*/
+/* line 389, ../sass/_general.scss */
+#trombi .row .col.l2 {
+  margin-left: 40px;
 }
 
-/* line 390, ../sass/_general.scss */
+/* line 393, ../sass/_general.scss */
 #trombi h6 {
   color: #EA640C;
 }
 
-/* line 394, ../sass/_general.scss */
+/* line 397, ../sass/_general.scss */
 #trombi p {
-  /*width: 100%;*/
-  /*font-family: 'courier new', sans-serif;*/
-  /*color: black;*/
-  /*font-size: 12px;*/
-}
-
-/*==================================================================== */
-/* -------------------- GESTION DES IMAGES ---------------------- */
-/*==================================================================== */
-/* line 405, ../sass/_general.scss */
-#logo {
-  max-height: 50%;
-}
-
-/* line 409, ../sass/_general.scss */
-.logoabt {
-  position: relative;
-  width: 70%;
-  z-index: 2;
-}
-
-/* line 415, ../sass/_general.scss */
-#trombi > img {
-  /*width: 100%;*/
-}
-
-/* line 419, ../sass/_general.scss */
-#img1 {
-  margin-right: 30px;
-  width: 7%;
-  align-self: center;
-}
-
-/* line 425, ../sass/_general.scss */
-#img2 {
-  margin-left: 30px;
-  width: 7%;
-  align-self: center;
-}
-
-/* line 432, ../sass/_general.scss */
-#trombi {
-  /*display: flex;*/
-  /*justify-content: space-around;*/
-  /*flex-wrap: wrap;*/
-  /*padding: 50px 0;*/
-  /*align-items: baseline;*/
-  /*width: 100%;*/
+  font-family: 'courier new', sans-serif;
+  font-size: 12px;
 }
 
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 445, ../sass/_general.scss */
+
+/* line 405, ../sass/_general.scss */
 footer {
-  height: 60px !important;
+  min-height: 170px !important;
   background-color: #ea640c;
+  padding: 20px;
+  bottom: 0;
 }
 
-/* line 450, ../sass/_general.scss */
-footer .col {
-  height: 60px !important;
-}
-
-/* line 454, ../sass/_general.scss */
+/* line 416, ../sass/_general.scss */
 #logowcs {
+  margin-top: 4.5%;
+  width: 120px;
+}
+
+/* line 421, ../sass/_general.scss */
+#logoruralis {
   margin-top: 0.5%;
-  height: 90%;
+  width: 120px;
 }
 
 /*
