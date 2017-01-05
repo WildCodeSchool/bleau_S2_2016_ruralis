@@ -647,18 +647,23 @@ a {
 }
 
 /* line 3, ../sass/_blog.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 6, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
 }
 
-/* line 6, ../sass/_blog.scss */
+/* line 9, ../sass/_blog.scss */
 .article {
   max-height: 200px;
   overflow: none;
   margin-bottom: 70px;
 }
 
-/* line 12, ../sass/_blog.scss */
+/* line 15, ../sass/_blog.scss */
 .card-image > img, .card-content {
   max-height: 190px;
   width: auto;
@@ -668,7 +673,7 @@ a {
   height : 33.3333333333%;
   width : 33.3333333333%;
 }*/
-/* line 22, ../sass/_blog.scss */
+/* line 25, ../sass/_blog.scss */
 .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -679,7 +684,7 @@ a {
   height: auto;
 }
 
-/* line 32, ../sass/_blog.scss */
+/* line 35, ../sass/_blog.scss */
 .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -690,17 +695,17 @@ a {
   height: auto;
 }
 
-/* line 42, ../sass/_blog.scss */
+/* line 45, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 46, ../sass/_blog.scss */
+/* line 49, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 50, ../sass/_blog.scss */
+/* line 53, ../sass/_blog.scss */
 .fixed .row {
   position: fixed;
   top: 40%;
@@ -710,17 +715,17 @@ a.cardLink {
   text-align: center;
 }
 
-/* line 59, ../sass/_blog.scss */
+/* line 62, ../sass/_blog.scss */
 .fixed div img {
   width: 40px;
 }
 
-/* line 63, ../sass/_blog.scss */
+/* line 66, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
 
-/* line 67, ../sass/_blog.scss */
+/* line 70, ../sass/_blog.scss */
 .blogTop {
   margin-top: 12%;
 }
@@ -728,28 +733,26 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 75, ../sass/_blog.scss */
+/* line 78, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 80, ../sass/_blog.scss */
+/* line 83, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
 }
 
-/*
-.cardCarre{
-  height: 100%;
-  overflow: visible;
-  max-width: 100%;
+/****************************/
+/*        article           */
+/****************************/
+/* line 92, ../sass/_blog.scss */
+.article {
+  margin-top: 10%;
 }
 
-.cardCarre img{
-  max-width: 50%;
-}*/
 /* line 1, ../sass/_partenaire.scss */
 .partenaire {
   text-align: center;

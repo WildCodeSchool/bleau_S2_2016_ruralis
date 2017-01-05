@@ -24,4 +24,11 @@ class DefaultController extends Controller
             'articles' => $pagination,
         ));
     }
+
+    public function articleAction(Article $article)
+    {
+        return $this->render('@Ruralis/user/article.html.twig', array(
+            'article' => $article,
+        ));
+    }
 }

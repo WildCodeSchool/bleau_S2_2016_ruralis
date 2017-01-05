@@ -21,11 +21,11 @@ class ArticleType extends AbstractType
             ->add('typeAffichage', ChoiceType::class, array (
                 'placeholder' => "",
                 'choices' => array (
-                    'Une' => '1',
-                    'Carré' => '2',
-                    'Rectangle + lien abonnement' => '3',
-                    'Rectangle + contenu' => '4',
-                    'Rectangle + lien abonnemnet complet' => '5',
+                    'Une' => 'Une',
+                    'Carré' => 'Carré',
+                    'Rectangle + lien abonnement' => 'Rectangle + lien abonnement',
+                    'Rectangle + descriptif' => 'Rectangle + descriptif',
+                    'Rectangle + lien abonnemnet complet' => 'Rectangle + article complet',
                 ),
                 'choices_as_values' => true,
             ))

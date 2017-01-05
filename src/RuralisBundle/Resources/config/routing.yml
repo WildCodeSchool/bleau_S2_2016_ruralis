@@ -1,6 +1,10 @@
-ruralis_article:
+ruralis_admin_article:
     resource: "@RuralisBundle/Resources/config/routing/article.yml"
-    prefix:   /admin/article
+    prefix:   /article
+
+ruralis_article:
+    path:     /{id}/article
+    defaults: { _controller: RuralisBundle:Default:article, id: null }
 
 ruralis_homepage:
     path:     /

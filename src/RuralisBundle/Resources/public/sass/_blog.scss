@@ -1,5 +1,8 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
 
+h1{
+  text-align:center;
+}
 .hoverable.header, .hoverable.card{
   height:2% !important;
 }
@@ -82,13 +85,11 @@ a.cardLink{
   margin:0px;
 }
 
-/*
-.cardCarre{
-  height: 100%;
-  overflow: visible;
-  max-width: 100%;
+/****************************/
+/*        article           */
+/****************************/
+
+.article{
+  margin-top:10%;
 }
 
-.cardCarre img{
-  max-width: 50%;
-}*/
