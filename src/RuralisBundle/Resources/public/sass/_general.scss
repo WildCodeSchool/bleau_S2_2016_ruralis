@@ -25,7 +25,7 @@ Author: Marielle Lautrou and Aurore David
 }
 
 header div{
-  list-style-type: none;
+  list-style-type: diamond;
   //display: inline;
 }
 
@@ -74,10 +74,10 @@ nav .row .col{
   left: 0;
   top: 0;
 }
-
-.nl {
-  margin-top: 40px;
-}
+//
+//.nl {
+//  margin-top: 40px;
+//}
 
 .nl button {
   margin-top: -19px;
@@ -88,8 +88,17 @@ nav .row .col{
   background-color: rgb(255, 132, 54);
 }
 
+.nav_1line ul li{
+  float: left;
+  list-style-type: square;
+}
+
+.marginnav {
+  margin-left: 15%;
+}
 .nav_2line {
-  margin-top: -5px;
+  list-style-type: square;
+  float: left;
 }
 
 .navigation .input-field label{
