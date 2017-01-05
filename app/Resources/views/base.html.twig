@@ -23,9 +23,9 @@
 
     <header>
         <div class="row navbar-fixed fixed_nav navigation">
-            <div class="col s2">
+            <div class="col s2 navcolleft">
                 <a href="{{ path ('ruralis_homepage') }}">
-                    <img src="{{ asset ('bundles/ruralis/images/logonav.png') }}" alt="Ruralis" class="ruralismag">
+                    <img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="ruralismag">
                 </a>
             </div>
 
@@ -60,7 +60,7 @@
                         <div class="col offset-s4 s1 nl">
                             <li><a href="#">Newsletter</a></li>
                         </div>
-                        <div class="input-field col s3">
+                        <div class="input-field col s3 mailbox">
                             <li> <input id="email" type="email" class="validate">
                                 <label for="email">Email</label>
                             </li>
@@ -88,20 +88,28 @@
 
 
 
-    <div class="row">
+    <div class="row page-footer">
         <footer>
-            <div class="col m6">
-                <img id="logowcs" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo">
+            <div class="row">
+                <div class="col s3 offset-s1">
+                    <img id="logoruralis" src="{{ asset('bundles/ruralis/images/logo_mini.png') }}" alt="logo">
+                </div>
+                <div class="col s3 white-text">
+                    <p>NOUS CONTACTER</p>
+                    <p>Association APRIORI / Ruralis Magazine</p>
+                    <p>12, rue du Four-Dieu</p>
+                    <p>45200 Montargis</p>
+                    <p>06 80 73 88 34</p>
+                    <p>contact@ruralismagazine.fr</p>
+                </div>
+                <div class="col s3 offset-s2">
+                    <a href="http://www.wildcodeschool.fr" target="_blank">
+                        <img id="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
+                    </a>
+                </div>
             </div>
-            <div class="col m6">
-                <a href="http://www.wildcodeschool.fr" target="_blank">
-                    <img id="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
-                </a>
-            </div>
-
         </footer>
     </div>
-
 
     {% block javascripts %}
         <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
