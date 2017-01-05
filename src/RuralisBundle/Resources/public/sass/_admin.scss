@@ -2,8 +2,9 @@
 select {
   display : block !important;
 }*/
-.nouvel_article{
+.adminmodel h1{
   color:#00B82B;
+  text-align:center;
 }
 
 .btn{
@@ -20,6 +21,7 @@ select {
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
+  margin-top:12%;
 }
 
 .container .row {
@@ -50,4 +52,16 @@ label{
 
 .file-path {
   color:white;
+}
+
+a {
+  color: #00B82B;
+}
+
+.imageAdmin{
+  height:150px;
+}
+
+.middleText{
+  margin-top:75px;
 }

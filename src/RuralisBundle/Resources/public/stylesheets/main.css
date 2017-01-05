@@ -170,6 +170,7 @@ div .row .ruralisimgtop {
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
+
 /* line 165, ../sass/_general.scss */
 #description {
   width: 100%;
@@ -410,6 +411,7 @@ strong {
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
+
 /* line 405, ../sass/_general.scss */
 footer {
   min-height: 170px !important;
@@ -435,64 +437,81 @@ select {
   display : block !important;
 }*/
 /* line 5, ../sass/_admin.scss */
-.nouvel_article {
+.adminmodel h1 {
   color: #00B82B;
+  text-align: center;
 }
 
-/* line 9, ../sass/_admin.scss */
+/* line 10, ../sass/_admin.scss */
 .btn {
   background-color: #00B82B;
 }
 
-/* line 13, ../sass/_admin.scss */
+/* line 14, ../sass/_admin.scss */
 .btn:hover {
   background-color: #47d9bc;
 }
 
-/* line 17, ../sass/_admin.scss */
+/* line 18, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: rgba(117, 207, 80, 0.75);
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
+  margin-top: 12%;
 }
 
-/* line 25, ../sass/_admin.scss */
+/* line 27, ../sass/_admin.scss */
 .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
 
-/* line 30, ../sass/_admin.scss */
+/* line 32, ../sass/_admin.scss */
 input[type="text"] {
   border-bottom-color: white;
 }
 
-/* line 34, ../sass/_admin.scss */
+/* line 36, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 39, ../sass/_admin.scss */
+/* line 41, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 43, ../sass/_admin.scss */
+/* line 45, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 47, ../sass/_admin.scss */
+/* line 49, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 51, ../sass/_admin.scss */
+/* line 53, ../sass/_admin.scss */
 .file-path {
   color: white;
+}
+
+/* line 57, ../sass/_admin.scss */
+a {
+  color: #00B82B;
+}
+
+/* line 61, ../sass/_admin.scss */
+.imageAdmin {
+  height: 150px;
+}
+
+/* line 65, ../sass/_admin.scss */
+.middleText {
+  margin-top: 75px;
 }
 
 /* line 3, ../sass/_abonnement.scss */
@@ -581,56 +600,126 @@ label {
 }
 
 /* line 3, ../sass/_blog.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 6, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
 }
 
-/* line 7, ../sass/_blog.scss */
-.card.large {
-  height: 33.3333333333%;
-  width: 33.3333333333%;
+/* line 9, ../sass/_blog.scss */
+.article {
+  max-height: 200px;
+  overflow: none;
+  margin-bottom: 70px;
 }
 
-/* line 12, ../sass/_blog.scss */
-.row .col .s12 {
-  width: 95%;
+/* line 15, ../sass/_blog.scss */
+.card-image > img, .card-content {
+  max-height: 190px;
+  width: auto;
 }
 
-/* line 16, ../sass/_blog.scss */
-.row > .card {
-  height: 20%;
+/*.card.large {
+  height : 33.3333333333%;
+  width : 33.3333333333%;
+}*/
+/* line 25, ../sass/_blog.scss */
+.la_une .card-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 230px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
 }
 
-/* line 20, ../sass/_blog.scss */
-.la_une {
-  margin-top: 40px;
+/* line 35, ../sass/_blog.scss */
+.carre .card-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
 }
 
-/* line 24, ../sass/_blog.scss */
+/* line 45, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 28, ../sass/_blog.scss */
+/* line 49, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 32, ../sass/_blog.scss */
+/* line 53, ../sass/_blog.scss */
 .fixed .row {
   position: fixed;
   top: 40%;
   width: 120px;
   color: red;
   margin-left: 40px;
+  text-align: center;
 }
 
-/* line 40, ../sass/_blog.scss */
+/* line 62, ../sass/_blog.scss */
 .fixed div img {
   width: 40px;
 }
 
-/* line 44, ../sass/_blog.scss */
+/* line 66, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
+}
+
+/* line 70, ../sass/_blog.scss */
+.blogTop {
+  margin-top: 12%;
+}
+
+/****************************/
+/*        row  & col        */
+/****************************/
+/* line 78, ../sass/_blog.scss */
+.rowCustom {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+/* line 83, ../sass/_blog.scss */
+.colCustom {
+  padding: 0px !important;
+  margin: 0px;
+}
+
+/****************************/
+/*        article           */
+/****************************/
+/* line 92, ../sass/_blog.scss */
+.article {
+  margin-top: 10%;
+}
+
+/* line 1, ../sass/_partenaire.scss */
+.partenaire {
+  text-align: center;
+}
+/* line 4, ../sass/_partenaire.scss */
+.partenaire .partenaireTop {
+  margin-top: 150px;
+}
+/* line 8, ../sass/_partenaire.scss */
+.partenaire .nomPart {
+  font-weight: bold;
+  color: #EF651B;
+}
+/* line 13, ../sass/_partenaire.scss */
+.partenaire img {
+  height: 150px;
 }

@@ -1,24 +1,45 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
 
+h1{
+  text-align:center;
+}
 .hoverable.header, .hoverable.card{
   height:2% !important;
 }
+.article {
+  max-height: 200px;
+  overflow: none;
+  margin-bottom:70px;
+}
 
-.card.large {
+.card-image > img, .card-content{
+    max-height: 190px;
+    width: auto;
+}
+
+/*.card.large {
   height : 33.3333333333%;
   width : 33.3333333333%;
+}*/
+
+.la_une .card-image img, {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:230px;
+  max-height:200px;
+  width: auto;
+  height: auto;
 }
 
-.row .col .s12{
-  width:95%;
-}
-
-.row>.card{
-  height:20%;
-}
-
-.la_une {
-  margin-top: 40px;
+.carre .card-image img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:100px;
+  max-height:100px;
+  width: auto;
+  height: auto;
 }
 
 h4, .card-content{
@@ -35,6 +56,7 @@ a.cardLink{
   width:120px;
   color:red;
   margin-left:40px;
+  text-align:center;
 }
 
 .fixed div img{
@@ -44,3 +66,30 @@ a.cardLink{
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
+
+.blogTop{
+  margin-top:12%;
+}
+
+/****************************/
+/*        row  & col        */
+/****************************/
+
+.rowCustom {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.colCustom {
+  padding:0px !important;
+  margin:0px;
+}
+
+/****************************/
+/*        article           */
+/****************************/
+
+.article{
+  margin-top:10%;
+}
+

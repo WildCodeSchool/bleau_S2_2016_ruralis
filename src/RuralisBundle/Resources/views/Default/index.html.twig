@@ -31,9 +31,7 @@
             </div>
         </div>
 
-        <div class="col s10">
-            {#      CARD DE UNE      #}
-
+        <div class="col s9 blogTop">
                 {% set is_row = false %}
                 {% for index, article in articles %}
                     {% if article.typeAffichage != '2' and is_row %}
@@ -41,8 +39,11 @@
                         {% set is_row = false %}
                     {% endif %}
 
-                    {% if article.typeAffichage == '1' %}
-                        <div class="row">
+
+                    {#      CARD DE UNE      #}
+
+                    {% if article.typeAffichage == 'Une' %}
+                        <div class="row article">
                             <div class="card large col s12 hoverable la_une">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
@@ -61,7 +62,7 @@
                                         <i class="material-icons right">close</i>
                                     </div>
                                     <p>
-                                        {{ article.contenu }}
+                                        {{ article.descriptif }}
                                     </p>
                                 </div>
                             </div>
@@ -70,14 +71,14 @@
             {#      CARDS BLOG      #}
 
                         {# CARD CARRE #}
-                        {% elseif article.typeAffichage == '2'%}
+                        {% elseif article.typeAffichage == 'Carré'%}
                             {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
-                                <div class="row">
+                                <div class="row article rowCustom">
                                 {% set is_row = true %}
                             {%  endif %}
-                                    <div class="col s5 offset-s2 carre card large hoverable">
+                                    <div class="col offset-s2 s5 carre card hoverable colCustom">
                                         {# First card #}
-                                        <div class="card">
+                                        <div class="card cardCarre">
                                             <div class="card-image waves-effect waves-block waves-light">
                                                 <img class="activator" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                                             </div>
@@ -91,7 +92,7 @@
                                             {#    Information about the article 1 revealed once clicked on      #}
                                             <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
                                                 <div class="row card-title grey-text text-darken-4">
-                                                   {{ article.contenu }}
+                                                   {{ article.descriptif }}
                                                 </div>
                                              </div>
                                         </div>
@@ -99,9 +100,9 @@
 
 
                         {# RECTANGLE + LIEN ABONNEMENT #}
-                        {% elseif article.typeAffichage == '3' %}
+                        {% elseif article.typeAffichage == 'Rectangle + lien abonnement' %}
                             {# Second card #}
-                            <div class="row">
+                            <div class="row article">
                                 <div class="col s12 hoverable">
                                     <h4 class="header">
                                         {{ article.nom }}
@@ -115,18 +116,18 @@
                                                 <p>{{ article.descriptif}}</p>
                                             </div>
                                             <div class="card-action">
-                                                <a href="{{ path('article_index') }}" class="cardLink">Pour en savoir plus abonnez-vous</a>
+                                                <a href="{{ path('ruralis_abonnement') }}" class="cardLink">Pour en savoir plus abonnez-vous</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                        {# RECTANGLE + CONTENU #}
-                        {% elseif article.typeAffichage == '4' %}
+                        {# RECTANGLE + DESCRIPTIF #}
+                        {% elseif article.typeAffichage == 'Rectangle + descriptif' %}
                             {# Third card #}
-                            <div class="row">
-                                <div class="col {#offset-l3 l8 offset-m1 m8 #}s12 hoverable">
+                            <div class="row article">
+                                <div class="col s12 hoverable">
                                     <h4 class="header">
                                         {{ article.nom  }}
                                     </h4>
@@ -136,18 +137,18 @@
                                         </div>
                                         <div class="card-stacked">
                                             <div class="card-content">
-                                                <p>{{ article.contenu }}</p>
+                                                <p>{{ article.descriptif }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                        {# RECTANGLE + LIEN ARTICLE COMPLET #}
-                        {% elseif article.typeAffichage == '5' %}
+                        {# RECTANGLE + ARTICLE COMPLET #}
+                        {% elseif article.typeAffichage == 'Rectangle + article complet' %}
                             {# fourth card #}
                             <div class="row">
-                                <div class="col {#offset-l3 l8 offset-m1 m8 #}s12 hoverable">
+                                <div class="col s12 hoverable">
                                     <h4 class="header">
                                         {{ article.nom  }}
                                     </h4>
@@ -166,18 +167,20 @@
                                     </div>
                                 </div>
                             </div>
-
                     {%  endif %}
                 {% endfor %}
                 {% if is_row %}
                     </div>
                     {% set is_row = false %}
                 {% endif %}
+            <div class="row">
+                <div class="col offset-s5 s3 navigation">
+                    {{ knp_pagination_render(articles) }}
+                </div>
             </div>
-            <div class="navigation">
-                {{ knp_pagination_render(articles) }}
             </div>
         </div>
+
     {% block javascripts %}
         {{ parent() }}
         <script>
