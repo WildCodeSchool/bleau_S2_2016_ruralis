@@ -32,6 +32,32 @@
         </div>
 
         <div class="col s9 blogTop">
+            {#      CARD DE UNE      #}
+            <div class="row article">
+                <div class="card large col s12 hoverable la_une">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article_une.image.url }}" alt="{{ article_une.image.alt }}">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-title activator grey-text text-darken-4">
+                            {{ article_une.nom }}
+                            <i class="material-icons right">more_vert</i>
+                        </div>
+                        <p><a href="#" class="cardLink">Lien vers la Une</a></p>
+                    </div>
+                    {#    Information about the News revealed once clicked on      #}
+                    <div class="card-reveal">
+                        <div class="card-title grey-text text-darken-4">{{ article_une.nom }}
+                            <i class="material-icons right">close</i>
+                        </div>
+                        <p>
+                            {{ article_une.descriptif }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
                 {% set is_row = false %}
                 {% for index, article in articles %}
                     {% if article.typeAffichage != '2' and is_row %}
@@ -39,39 +65,10 @@
                         {% set is_row = false %}
                     {% endif %}
 
-
-                    {#      CARD DE UNE      #}
-
-                    {% if article.typeAffichage == 'Une' %}
-                        <div class="row article">
-                            <div class="card large col s12 hoverable la_une">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" width="20%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
-                                </div>
-
-                                <div class="card-content">
-                                    <div class="card-title activator grey-text text-darken-4">
-                                        {{ article.nom }}
-                                        <i class="material-icons right">more_vert</i>
-                                    </div>
-                                    <p><a href="#" class="cardLink">Lien vers la Une</a></p>
-                                </div>
-                                {#    Information about the News revealed once clicked on      #}
-                                <div class="card-reveal">
-                                    <div class="card-title grey-text text-darken-4">{{ article.nom }}
-                                        <i class="material-icons right">close</i>
-                                    </div>
-                                    <p>
-                                        {{ article.descriptif }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
             {#      CARDS BLOG      #}
 
                         {# CARD CARRE #}
-                        {% elseif article.typeAffichage == 'Carré'%}
+                        {% if article.typeAffichage == 'Carré'%}
                             {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
                                 <div class="row article rowCustom">
                                 {% set is_row = true %}

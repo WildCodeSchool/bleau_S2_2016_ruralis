@@ -170,7 +170,6 @@ div .row .ruralisimgtop {
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
-
 /* line 165, ../sass/_general.scss */
 #description {
   width: 100%;
@@ -411,7 +410,6 @@ strong {
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-
 /* line 405, ../sass/_general.scss */
 footer {
   min-height: 170px !important;
@@ -678,32 +676,19 @@ a.cardLink {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
 
-/* line 70, ../sass/_blog.scss */
-.blogTop {
-  margin-top: 12%;
-}
-
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 78, ../sass/_blog.scss */
+/* line 74, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 83, ../sass/_blog.scss */
+/* line 79, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
-}
-
-/****************************/
-/*        article           */
-/****************************/
-/* line 92, ../sass/_blog.scss */
-.article {
-  margin-top: 10%;
 }
 
 /* line 1, ../sass/_partenaire.scss */
