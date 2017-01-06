@@ -17,9 +17,9 @@ class Image
 
     /**
      * @Assert\Image(
-     *     maxSize = "1k",
+     *     maxSize = "2k",
      *     mimeTypes = {"image/*"},
-     *     maxSizeMessage = "The maximum allowed file size is 1MB.",
+     *     maxSizeMessage = "The maximum allowed file size is 2MB.",
      *     mimeTypesMessage = "Please upload a valid Image.")
      */
     public $file;
