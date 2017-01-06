@@ -1,10 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="container adminmodel">
-    <div class="col m8 offset-m2">
+<div class="row adminmodel">
+    <div class="col offset-m1 m8">
         <h1>Articles de blog</h1>
-
         <table>
             <thead>
             <tr>
@@ -27,7 +26,7 @@
                     <td>{{ article.contenu }}</td>
                     <td>{{ article.auteur }}</td>
                     <td>{{ article.date|date('d M Y') }}</td>
-                    <td><img width="30%" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
+                    <td><img class="adminImg" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
                     <td><a href="{{ path('article_show', { 'id': article.id }) }}">Voir</a></td>
                     <td><a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a></td>
                     <td><a href="{{ path('article_delete', { 'id': article.id }) }}">Supprimer</a></td>
@@ -40,10 +39,9 @@
         </table>
     </div>
 </div>
-
-    <ul>
-        <li>
-            <a href="{{ path('article_new') }}">Ajouter un article</a>
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col offset-s4 s4">
+            <a class="waves-effect waves-light btn" href="{{ path('article_new') }}">Ajouter un article</a>
+        </div>
+    </div>
 {% endblock %}

@@ -172,7 +172,11 @@ div .row .ruralisimgtop {
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
+<<<<<<< HEAD
+/* line 165, ../sass/_general.scss */
+=======
 /* line 181, ../sass/_general.scss */
+>>>>>>> 5c2fb662c944ff5b8c86178126fbbbdca70094b9
 #description {
   width: 100%;
   text-align: center;
@@ -443,16 +447,21 @@ select {
 }
 
 /* line 10, ../sass/_admin.scss */
+.adminImg {
+  width: 50px;
+}
+
+/* line 13, ../sass/_admin.scss */
 .btn {
   background-color: #00B82B;
 }
 
-/* line 14, ../sass/_admin.scss */
+/* line 17, ../sass/_admin.scss */
 .btn:hover {
   background-color: #47d9bc;
 }
 
-/* line 18, ../sass/_admin.scss */
+/* line 21, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: rgba(117, 207, 80, 0.75);
@@ -462,54 +471,54 @@ select {
   margin-top: 12%;
 }
 
-/* line 27, ../sass/_admin.scss */
+/* line 30, ../sass/_admin.scss */
 .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
 
-/* line 32, ../sass/_admin.scss */
+/* line 35, ../sass/_admin.scss */
 input[type="text"] {
   border-bottom-color: white;
 }
 
-/* line 36, ../sass/_admin.scss */
+/* line 39, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 41, ../sass/_admin.scss */
+/* line 44, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 45, ../sass/_admin.scss */
+/* line 48, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 49, ../sass/_admin.scss */
+/* line 52, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 53, ../sass/_admin.scss */
+/* line 56, ../sass/_admin.scss */
 .file-path {
   color: white;
 }
 
-/* line 57, ../sass/_admin.scss */
+/* line 60, ../sass/_admin.scss */
 a {
   color: #00B82B;
 }
 
-/* line 61, ../sass/_admin.scss */
+/* line 64, ../sass/_admin.scss */
 .imageAdmin {
   height: 150px;
 }
 
-/* line 65, ../sass/_admin.scss */
+/* line 68, ../sass/_admin.scss */
 .middleText {
   margin-top: 75px;
 }
@@ -678,32 +687,19 @@ a.cardLink {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
 
-/* line 70, ../sass/_blog.scss */
-.blogTop {
-  margin-top: 12%;
-}
-
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 78, ../sass/_blog.scss */
+/* line 74, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 83, ../sass/_blog.scss */
+/* line 79, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
-}
-
-/****************************/
-/*        article           */
-/****************************/
-/* line 92, ../sass/_blog.scss */
-.article {
-  margin-top: 10%;
 }
 
 /* line 1, ../sass/_partenaire.scss */
@@ -720,6 +716,14 @@ a.cardLink {
   color: #EF651B;
 }
 /* line 13, ../sass/_partenaire.scss */
-.partenaire img {
+.partenaire .photoPart {
   height: 150px;
+}
+/* line 17, ../sass/_partenaire.scss */
+.partenaire .photoPart img {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  max-height: 150px;
 }

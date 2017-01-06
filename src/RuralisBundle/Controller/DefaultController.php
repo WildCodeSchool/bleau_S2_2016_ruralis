@@ -14,6 +14,7 @@ class DefaultController extends Controller
         $dql = "SELECT a FROM RuralisBundle:Article a ORDER BY a.date DESC";
         $query = $em->createQuery($dql);
 
+        $article_une = $em->getRepository('RuralisBundle:Article')->findOneByTypeAffichage('Une');
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
@@ -22,6 +23,7 @@ class DefaultController extends Controller
 
         return $this->render('RuralisBundle:Default:index.html.twig', array(
             'articles' => $pagination,
+            'article_une' => $article_une,
         ));
     }
 

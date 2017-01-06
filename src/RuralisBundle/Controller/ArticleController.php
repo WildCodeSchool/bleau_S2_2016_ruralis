@@ -46,17 +46,15 @@ class ArticleController extends Controller
             $em = $this->getDoctrine()->getManager();
             /*Vérifie si une autre Une existe */
             if ($article->getTypeAffichage() == 'Une'){
-                $article_une = $em->getRepository('RuralisBundle:Article')->findAll();
-                var_dump($article_une->toArray());
-                echo "\n" . 'fin' . "\n" ;
-                die;
-/*                if ($article_une){
+                $article_une = $em->getRepository('RuralisBundle:Article')->findOneByTypeAffichage('Une');
+                if ($article_une){
                     $article_une->setTypeAffichage('Rectangle + lien abonnement');
-                }*/
+                    $em->persist($article_une);
+                }
             }
             $article->setDate(new \DateTime());
             $em->persist($article);
-            $em->flush($article);
+            $em->flush();
             return $this->redirectToRoute('article_index');
         }
         return $this->render('@Ruralis/admin/article/new.html.twig', array(
