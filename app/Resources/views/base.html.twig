@@ -23,45 +23,49 @@
 
     <header>
         <div class="row navbar-fixed fixed_nav navigation">
-            <div class="row nl">
+            <div class="row nl orangebckg">
                 <div class="col s1 navcolleft">
                     <a href="{{ path ('ruralis_homepage') }}">
                         <img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="ruralismag">
                     </a>
                 </div>
-                <div class="col s1 orangebckg">
+                <div class="col s1">
                     <a href="{{ path ('ruralis_homepage') }}">
                         <img src="{{ asset ('bundles/ruralis/images/logoarbre1.png') }}" id="animation" alt="Logo arbre" class="smallarbre">
                     </a>
                 </div>
-                <div class="col s10 whitebckg">
+                <div class="col s10">
                     <div class="row orangebckg">
                         <a href="{{ path ('ruralis_homepage') }}" class="brand-logo RuralisLogo">
                             <img src="{{ asset ('bundles/ruralis/images/textlogo.png') }}" alt="Demain s'invente dans les campagnes" class="navbar_logo2">
                         </a>
                     </div>
-                    <div class="row nav_1line">
-                        <ul class="offset-s2">
-                            <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
-                            <li class="marginnav"><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
-                            <li class="marginnav"><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
-                            <li class="marginnav"><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
-                            <li class="marginnav"><a href="{{ path('article_index') }}">Admin</a></li>
-                        </ul>
-                    </div>
-                    <div class="row nav_2line">
-                        <ul>
-                            <li class="col s2 offset-s1 nl">
-                                <a href="#">Newsletter</a>
-                            </li>
-                            <li class="col s4 input-field mailbox"> <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </li>
-                            <button class="col s1 btn waves-effect waves-light nl" type="submit" name="action">Ok
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </ul>
-                    </div>
+                </div>
+            </div>
+            <div class="row whitebckg">
+                <div class="row nav_1line">
+                    <ul class="col offset-s2 s10">
+                        <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
+                        <li class="marginnav"><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
+                        <li class="marginnav"><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
+                        <li class="marginnav"><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
+                        <li class="marginnav"><a href="{{ path('article_index') }}">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="row nav_2line">
+                    <ul class="col offset-s2 s10">
+                        <li class="col s2 offset-s1 nl">
+                            <a href="#">Newsletter</a>
+                        </li>
+                        <li class="col s4 input-field mailbox"> <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </li>
+                        <button class="col s1 btn waves-effect waves-light nl" type="submit" name="action">Ok
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </ul>
+                </div>
+            </div>
                 </div>
             </div>
         </div>

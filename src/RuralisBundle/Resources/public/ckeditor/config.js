@@ -4,11 +4,9 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-    config.toolbar_Basic = [
-        [ 'Source', '-', 'Bold', 'Italic' ]
-    ];
-// Load toolbar_Name where Name = Basic.
-    config.toolbar = 'Basic';
+/*
+    config.removeDialogTabs = 'image:advanced;image:Link';
+*/
     config.extraPlugins = 'youtube';
-    config.toolbar = [{ name: 'insert', items: ['Image', 'Youtube']}];
+    config.toolbar = [{ name: 'insert', items: ['Youtube']}];
 };
