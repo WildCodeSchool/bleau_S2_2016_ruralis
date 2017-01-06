@@ -66,6 +66,18 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
+ivory_ck_editor:
+    plugins:
+        video:
+            path:                       '/bundles/ckeditor/youtube/'
+            filename:                   'plugin.js'
+    default_config:    my_custom_config
+    configs:
+        my_custom_config:
+            toolbar:                   [ [ 'Preview' ], [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ], [ 'Source' ], [ "About" ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink','Anchor' ], [ 'pbckcode', 'Image', 'Youtube', 'Table','SpecialChar','Iframe' ], '/', [ 'Styles', 'Format','Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
+            language: %locale%
+       #     extraPlugins:               'youtube'
+
 
 knp_paginator:
     page_range: 5                      # default page range used in pagination control
