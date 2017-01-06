@@ -21,6 +21,7 @@ Author: Marielle Lautrou and Aurore David
 // BACKGROUND SMOOTH WHITE
 .whitebckg {
   background-color: rgba(255,255,255,0.75);
+  max-height: 163px;
 }
 
 
@@ -48,12 +49,14 @@ header {
 .ruralismag {
   position: fixed;
   max-height: 5.9%;
+  min-height: 56px;
   left: 0;
   top: 0;
 }
 
-img .smallarbre {
+.smallarbre {
   max-width: 84%;
+  margin-left: 30px;
 }
 
 
@@ -80,12 +83,26 @@ img .smallarbre {
   margin-left: 9.333%;
 }
 
-//.btn {
-//  background-color: rgb(234,100,12);
-//}
+// GREEN BUTTON INSTEAD OF ORANGE
+.btn.nl {
+  background-color: rgb(234,100,12);
+}
+// MAIL LINE
+.mailbox {
+  margin-top: -22px;
+  list-style: none;
+}
 
+//BLANC BEFORE ROW TOP NAV
+.whitebckg {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 83.33333% !important;
+}
+
+// BUTTON
 .nl button {
-  margin-top: -19px;
+  margin-top: -13.5px;
   background-color: rgb(234,100,12);
 }
 
@@ -95,7 +112,7 @@ img .smallarbre {
 
 .nav_1line ul li{
   float: left;
-  list-style-type: square;
+  //list-style-type: square;
 }
 
 .marginnav {
@@ -103,8 +120,8 @@ img .smallarbre {
 }
 
 .nav_2line ul li {
-  list-style-type: square;
-  float: left;
+  //list-style-type: square;
+  //float: left;
 }
 
 .navigation .input-field label{
