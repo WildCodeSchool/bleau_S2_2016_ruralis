@@ -1,5 +1,7 @@
 .abonnement{
 
+  font-size: 26px;
+
   .row .col {
     padding:0;
   }
@@ -10,18 +12,17 @@
   }
 
   .lecteur, .donateur, .ambassadeur, .cadeau {
-    border-style:solid;
-    border-width:2px;
     margin:auto;
   }
 
-  .lecteur{
+  .lecteur, .donateur {
     background-color: rgba(0, 184, 43, 1);
+    border: solid black 5px;
   }
 
   .lecteur2{
-    border-style:solid;
-    border-width:2px;
+    border-top:solid black 5px;
+    border-right: solid black 5px;
     height:120px;
   }
 
@@ -31,12 +32,13 @@
   }
 
   .cadeau{
+    border-right: solid black 5px;
+    border-left: solid black 5px;;
     padding:40px;
   }
 
   .don{
-    border-style:solid;
-    border-width:2px;
+    border-top: solid black 5px;
     height:80px;
     margin-top:40px;
   }
@@ -46,18 +48,23 @@
   }
 
   .donateur2, .donateur3{
-    border-style:solid;
-    border-width:2px;
+    border-left: solid black 5px;;
     height:200px;
   }
 
+  .donateur2 {
+    border-bottom: solid black 5px;;
+  }
+
   .ambassadeur{
+    border-bottom: solid black 5px;
+    border-left: solid black 5px;
+    border-right: solid black 5px;
     background-color: rgb(239, 94, 0);
   }
 
   .ambassadeur3{
-    border-style:solid;
-    border-width:2px;
+    border: solid black 5px;
     height:140px;
     margin-top:40px;
     margin-bottom:40px;

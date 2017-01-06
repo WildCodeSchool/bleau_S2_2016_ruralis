@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+	<h1>Mise en page 1</h1>
 	<div class="container abonnement">
 		<div class="row center">
 		 {#div générale#}
@@ -13,10 +14,10 @@
 						<h3>Abonnez-vous ! Soutenez-nous ! </h3>
 					</div>
 				</div>
-				<div class="col s8">
+				<div class="col s7">
 					<p>Cher(ère) lecteur(trice), acteur(trices) des territoires ruraux, citoyens engagés, amoureux (...) de la campagne</p>
 				</div>
-				<div class="col s4">
+				<div class="col s5">
 					<a href="{{ path('ruralis_abonnement') }}">
 						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>
 					</a>
@@ -25,15 +26,106 @@
 					Ce projet fait sens pour vous,
 					<ul>
 						<li>
-							<a href="{{ path('ruralis_abonnement') }}">
+							<a href="{{ path('ruralis_abonnement') }}" class="hoverable">
 								devenez donateur
-								<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
+								<img class="responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
 							</a>
 						</li>
 						<li>
-							<a href="{{ path('ruralis_abonnement') }}">
+							<a href="{{ path('ruralis_abonnement') }}" class="hoverable">
 								devenez ambassadeur
-								<img class="hoverable" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
+								<img src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col s5 don hoverable valign-wrapper">
+					<a href="{{ path('ruralis_abonnement') }}">
+						Faire un don en ligne
+					</a>
+				</div>
+			</div>
+			<div class="col s12 cadeau">
+				<p>
+					Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.
+					<a class="hoverable" href="{{ path('ruralis_abonnement') }}">
+						J'offre un abonnement à un proche
+					</a>
+				</p>
+			</div>
+			<div class="col s12 donateur">
+				<div class="col s5">
+					<div class="col s1">
+						<i class="material-icons">add</i>
+					</div>
+					<a href="{{ path('ruralis_abonnement') }}">
+						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}"/>
+					</a>
+				</div>
+				<a href="{{ path('ruralis_abonnement') }}">
+					<div class="col s7 donateur2 hoverable valign-wrapper">
+						<p class="valign center">Je m'abonne et deviens donateur</p>
+					</div>
+				</a>
+				<a href="{{ path('ruralis_abonnement') }}">
+					<div class="col offset-s5  s7 donateur3 hoverable valign-wrapper">
+						<p class="valign center">Devenir Ambassadeur</p>
+						<img class="responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
+					</div>
+				</a>
+			</div>
+			<div class="col s12 ambassadeur">
+				<div class="col s4 ambassadeur2">
+					<div class="col s1">
+						<i class="material-icons">add</i>
+					</div>
+					<a href="{{ path('ruralis_abonnement') }}">
+						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}"/>
+					</a>
+				</div>
+				<a href="{{ path('ruralis_abonnement') }}">
+					<div class="col s7 ambassadeur3 hoverable valign-wrapper">
+						<p class="valign center">Je m'abonne et deviens ambassadeur</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<h1>Mise en page 2</h1>
+	<div class="container abonnement">
+		<div class="row center">
+            {#div générale#}
+			<div class="col s12 lecteur">
+				<div class="row valign-wrapper">
+					<div class="col s1">
+						<i class="material-icons">add</i>
+					</div>
+					<div class="col offset-s1 s10">
+						<h3>Abonnez-vous ! Soutenez-nous ! </h3>
+					</div>
+				</div>
+				<div class="col s7">
+					<p>Cher(ère) lecteur(trice), acteur(trices) des territoires ruraux, citoyens engagés, amoureux (...) de la campagne</p>
+				</div>
+				<div class="col s5">
+					<a href="{{ path('ruralis_abonnement') }}">
+						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>
+					</a>
+				</div>
+				<div class="col s7 lecteur2 valign-wrapper">
+					Ce projet fait sens pour vous,
+					<ul>
+						<li>
+							<a href="{{ path('ruralis_abonnement') }}" class="hoverable">
+								devenez donateur
+								<img class="responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('ruralis_abonnement') }}" class="hoverable">
+								devenez ambassadeur
+								<img src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
 							</a>
 						</li>
 					</ul>
