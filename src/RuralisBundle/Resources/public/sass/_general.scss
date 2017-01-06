@@ -18,25 +18,46 @@ Author: Marielle Lautrou and Aurore David
 /* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
 
+// BACKGROUND SMOOTH WHITE
+.whitebckg {
+  background-color: rgba(255,255,255,0.75);
+}
+
+
+// ORANGE BACKGROUND FOR ROW TOP NAV
+.orangebckg {
+  background-color: rgb(234,100,12);
+  max-height: 56px;
+}
+
+
+//SPACE AFTER NAVBAR
+header {
+  margin-bottom: 155px;
+}
+
+// NAVBAR FIXED
 .fixed_nav {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-header div{
-  list-style-type: none;
-  //display: inline;
+
+// IMAGES NAV
+.ruralismag {
+  position: fixed;
+  max-height: 8.3%;
+  left: 0;
+  top: 0;
 }
 
-.whitebckg {
-  background-color: rgba(255,255,255,0.75);
+img .smallarbre {
+  max-width: 84%;
 }
 
-header {
-  margin-bottom: 155px;
-}
 
+// NAV LIST
 .navigation a {
   color : rgb(234,100,12);
   font-weight: 800;
@@ -51,33 +72,18 @@ header {
   color : rgb(234, 76, 10);
 }
 
-nav .row .col{
-  padding: 0;
-}
-
 .mailbox:hover{
   background-color: snow !important;
-}
-
-.orangebckg {
-  background-color: rgb(234,100,12);
-  max-height: 56px;
 }
 
 .navigation .row .col.offset-s1 {
   margin-left: 9.333%;
 }
 
-.ruralismag {
-  position: fixed;
-  max-height: 142px;
-  left: 0;
-  top: 0;
-}
 
-.nl {
-  margin-top: 40px;
-}
+//.btn {
+//  background-color: rgb(234,100,12);
+//}
 
 .nl button {
   margin-top: -19px;
@@ -88,8 +94,18 @@ nav .row .col{
   background-color: rgb(255, 132, 54);
 }
 
+.nav_1line ul li{
+  float: left;
+  list-style-type: square;
+}
+
+.marginnav {
+  margin-left: 15%;
+}
+
 .nav_2line {
-  margin-top: -5px;
+  list-style-type: square;
+  float: left;
 }
 
 .navigation .input-field label{
@@ -147,7 +163,7 @@ div .row .ruralisimgtop {
 .logoabt{
   position: relative;
   z-index: 2;
-mi-width: 200px;
+  min-width: 200px;
 }
 
 #img1, #img2{
