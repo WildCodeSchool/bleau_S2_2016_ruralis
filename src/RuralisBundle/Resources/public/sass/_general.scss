@@ -49,6 +49,7 @@ header {
 .ruralismag {
   position: fixed;
   max-height: 5.9%;
+  min-height: 56px;
   left: 0;
   top: 0;
 }
@@ -95,6 +96,8 @@ header {
 //BLANC BEFORE ROW TOP NAV
 .whitebckg {
   padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 83.33333% !important;
 }
 
 // BUTTON
