@@ -72,11 +72,11 @@ ivory_ck_editor:
         my_config:
             toolbar:                    [ [ 'Preview' ], [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink','Anchor' ], [ 'pbckcode', 'Image', 'Youtube', 'Table','SpecialChar','Iframe' ], '/', [ 'Styles', 'Format','Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
             language: %locale%
-            extraPlugins: "youtube"
-    plugins:
-        wordcount:
-            path:     "/bundles/mybundle/youtube/"
-            filename: "plugin.js"
+            extraPlugins: 'youtube'
+#    plugins:
+#        youtube:
+#            path:     "/bundles/mybundle/youtube/"
+#            filename: "plugin.js"
 
 knp_paginator:
     page_range: 5                      # default page range used in pagination control
