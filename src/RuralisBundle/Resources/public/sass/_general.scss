@@ -22,13 +22,15 @@ Author: Marielle Lautrou and Aurore David
 .whitebckg {
   background-color: rgba(255,255,255,0.75);
   max-height: 163px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
-
 
 // ORANGE BACKGROUND FOR ROW TOP NAV
 .orangebckg {
   background-color: rgb(234,100,12);
   max-height: 56px;
+  margin-bottom:0;
 }
 
 
@@ -91,13 +93,6 @@ header {
 .mailbox {
   margin-top: -22px;
   list-style: none;
-}
-
-//BLANC BEFORE ROW TOP NAV
-.whitebckg {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  width: 83.33333% !important;
 }
 
 // BUTTON
