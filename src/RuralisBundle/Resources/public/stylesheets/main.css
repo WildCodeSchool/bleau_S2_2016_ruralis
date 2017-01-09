@@ -481,7 +481,7 @@ strong {
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
 /* line 479, ../sass/_general.scss */
-footer, .container {
+footer, footer .container {
   min-height: 170px !important;
   background-color: #EA640C !important;
   padding: 20px;

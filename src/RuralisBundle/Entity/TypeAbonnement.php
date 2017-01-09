@@ -52,4 +52,3 @@ class TypeAbonnement
         return $this->nom;
     }
 }
-
