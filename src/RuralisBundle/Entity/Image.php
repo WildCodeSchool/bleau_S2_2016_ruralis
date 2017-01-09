@@ -26,12 +26,12 @@ class Image
 
     protected function getUploadDir()
     {
-        return 'uploads';
+        return 'images';
     }
 
     protected function getUploadRootDir()
     {
-        return __DIR__.'/../../../web/'.$this->getUploadDir();
+        return __DIR__.'/../../../web/uploads/'.$this->getUploadDir();
     }
 
     public function getWebPath()
