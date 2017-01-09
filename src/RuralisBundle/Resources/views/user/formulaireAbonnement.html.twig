@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <form class="col s12 formulaireAbonnement">
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input placeholder="Prénom" id="first_name" type="text" class="validate">
+                    <label for="Prénom" class="active">Prénom</label>
+                </div>
+                <div class="input-field col s4 offset-s1">
+                    <input placeholder="Nom" id="last_name" type="text" class="validate">
+                    <label for="Nom" class="active">Nom</label>
+                </div>
+            </div>
+
+{# Mail et Tel #}
+
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input id="email" type="email" class="validate">
+                    <label for="email" class="active">Email</label>
+                </div>
+                <div class="input-field col s4 offset-s1">
+                    <input class="validate">
+                    <label for="Téléphone" class="active">Téléphone</label>
+                </div>
+            </div>
+
+{# Adresse #}
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Rue" type="text" class="validate">
+                    <label for="Rue" class="active">Rue</label>
+                </div>
+                <div class="input-field col s2">
+                    <input placeholder="Code Postal" class="validate">
+                    <label for="Code Postal" class="active">Code Postal</label>
+                </div>
+                <div class="input-field col s4">
+                    <input placeholder="Ville" type="text" class="validate">
+                    <label for="Ville" class="active">Ville</label>
+                </div>
+            </div>
+{# Choix abonnement #}
+            <div class="row">
+                <div class="col s4 offset-s1">
+                    <p>
+                        Je m'abonne en tant que :
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s2 offset-s1">
+                    <p>
+                        <input class="with-gap" name="group1" type="radio" id="test3"  />
+                        <label for="test3">Lecteur</label>
+                    </p>
+                </div>
+                <div class="col s2">
+                    <p>
+                        <input class="with-gap" name="group1" type="radio" id="test3"  />
+                        <label for="test3">Donateur</label>
+                    </p>
+                </div>
+                <div class="col s2">
+                    <p>
+                        <input class="with-gap" name="group1" type="radio" id="test3"  />
+                        <label for="test3">Ambassadeur</label>
+                    </p>
+                </div>
+            </div>
+
+
+{# Case abonnement Newsletter #}
+            <div class="row">
+                <div class="col s2 offset-s1">
+                    <p>
+                        En plus :
+                        <input type="checkbox" id="test6" checked="checked" />
+                        <label for="test6">Je m'abonne à la Newsletter</label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s2 offset-s5 center">
+                    <a class="waves-effect waves-light btn"  type="submit" name="action">Valider</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
