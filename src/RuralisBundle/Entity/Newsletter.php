@@ -110,4 +110,3 @@ class Newsletter
         return $this->contenu;
     }
 }
-

@@ -342,4 +342,3 @@ class Abonne
         return $this->typeAbonnement;
     }
 }
-
