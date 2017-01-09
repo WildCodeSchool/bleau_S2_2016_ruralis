@@ -1,0 +1,15 @@
+RuralisBundle\Entity\TypeAbonnement:
+    type: entity
+    table: null
+    repositoryClass: RuralisBundle\Repository\TypeAbonnementRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
