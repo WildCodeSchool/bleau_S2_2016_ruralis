@@ -12,8 +12,6 @@ Author: Marielle Lautrou and Aurore David
   margin: 0;
   padding: 0;
 }
-
-
 /*==================================================================== */
 /* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
@@ -21,9 +19,7 @@ Author: Marielle Lautrou and Aurore David
 // BACKGROUND SMOOTH WHITE
 .whitebckg {
   background-color: rgba(255,255,255,0.75);
-  max-height: 163px;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  max-height: 125px;
 }
 
 // ORANGE BACKGROUND FOR ROW TOP NAV
@@ -33,10 +29,15 @@ Author: Marielle Lautrou and Aurore David
   margin-bottom:0;
 }
 
+.nav_1line{
+  margin-top:0;
+}
 
 //SPACE AFTER NAVBAR
-header {
+header{
   margin-bottom: 155px;
+  position: relative;
+  height: 100%;
 }
 
 // NAVBAR FIXED
@@ -45,7 +46,6 @@ header {
   top: 0;
   width: 100%;
 }
-
 
 // IMAGES NAV
 .ruralismag {
@@ -63,7 +63,7 @@ header {
 
 
 // NAV LIST
-.navigation a {
+.navigation a, .navigation li {
   color : rgb(234,100,12);
   font-weight: 800;
 }
@@ -72,7 +72,7 @@ header {
   text-align: center;
 }
 
-.navigation li:hover {
+.whitebckg a:hover {
   background-color : rgba(234, 100, 12, 0.48);
   color : rgb(234, 76, 10);
 }
@@ -85,14 +85,45 @@ header {
   margin-left: 9.333%;
 }
 
-// GREEN BUTTON INSTEAD OF ORANGE
-.btn.nl {
-  background-color: rgb(234,100,12);
+.navlinks{
+    list-style: none;
+    li {
+        margin-bottom: 1em;
+        padding-left: 1em;
+        position: relative;
+
+        &:after {
+            content: '';
+            height: .4em;
+            width: .4em;
+            background: #D2153A;
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            top: .5em;
+            left: 2px;
+        }
+    }
 }
+
+// ORANGE BUTTON INSTEAD OF GREEN
+.btn.nl {
+  background-color: rgb(234, 100, 12);
+}
+
 // MAIL LINE
 .mailbox {
   margin-top: -22px;
   list-style: none;
+}
+
+input[type=email]:focus:not([readonly]) + label {
+  color: rgb(234,100,12);
+}
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid rgb(234,100,12);
+  box-shadow: 0 1px 0 0 rgb(234,100,12);
 }
 
 // BUTTON
@@ -105,13 +136,21 @@ header {
   background-color: rgb(255, 132, 54);
 }
 
+.btn.nl:hover{
+  background-color: rgb(255, 132, 54);
+}
+
 .nav_1line ul li{
   float: left;
   //list-style-type: square;
 }
 
+button:hover{
+  background-color: rgb(255, 132, 54);
+
+}
 .marginnav {
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .nav_2line ul li {
@@ -169,12 +208,27 @@ div .row .ruralisimgtop {
   position: relative;
   bottom: 565px;
   margin-bottom: -320px;
+  z-index: 2;
+
 }
 
 #img1, #img2{
   width: 7%;
 }
 
+#animation {
+  background-repeat: no-repeat;
+  /*
+  position : fixed;
+  */
+}
+
+#bottommark {
+
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
 
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
@@ -422,9 +476,9 @@ strong{
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
 
-footer{
+footer, .container{
   min-height: 170px !important;
-  background-color: rgb(234,100,12);
+  background-color: #EA640C !important;
   padding: 20px;
   bottom: 0;
 }

@@ -26,7 +26,7 @@ class Image
 
     protected function getUploadDir()
     {
-        return 'images';
+        return 'uploads';
     }
 
     protected function getUploadRootDir()
