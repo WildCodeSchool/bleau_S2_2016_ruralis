@@ -481,7 +481,7 @@ strong {
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
 /* line 479, ../sass/_general.scss */
-footer, .container {
+footer, footer .container {
   min-height: 170px !important;
   background-color: #EA640C !important;
   padding: 20px;
@@ -772,7 +772,7 @@ a.cardLink {
 }
 
 /* line 53, ../sass/_blog.scss */
-.fixed .row {
+.fixedSideNav .row {
   position: fixed;
   top: 40%;
   width: 120px;
@@ -782,7 +782,7 @@ a.cardLink {
 }
 
 /* line 62, ../sass/_blog.scss */
-.fixed div img {
+.fixedSideNav div img {
   width: 40px;
 }
 
