@@ -21,9 +21,7 @@ Author: Marielle Lautrou and Aurore David
 // BACKGROUND SMOOTH WHITE
 .whitebckg {
   background-color: rgba(255,255,255,0.75);
-  max-height: 163px;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  max-height: 125px;
 }
 
 // ORANGE BACKGROUND FOR ROW TOP NAV
@@ -31,6 +29,10 @@ Author: Marielle Lautrou and Aurore David
   background-color: rgb(234,100,12);
   max-height: 56px;
   margin-bottom:0;
+}
+
+.nav_1line{
+  margin-top:0;
 }
 
 
@@ -86,6 +88,27 @@ header{
   margin-left: 9.333%;
 }
 
+.navlinks{
+    list-style: none;
+    li {
+        margin-bottom: 1em;
+        padding-left: 1em;
+        position: relative;
+
+        &:after {
+            content: '';
+            height: .4em;
+            width: .4em;
+            background: #D2153A;
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            top: .5em;
+            left: 2px;
+        }
+    }
+}
+
 // ORANGE BUTTON INSTEAD OF GREEN
 .btn.nl {
   background-color: rgb(234, 100, 12);
@@ -130,7 +153,7 @@ button:hover{
 
 }
 .marginnav {
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .nav_2line ul li {

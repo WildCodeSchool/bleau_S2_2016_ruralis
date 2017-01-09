@@ -60,7 +60,7 @@
 
                 {% set is_row = false %}
                 {% for index, article in articles %}
-                    {% if article.typeAffichage != '2' and is_row %}
+                    {% if article.typeAffichage != 'Carré' and is_row %}
                         </div>
                         {% set is_row = false %}
                     {% endif %}
@@ -69,7 +69,7 @@
 
                         {# CARD CARRE #}
                         {% if article.typeAffichage == 'Carré'%}
-                            {% if not(index > 0 and articles[index-1].typeAffichage == '2') %}
+                            {% if not(index > 0 and articles[index-1].typeAffichage == 'Carré') %}
                                 <div class="row article rowCustom">
                                 {% set is_row = true %}
                             {%  endif %}

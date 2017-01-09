@@ -23,7 +23,7 @@
                     <td>{{ article.nom }}</td>
                     <td>{{ article.typeAffichage }}</td>
                     <td>{{ article.descriptif }}</td>
-                    <td>{{ article.contenu }}</td>
+                    <td>{{ article.contenu | raw }}</td>
                     <td>{{ article.auteur }}</td>
                     <td>{{ article.date|date('d M Y') }}</td>
                     <td><img class="adminImg" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>

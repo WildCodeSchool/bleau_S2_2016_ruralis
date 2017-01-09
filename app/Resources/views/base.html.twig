@@ -22,7 +22,7 @@
     {%  block header %}
 
     <header>
-        <div class="row navbar-fixed fixed_nav navigation z-depth-1">
+        <div class="row navbar-fixed fixed_nav navigation">
             <div class="ancre" name="top" id="top"></div>
             <div class="row nl orangebckg">
                 <div class="col s1 navcolleft">
@@ -30,7 +30,7 @@
                         <img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="ruralismag">
                     </a>
                 </div>
-                <div class="col s1">
+                <div class="col s1 nav-wrapper">
                     <a href="{{ path ('ruralis_homepage') }}">
                         <img src="{{ asset ('bundles/ruralis/images/logoarbre1.png') }}" id="animation" alt="Logo arbre" class="smallarbre">
                     </a>
@@ -46,7 +46,7 @@
             </div>
             <div class="row whitebckg">
                 <div class="row nav_1line">
-                    <ul class="col offset-s2 s10">
+                    <ul class="col offset-s2 s10 navlinks">
                         <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
                         <li class="marginnav"><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
                         <li class="marginnav"><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
@@ -108,9 +108,8 @@
         </footer>
     </div>
     {% block javascripts %}
-        <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>        <script src="{{ asset('bundles/ruralis/materialize/js/materialize.js') }}"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles/ruralis/materialize/js/materialize.min.js') }}"></script>
         <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
         <script src="{{ asset('bundles/ruralis/javascript/blog.js') }}"></script>
     {% endblock %}
