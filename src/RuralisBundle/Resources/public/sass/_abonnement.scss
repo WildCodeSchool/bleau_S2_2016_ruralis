@@ -91,3 +91,32 @@ div .cadeau p {
   text-align:center !important;
 }
 
+// NEW PROPOSITION MISE EN PAGE
+
+.options {
+  position: fixed;
+  top: 48%;
+  text-align: center;
+  z-index: 1;
+}
+
+.abotop {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.abovert{
+  margin-top:40px;
+  z-index: 99999999999999999999999999;
+}
+
+.lhsmall {
+  line-height: 1;
+}
+
+// Marge au dessus des lien dons et cadeau
+// Ne Fontionne pas...
+.margtop {
+  margin-top: 30px;
+  color: rgba(0, 184, 43, 1);
+}

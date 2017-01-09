@@ -1,11 +1,4 @@
-ruralis_admin_article:
-    resource: "@RuralisBundle/Resources/config/routing/article.yml"
-    prefix:   /article
-
-ruralis_article:
-    path:     /{id}/article
-    defaults: { _controller: RuralisBundle:Default:article, id: null }
-
+# Routes User
 ruralis_homepage:
     path:     /
     defaults: { _controller: RuralisBundle:Default:index, page:1 }
@@ -21,6 +14,20 @@ ruralis_abonnement:
 ruralis_partenaire:
     path:     /partenaires
     defaults: { _controller: RuralisBundle:Partenaires:index }
+
+ruralis_formulaire_abonnement:
+  path:     /formulaire
+  defaults: { _controller: RuralisBundle:Formulaire:index}
+
+
+# Routes Admin
+ruralis_admin_article:
+    resource: "@RuralisBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+ruralis_article:
+    path:     /{id}/article
+    defaults: { _controller: RuralisBundle:Default:article, id: null }
 
 ruralis_admin_partenaire:
     resource: "@RuralisBundle/Resources/config/routing/partenaire.yml"
