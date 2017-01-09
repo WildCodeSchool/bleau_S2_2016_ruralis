@@ -772,7 +772,7 @@ a.cardLink {
 }
 
 /* line 53, ../sass/_blog.scss */
-.fixed .row {
+.fixedSideNav .row {
   position: fixed;
   top: 40%;
   width: 120px;
@@ -782,7 +782,7 @@ a.cardLink {
 }
 
 /* line 62, ../sass/_blog.scss */
-.fixed div img {
+.fixedSideNav div img {
   width: 40px;
 }
 
