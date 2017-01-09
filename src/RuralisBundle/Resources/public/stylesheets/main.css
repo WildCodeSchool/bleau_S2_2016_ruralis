@@ -17,39 +17,39 @@ Author: Marielle Lautrou and Aurore David
 /*==================================================================== */
 /* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
-/* line 22, ../sass/_general.scss */
+/* line 20, ../sass/_general.scss */
 .whitebckg {
   background-color: rgba(255, 255, 255, 0.75);
   max-height: 125px;
 }
 
-/* line 28, ../sass/_general.scss */
+/* line 26, ../sass/_general.scss */
 .orangebckg {
   background-color: #ea640c;
   max-height: 56px;
   margin-bottom: 0;
 }
 
-/* line 34, ../sass/_general.scss */
+/* line 32, ../sass/_general.scss */
 .nav_1line {
   margin-top: 0;
 }
 
-/* line 40, ../sass/_general.scss */
+/* line 37, ../sass/_general.scss */
 header {
   margin-bottom: 155px;
   position: relative;
   height: 100%;
 }
 
-/* line 47, ../sass/_general.scss */
+/* line 44, ../sass/_general.scss */
 .fixed_nav {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* line 54, ../sass/_general.scss */
+/* line 51, ../sass/_general.scss */
 .ruralismag {
   position: fixed;
   max-height: 5.9%;
@@ -58,50 +58,50 @@ header {
   top: 0;
 }
 
-/* line 62, ../sass/_general.scss */
+/* line 59, ../sass/_general.scss */
 .smallarbre {
   max-width: 84%;
   margin-left: 30px;
 }
 
-/* line 69, ../sass/_general.scss */
+/* line 66, ../sass/_general.scss */
 .navigation a, .navigation li {
   color: #ea640c;
   font-weight: 800;
 }
 
-/* line 74, ../sass/_general.scss */
+/* line 71, ../sass/_general.scss */
 .navigation li {
   text-align: center;
 }
 
-/* line 78, ../sass/_general.scss */
+/* line 75, ../sass/_general.scss */
 .whitebckg a:hover {
   background-color: rgba(234, 100, 12, 0.48);
   color: #ea4c0a;
 }
 
-/* line 83, ../sass/_general.scss */
+/* line 80, ../sass/_general.scss */
 .mailbox:hover {
   background-color: snow !important;
 }
 
-/* line 87, ../sass/_general.scss */
+/* line 84, ../sass/_general.scss */
 .navigation .row .col.offset-s1 {
   margin-left: 9.333%;
 }
 
-/* line 91, ../sass/_general.scss */
+/* line 88, ../sass/_general.scss */
 .navlinks {
   list-style: none;
 }
-/* line 93, ../sass/_general.scss */
+/* line 90, ../sass/_general.scss */
 .navlinks li {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
 }
-/* line 98, ../sass/_general.scss */
+/* line 95, ../sass/_general.scss */
 .navlinks li:after {
   content: '';
   height: .4em;
@@ -114,66 +114,66 @@ header {
   left: 2px;
 }
 
-/* line 113, ../sass/_general.scss */
+/* line 110, ../sass/_general.scss */
 .btn.nl {
   background-color: #ea640c;
 }
 
-/* line 118, ../sass/_general.scss */
+/* line 115, ../sass/_general.scss */
 .mailbox {
   margin-top: -22px;
   list-style: none;
 }
 
-/* line 123, ../sass/_general.scss */
+/* line 120, ../sass/_general.scss */
 input[type=email]:focus:not([readonly]) + label {
   color: #ea640c;
 }
 
-/* line 127, ../sass/_general.scss */
+/* line 124, ../sass/_general.scss */
 input[type=email]:focus:not([readonly]) {
   border-bottom: 1px solid #ea640c;
   box-shadow: 0 1px 0 0 #ea640c;
 }
 
-/* line 133, ../sass/_general.scss */
+/* line 130, ../sass/_general.scss */
 .nl button {
   margin-top: -13.5px;
   background-color: #ea640c;
 }
 
-/* line 138, ../sass/_general.scss */
+/* line 135, ../sass/_general.scss */
 .nl button:hover {
   background-color: #ff8436;
 }
 
-/* line 142, ../sass/_general.scss */
+/* line 139, ../sass/_general.scss */
 .btn.nl:hover {
   background-color: #ff8436;
 }
 
-/* line 146, ../sass/_general.scss */
+/* line 143, ../sass/_general.scss */
 .nav_1line ul li {
   float: left;
 }
 
-/* line 151, ../sass/_general.scss */
+/* line 148, ../sass/_general.scss */
 button:hover {
   background-color: #ff8436;
 }
 
-/* line 155, ../sass/_general.scss */
+/* line 152, ../sass/_general.scss */
 .marginnav {
   margin-left: 10%;
 }
 
-/* line 164, ../sass/_general.scss */
+/* line 161, ../sass/_general.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 169, ../sass/_general.scss */
+/* line 166, ../sass/_general.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
@@ -182,24 +182,24 @@ button:hover {
 /* -------------------------- THREE BIG IMAGES ----------------------- */
 /*==================================================================== */
 /*Top image*/
-/* line 181, ../sass/_general.scss */
+/* line 178, ../sass/_general.scss */
 .size-large {
   width: 100%;
   height: 720px;
 }
 
-/* line 186, ../sass/_general.scss */
+/* line 183, ../sass/_general.scss */
 div .row .ruralisimgtop {
   margin-bottom: 0;
 }
 
-/* line 190, ../sass/_general.scss */
+/* line 187, ../sass/_general.scss */
 .topruralis {
   max-width: 99.99%;
 }
 
 /* Images Territoire */
-/* line 197, ../sass/_general.scss */
+/* line 194, ../sass/_general.scss */
 .size-full {
   height: auto;
   width: 19.5%;
@@ -209,7 +209,7 @@ div .row .ruralisimgtop {
 /*==================================================================== */
 /* -------------------- GESTION DES IMAGES ---------------------- */
 /*==================================================================== */
-/* line 210, ../sass/_general.scss */
+/* line 207, ../sass/_general.scss */
 #logo {
   position: relative;
   bottom: 565px;
@@ -217,12 +217,12 @@ div .row .ruralisimgtop {
   z-index: 2;
 }
 
-/* line 218, ../sass/_general.scss */
+/* line 215, ../sass/_general.scss */
 #img1, #img2 {
   width: 7%;
 }
 
-/* line 222, ../sass/_general.scss */
+/* line 219, ../sass/_general.scss */
 #animation {
   background-repeat: no-repeat;
   /*
@@ -230,7 +230,7 @@ div .row .ruralisimgtop {
   */
 }
 
-/* line 229, ../sass/_general.scss */
+/* line 226, ../sass/_general.scss */
 #bottommark {
   position: absolute;
   bottom: 0;
@@ -240,7 +240,7 @@ div .row .ruralisimgtop {
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
-/* line 243, ../sass/_general.scss */
+/* line 240, ../sass/_general.scss */
 #description {
   width: 100%;
   text-align: center;
@@ -248,7 +248,7 @@ div .row .ruralisimgtop {
   padding-top: -20px;
 }
 
-/* line 250, ../sass/_general.scss */
+/* line 247, ../sass/_general.scss */
 #description p {
   display: inline-block;
   font-size: 14pt;
@@ -257,39 +257,39 @@ div .row .ruralisimgtop {
   color: #EA640C;
 }
 
-/* line 262, ../sass/_general.scss */
+/* line 259, ../sass/_general.scss */
 #territoire {
   padding: 0;
   width: 100%;
 }
 
-/* line 268, ../sass/_general.scss */
+/* line 265, ../sass/_general.scss */
 #territoire h4, #peuple h4 {
   padding: 15px 0;
   width: 100%;
   font-family: 'Arial Bold';
 }
 
-/* line 276, ../sass/_general.scss */
+/* line 273, ../sass/_general.scss */
 #editorial {
   text-align: center;
   line-height: 18pt;
 }
 
-/* line 280, ../sass/_general.scss */
+/* line 277, ../sass/_general.scss */
 #editorial h5 {
   font-family: 'Sakkal Majalla Bold';
   font-size: 18pt;
   color: #EA640C;
 }
 
-/* line 286, ../sass/_general.scss */
+/* line 283, ../sass/_general.scss */
 #editorial p {
   font-family: 'Time New Roman';
   font-size: 14pt;
 }
 
-/* line 293, ../sass/_general.scss */
+/* line 290, ../sass/_general.scss */
 #arpenteurs {
   display: flex;
   justify-content: center;
@@ -299,18 +299,18 @@ div .row .ruralisimgtop {
   background-color: rgba(211, 211, 211, 0.5);
 }
 
-/* line 302, ../sass/_general.scss */
+/* line 299, ../sass/_general.scss */
 #magazine {
   max-width: 60%;
 }
 
-/* line 306, ../sass/_general.scss */
+/* line 303, ../sass/_general.scss */
 #textarp {
   margin-left: -120px;
   text-align: center;
 }
 
-/* line 311, ../sass/_general.scss */
+/* line 308, ../sass/_general.scss */
 #textarp h5 {
   font-family: 'Sakkal Majalla Bold';
   font-size: 18pt;
@@ -318,32 +318,32 @@ div .row .ruralisimgtop {
   color: #EA640C;
 }
 
-/* line 318, ../sass/_general.scss */
+/* line 315, ../sass/_general.scss */
 #textarp p {
   font-family: 'Time New Roman';
   font-size: 14pt;
   line-height: 18pt;
 }
 
-/* line 327, ../sass/_general.scss */
+/* line 324, ../sass/_general.scss */
 .peuple {
   text-align: center;
 }
 
-/* line 331, ../sass/_general.scss */
+/* line 328, ../sass/_general.scss */
 .peuple img {
   max-height: 362.493px;
   max-width: 236.522px;
 }
 
-/* line 339, ../sass/_general.scss */
+/* line 336, ../sass/_general.scss */
 .objectifs {
   position: relative;
   display: inline-block;
   text-align: center;
 }
 
-/* line 346, ../sass/_general.scss */
+/* line 343, ../sass/_general.scss */
 .objectifs p {
   font-family: 'Time New Roman';
   font-size: 14pt;
@@ -351,7 +351,7 @@ div .row .ruralisimgtop {
   margin: auto;
 }
 
-/* line 354, ../sass/_general.scss */
+/* line 351, ../sass/_general.scss */
 #txtobjectif p {
   display: inline-block;
   text-align: center;
@@ -363,7 +363,7 @@ div .row .ruralisimgtop {
   font-weight: bold;
 }
 
-/* line 368, ../sass/_general.scss */
+/* line 365, ../sass/_general.scss */
 #flexabonnes {
   margin-top: 70px;
   width: 100%;
@@ -372,7 +372,7 @@ div .row .ruralisimgtop {
   align-content: center;
 }
 
-/* line 376, ../sass/_general.scss */
+/* line 373, ../sass/_general.scss */
 #nbabonnes {
   padding-right: 5px;
   width: 40%;
@@ -382,7 +382,7 @@ div .row .ruralisimgtop {
   font-size: 200%;
 }
 
-/* line 385, ../sass/_general.scss */
+/* line 382, ../sass/_general.scss */
 #nbabonnes p {
   display: inline-block;
   margin-top: 2.5%;
@@ -393,14 +393,14 @@ div .row .ruralisimgtop {
   font-size: 75%;
 }
 
-/* line 395, ../sass/_general.scss */
+/* line 392, ../sass/_general.scss */
 #flexabonnes img {
   width: 5%;
   margin: 0 2%;
   align-self: center;
 }
 
-/* line 404, ../sass/_general.scss */
+/* line 401, ../sass/_general.scss */
 #savoir {
   height: 100%;
   position: relative;
@@ -417,20 +417,20 @@ div .row .ruralisimgtop {
   transition: 0.5s;
 }
 
-/* line 420, ../sass/_general.scss */
+/* line 417, ../sass/_general.scss */
 #savoir:hover {
   background-color: #ffffff;
   transition: 0.5s;
   color: #ea640c;
 }
 
-/* line 429, ../sass/_general.scss */
+/* line 426, ../sass/_general.scss */
 #abonnement {
   width: 100%;
   background-color: rgba(211, 211, 211, 0.5);
 }
 
-/* line 437, ../sass/_general.scss */
+/* line 434, ../sass/_general.scss */
 #citation {
   text-align: center;
   font-size: 14pt;
@@ -438,40 +438,40 @@ div .row .ruralisimgtop {
   color: #EA640C;
 }
 
-/* line 447, ../sass/_general.scss */
+/* line 444, ../sass/_general.scss */
 strong {
   color: #EA640C;
   font-size: 23px;
   font-weight: bold;
 }
 
-/* line 453, ../sass/_general.scss */
+/* line 450, ../sass/_general.scss */
 .txtorange {
   color: #EA640C;
 }
 
-/* line 457, ../sass/_general.scss */
+/* line 454, ../sass/_general.scss */
 #nb {
   color: #EA640C;
 }
 
-/* line 461, ../sass/_general.scss */
+/* line 458, ../sass/_general.scss */
 #auteur {
   font-size: 80%;
   color: black;
 }
 
-/* line 466, ../sass/_general.scss */
+/* line 463, ../sass/_general.scss */
 #trombi .row .col.l2 {
   margin-left: 40px;
 }
 
-/* line 470, ../sass/_general.scss */
+/* line 467, ../sass/_general.scss */
 #trombi h6 {
   color: #EA640C;
 }
 
-/* line 474, ../sass/_general.scss */
+/* line 471, ../sass/_general.scss */
 #trombi p {
   font-family: 'courier new', sans-serif;
   font-size: 12px;
@@ -480,21 +480,21 @@ strong {
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 482, ../sass/_general.scss */
-footer {
+/* line 479, ../sass/_general.scss */
+footer, .container {
   min-height: 170px !important;
-  background-color: #ea640c;
+  background-color: #EA640C !important;
   padding: 20px;
   bottom: 0;
 }
 
-/* line 493, ../sass/_general.scss */
+/* line 490, ../sass/_general.scss */
 #logowcs {
   margin-top: 4.5%;
   width: 120px;
 }
 
-/* line 498, ../sass/_general.scss */
+/* line 495, ../sass/_general.scss */
 #logoruralis {
   margin-top: 0.5%;
   width: 120px;

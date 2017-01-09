@@ -6,7 +6,7 @@ $(document).ready(function(){
         var offset = $(window).scrollTop();
         var lineH = offset1 - $("#bottommark").position().top - offset;
         var lineHpart = lineHF/15;
-        $("span").html(lineH);
+        $("iconeanime").html(lineH);
         if (lineH > lineHpart*15) {
                 $("#animation").attr("src", "/bleau_S2_2016_ruralis/web/bundles/ruralis/images/logoarbre1.png");
             }

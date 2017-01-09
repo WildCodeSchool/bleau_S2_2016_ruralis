@@ -82,31 +82,31 @@
     </header>
     {% block body %}
     {% endblock %}
-
-
-
-    <div class="row page-footer">
-        <footer>
-            <div class="row">
-                <div class="col s3 offset-s1">
-                    <img id="logoruralis" src="{{ asset('bundles/ruralis/images/logo_mini.png') }}" alt="logo">
-                </div>
-                <div class="col s3 white-text">
-                    <p>NOUS CONTACTER</p>
-                    <p>Association APRIORI / Ruralis Magazine</p>
-                    <p>12, rue du Four-Dieu</p>
-                    <p>45200 Montargis</p>
-                    <p>06 80 73 88 34</p>
-                    <p>contact@ruralismagazine.fr</p>
-                </div>
-                <div class="col s3 offset-s2">
-                    <a href="http://www.wildcodeschool.fr" target="_blank">
-                        <img id="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
-                    </a>
+    {% block footer %}
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m3 offset-m1 left">
+                        <img id="logoruralis" src="{{ asset('bundles/ruralis/images/logo_mini.png') }}" alt="logo">
+                    </div>
+                    <div class="col s12 m3 white-text">
+                        <p>NOUS CONTACTER</p>
+                        <p>Association APRIORI / Ruralis Magazine</p>
+                        <p>12, rue du Four-Dieu</p>
+                        <p>45200 Montargis</p>
+                        <p>06 80 73 88 34</p>
+                        <p>contact@ruralismagazine.fr</p>
+                    </div>
+                    <div class="col s12 m3 offset-m2 center">
+                        <a href="http://www.wildcodeschool.fr" target="_blank">
+                            <img id="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
+    {% endblock footer %}
     {% block javascripts %}
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="{{ asset('bundles/ruralis/materialize/js/materialize.min.js') }}"></script>

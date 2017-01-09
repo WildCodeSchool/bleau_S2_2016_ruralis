@@ -12,8 +12,6 @@ Author: Marielle Lautrou and Aurore David
   margin: 0;
   padding: 0;
 }
-
-
 /*==================================================================== */
 /* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
@@ -34,7 +32,6 @@ Author: Marielle Lautrou and Aurore David
 .nav_1line{
   margin-top:0;
 }
-
 
 //SPACE AFTER NAVBAR
 header{
@@ -479,9 +476,9 @@ strong{
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
 
-footer{
+footer, .container{
   min-height: 170px !important;
-  background-color: rgb(234,100,12);
+  background-color: #EA640C !important;
   padding: 20px;
   bottom: 0;
 }

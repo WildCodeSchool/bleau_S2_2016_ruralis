@@ -5,41 +5,43 @@
     <div class="col m8 offset-m2">
         <h1>{{ article.nom }}</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Nom</th>
-                <td>{{ article.nom }}</td>
-            </tr>
-            <tr>
-                <th>Descriptif</th>
-                <td>{{ article.descriptif }}</td>
-            </tr>
-            <tr>
-                <th>Contenu</th>
-                <td>{{ article.contenu | raw}}</td>
-            </tr>
-            <tr>
-                <th>Auteur</th>
-                <td>{{ article.auteur }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{{ article.date|date('d M Y') }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td><img class="imageAdmin" src="{{ asset('/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ article.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Descriptif</th>
+                    <td>{{ article.descriptif }}</td>
+                </tr>
+                <tr>
+                    <th>Contenu</th>
+                    <td>{{ article.contenu | raw}}</td>
+                </tr>
+                <tr>
+                    <th>Auteur</th>
+                    <td>{{ article.auteur }}</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>{{ article.date|date('d M Y') }}</td>
+                </tr>
+                <tr>
+                    <th>Image</th>
+                    <td><img class="imageAdmin" src="{{ asset('/uploads/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
+                </tr>
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('article_index') }}">Retourner à la liste des articles</a>
-        </li>
-        <li>
-            <a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a href="{{ path('article_index') }}">Retourner à la liste des articles</a>
+            </li>
+            <li>
+                <a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a>
+            </li>
+        </ul>
+    </div>
+</div>
 {% endblock %}
