@@ -43,8 +43,13 @@ header{
 // NAVBAR FIXED
 .fixed_nav {
   position: fixed;
-  top: 0;
+  //top: 0;
   width: 100%;
+  height: auto;
+}
+
+.fixed_nav div{
+  margin-bottom: 0;
 }
 
 // IMAGES NAV
@@ -96,7 +101,7 @@ header{
             content: '';
             height: .4em;
             width: .4em;
-            background: #D2153A;
+            background: rgb(234, 100, 12);
             display: block;
             position: absolute;
             transform: rotate(45deg);
