@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="input-field col s4 offset-s1">
                     <input placeholder="Prénom" id="first_name" type="text" class="validate">
-                    <label for="Prénom" class="active orgtxt">Prénom</label>
+                    <label for="Prénom" class="active">Prénom</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
                     <input placeholder="Nom" id="last_name" type="text" class="validate">
-                    <label for="Nom" class="active orgtxt">Nom</label>
+                    <label for="Nom" class="active">Nom</label>
                 </div>
             </div>
 
@@ -20,28 +20,28 @@
             <div class="row">
                 <div class="input-field col s4 offset-s1">
                     <input id="email" type="email" class="validate">
-                    <label for="email" class="active orgtxt">Email</label>
+                    <label for="email" class="active">Email</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
                     <input class="validate">
-                    <label for="Téléphone" class="active orgtxt">Téléphone</label>
+                    <label for="Téléphone" class="active">Téléphone</label>
                 </div>
             </div>
 
 {# Adresse #}
 
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s3 offset-s1">
                     <input placeholder="Rue" type="text" class="validate">
-                    <label for="Rue" class="active orgtxt">Rue</label>
+                    <label for="Rue" class="active">Rue</label>
                 </div>
-                <div class="input-field col s2">
+                <div class="input-field col s1 offset-s1">
                     <input placeholder="Code Postal" class="validate">
-                    <label for="Code Postal" class="active orgtxt">Code Postal</label>
+                    <label for="Code Postal" class="active">Code Postal</label>
                 </div>
-                <div class="input-field col s4">
+                <div class="input-field col s3 offset-s1">
                     <input placeholder="Ville" type="text" class="validate">
-                    <label for="Ville" class="active orgtxt">Ville</label>
+                    <label for="Ville" class="active">Ville</label>
                 </div>
             </div>
 {# Choix abonnement #}
@@ -79,15 +79,15 @@
                 <div class="col s2 offset-s1">
                     <p>
                         En plus :
-                        <input type="checkbox" id="test6" checked="checked" />
-                        <label for="test6">Je m'abonne à la Newsletter</label>
                     </p>
+                        <input type="checkbox" id="test6" checked="checked" />
+                        <label for="test6" class="orgtxt">Je m'abonne à la Newsletter</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col s2 offset-s5 center">
-                    <a class="waves-effect waves-light btn"  type="submit" name="action">Valider</a>
+                    <a class="waves-effect waves-light btn formvalid"  type="submit" name="action">Valider</a>
                 </div>
             </div>
 
