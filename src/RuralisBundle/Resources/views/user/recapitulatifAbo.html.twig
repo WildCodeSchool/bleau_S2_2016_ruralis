@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ app.session.get('type') }}</h1>
+    <h1>{% for details in app.session.get('details') %}
+            {{ dump(details) }}
+        {% endfor %}</h1>
+
+
+    //ajout du prix
+    //ajout durée de paiement
+{% endblock %}
