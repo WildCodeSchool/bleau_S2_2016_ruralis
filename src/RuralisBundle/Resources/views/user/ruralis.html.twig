@@ -1,60 +1,59 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    {# IMAGES TOP PAGE #}
-
-        <div class="row ruralisimgtop">
-            <div class="col s12 topruralis">
+    <body>
+        {# IMAGES TOP PAGE #}
+        <div class="row ruralis_img_top">
+            <div class="col m12">
                 <img class="size-large" src="{{ asset("bundles/ruralis/images/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi.png") }}" alt="home">
             </div>
-            <div class="col s2 offset-s5 logotopruralis">
-                <img id="logo" class="responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo ruralis magazine" />
+            <div class="col m2 offset-m5 logotopruralis">
+                <img class="logo responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo ruralis magazine" />
             </div>
         </div>
 
-    </header>
-
-    <body>
-
-    {# DESCRIPTION #}
-        <div class="row" id="description">
-            <div class="col s6 offset-s3">
+        {# DESCRIPTION #}
+        <div class="row description">
+            <div class="col m8 offset-m2">
                 <p>Illustrant une ruralité vivante, riche de ses initiativeslocales et de ses capacités d’innovation sociale,citoyenne et agricole, Ruralis Magazine ambitionne de donner à voir les transformations des territoires ruraux en participant de façon volontariste et délibérément optimiste à la réflexion du devenir des campagnes et de leur nouvelle gouvernance.</p>
             </div>
         </div>
 
-    {# TERRITOIRES EN DEVENIR #}
-        <div class="row" id="territoire">
-            <div class="col s4 offset-s4">
-                <h4>TERRITOIRES EN DEVENIR</h4>
+        {# TERRITOIRES EN DEVENIR #}
+        <div class="row territoire">
+            <h4>TERRITOIRES EN DEVENIR</h4>
+            <div class="col m2 offset-m1">
+                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-1.jpg') }}" alt="Paysage Clocher">
             </div>
-
-            <div class="col s12">
-                <img class="size-full" src="{{ asset('bundles/ruralis/images/Paysage-Clocher-1.jpg') }}" alt="Paysage Clocher">
-                <img class="size-full" src="{{ asset('bundles/ruralis/images/Paysage-Clocher-2.jpg') }}" alt="Paysage Clocher 2">
-                <img class="size-full" src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 3">
-                <img class="size-full" src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 4">
-                <img class="size-full" src="{{ asset('bundles/ruralis/images/Paysage-Clocher-9.jpg') }}" alt="Paysage clocher 5">
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-2.jpg') }}" alt="Paysage Clocher 2">
+            </div>
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 3">
+            </div>
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 4">
+            </div>
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-9.jpg') }}" alt="Paysage clocher 5">
             </div>
         </div>
 
-    {# EDITORIAL #}
-
-        <div class="row" id="editorial">
-            <div class="col s10 offset-s1">
-                <div class="col s4 edit">
+        {# EDITORIAL #}
+        <div class="row editorial">
+            <div class="col m10 offset-m1">
+                <div class="col m4 edit">
                     <h5>Un constat</h5>
                     <p>Quand on parle des problématiques de l’aménagement des territoires ruraux, nous observons que les grands médias (l’audiovisuel et  la presse écrite) ne semblent s’y intéresser que de façon  épisodique et fragmentée au seul  ressort des éruptions sociales, des colères économiques ou de la détresse culturelle.</p>
                 </div>
 
-                <div class="col s4 edit">
+                <div class="col m4 edit">
                     <h5>qui conforte</h5>
                     <p>Ce constat nous conduit à croire qu’une nouvelle aventure éditoriale est possible.  Nous nous inscrivons dans un journalisme de profondeur et de solutions.  Cette démarche journalistique promet de décrypter les enjeux à venir et de diffuser l’envie d’agir.
                     </p>
                 </div>
 
-                <div class="col s4 edit">
+                <div class="col m4 edit">
                     <h5>notre projet éditorial</h5>
                     <p>RURALIS Magazine, un trimestriel de 96 pages en quadrichromie au format 19x27.  Un travail d’enquête approfondie de terrain, de rencontres, d’échanges, de questionnement au service de l’évolution des campagnes françaises.</p>
                 </div>
@@ -63,12 +62,11 @@
 
     {# ARPENTEURS #}
 
-        <div class="row center" id="arpenteurs">
-            <div class="col s12 l3 offset-l1">
-                <img id="magazine" src="{{ asset('bundles/ruralis/images/Couverture.png') }}" alt="Couverture magazine" />
+        <div class="row arpenteurs valign-wrapper">
+            <div class="col m3 offset-m2">
+                <img class="size-large" src="{{ asset('bundles/ruralis/images/Couverture.png') }}" alt="Couverture magazine" />
             </div>
-
-            <div class="col s12 l5" id="textarp">
+            <div class="col m4 offset-m1 valign">
                 <h5>Arpenteurs des territoires</h5>
                 <p>Photographie, dessins et infographie seront les principales clés de lecture des sujets. Ce parti pris d’une maquette visuelle renforce le pouvoir immersif des reportages au plus près de l’action et complète le travail pertinent d’un rédactionnel de terrain. Ce magazine papier, à diffusion nationale, veut explorer la géo-diversité des campagnes françaises en rendant vivante et immersive chaque part d’humanité sous forme d’histoires incarnées.</p>
             </div>
@@ -77,26 +75,21 @@
     {# PEUPLE #}
 
         <div class="row peuple">
-            <div class="col s12">
-                <h4>PEUPLE DES CAMPAGNES</h4>
+            <h4>PEUPLE DES CAMPAGNES</h4>
+            <div class="col m2 offset-m1">
+                <img src="{{ asset('bundles/ruralis/images/Editing_Culture_bandeau.png') }}" alt="1">
             </div>
-        </div>
-
-        <div class="row peuple">
-            <div class="col s12 l2 offset-l1">
-                <img class="responsive-img" src="{{ asset('bundles/ruralis/images/Editing_Culture_bandeau.png') }}" alt="1">
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Festival-de-Montsapey-bandeau.png') }}" alt="2">
             </div>
-            <div class="col s12 l2">
-                <img class="responsive-img" src="{{ asset('bundles/ruralis/images/Festival-de-Montsapey-bandeau.png') }}" alt="2">
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/guylaine_bandeau.png') }}" alt="3">
             </div>
-            <div class="col s12 l2">
-                <img class="responsive-img" src="{{ asset('bundles/ruralis/images/guylaine_bandeau.png') }}" alt="3">
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}" alt="4">
             </div>
-            <div class="col s12 l2">
-            <img class="responsive-img" src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}" alt="4">
-            </div>
-            <div class="col s12 l2">
-                <img class="responsive-img" src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}" alt="5">
+            <div class="col m2">
+                <img src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}" alt="5">
             </div>
         </div>
 
@@ -104,97 +97,91 @@
     {# Objectifs #}
 
         <div class="row objectifs">
-            <div class="col s6 offset-s3">
-                <p id="para">
-                    Pour vous garantir, chers(ères) lecteurs (trices), le respect à la lettre de notre charte éditoriale, nous avons fait le choix du statut associatif dans l’esprit novateur de l’entreprise solidaire de presse d’information qui permet d’encourager l’émergence et la diversité de nouveaux médias.
-                </p>
-                <a id="bilan" href="{{ asset('bundles/ruralis/images/Business_plan_Ruralis_Magazine.pdf') }}"target="_blank">
-                    <p class="txtorange">
-                        Objectif : 5000 abonné(e)s
-                    </p>
-                </a>
-                <p>
-                    Elus des territoires ruraux, acteurs du monde agricole, citoyens engagés sur le terrain, dans l’action associative ou simple amoureux des paysages de la campagne française, le pouvoir de nous faire exister est désormais entre vos mains.
-                </p>
-            </div>
-
-            <div class="col s6" id="flexabonnes">
-                <div id="txtobjectif">
+            <div class="row">
+                <div class="col m6 offset-m3">
                     <p>
-                        OBJECTIF
+                        Pour vous garantir, chers(ères) lecteurs (trices), le respect à la lettre de notre charte éditoriale, nous avons fait le choix du statut associatif dans l’esprit novateur de l’entreprise solidaire de presse d’information qui permet d’encourager l’émergence et la diversité de nouveaux médias.
                     </p>
-                    <p id="nb">
-                        5000
-                    </p>
+                    <a href="{{ asset('bundles/ruralis/images/Business_plan_Ruralis_Magazine.pdf') }}" target="_blank">
+                        <p class="txtorange">Objectif : 5000 abonné(e)s</p>
+                    </a>
                     <p>
-                        abonné(e)s
+                        Elus des territoires ruraux, acteurs du monde agricole, citoyens engagés sur le terrain, dans l’action associative ou simple amoureux des paysages de la campagne française, le pouvoir de nous faire exister est désormais entre vos mains.
                     </p>
                 </div>
-
-                <img src="{{ asset('bundles/ruralis/images/fleche.png') }}" alt="fleche" />
-
-                <a id="savoir" href="{{ asset('bundles/ruralis/images/Business_plan_Ruralis_Magazine.pdf') }}" target="_blank">
-                    En savoir plus
-                </a>
+            </div>
+            <div class="row abonnes">
+                <div class="col m6 offset-m3 valign-wrapper" id="flexabonnes">
+                    <div class="col m4 valign">
+                        <p>OBJECTIF</p>
+                        <p><span>5000</span></p>
+                        <p>abonné(e)s</p>
+                    </div>
+                    <div class="col m4 valign">
+                        <img src="{{ asset('bundles/ruralis/images/fleche.png') }}" alt="fleche" />
+                    </div>
+                    <div class="col m4 valign">
+                        <a href="{{ asset('bundles/ruralis/images/Business_plan_Ruralis_Magazine.pdf') }}" target="_blank" class="waves-effect waves-light btn">En savoir plus</a>
+                    </div>
+                </div>
             </div>
         </div>
 
 
     {# Abonnement #}
 
-        <div class="row center" id="abonnement">
-            <div class="col l3 offset-l2 s8 offset-s2">
+        <div class="row abonnement">
+            <div class="col m4">
                 <a href="{{ asset('bundles/ruralis/images/abonnement_de_lecteur.pdf') }}" target="_blank">
-                    <img class="logoabt responsive-img" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}" alt="logo48"  />
+                    <img src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}" alt="logo48"  />
                 </a>
             </div>
-            <div class="col l3 s8 offset-s2">
+            <div class="col m4">
                 <a href="{{ asset('bundles/ruralis/images/abonnement_de_soutien.pdf') }}"  target="_blank">
-                    <img class="logoabt responsive-img" src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}" alt="logo150"  />
+                    <img src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}" alt="logo150"  />
                 </a>
             </div>
-            <div class="col l3 s8 offset-s2">
+            <div class="col m4">
                 <a href="{{ asset('bundles/ruralis/images/abonnement_ambassadeur.pdf') }}"  target="_blank">
-                    <img class="logoabt responsive-img" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}" alt="logo250"  />
+                    <img src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}" alt="logo250"  />
                 </a>
             </div>
         </div>
 
     {# Citation #}
 
-        <div class="row center" id="citation">
-            <div class="col s6 offset-s3">
-                <img id="img1" src="{{ asset('bundles/ruralis/images/logoarbre.png') }}" alt="mini logo" />
+        <div class="row center citation">
+            <div class="col m6 offset-m3">
+                <img src="{{ asset('bundles/ruralis/images/logoarbre.png') }}" alt="mini logo" />
                 <div>
                     <p>Dans une société en crise et en panne d'imagination, le monde rural ne pourrait-il pas être, pour une fois, un espace d'invention, d'innovation sociale ?</p>
-                    <p id="auteur">Préface <i>"Ils ont choisi la campagne"</i> de Bernard KAYSER</p>
+                    <p><span>Préface <i>"Ils ont choisi la campagne"</i> de Bernard KAYSER</span></p>
                 </div>
-                <img id="img2" src="{{ asset('bundles/ruralis/images/logoarbre.png') }}" alt="mini logo" />
+                <img src="{{ asset('bundles/ruralis/images/logoarbre.png') }}" alt="mini logo" />
             </div>
         </div>
 
     {# Trombi #}
 
-        <div class="row center" id="trombi">
-                <img class="col s12" src="{{ asset('bundles/ruralis/images/trombi.png') }}" alt="trombinoscope de l'équipe de rédaction, des journalistes, du magazine Ruralis">
-            <div class="col l2 offset-l1 s10 offset-s1">
+        <div class="row center trombi">
+            <img class="col m12" src="{{ asset('bundles/ruralis/images/trombi.png') }}" alt="trombinoscope de l'équipe de rédaction, des journalistes, du magazine Ruralis">
+            <div class="col m2 offset-m1 s10 offset-s1">
                 <h6>Sylvie BRAIBANT</h6>
                 <p>Journaliste politique internationale, elle travaille dix ans pour la chaîne audiovisuelle TF1, puis intègre la rédaction de TV5 Monde où elle exerce ses talents de rédactrice en chef sur le site Terriennes, dédié à la condition des femmes dans le monde.  Elle collabore au Monde diplomatique.</p>
-
             </div>
-            <div class="col l2 s10 offset-s1">
+            <div class="col m2 s10 offset-s1">
                 <h6>Françoise ROCHER</h6>
                 <p>Directrice juridique adjointe du Corporate de Lagardère Active, elle exerce sa profession dans le domaine de la presse et de l’édition depuis trente ans. Elle apporte la maîtrise technique des compétences juridiques et fiscales.</p>
             </div>
-            <div class="col l2 s10 offset-s1">
+            <div class="col m2 s10 offset-s1">
                 <h6>Eric MANGEAT</h6>
                 <p>Fondateur du projet.Photographe et journaliste indépendant, Eric développe depuis des années une vision humaniste et prospective de la ruralité.Ce projet est l’aboutissement d’une réflexion mûrie au plus près de la géo-diversité des campagnes et de la richesse de ses hommes.</p>
             </div>
-            <div class="col l2 s10 offset-s1">
+            <div class="col m2 s10 offset-s1">
                 <h6>Armelle GOUEROU</h6>
                 <p>Co-animatrice du projet magazine, elle est journaliste-formatrice. Elle apporte son regard exigeant sur la ligne éditoriale et l’esprit qui en découle afin de structurer un contenu cohérent et séduisant. Elle met aussi à disposition son expertise professionnelle des ressources humaines et ses connaissances administratives.</p>
             </div>
-            <div class="col l2 s10 offset-s1">
+            <div class="col m2 s10 offset-s1">
                 <h6>Frédéric NICOLAS</h6>
                 <p>Après avoir travaillé en presse quotidienne régionale pendant dix ans puis créé une agence éditoriale en ligne, le journaliste économique de terrain qu’il demeure a renforcé ses compétences et intervient aujourd’hui comme consultant en animation et gestion des réseaux sociaux.</p>
             </div>
