@@ -1,29 +1,6 @@
 .formulaire {
-  margin-top: 120px;
-
-  .formvalid {
-    background-color: #ea4c0a;
-  }
-  //
-  //.validate {
-  //  color: black;
-  //}
-
-  input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="time"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="tel"], input[type="number"], input[type="search"], textarea.materialize-textarea {
-    color: black;
-  }
-
-  .input-field label {
-    color: #ea4c0a;
-  }
-
-  label.orgtxt {
+  span {
     color: dimgrey;
     font-weight: bold;
   }
-
-  //label.active.orgtxt {
-  //  text-decoration-color: #ea4c0a;
-  //  outline-color: #ea4c0a;
-  //}
 }

@@ -28,6 +28,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: navajowhite;
 }
 main {
   flex: 1 0 auto;
@@ -43,7 +44,10 @@ main {
 .size-large{
   width: 100%;
 }
-
+header{
+  height: 168px !important;
+  z-index: 1 !important;
+}
 p{
   font-size: 18px;
   font-family: 'Time New Roman', sans-serif;
@@ -56,6 +60,73 @@ h5{
   font-size: 25px;
   font-family: 'Sakkal Majalla Bold';
   color: $orange;
+}
+
+// Mise en forme form
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: $orange;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $orange;
+  box-shadow: 0 1px 0 0 $orange;
+}
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+textarea.materialize-textarea {
+  color: black;
+}
+[type="checkbox"]:checked + label:before {
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid $orange;
+  border-bottom: 2px solid $orange;
+}
+.input-field label {
+  color: $orange;
+}
+
+// Style bouton
+
+.btn.nl {
+  background-color: $orange;
+  margin-top: -11px;
+}
+.btn.nl:hover{
+  background-color: $orange_pale;
 }
 
 //Import des feuille de style

@@ -4,9 +4,6 @@
 /*==================================================================== */
 /* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
-body{
-  background-color: navajowhite;
-}
 
 //ERASE MATERIALIZE CSS
 .navigation .col{
@@ -99,31 +96,11 @@ body{
     margin-bottom: 0px;
   }
 }
-
-.btn.nl {
-  background-color: $orange;
-  margin-top: -11px;
-}
-
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
-
-input[type=email]:focus:not([readonly]) + label {
-  color: $orange;
-}
-
-input[type=email]:focus:not([readonly]) {
-  border-bottom: 1px solid $orange;
-  box-shadow: 0 1px 0 0 $orange;
-}
-
-.btn.nl:hover{
-  background-color: $orange_pale;
-}
-
 .navigation .input-field label{
   color: $orange;
   top: 1.8rem;

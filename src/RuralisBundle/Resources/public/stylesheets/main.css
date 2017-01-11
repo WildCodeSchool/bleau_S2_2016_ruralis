@@ -14,41 +14,124 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: navajowhite;
 }
 
-/* line 32, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 main {
   flex: 1 0 auto;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 38, ../sass/main.scss */
 .col {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 43, ../sass/main.scss */
+/* line 44, ../sass/main.scss */
 .size-large {
   width: 100%;
 }
 
 /* line 47, ../sass/main.scss */
+header {
+  height: 168px !important;
+  z-index: 1 !important;
+}
+
+/* line 51, ../sass/main.scss */
 p {
   font-size: 18px;
   font-family: 'Time New Roman', sans-serif;
 }
 
-/* line 51, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 h4 {
   font-family: 'Arial Bold';
   text-align: center;
 }
 
-/* line 55, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 h5 {
   font-size: 25px;
   font-family: 'Sakkal Majalla Bold';
   color: #ea640c;
+}
+
+/* line 66, ../sass/main.scss */
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #ea640c;
+}
+
+/* line 81, ../sass/main.scss */
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ea640c;
+  box-shadow: 0 1px 0 0 #ea640c;
+}
+
+/* line 97, ../sass/main.scss */
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+textarea.materialize-textarea {
+  color: black;
+}
+
+/* line 112, ../sass/main.scss */
+[type="checkbox"]:checked + label:before {
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #ea640c;
+  border-bottom: 2px solid #ea640c;
+}
+
+/* line 118, ../sass/main.scss */
+.input-field label {
+  color: #ea640c;
+}
+
+/* line 124, ../sass/main.scss */
+.btn.nl {
+  background-color: #ea640c;
+  margin-top: -11px;
+}
+
+/* line 128, ../sass/main.scss */
+.btn.nl:hover {
+  background-color: #ff8436;
 }
 
 /*Theme Name: Ruralis
@@ -186,16 +269,16 @@ Author: Marielle Lautrou and Aurore David
 }
 
 /* line 122, ../sass/_general.scss */
-.abonnement {
+.abonnement_ruralis {
   padding: 0 5%;
   background-color: rgba(211, 211, 211, 0.5);
 }
 /* line 11, ../sass/main.scss */
-.abonnement img {
+.abonnement_ruralis img {
   width: 100%;
 }
 /* line 14, ../sass/main.scss */
-.abonnement .col {
+.abonnement_ruralis .col {
   padding: 0 0.30rem !important;
 }
 
@@ -251,96 +334,91 @@ footer img {
 /*==================================================================== */
 /* ----------------------- NAVIGATION BAR ----------------------- */
 /*==================================================================== */
-/* line 7, ../sass/_navbar.scss */
-body {
-  background-color: navajowhite;
-}
-
-/* line 12, ../sass/_navbar.scss */
+/* line 9, ../sass/_navbar.scss */
 .navigation .col {
   padding: initial !important;
 }
 
-/* line 15, ../sass/_navbar.scss */
+/* line 12, ../sass/_navbar.scss */
 .navigation .row {
   margin-bottom: 0 !important;
 }
 
-/* line 20, ../sass/_navbar.scss */
+/* line 17, ../sass/_navbar.scss */
 .fixed_nav {
   position: fixed;
   width: 100%;
   height: auto;
 }
 
-/* line 26, ../sass/_navbar.scss */
+/* line 23, ../sass/_navbar.scss */
 .navigation a, .navigation li {
   color: #ea640c;
   font-weight: 800;
 }
-/* line 30, ../sass/_navbar.scss */
+/* line 27, ../sass/_navbar.scss */
 .navigation li {
   text-align: center;
 }
 
-/* line 36, ../sass/_navbar.scss */
+/* line 33, ../sass/_navbar.scss */
 .first_line {
   background-color: #ea640c;
   max-height: 56px;
   margin-bottom: 0;
 }
 
-/* line 41, ../sass/_navbar.scss */
+/* line 38, ../sass/_navbar.scss */
 .nav_logo {
   width: 100%;
   max-height: 56px;
 }
 
-/* line 45, ../sass/_navbar.scss */
+/* line 42, ../sass/_navbar.scss */
 .smallarbre {
   max-width: 64%;
 }
 
-/* line 48, ../sass/_navbar.scss */
+/* line 45, ../sass/_navbar.scss */
 #animation {
   background-repeat: no-repeat;
 }
 
-/* line 51, ../sass/_navbar.scss */
+/* line 48, ../sass/_navbar.scss */
 #bottommark {
   position: absolute;
   bottom: 0;
   width: 0;
 }
 
-/* line 58, ../sass/_navbar.scss */
+/* line 55, ../sass/_navbar.scss */
 .second_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 60, ../sass/_navbar.scss */
+/* line 57, ../sass/_navbar.scss */
 .second_line a:hover {
   background-color: rgba(234, 100, 12, 0.48);
   color: #ea4c0a;
 }
-/* line 64, ../sass/_navbar.scss */
+/* line 61, ../sass/_navbar.scss */
 .second_line ul li {
   float: left;
 }
 
-/* line 69, ../sass/_navbar.scss */
+/* line 66, ../sass/_navbar.scss */
 .navlinks {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
 }
-/* line 73, ../sass/_navbar.scss */
+/* line 70, ../sass/_navbar.scss */
 .navlinks li {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 10%;
 }
-/* line 78, ../sass/_navbar.scss */
+/* line 75, ../sass/_navbar.scss */
 .navlinks li:after {
   content: '';
   height: .4em;
@@ -352,56 +430,34 @@ body {
   top: .5em;
   left: 2px;
 }
-/* line 90, ../sass/_navbar.scss */
+/* line 87, ../sass/_navbar.scss */
 .navlinks li:first-child {
   margin-left: 0px;
 }
 
-/* line 96, ../sass/_navbar.scss */
+/* line 93, ../sass/_navbar.scss */
 .third_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 98, ../sass/_navbar.scss */
+/* line 95, ../sass/_navbar.scss */
 .third_line ul {
   margin-bottom: 0px;
 }
 
-/* line 103, ../sass/_navbar.scss */
-.btn.nl {
-  background-color: #ea640c;
-  margin-top: -11px;
-}
-
-/* line 108, ../sass/_navbar.scss */
+/* line 99, ../sass/_navbar.scss */
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
 
-/* line 114, ../sass/_navbar.scss */
-input[type=email]:focus:not([readonly]) + label {
-  color: #ea640c;
-}
-
-/* line 118, ../sass/_navbar.scss */
-input[type=email]:focus:not([readonly]) {
-  border-bottom: 1px solid #ea640c;
-  box-shadow: 0 1px 0 0 #ea640c;
-}
-
-/* line 123, ../sass/_navbar.scss */
-.btn.nl:hover {
-  background-color: #ff8436;
-}
-
-/* line 127, ../sass/_navbar.scss */
+/* line 104, ../sass/_navbar.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 132, ../sass/_navbar.scss */
+/* line 109, ../sass/_navbar.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
@@ -447,48 +503,43 @@ select {
   margin-right: 2.25rem;
 }
 
-/* line 35, ../sass/_admin.scss */
-input[type="text"] {
-  border-bottom-color: white;
-}
-
-/* line 39, ../sass/_admin.scss */
+/* line 36, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 44, ../sass/_admin.scss */
+/* line 41, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 48, ../sass/_admin.scss */
+/* line 45, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 52, ../sass/_admin.scss */
+/* line 49, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 56, ../sass/_admin.scss */
+/* line 53, ../sass/_admin.scss */
 .file-path {
   color: white;
 }
 
-/* line 60, ../sass/_admin.scss */
+/* line 57, ../sass/_admin.scss */
 a {
   color: #00B82B;
 }
 
-/* line 64, ../sass/_admin.scss */
+/* line 61, ../sass/_admin.scss */
 .imageAdmin {
   height: 150px;
 }
 
-/* line 68, ../sass/_admin.scss */
+/* line 65, ../sass/_admin.scss */
 .middleText {
   margin-top: 75px;
 }
@@ -747,24 +798,8 @@ a.cardLink {
   max-height: 150px;
 }
 
-/* line 1, ../sass/_formulaireAbonnement.scss */
-.formulaire {
-  margin-top: 120px;
-}
-/* line 4, ../sass/_formulaireAbonnement.scss */
-.formulaire .formvalid {
-  background-color: #ea4c0a;
-}
-/* line 12, ../sass/_formulaireAbonnement.scss */
-.formulaire input:not([type]), .formulaire input[type="text"], .formulaire input[type="password"], .formulaire input[type="email"], .formulaire input[type="url"], .formulaire input[type="time"], .formulaire input[type="date"], .formulaire input[type="datetime"], .formulaire input[type="datetime-local"], .formulaire input[type="tel"], .formulaire input[type="number"], .formulaire input[type="search"], .formulaire textarea.materialize-textarea {
-  color: black;
-}
-/* line 16, ../sass/_formulaireAbonnement.scss */
-.formulaire .input-field label {
-  color: #ea4c0a;
-}
-/* line 20, ../sass/_formulaireAbonnement.scss */
-.formulaire label.orgtxt {
+/* line 2, ../sass/_formulaireAbonnement.scss */
+.formulaire span {
   color: dimgrey;
   font-weight: bold;
 }

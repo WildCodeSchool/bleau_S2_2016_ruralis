@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>{{ app.session.get('type') }}</h1>
+    <h1>{{ app.session.get('type') }}</h1>
     <div class="row">
         <form name="formAbo" class="col s12 formulaire" action="{{ path('ruralis_recapitulatif_abo') }}" method="post">
             <div class="row">
                 <div class="input-field col s4 offset-s1">
-                    <input placeholder="Prénom" name="prenom" type="text" class="validate">
+                    <input name="prenom" type="text" class="validate">
                     <label for="prenom">Prénom</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
-                    <input placeholder="Nom" name="nom" type="text" class="validate">
+                    <input name="nom" type="text" class="validate">
                     <label for="nom">Nom</label>
                 </div>
             </div>
@@ -32,15 +32,15 @@
 
             <div class="row">
                 <div class="input-field col s3 offset-s1">
-                    <input placeholder="Rue" type="text" name="rue" class="validate">
+                    <input type="text" name="rue" class="validate">
                     <label for="rue">Rue</label>
                 </div>
-                <div class="input-field col s1 offset-s1">
-                    <input placeholder="Code Postal" name="cp" class="validate">
+                <div class="input-field col s2 offset-s1">
+                    <input name="cp" type="text" class="validate">
                     <label for="cp">Code Postal</label>
                 </div>
                 <div class="input-field col s3 offset-s1">
-                    <input placeholder="Ville" name="ville" type="text" class="validate">
+                    <input name="ville" type="text" class="validate">
                     <label for="ville">Ville</label>
                 </div>
             </div>
@@ -48,21 +48,28 @@
 {# Case abonnement Newsletter #}
             <div class="row">
                 <div class="col s2 offset-s1">
-                    <p>
-                        En plus :
-                    </p>
-                        <input type="checkbox" name="nl" checked="checked" />
-                        <label for="nl" class="orgtxt">Je m'abonne à la Newsletter</label>
+                    <p>En plus :</p>
+                    <input type="checkbox" id="check" name="nl" checked="checked" />
+                    <label for="check"><span>Je m'abonne à la Newsletter</span></label>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col s2 offset-s5 center">
-                    <input class="waves-effect waves-light btn formvalid" type="Submit" name="Valider">
+                    <input class="waves-effect waves-light btn nl" type="Submit" name="Valider">
                 </div>
             </div>
 
         </form>
     </div>
 
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+            Materialize.updateTextFields();
+        });
+    </script>
 {% endblock %}

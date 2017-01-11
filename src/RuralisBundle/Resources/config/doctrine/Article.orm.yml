@@ -14,11 +14,14 @@ RuralisBundle\Entity\Article:
             length: 255
         descriptif:
             type: text
+            nullable: true
         contenu:
             type: text
+            nullable: true
         auteur:
             type: string
             length: 255
+            nullable: true
         date:
             type: datetime
         typeAffichage:

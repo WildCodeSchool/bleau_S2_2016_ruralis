@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<div xmlns="http://www.w3.org/1999/html">
+<div>
     <div class="row">
         <div class="col s2 fixedSideNav">
             <div class="row">
@@ -32,10 +32,10 @@
         <div class="col s9 blogTop">
             {#      CARD DE UNE      #}
 
-            {% if article_une.typeAffichage is defined %} }}
+            {% if article_une.typeAffichage is defined %}
             <div class="row article">
                 <div class="card large col s12 hoverable la_une">
-                    <div class="card-image waves-effect waves-block waves-light">
+                    <div style="z-index: 0 !important;" class="card-image waves-effect waves-block waves-light">
                         <img class="activator" width="20%" src="{{ asset('/uploads/images/') }}{{ article_une.image.url }}" alt="{{ article_une.image.alt }}">
                     </div>
 
