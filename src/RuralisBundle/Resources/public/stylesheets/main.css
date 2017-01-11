@@ -1,0 +1,770 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*==================================================================== */
+/* ----------------------- Mixins + Variables ----------------------- */
+/*==================================================================== */
+/*==================================================================== */
+/* ----------------------- GENERAL CSS ----------------------- */
+/*==================================================================== */
+/* line 27, ../sass/main.scss */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* line 32, ../sass/main.scss */
+main {
+  flex: 1 0 auto;
+}
+
+/* line 37, ../sass/main.scss */
+.col {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* line 43, ../sass/main.scss */
+.size-large {
+  width: 100%;
+}
+
+/* line 47, ../sass/main.scss */
+p {
+  font-size: 18px;
+  font-family: 'Time New Roman', sans-serif;
+}
+
+/* line 51, ../sass/main.scss */
+h4 {
+  font-family: 'Arial Bold';
+  text-align: center;
+}
+
+/* line 55, ../sass/main.scss */
+h5 {
+  font-size: 25px;
+  font-family: 'Sakkal Majalla Bold';
+  color: #ea640c;
+}
+
+/*Theme Name: Ruralis
+Author: Marielle Lautrou and Aurore David
+*/
+/*==================================================================== */
+/* ------------------------------ MENU ------------------------------- */
+/*==================================================================== */
+/*
+1. IMAGES TOP
+
+2. BODY RURALIS
+    1. Description
+    2. Territoire
+    3. Editorial
+    4. Arpenteurs
+    5. Peuples
+    6. Objectifs
+    7. Abonnement
+    8. Citation
+    9. Trombinoscope + présentation équipe
+
+3. FOOTER
+*/
+/*==================================================================== */
+/* -------------------------- IMAGES TOP PAGE ----------------------- */
+/*==================================================================== */
+/*Top image*/
+/* line 34, ../sass/_general.scss */
+.ruralis_img_top {
+  margin-bottom: 0;
+}
+
+/* line 37, ../sass/_general.scss */
+.logo {
+  position: relative;
+  bottom: 565px;
+  margin-bottom: -320px;
+  z-index: 2;
+}
+
+/*==================================================================== */
+/* -------------------------- BODY RURALIS --------------------------- */
+/*==================================================================== */
+/* line 50, ../sass/_general.scss */
+.description {
+  text-align: center;
+  margin-top: -20px;
+  padding-top: -20px;
+}
+/* line 54, ../sass/_general.scss */
+.description p {
+  color: #ea640c;
+}
+
+/* line 60, ../sass/_general.scss */
+.territoire {
+  padding: 0;
+  width: 100%;
+}
+/* line 63, ../sass/_general.scss */
+.territoire h4 {
+  padding: 15px 0;
+}
+/* line 11, ../sass/main.scss */
+.territoire img {
+  width: 100%;
+}
+/* line 14, ../sass/main.scss */
+.territoire .col {
+  padding: 0 0.30rem !important;
+}
+
+/* line 70, ../sass/_general.scss */
+.editorial {
+  text-align: center;
+}
+/* line 72, ../sass/_general.scss */
+.editorial .edit {
+  padding-left: 5px !important;
+}
+
+/* line 78, ../sass/_general.scss */
+.arpenteurs {
+  padding: 8px 0;
+  margin-top: 7%;
+  background-color: rgba(211, 211, 211, 0.5);
+  text-align: center;
+}
+
+/* line 86, ../sass/_general.scss */
+.peuple {
+  text-align: center;
+}
+/* line 11, ../sass/main.scss */
+.peuple img {
+  width: 100%;
+}
+/* line 14, ../sass/main.scss */
+.peuple .col {
+  padding: 0 0.30rem !important;
+}
+
+/* line 93, ../sass/_general.scss */
+.objectifs div:first-child {
+  text-align: center;
+}
+/* line 96, ../sass/_general.scss */
+.objectifs .txtorange {
+  color: #ea640c;
+}
+
+/* line 101, ../sass/_general.scss */
+.abonnes p {
+  text-align: center;
+  font-size: 150%;
+  font-family: 'courier new', sans-serif;
+  font-weight: bold;
+}
+/* line 107, ../sass/_general.scss */
+.abonnes img {
+  width: 50%;
+}
+/* line 110, ../sass/_general.scss */
+.abonnes a {
+  background-color: #ea640c;
+}
+/* line 113, ../sass/_general.scss */
+.abonnes a:hover {
+  background-color: #ff8436;
+}
+/* line 116, ../sass/_general.scss */
+.abonnes span {
+  color: #ea640c;
+}
+
+/* line 122, ../sass/_general.scss */
+.abonnement {
+  padding: 0 5%;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+/* line 11, ../sass/main.scss */
+.abonnement img {
+  width: 100%;
+}
+/* line 14, ../sass/main.scss */
+.abonnement .col {
+  padding: 0 0.30rem !important;
+}
+
+/* line 130, ../sass/_general.scss */
+.citation {
+  color: #ea640c;
+}
+/* line 132, ../sass/_general.scss */
+.citation img {
+  width: 7%;
+}
+/* line 135, ../sass/_general.scss */
+.citation span {
+  font-size: 80%;
+  color: black;
+}
+
+/* line 143, ../sass/_general.scss */
+.trombi h6 {
+  color: #ea640c;
+}
+/* line 146, ../sass/_general.scss */
+.trombi p {
+  font-size: 12px;
+  font-family: 'courier new', sans-serif;
+}
+/* line 150, ../sass/_general.scss */
+.trombi .col {
+  padding: 0 0.30rem !important;
+}
+
+/*==================================================================== */
+/* ----------------------------- FOOTER ------------------------------ */
+/*==================================================================== */
+/* line 158, ../sass/_general.scss */
+footer {
+  background-color: #ea640c !important;
+  padding: 20px;
+  bottom: 0;
+  text-align: center;
+}
+/* line 163, ../sass/_general.scss */
+footer p {
+  line-height: 0.2;
+  font-size: 12px;
+  font-family: 'courier new', sans-serif;
+}
+/* line 168, ../sass/_general.scss */
+footer img {
+  width: 30%;
+}
+
+/*==================================================================== */
+/* ----------------------- NAVIGATION BAR ----------------------- */
+/*==================================================================== */
+/* line 7, ../sass/_navbar.scss */
+body {
+  background-color: navajowhite;
+}
+
+/* line 12, ../sass/_navbar.scss */
+.navigation .col {
+  padding: initial !important;
+}
+
+/* line 15, ../sass/_navbar.scss */
+.navigation .row {
+  margin-bottom: 0 !important;
+}
+
+/* line 20, ../sass/_navbar.scss */
+.fixed_nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+
+/* line 26, ../sass/_navbar.scss */
+.navigation a, .navigation li {
+  color: #ea640c;
+  font-weight: 800;
+}
+/* line 30, ../sass/_navbar.scss */
+.navigation li {
+  text-align: center;
+}
+
+/* line 36, ../sass/_navbar.scss */
+.first_line {
+  background-color: #ea640c;
+  max-height: 56px;
+  margin-bottom: 0;
+}
+
+/* line 41, ../sass/_navbar.scss */
+.nav_logo {
+  width: 100%;
+  max-height: 56px;
+}
+
+/* line 45, ../sass/_navbar.scss */
+.smallarbre {
+  max-width: 64%;
+}
+
+/* line 48, ../sass/_navbar.scss */
+#animation {
+  background-repeat: no-repeat;
+}
+
+/* line 51, ../sass/_navbar.scss */
+#bottommark {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+/* line 58, ../sass/_navbar.scss */
+.second_line {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* line 60, ../sass/_navbar.scss */
+.second_line a:hover {
+  background-color: rgba(234, 100, 12, 0.48);
+  color: #ea4c0a;
+}
+/* line 64, ../sass/_navbar.scss */
+.second_line ul li {
+  float: left;
+}
+
+/* line 69, ../sass/_navbar.scss */
+.navlinks {
+  margin-top: -15px;
+  margin-bottom: 0;
+  list-style: none;
+}
+/* line 73, ../sass/_navbar.scss */
+.navlinks li {
+  margin-bottom: 1em;
+  padding-left: 1em;
+  position: relative;
+  margin-left: 10%;
+}
+/* line 78, ../sass/_navbar.scss */
+.navlinks li:after {
+  content: '';
+  height: .4em;
+  width: .4em;
+  background: #ea640c;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: .5em;
+  left: 2px;
+}
+/* line 90, ../sass/_navbar.scss */
+.navlinks li:first-child {
+  margin-left: 0px;
+}
+
+/* line 96, ../sass/_navbar.scss */
+.third_line {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* line 98, ../sass/_navbar.scss */
+.third_line ul {
+  margin-bottom: 0px;
+}
+
+/* line 103, ../sass/_navbar.scss */
+.btn.nl {
+  background-color: #ea640c;
+  margin-top: -11px;
+}
+
+/* line 108, ../sass/_navbar.scss */
+.mailbox {
+  margin-top: -22px;
+  margin-right: 3%;
+  list-style: none;
+}
+
+/* line 114, ../sass/_navbar.scss */
+input[type=email]:focus:not([readonly]) + label {
+  color: #ea640c;
+}
+
+/* line 118, ../sass/_navbar.scss */
+input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid #ea640c;
+  box-shadow: 0 1px 0 0 #ea640c;
+}
+
+/* line 123, ../sass/_navbar.scss */
+.btn.nl:hover {
+  background-color: #ff8436;
+}
+
+/* line 127, ../sass/_navbar.scss */
+.navigation .input-field label {
+  color: #ea640c;
+  top: 1.8rem;
+}
+
+/* line 132, ../sass/_navbar.scss */
+.navigation input[type="email"] {
+  border-bottom: 1px solid #ea640c;
+}
+
+/*
+select {
+  display : block !important;
+}*/
+/* line 5, ../sass/_admin.scss */
+.adminmodel h1 {
+  color: #00B82B;
+  text-align: center;
+}
+
+/* line 10, ../sass/_admin.scss */
+.adminImg {
+  width: 50px;
+}
+
+/* line 13, ../sass/_admin.scss */
+.btn {
+  background-color: #00B82B;
+}
+
+/* line 17, ../sass/_admin.scss */
+.btn:hover {
+  background-color: #47d9bc;
+}
+
+/* line 21, ../sass/_admin.scss */
+.adminmodel {
+  max-width: 90%;
+  background-color: rgba(117, 207, 80, 0.75);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-top: 12%;
+}
+
+/* line 30, ../sass/_admin.scss */
+.container .row {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
+/* line 35, ../sass/_admin.scss */
+input[type="text"] {
+  border-bottom-color: white;
+}
+
+/* line 39, ../sass/_admin.scss */
+.input-field label {
+  color: white;
+  left: 4px;
+}
+
+/* line 44, ../sass/_admin.scss */
+label {
+  color: white;
+}
+
+/* line 48, ../sass/_admin.scss */
+.select-wrapper input.select-dropdown {
+  border-bottom-color: white;
+}
+
+/* line 52, ../sass/_admin.scss */
+.select-dropdown {
+  color: #00B82B;
+}
+
+/* line 56, ../sass/_admin.scss */
+.file-path {
+  color: white;
+}
+
+/* line 60, ../sass/_admin.scss */
+a {
+  color: #00B82B;
+}
+
+/* line 64, ../sass/_admin.scss */
+.imageAdmin {
+  height: 150px;
+}
+
+/* line 68, ../sass/_admin.scss */
+.middleText {
+  margin-top: 75px;
+}
+
+/* line 1, ../sass/_abonnement.scss */
+.abonnement {
+  font-size: 26px;
+}
+/* line 5, ../sass/_abonnement.scss */
+.abonnement .row .col {
+  padding: 0;
+}
+/* line 9, ../sass/_abonnement.scss */
+.abonnement .lecteur img, .abonnement .donateur img, .abonnement .ambassadeur2 img {
+  width: 150px;
+  height: 150px;
+}
+/* line 14, ../sass/_abonnement.scss */
+.abonnement .lecteur, .abonnement .donateur, .abonnement .ambassadeur, .abonnement .cadeau {
+  margin: auto;
+}
+/* line 18, ../sass/_abonnement.scss */
+.abonnement .lecteur, .abonnement .donateur {
+  background-color: #00b82b;
+  border: solid black 5px;
+}
+/* line 23, ../sass/_abonnement.scss */
+.abonnement .lecteur2 {
+  border-top: solid black 5px;
+  border-right: solid black 5px;
+  height: 120px;
+}
+/* line 29, ../sass/_abonnement.scss */
+.abonnement .lecteur2 img, .abonnement .donateur3 img {
+  width: 5%;
+  height: 5%;
+}
+/* line 34, ../sass/_abonnement.scss */
+.abonnement .cadeau {
+  border-right: solid black 5px;
+  border-left: solid black 5px;
+  padding: 40px;
+}
+/* line 40, ../sass/_abonnement.scss */
+.abonnement .don {
+  border-top: solid black 5px;
+  height: 80px;
+  margin-top: 40px;
+}
+/* line 46, ../sass/_abonnement.scss */
+.abonnement .donateur {
+  background-color: #efff00;
+}
+/* line 50, ../sass/_abonnement.scss */
+.abonnement .donateur2, .abonnement .donateur3 {
+  border-left: solid black 5px;
+  height: 200px;
+}
+/* line 55, ../sass/_abonnement.scss */
+.abonnement .donateur2 {
+  border-bottom: solid black 5px;
+}
+/* line 59, ../sass/_abonnement.scss */
+.abonnement .ambassadeur {
+  border-bottom: solid black 5px;
+  border-left: solid black 5px;
+  border-right: solid black 5px;
+  background-color: #ef5e00;
+}
+/* line 66, ../sass/_abonnement.scss */
+.abonnement .ambassadeur3 {
+  border: solid black 5px;
+  height: 140px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/* line 73, ../sass/_abonnement.scss */
+.abonnement .hoverable a, .abonnement .hoverable, .abonnement .lecteur2 a {
+  border-color: black;
+  color: rgba(1, 0, 1, 0.55);
+}
+/* line 78, ../sass/_abonnement.scss */
+.abonnement div .don.hoverable a, .abonnement div .donateur2.hoverable p, .abonnement div .donateur3.hoverable p, .abonnement div .ambassadeur3.hoverable p {
+  margin: auto;
+}
+/* line 82, ../sass/_abonnement.scss */
+.abonnement div .cadeau p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 88, ../sass/_abonnement.scss */
+.hoverable a, .hoverable, .lecteur2 a {
+  border-color: black;
+  color: white;
+  text-align: center !important;
+}
+
+/* line 96, ../sass/_abonnement.scss */
+.options {
+  position: fixed;
+  top: 48%;
+  text-align: center;
+  z-index: 1;
+}
+
+/* line 103, ../sass/_abonnement.scss */
+.abotop {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+/* line 108, ../sass/_abonnement.scss */
+.abovert {
+  margin-top: 40px;
+  z-index: 99999999999999999999999999;
+}
+
+/* line 113, ../sass/_abonnement.scss */
+.lhsmall {
+  line-height: 1;
+}
+
+/* line 119, ../sass/_abonnement.scss */
+.margtop {
+  margin-top: 30px;
+  color: #00b82b;
+}
+
+/* line 3, ../sass/_blog.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 6, ../sass/_blog.scss */
+.hoverable.header, .hoverable.card {
+  height: 2% !important;
+}
+
+/* line 9, ../sass/_blog.scss */
+.article {
+  max-height: 200px;
+  overflow: none;
+  margin-bottom: 70px;
+}
+
+/* line 15, ../sass/_blog.scss */
+.card-image > img, .card-content {
+  max-height: 190px;
+  width: auto;
+}
+
+/*.card.large {
+  height : 33.3333333333%;
+  width : 33.3333333333%;
+}*/
+/* line 25, ../sass/_blog.scss */
+.la_une .card-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 230px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+/* line 35, ../sass/_blog.scss */
+.carre .card-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+/* line 45, ../sass/_blog.scss */
+h4, .card-content {
+  color: black;
+}
+
+/* line 49, ../sass/_blog.scss */
+a.cardLink {
+  color: #ffd8a6;
+}
+
+/* line 53, ../sass/_blog.scss */
+.fixedSideNav .row {
+  position: fixed;
+  top: 40%;
+  width: 120px;
+  color: red;
+  margin-left: 40px;
+  text-align: center;
+}
+
+/* line 62, ../sass/_blog.scss */
+.fixedSideNav div img {
+  width: 40px;
+}
+
+/* line 66, ../sass/_blog.scss */
+.current a {
+  background-color: rgba(234, 100, 12, 0.8) !important;
+}
+
+/****************************/
+/*        row  & col        */
+/****************************/
+/* line 74, ../sass/_blog.scss */
+.rowCustom {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+/* line 79, ../sass/_blog.scss */
+.colCustom {
+  padding: 0px !important;
+  margin: 0px;
+}
+
+/***********************************/
+/*        Images abonnement        */
+/***********************************/
+/* line 89, ../sass/_blog.scss */
+.logoabt {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 1, ../sass/_partenaire.scss */
+.partenaire {
+  text-align: center;
+}
+/* line 4, ../sass/_partenaire.scss */
+.partenaire .partenaireTop {
+  margin-top: 150px;
+}
+/* line 8, ../sass/_partenaire.scss */
+.partenaire .nomPart {
+  font-weight: bold;
+  color: #EF651B;
+}
+/* line 13, ../sass/_partenaire.scss */
+.partenaire .photoPart {
+  height: 150px;
+}
+/* line 17, ../sass/_partenaire.scss */
+.partenaire .photoPart img {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+/* line 1, ../sass/_formulaireAbonnement.scss */
+.formulaire {
+  margin-top: 120px;
+}
+/* line 4, ../sass/_formulaireAbonnement.scss */
+.formulaire .formvalid {
+  background-color: #ea4c0a;
+}
+/* line 12, ../sass/_formulaireAbonnement.scss */
+.formulaire input:not([type]), .formulaire input[type="text"], .formulaire input[type="password"], .formulaire input[type="email"], .formulaire input[type="url"], .formulaire input[type="time"], .formulaire input[type="date"], .formulaire input[type="datetime"], .formulaire input[type="datetime-local"], .formulaire input[type="tel"], .formulaire input[type="number"], .formulaire input[type="search"], .formulaire textarea.materialize-textarea {
+  color: black;
+}
+/* line 16, ../sass/_formulaireAbonnement.scss */
+.formulaire .input-field label {
+  color: #ea4c0a;
+}
+/* line 20, ../sass/_formulaireAbonnement.scss */
+.formulaire label.orgtxt {
+  color: dimgrey;
+  font-weight: bold;
+}

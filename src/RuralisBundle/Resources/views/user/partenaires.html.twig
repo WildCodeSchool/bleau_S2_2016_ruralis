@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="container partenaire">
+            <div class="row partenaireTop">
+                <div class="col s12">
+                    <h1>
+                        Nos partenaires
+                    </h1>
+                </div>
+                <div class="col s12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate iste iure maxime perspiciatis quaerat quasi qui quos, voluptates! Beatae doloribus eos est impedit ipsam neque, omnis pariatur recusandae ut!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                {% for partenaire in partenaires %}
+                    <div class="col s3 part1">
+                        <div class="row">
+                            <div class="col offset-s2 s10 nomPart">
+                                {{ partenaire.nom }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 photoPart">
+                                <img src="{{ asset('/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col offset-s2 s10 descPart">
+                                {{ partenaire.descriptif }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock body %}

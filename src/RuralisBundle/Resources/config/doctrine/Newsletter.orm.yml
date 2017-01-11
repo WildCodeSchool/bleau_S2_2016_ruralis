@@ -1,0 +1,20 @@
+RuralisBundle\Entity\Newsletter:
+    type: entity
+    table: null
+    repositoryClass: RuralisBundle\Repository\NewsletterRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        date:
+            type: date
+        contenu:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

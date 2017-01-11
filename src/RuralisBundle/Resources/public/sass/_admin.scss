@@ -1,0 +1,71 @@
+/*
+select {
+  display : block !important;
+}*/
+.adminmodel h1{
+  color:#00B82B;
+  text-align:center;
+}
+
+.adminImg{
+  width:50px;
+}
+.btn{
+  background-color: #00B82B;
+}
+
+.btn:hover{
+  background-color: #47d9bc;
+}
+
+.adminmodel {
+  max-width: 90%;
+  background-color: rgba(117, 207, 80, 0.75);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-top:12%;
+}
+
+.container .row {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
+input[type="text"] {
+  border-bottom-color: white;
+}
+
+.input-field label {
+  color: white;
+  left: 4px;
+}
+
+label{
+  color:white;
+}
+
+.select-wrapper input.select-dropdown{
+  border-bottom-color:white;
+}
+
+.select-dropdown{
+  color: #00B82B;
+}
+
+.file-path {
+  color:white;
+}
+
+a {
+  color: #00B82B;
+}
+
+.imageAdmin{
+  height:150px;
+}
+
+.middleText{
+  margin-top:75px;
+}
+

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row article">
+    <div class="col m8 offset-m2">
+        <h1>{{ article.nom }}</h1>
+            <div class="row">
+                <div class="col s12">
+                    <td>{{ article.contenu }}</td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    Article rédigé par {{ article.auteur }}, le {{ article.date|date('d M Y') }}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

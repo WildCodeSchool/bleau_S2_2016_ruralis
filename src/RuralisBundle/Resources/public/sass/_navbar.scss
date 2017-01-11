@@ -1,0 +1,134 @@
+// ATTENTION ==> DES MIXINS ET VARIABLE SONT DEFINIE DANS MAIN.SCSS
+
+
+/*==================================================================== */
+/* ----------------------- NAVIGATION BAR ----------------------- */
+/*==================================================================== */
+body{
+  background-color: navajowhite;
+}
+
+//ERASE MATERIALIZE CSS
+.navigation .col{
+  padding: initial !important;
+}
+.navigation .row{
+  margin-bottom: 0 !important;
+}
+
+//NAV BAR
+.fixed_nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+.navigation{
+  a, li{
+    color : $orange;
+    font-weight: 800;
+  }
+  li{
+    text-align: center;
+  }
+}
+
+//First line nav bar
+.first_line {
+  background-color: $orange;
+  max-height: 56px;
+  margin-bottom:0;
+}
+.nav_logo {
+  width: 100%;
+  max-height: 56px;
+}
+.smallarbre {
+  max-width: 64%;
+}
+#animation {
+  background-repeat: no-repeat;
+}
+#bottommark {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+//Second line nav bar
+.second_line{
+  background-color: rgba(255,255,255,0.75);
+  a:hover {
+    background-color : rgba(234, 100, 12, 0.48);
+    color : rgb(234, 76, 10);
+  }
+  ul li{
+    float: left;
+  }
+}
+
+.navlinks{
+  margin-top: -15px;
+  margin-bottom: 0;
+  list-style: none;
+  li {
+    margin-bottom: 1em;
+    padding-left: 1em;
+    position: relative;
+    margin-left: 10%;
+    &:after {
+      content: '';
+      height: .4em;
+      width: .4em;
+      background: $orange;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: .5em;
+      left: 2px;
+    }
+  }
+  li:first-child{
+    margin-left: 0px;
+  }
+}
+
+//Third line nav bar
+.third_line {
+  background-color: rgba(255, 255, 255, 0.75);
+  ul{
+    margin-bottom: 0px;
+  }
+}
+
+.btn.nl {
+  background-color: $orange;
+  margin-top: -11px;
+}
+
+.mailbox {
+  margin-top: -22px;
+  margin-right: 3%;
+  list-style: none;
+}
+
+input[type=email]:focus:not([readonly]) + label {
+  color: $orange;
+}
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid $orange;
+  box-shadow: 0 1px 0 0 $orange;
+}
+
+.btn.nl:hover{
+  background-color: $orange_pale;
+}
+
+.navigation .input-field label{
+  color: $orange;
+  top: 1.8rem;
+}
+
+.navigation input[type="email"] {
+  border-bottom: 1px solid $orange;
+}

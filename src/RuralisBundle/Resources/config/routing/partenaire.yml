@@ -1,0 +1,24 @@
+partenaire_index:
+    path:     /
+    defaults: { _controller: "RuralisBundle:Partenaire:index" }
+    methods:  GET
+
+partenaire_show:
+    path:     /{id}/show
+    defaults: { _controller: "RuralisBundle:Partenaire:show" }
+    methods:  GET
+
+partenaire_new:
+    path:     /new
+    defaults: { _controller: "RuralisBundle:Partenaire:new" }
+    methods:  [GET, POST]
+
+partenaire_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RuralisBundle:Partenaire:edit" }
+    methods:  [GET, POST]
+
+partenaire_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RuralisBundle:Partenaire:delete" }
+    methods:  DELETE

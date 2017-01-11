@@ -1,0 +1,171 @@
+/*Theme Name: Ruralis
+Author: Marielle Lautrou and Aurore David
+*/
+
+// ATTENTION ==> DES MIXINS, VARIABLE ET STYLE SUR DIV GLOBAL SONT DEFINIE DANS MAIN.SCSS
+
+/*==================================================================== */
+/* ------------------------------ MENU ------------------------------- */
+/*==================================================================== */
+
+/*
+1. IMAGES TOP
+
+2. BODY RURALIS
+    1. Description
+    2. Territoire
+    3. Editorial
+    4. Arpenteurs
+    5. Peuples
+    6. Objectifs
+    7. Abonnement
+    8. Citation
+    9. Trombinoscope + présentation équipe
+
+3. FOOTER
+*/
+
+/*==================================================================== */
+/* -------------------------- IMAGES TOP PAGE ----------------------- */
+/*==================================================================== */
+
+
+/*Top image*/
+.ruralis_img_top {
+  margin-bottom: 0;
+}
+.logo{
+  position: relative;
+  bottom: 565px;
+  margin-bottom: -320px;
+  z-index: 2;
+}
+
+/*==================================================================== */
+/* -------------------------- BODY RURALIS --------------------------- */
+/*==================================================================== */
+
+
+// Description
+.description{
+  text-align: center;
+  margin-top: -20px;
+  padding-top: -20px;
+  p{
+    color: $orange;
+  }
+}
+
+// Territoire
+.territoire{
+  padding: 0;
+  width: 100%;
+  h4{
+    padding: 15px 0;
+  }
+  @include multiple_img_line();
+}
+
+// Editorial
+.editorial {
+  text-align: center;
+  .edit{
+    padding-left: 5px !important;
+  }
+}
+
+// Arpenteurs
+.arpenteurs{
+  padding: 8px 0;
+  margin-top: 7%;
+  background-color: $gris;
+  text-align: center;
+}
+
+// Peuples
+.peuple {
+  text-align: center;
+  @include multiple_img_line();
+}
+
+// Objectifs
+.objectifs{
+  div:first-child{
+    text-align: center;
+  }
+  .txtorange{
+    color: $orange;
+  }
+}
+.abonnes{
+  p{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'courier new', sans-serif;
+    font-weight: bold;
+  }
+  img{
+    width: 50%;
+  }
+  a{
+    background-color: $orange;
+  }
+  a:hover{
+    background-color: $orange_pale;
+  }
+  span{
+    color: $orange;
+  }
+}
+
+// Abonnement
+.abonnement{
+  padding: 0 5%;
+  background-color: $gris;
+  @include multiple_img_line();
+}
+
+
+// Citation
+.citation{
+  color: $orange;
+  img{
+    width: 7%;
+  }
+  span{
+    font-size: 80%;
+    color: black;
+  }
+}
+
+// Trombinoscope + présentation équipe
+.trombi{
+  h6 {
+    color: $orange;
+  }
+  p{
+    font-size: 12px;
+    font-family: 'courier new', sans-serif;
+  }
+  .col{
+    padding: 0 0.30rem !important;
+  }
+}
+/*==================================================================== */
+/* ----------------------------- FOOTER ------------------------------ */
+/*==================================================================== */
+
+footer{
+  background-color: $orange !important;
+  padding: 20px;
+  bottom: 0;
+  text-align: center;
+  p{
+    line-height: 0.2;
+    font-size: 12px;
+    font-family: 'courier new', sans-serif;
+  }
+  img{
+    width: 30%;
+  }
+}
