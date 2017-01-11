@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col s12">
                     <p>
-                        Abonnez-vous et soutenez Ruralis Magazine
+                        Je m'abonne
                     </p>
                 </div>
                 <div class="col s12">
@@ -26,6 +26,16 @@
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}" alt="logo250"  />
                     </a>
                 </div>
+                <div class="col s12">
+                    <p>
+                        J'encourage Ruralis Magazine
+                    </p>
+                </div>
+                <div class="col s12">
+                    <a href="{{ asset('/') }}" target="_blank">
+                        <img class="logoabt" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -41,19 +51,20 @@
 
                     <div class="card-content">
                         <div class="card-title activator grey-text text-darken-4">
-                            {{ article_une.nom }}
+                            <h5>
+                                {{ article_une.nom }}
+                            </h5>
                             <i class="material-icons right">more_vert</i>
                         </div>
-                        <p><a href="#" class="cardLink">Lien vers la Une</a></p>
                     </div>
                     {#    Information about the News revealed once clicked on      #}
                     <div class="card-reveal">
-                        <div class="card-title grey-text text-darken-4">{{ article_une.nom }}
+                        <div class="card-title grey-text text-darken-4">
+                            <p>
+                                {{ article_une.descriptif | nl2br }}
+                            </p>
                             <i class="material-icons right">close</i>
                         </div>
-                        <p>
-                            {{ article_une.descriptif }}
-                        </p>
                     </div>
                 </div>
             </div>
@@ -82,7 +93,7 @@
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-title activator grey-text text-darken-4">
-                                                    {{ article.nom }}
+                                                    <h5>{{ article.nom }}</h5>
                                                     <i class="material-icons right">more_vert</i>
                                                 </div>
                                                 <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
@@ -90,7 +101,9 @@
                                             {#    Information about the article 1 revealed once clicked on      #}
                                             <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
                                                 <div class="row card-title grey-text text-darken-4">
-                                                   {{ article.descriptif }}
+                                                   <p>
+                                                       {{ article.descriptif |nl2br }}
+                                                   </p>
                                                 </div>
                                              </div>
                                         </div>
@@ -103,7 +116,7 @@
                             <div class="row article">
                                 <div class="col s12 hoverable">
                                     <h4 class="header">
-                                        {{ article.nom }}
+                                        <h5>{{ article.nom }}</h5>
                                     </h4>
                                     <div class="card horizontal">
                                         <div class="card-image">
@@ -123,11 +136,10 @@
 
                         {# RECTANGLE + DESCRIPTIF #}
                         {% elseif article.typeAffichage == 'Rectangle + descriptif' %}
-                            {# Third card #}
                             <div class="row article">
                                 <div class="col s12 hoverable">
                                     <h4 class="header">
-                                        {{ article.nom  }}
+                                        <h5>{{ article.nom  }}</h5>
                                     </h4>
                                     <div class="card horizontal">
                                         <div class="card-image">
@@ -144,11 +156,10 @@
 
                         {# RECTANGLE + ARTICLE COMPLET #}
                         {% elseif article.typeAffichage == 'Rectangle + article complet' %}
-                            {# fourth card #}
                             <div class="row">
                                 <div class="col s12 hoverable">
                                     <h4 class="header">
-                                        {{ article.nom  }}
+                                        <h5>{{ article.nom  }}</h5>
                                     </h4>
                                     <div class="card horizontal">
                                         <div class="card-image">
@@ -159,7 +170,7 @@
                                                 <p>{{ article.descriptif }}</p>
                                             </div>
                                             <div class="card-action">
-                                                <a href="{{ path('article_index') }}" class="cardLink">Lire l'article complet</a>
+                                                <a href="{{ path('ruralis_article', {id: article.id}) }}" class="cardLink">Lire l'article complet</a>
                                             </div>
                                         </div>
                                     </div>
