@@ -623,19 +623,19 @@ h1 {
   text-align: center;
 }
 
-/* line 6, ../sass/_blog.scss */
+/* line 7, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
 }
 
-/* line 9, ../sass/_blog.scss */
+/* line 10, ../sass/_blog.scss */
 .article {
   max-height: 200px;
   overflow: none;
   margin-bottom: 70px;
 }
 
-/* line 15, ../sass/_blog.scss */
+/* line 16, ../sass/_blog.scss */
 .card-image > img, .card-content {
   max-height: 190px;
   width: auto;
@@ -645,7 +645,7 @@ h1 {
   height : 33.3333333333%;
   width : 33.3333333333%;
 }*/
-/* line 25, ../sass/_blog.scss */
+/* line 26, ../sass/_blog.scss */
 .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -656,7 +656,7 @@ h1 {
   height: auto;
 }
 
-/* line 35, ../sass/_blog.scss */
+/* line 36, ../sass/_blog.scss */
 .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -667,17 +667,17 @@ h1 {
   height: auto;
 }
 
-/* line 45, ../sass/_blog.scss */
+/* line 46, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 49, ../sass/_blog.scss */
+/* line 50, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 53, ../sass/_blog.scss */
+/* line 54, ../sass/_blog.scss */
 .fixedSideNav .row {
   position: fixed;
   top: 40%;
@@ -687,12 +687,12 @@ a.cardLink {
   text-align: center;
 }
 
-/* line 62, ../sass/_blog.scss */
+/* line 63, ../sass/_blog.scss */
 .fixedSideNav div img {
   width: 40px;
 }
 
-/* line 66, ../sass/_blog.scss */
+/* line 67, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
@@ -700,13 +700,13 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 74, ../sass/_blog.scss */
+/* line 75, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 79, ../sass/_blog.scss */
+/* line 80, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
@@ -715,7 +715,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 89, ../sass/_blog.scss */
+/* line 90, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;
