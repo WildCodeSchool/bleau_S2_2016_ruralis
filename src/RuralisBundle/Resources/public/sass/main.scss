@@ -3,7 +3,64 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+/*==================================================================== */
+/* ----------------------- Mixins + Variables ----------------------- */
+/*==================================================================== */
+
+@mixin multiple_img_line(){
+  img{
+    width: 100%;
+  }
+  .col{
+    padding: 0 0.30rem !important;
+  }
+}
+$orange: rgb(234,100,12);
+$orange_pale: rgb(255, 132, 54);
+$gris: rgba(211, 211, 211, 0.5);
+
+/*==================================================================== */
+/* ----------------------- GENERAL CSS ----------------------- */
+/*==================================================================== */
+
+//Permet de garder le footer on the button
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+
+//Suppression du padding right and left sur les col (surcharge materialize)
+.col{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+//Class à utiliser pour mettre les images en width 100%
+.size-large{
+  width: 100%;
+}
+
+p{
+  font-size: 18px;
+  font-family: 'Time New Roman', sans-serif;
+}
+h4{
+  font-family: 'Arial Bold';
+  text-align: center;
+}
+h5{
+  font-size: 25px;
+  font-family: 'Sakkal Majalla Bold';
+  color: $orange;
+}
+
+//Import des feuille de style
 @import "_general";
+@import "_navbar";
 @import "_admin";
 @import "_abonnement";
 @import "_blog";

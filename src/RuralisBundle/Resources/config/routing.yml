@@ -16,8 +16,10 @@ ruralis_partenaire:
     defaults: { _controller: RuralisBundle:Partenaires:index }
 
 ruralis_formulaire_abonnement:
-  path:     /formulaire
-  defaults: { _controller: RuralisBundle:Formulaire:index}
+    path:     /{type}/formulaire
+    defaults: { _controller: RuralisBundle:Formulaire:index, type: lecteur|donateur|ambassadeur}
+    requirements:
+        type: lecteur|donateur|ambassadeur
 
 
 # Routes Admin
