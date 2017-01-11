@@ -3,7 +3,7 @@ select {
   display : block !important;
 }*/
 .adminmodel h1{
-  color:#00B82B;
+  color: #4c4c4c;
   text-align:center;
 }
 
@@ -20,7 +20,7 @@ select {
 
 .adminmodel {
   max-width: 90%;
-  background-color: rgba(117, 207, 80, 0.75);
+  background-color: #ebebeb;
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -66,3 +66,28 @@ a {
   margin-top:75px;
 }
 
+.articlenew {
+  //input:not([type]),
+  //input[type="text"],
+  //input[type="password"],
+  //input[type="email"],
+  //input[type="url"],
+  //input[type="time"],
+  //input[type="date"],
+  //input[type="datetime"],
+  //input[type="datetime-local"],
+  //input[type="tel"],
+  //input[type="number"],
+  //input[type="search"],
+  //textarea.materialize-textarea{
+  //  background-color: #ebebeb;
+  //}
+
+  .input-field label,
+  label,
+  .dropdown-content li > a,
+  .dropdown-content li > span,
+  .descimg {
+    color: $orange;
+  }
+}

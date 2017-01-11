@@ -468,7 +468,7 @@ select {
 }*/
 /* line 5, ../sass/_admin.scss */
 .adminmodel h1 {
-  color: #00B82B;
+  color: #4c4c4c;
   text-align: center;
 }
 
@@ -490,7 +490,7 @@ select {
 /* line 21, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
-  background-color: rgba(117, 207, 80, 0.75);
+  background-color: #ebebeb;
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -542,6 +542,15 @@ a {
 /* line 65, ../sass/_admin.scss */
 .middleText {
   margin-top: 75px;
+}
+
+/* line 86, ../sass/_admin.scss */
+.articlenew .input-field label,
+.articlenew label,
+.articlenew .dropdown-content li > a,
+.articlenew .dropdown-content li > span,
+.articlenew .descimg {
+  color: #ea640c;
 }
 
 /* line 1, ../sass/_abonnement.scss */

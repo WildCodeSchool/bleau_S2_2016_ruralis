@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row adminmodel">
-    <div class="col m8 offset-m2">
+<div class="row adminmodel z-depth-2">
+    <div class="col m10 offset-m1">
         <h1>{{ article.nom }}</h1>
 
         <table>
@@ -31,17 +31,21 @@
                     <th>Image</th>
                     <td><img class="imageAdmin" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
                 </tr>
+                <tr>
+                    <th>Description de l'image</th>
+                    <td>{{ article.image.alt }}</td>
+                </tr>
             </tbody>
         </table>
 
-        <ul>
-            <li>
-                <a href="{{ path('article_index') }}">Retourner à la liste des articles</a>
-            </li>
-            <li>
-                <a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a>
-            </li>
-        </ul>
+        <div class="center">
+            <a class="waves-effect waves-light btn" href="{{ path('article_index') }}">
+                Liste des articles
+            </a>
+            <a class="waves-effect waves-light btn" href="{{ path('article_edit', { 'id': article.id }) }}">
+                Editer
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}
