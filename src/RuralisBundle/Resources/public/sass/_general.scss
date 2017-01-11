@@ -2,237 +2,43 @@
 Author: Marielle Lautrou and Aurore David
 */
 
-
-
-/*==================================================================== */
-/* ----------------------- GENERAL CSS ----------------------- */
-/*==================================================================== */
-
-*{
-  margin: 0;
-  padding: 0;
-}
-/*==================================================================== */
-/* ----------------------- NAVIGATION BAR ----------------------- */
-/*==================================================================== */
-
-// BACKGROUND SMOOTH WHITE
-.whitebckg {
-  background-color: rgba(255,255,255,0.75);
-  max-height: 125px;
-}
-
-// ORANGE BACKGROUND FOR ROW TOP NAV
-.orangebckg {
-  background-color: rgb(234,100,12);
-  max-height: 56px;
-  margin-bottom:0;
-}
-
-.nav_1line{
-  margin-top:0;
-}
-
-//SPACE AFTER NAVBAR
-header{
-  margin-bottom: 155px;
-  position: relative;
-  height: 100%;
-}
-
-// NAVBAR FIXED
-.fixed_nav {
-  position: fixed;
-  //top: 0;
-  width: 100%;
-  height: auto;
-}
-
-.fixed_nav div{
-  margin-bottom: 0;
-}
-
-// IMAGES NAV
-.ruralismag {
-  position: fixed;
-  max-height: 5.9%;
-  min-height: 56px;
-  left: 0;
-  top: 0;
-}
-
-.smallarbre {
-  max-width: 84%;
-  margin-left: 30px;
-}
-
-
-// NAV LIST
-.navigation a, .navigation li {
-  color : rgb(234,100,12);
-  font-weight: 800;
-}
-
-.navigation li{
-  text-align: center;
-}
-
-.whitebckg a:hover {
-  background-color : rgba(234, 100, 12, 0.48);
-  color : rgb(234, 76, 10);
-}
-
-.mailbox:hover{
-  background-color: snow !important;
-}
-
-.navigation .row .col.offset-s1 {
-  margin-left: 9.333%;
-}
-
-.navlinks{
-    list-style: none;
-    li {
-        margin-bottom: 1em;
-        padding-left: 1em;
-        position: relative;
-
-        &:after {
-            content: '';
-            height: .4em;
-            width: .4em;
-            background: rgb(234, 100, 12);
-            display: block;
-            position: absolute;
-            transform: rotate(45deg);
-            top: .5em;
-            left: 2px;
-        }
-    }
-}
-
-// ORANGE BUTTON INSTEAD OF GREEN
-.btn.nl {
-  background-color: rgb(234, 100, 12);
-}
-
-// MAIL LINE
-.mailbox {
-  margin-top: -22px;
-  list-style: none;
-}
-
-input[type=email]:focus:not([readonly]) + label {
-  color: rgb(234,100,12);
-}
-
-input[type=email]:focus:not([readonly]) {
-  border-bottom: 1px solid rgb(234,100,12);
-  box-shadow: 0 1px 0 0 rgb(234,100,12);
-}
-
-// BUTTON
-.nl button {
-  margin-top: -13.5px;
-  background-color: rgb(234,100,12);
-}
-
-.nl button:hover {
-  background-color: rgb(255, 132, 54);
-}
-
-.btn.nl:hover{
-  background-color: rgb(255, 132, 54);
-}
-
-.nav_1line ul li{
-  float: left;
-  //list-style-type: square;
-}
-
-button:hover{
-  background-color: rgb(255, 132, 54);
-
-}
-.marginnav {
-  margin-left: 10%;
-}
-
-.nav_2line ul li {
-  //list-style-type: square;
-  //float: left;
-}
-
-.navigation .input-field label{
-  color: #ea640c;;
-  top: 1.8rem;
-}
-
-.navigation input[type="email"] {
-  border-bottom: 1px solid #ea640c;
-}
-
+// ATTENTION ==> DES MIXINS, VARIABLE ET STYLE SUR DIV GLOBAL SONT DEFINIE DANS MAIN.SCSS
 
 /*==================================================================== */
-/* -------------------------- THREE BIG IMAGES ----------------------- */
+/* ------------------------------ MENU ------------------------------- */
+/*==================================================================== */
+
+/*
+1. IMAGES TOP
+
+2. BODY RURALIS
+    1. Description
+    2. Territoire
+    3. Editorial
+    4. Arpenteurs
+    5. Peuples
+    6. Objectifs
+    7. Abonnement
+    8. Citation
+    9. Trombinoscope + présentation équipe
+
+3. FOOTER
+*/
+
+/*==================================================================== */
+/* -------------------------- IMAGES TOP PAGE ----------------------- */
 /*==================================================================== */
 
 
 /*Top image*/
-
-.size-large{
-  width: 100%;
-  height: 720px;
-  //max-width: 1859px;
+.ruralis_img_top {
+  margin-bottom: 0;
 }
-div .row .ruralisimgtop {
- margin-bottom: 0;
-}
-
-.topruralis{
-  max-width: 99.99%;
-}
-
-
-/* Images Territoire */
-
-.size-full{
-  height: auto;
-  width: 19.5%;
-  margin: 0;
-}
-
-
-/*==================================================================== */
-/* -------------------- GESTION DES IMAGES ---------------------- */
-/*==================================================================== */
-//
-
-// Logo on Top Image Ruralis (.logotopruralis)
-#logo{
+.logo{
   position: relative;
   bottom: 565px;
   margin-bottom: -320px;
   z-index: 2;
-
-}
-
-#img1, #img2{
-  width: 7%;
-}
-
-#animation {
-  background-repeat: no-repeat;
-  /*
-  position : fixed;
-  */
-}
-
-#bottommark {
-
-  position: absolute;
-  bottom: 0;
-  width: 0;
 }
 
 /*==================================================================== */
@@ -241,263 +47,125 @@ div .row .ruralisimgtop {
 
 
 // Description
-
-#description{
-  width: 100%;
+.description{
   text-align: center;
   margin-top: -20px;
   padding-top: -20px;
+  p{
+    color: $orange;
+  }
 }
-
-#description p{
-  display: inline-block;
-  //width: 55%;
-  font-size: 14pt;
-  font-family: 'Time New Roman', sans-serif;
-  line-height: 18pt;
-  color: #EA640C;
-}
-
 
 // Territoire
-
-#territoire{
-  //margin-top: 170px;
+.territoire{
   padding: 0;
   width: 100%;
-}
-
-#territoire h4, #peuple h4{
-  padding: 15px 0;
-  width: 100%;
-  font-family: 'Arial Bold';
+  h4{
+    padding: 15px 0;
+  }
+  @include multiple_img_line();
 }
 
 // Editorial
-
-#editorial {
+.editorial {
   text-align: center;
-  line-height: 18pt;
-}
-#editorial h5{
-  font-family: 'Sakkal Majalla Bold';
-  font-size: 18pt;
-  color: #EA640C;
+  .edit{
+    padding-left: 5px !important;
+  }
 }
 
-#editorial p{
-  font-family: 'Time New Roman';
-  font-size: 14pt;
-}
-
-
-// ARPENTEURS
-#arpenteurs{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Arpenteurs
+.arpenteurs{
   padding: 8px 0;
   margin-top: 7%;
-  background-color: rgba(211, 211, 211, 0.5);
-}
-
-#magazine{
-  max-width: 60%;
-}
-
-#textarp{
-  margin-left: -120px;
+  background-color: $gris;
   text-align: center;
 }
-
-#textarp h5{
-  font-family: 'Sakkal Majalla Bold';
-  font-size: 18pt;
-  line-height: 18pt;
-  color: #EA640C;
-}
-
-#textarp p{
-  font-family: 'Time New Roman';
-  font-size: 14pt;
-  line-height: 18pt;
-}
-
 
 // Peuples
-
 .peuple {
   text-align: center;
+  @include multiple_img_line();
 }
-
-.peuple img{
-  max-height: 362.493px;
-  max-width: 236.522px;
-}
-
 
 // Objectifs
-
 .objectifs{
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  //height: 60%;
+  div:first-child{
+    text-align: center;
+  }
+  .txtorange{
+    color: $orange;
+  }
 }
-
-.objectifs p{
-  font-family: 'Time New Roman';
-  font-size: 14pt;
-  line-height: 25pt;
-  //width: 52%;
-  margin: auto;
+.abonnes{
+  p{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'courier new', sans-serif;
+    font-weight: bold;
+  }
+  img{
+    width: 50%;
+  }
+  a{
+    background-color: $orange;
+  }
+  a:hover{
+    background-color: $orange_pale;
+  }
+  span{
+    color: $orange;
+  }
 }
-
-#txtobjectif p{
-  display: inline-block;
-  text-align: center;
-  margin-top: 3.4%;
-  margin-bottom: 1.5%;
-  width: 100%;
-  font-size: 150%;
-  font-family: 'courier new', sans-serif;
-  font-weight: bold;
-}
-
-
-// Abonnees
-
-#flexabonnes{
-  margin-top: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-#nbabonnes{
-  padding-right: 5px;
-  width: 40%;
-  text-align: center;
-  font-family: 'courier new', sans-serif;
-  font-weight: bold;
-  font-size: 200%;
-}
-
-#nbabonnes p{
-  display: inline-block;
-  margin-top: 2.5%;
-  width: 100%;
-  text-align: center;
-  font-family: 'courier new', sans-serif;
-  font-weight: bold;
-  font-size: 75%;
-}
-
-#flexabonnes img{
-  width: 5%;
-  margin: 0 2%;
-  align-self: center;
-}
-
-
-// Savoir
-
-#savoir{
-  height: 100%;
-  position: relative;
-  display: inline-block;
-  background-color: rgb(234,100,12);
-  padding: 15px 0;
-  margin-top: 52px;
-  margin-left: 6%;
-  width: 16%;
-  font-family: 'courier new', sans-serif;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.5s;
-}
-
-#savoir:hover{
-  background-color: #ffffff;
-  transition: 0.5s;
-  color : rgb(234,100,12);
-}
-
 
 // Abonnement
-
-#abonnement{
-  width: 100%;
-  background-color: rgba(211, 211, 211, 0.5);
+.abonnement{
+  padding: 0 5%;
+  background-color: $gris;
+  @include multiple_img_line();
 }
 
 
 // Citation
-
-#citation{
-  text-align: center;
-  font-size: 14pt;
-  width: 100%;
-  color: #EA640C;
+.citation{
+  color: $orange;
+  img{
+    width: 7%;
+  }
+  span{
+    font-size: 80%;
+    color: black;
+  }
 }
 
-
-// A ranger dans CSS
-
-strong{
-  color: #EA640C;
-  font-size: 23px;
-  font-weight: bold;
-}
-
-.txtorange{
-  color: #EA640C;
-}
-
-#nb{
-  color: #EA640C;
-}
-
-#auteur{
-  font-size: 80%;
-  color: black;
-}
-
-#trombi .row .col.l2{
-  margin-left: 40px;
-}
-
-#trombi h6{
-  color: #EA640C;
-}
-
-#trombi p{
-  font-family: 'courier new', sans-serif;
-  font-size: 12px;
+// Trombinoscope + présentation équipe
+.trombi{
+  h6 {
+    color: $orange;
+  }
+  p{
+    font-size: 12px;
+    font-family: 'courier new', sans-serif;
+  }
+  .col{
+    padding: 0 0.30rem !important;
+  }
 }
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
 
-footer, footer .container{
-  min-height: 170px !important;
-  background-color: #EA640C !important;
+footer{
+  background-color: $orange !important;
   padding: 20px;
   bottom: 0;
-}
-
-//footer .col{
-//  height: 60px !important;
-//}
-
-#logowcs{
-  margin-top: 4.5%;
-  width: 120px;
-}
-
-#logoruralis {
-  margin-top: 0.5%;
-  width: 120px;
+  text-align: center;
+  p{
+    line-height: 0.2;
+    font-size: 12px;
+    font-family: 'courier new', sans-serif;
+  }
+  img{
+    width: 30%;
+  }
 }
