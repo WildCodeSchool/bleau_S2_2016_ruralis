@@ -27,15 +27,29 @@ class FormulaireController extends Controller
             'type' => $type,
         ));
     }
+
+    public function recapAboAction(Request $request, $details)
+    {
+        $session = $this->get('request')->getSession();
+        $session->set('details', array(
+            'typeAbo' => $type,
+            'prenom' => $prenom,
+            'nom' => $nom,
+            'email' => $email,
+            'tel' => $tel,
+            'rue' => $rue,
+            'cp' => $cp,
+            'ville' => $ville,
+        ));
+
+        $details = $session->get('details');
+
+        if ($formAbo->isSubmitted() && $formAbo->isValid()) {
+            return $this->redirectToRoute('ruralis_recapitulatif_abo', array(
+                'details' => $details));
+        }
+        return $this->render('@Ruralis/user/formulaireAbonnement.html.twig', array(
+            'details' => $details,
+        ));
+    }
 }
-
-
-//
-//// store an attribute for reuse during a later user request
-//$session->set('foo', 'bar');
-//
-//// get the attribute set by another controller in another request
-//$foobar = $session->get('foobar');
-//
-//// use a default value if the attribute doesn't exist
-//$filters = $session->get('filters', array());

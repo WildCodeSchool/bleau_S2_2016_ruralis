@@ -3,15 +3,15 @@
 {% block body %}
 <h1>{{ app.session.get('type') }}</h1>
     <div class="row">
-        <form class="col s12 formulaire">
+        <form name="formAbo" class="col s12 formulaire" action="{{ path('ruralis_recapitulatif_abo', {'details': 'lecteur'}) }}" method="post">
             <div class="row">
                 <div class="input-field col s4 offset-s1">
-                    <input placeholder="Prénom" id="first_name" type="text" class="validate">
-                    <label for="Prénom" class="active">Prénom</label>
+                    <input placeholder="Prénom" id="prenom" type="text" class="validate">
+                    <label for="prenom">Prénom</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
-                    <input placeholder="Nom" id="last_name" type="text" class="validate">
-                    <label for="Nom" class="active">Nom</label>
+                    <input placeholder="Nom" id="nom" type="text" class="validate">
+                    <label for="nom">Nom</label>
                 </div>
             </div>
 
@@ -20,11 +20,11 @@
             <div class="row">
                 <div class="input-field col s4 offset-s1">
                     <input id="email" type="email" class="validate">
-                    <label for="email" class="active">Email</label>
+                    <label for="email">Email</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
-                    <input class="validate">
-                    <label for="Téléphone" class="active">Téléphone</label>
+                    <input class="validate" id="tel" type="tel">
+                    <label for="tel">Téléphone</label>
                 </div>
             </div>
 
@@ -32,47 +32,18 @@
 
             <div class="row">
                 <div class="input-field col s3 offset-s1">
-                    <input placeholder="Rue" type="text" class="validate">
-                    <label for="Rue" class="active">Rue</label>
+                    <input placeholder="Rue" type="text" id="rue" class="validate">
+                    <label for="rue">Rue</label>
                 </div>
                 <div class="input-field col s1 offset-s1">
-                    <input placeholder="Code Postal" class="validate">
-                    <label for="Code Postal" class="active">Code Postal</label>
+                    <input placeholder="Code Postal" id="cp" class="validate">
+                    <label for="cp">Code Postal</label>
                 </div>
                 <div class="input-field col s3 offset-s1">
-                    <input placeholder="Ville" type="text" class="validate">
-                    <label for="Ville" class="active">Ville</label>
+                    <input placeholder="Ville" id="ville" type="text" class="validate">
+                    <label for="ville">Ville</label>
                 </div>
             </div>
-{# Choix abonnement #}
-            <div class="row">
-                <div class="col s4 offset-s1">
-                    <p>
-                        Je m'abonne en tant que :
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s2 offset-s1">
-                    <p>
-                        <input class="with-gap" name="group1" type="radio" id="test3"  />
-                        <label for="test3" class="orgtxt">Lecteur</label>
-                    </p>
-                </div>
-                <div class="col s2">
-                    <p>
-                        <input class="with-gap" name="group1" type="radio" id="test3"  />
-                        <label for="test3" class="orgtxt">Donateur</label>
-                    </p>
-                </div>
-                <div class="col s2">
-                    <p>
-                        <input class="with-gap" name="group1" type="radio" id="test3"  />
-                        <label for="test3" class="orgtxt">Ambassadeur</label>
-                    </p>
-                </div>
-            </div>
-
 
 {# Case abonnement Newsletter #}
             <div class="row">
@@ -80,24 +51,18 @@
                     <p>
                         En plus :
                     </p>
-                        <input type="checkbox" id="test6" checked="checked" />
-                        <label for="test6" class="orgtxt">Je m'abonne à la Newsletter</label>
+                        <input type="checkbox" id="nl" checked="checked" />
+                        <label for="nl" class="orgtxt">Je m'abonne à la Newsletter</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col s2 offset-s5 center">
-                    <a class="waves-effect waves-light btn formvalid"  type="submit" name="action">Valider</a>
+                    <input class="waves-effect waves-light btn formvalid" type="Submit" name="Valider">
                 </div>
             </div>
 
         </form>
     </div>
 
-{% endblock %}
-
-{% block javascripts %}
-    <script>
-
-    </script>
 {% endblock %}
