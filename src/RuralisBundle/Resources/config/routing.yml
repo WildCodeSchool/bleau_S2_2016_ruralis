@@ -22,11 +22,9 @@ ruralis_formulaire_abonnement:
         type: lecteur|donateur|ambassadeur
 
 ruralis_recapitulatif_abo:
-    path:     /{type}/recapitulatif
-    defaults: { _controller:  RuralisBundle:RecapitulatifAbo:index, type: lecteur}
-    requirements:
-        type: lecteur|donateur|ambassadeur
-    methods:  [GET, POST]
+    path:     /recapitulatif
+    defaults: { _controller:  RuralisBundle:Formulaire:recapAbo}
+    methods:  [POST]
 
 # Routes Admin
 ruralis_admin_article:

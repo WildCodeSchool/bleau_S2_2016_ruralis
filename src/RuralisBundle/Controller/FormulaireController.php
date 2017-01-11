@@ -28,11 +28,18 @@ class FormulaireController extends Controller
         ));
     }
 
-    public function recapAboAction(Request $request, $details)
+    public function recapAboAction(Request $request)
     {
+        $prenom = $_POST['prenom'];
+        $nom = $_POST['nom'];
+        $email = $_POST['email'];
+        $tel = $_POST['tel'];
+        $rue = $_POST['rue'];
+        $cp = $_POST['cp'];
+        $ville = $_POST['ville'];
+
         $session = $this->get('request')->getSession();
         $session->set('details', array(
-            'typeAbo' => $type,
             'prenom' => $prenom,
             'nom' => $nom,
             'email' => $email,
@@ -44,11 +51,8 @@ class FormulaireController extends Controller
 
         $details = $session->get('details');
 
-        if ($formAbo->isSubmitted() && $formAbo->isValid()) {
-            return $this->redirectToRoute('ruralis_recapitulatif_abo', array(
-                'details' => $details));
-        }
-        return $this->render('@Ruralis/user/formulaireAbonnement.html.twig', array(
+        //Lien vers l'API
+        return $this->render('@Ruralis/user/recapitulatifAbo.html.twig', array(
             'details' => $details,
         ));
     }

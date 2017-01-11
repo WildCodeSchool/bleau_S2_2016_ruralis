@@ -3,14 +3,14 @@
 {% block body %}
 <h1>{{ app.session.get('type') }}</h1>
     <div class="row">
-        <form name="formAbo" class="col s12 formulaire" action="{{ path('ruralis_recapitulatif_abo', {'details': 'lecteur'}) }}" method="post">
+        <form name="formAbo" class="col s12 formulaire" action="{{ path('ruralis_recapitulatif_abo') }}" method="post">
             <div class="row">
                 <div class="input-field col s4 offset-s1">
-                    <input placeholder="Prénom" id="prenom" type="text" class="validate">
+                    <input placeholder="Prénom" name="prenom" type="text" class="validate">
                     <label for="prenom">Prénom</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
-                    <input placeholder="Nom" id="nom" type="text" class="validate">
+                    <input placeholder="Nom" name="nom" type="text" class="validate">
                     <label for="nom">Nom</label>
                 </div>
             </div>
@@ -19,11 +19,11 @@
 
             <div class="row">
                 <div class="input-field col s4 offset-s1">
-                    <input id="email" type="email" class="validate">
+                    <input name="email" type="email" class="validate">
                     <label for="email">Email</label>
                 </div>
                 <div class="input-field col s4 offset-s1">
-                    <input class="validate" id="tel" type="tel">
+                    <input class="validate" name="tel" type="tel">
                     <label for="tel">Téléphone</label>
                 </div>
             </div>
@@ -32,15 +32,15 @@
 
             <div class="row">
                 <div class="input-field col s3 offset-s1">
-                    <input placeholder="Rue" type="text" id="rue" class="validate">
+                    <input placeholder="Rue" type="text" name="rue" class="validate">
                     <label for="rue">Rue</label>
                 </div>
                 <div class="input-field col s1 offset-s1">
-                    <input placeholder="Code Postal" id="cp" class="validate">
+                    <input placeholder="Code Postal" name="cp" class="validate">
                     <label for="cp">Code Postal</label>
                 </div>
                 <div class="input-field col s3 offset-s1">
-                    <input placeholder="Ville" id="ville" type="text" class="validate">
+                    <input placeholder="Ville" name="ville" type="text" class="validate">
                     <label for="ville">Ville</label>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <p>
                         En plus :
                     </p>
-                        <input type="checkbox" id="nl" checked="checked" />
+                        <input type="checkbox" name="nl" checked="checked" />
                         <label for="nl" class="orgtxt">Je m'abonne à la Newsletter</label>
                 </div>
             </div>
