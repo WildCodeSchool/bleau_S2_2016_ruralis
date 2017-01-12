@@ -74,7 +74,7 @@ class PartenaireController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('partenaire_edit', array('id' => $partenaire->getId()));
+            return $this->redirectToRoute('partenaire_show', array('id' => $partenaire->getId()));
         }
 
         return $this->render('@Ruralis/admin/partenaire/edit.html.twig', array(
