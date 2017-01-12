@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row adminmodel">
-    <div class="col m8 offset-m2">
+<div class="row adminmodel z-depth-2">
+    <div class="col m10 offset-m1">
         <h1>Liste des partenaires</h1>
 
         <table>
@@ -11,35 +11,30 @@
                     <th>Nom</th>
                     <th>Descriptif</th>
                     <th>Image</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
+
             <tbody>
-            {% for partenaire in partenaires %}
+    {% for partenaire in partenaires %}
                 <tr>
                     <td class="nomPart">{{ partenaire.nom }}</td>
                     <td>{{ partenaire.descriptif }}</td>
-                    <td><img width="30%" src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
-                    <td>
-                        <ul>
-                            <li>
-                                <a href="{{ path('partenaire_show', { 'id': partenaire.id }) }}">Voir</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">Editer</a>
-                            </li>
-                        </ul>
-                    </td>
+                    <td class="center"><img width="30%" src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
+                    <td><a href="{{ path('partenaire_show', { 'id': partenaire.id }) }}">Voir</a></td>
+                    <td><a href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">Editer</a></td>
+                    <td><a href="{{ path('partenaire_delete', { 'id': partenaire.id }) }}">Supprimer</a></td>
                 </tr>
-            {% endfor %}
+    {% endfor %}
+
             </tbody>
+
         </table>
 
-        <ul>
-            <li>
-                <a href="{{ path('partenaire_new') }}">Ajouter un nouveau partenaire</a>
-            </li>
-        </ul>
+        {# Bouton #}
+        <div class="row center">
+            <a class="waves-effect waves-light btn" href="{{ path('partenaire_new') }}">Nouveau partenaire</a>
+        </div>
+
     </div>
 </div>
 {% endblock %}

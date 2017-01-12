@@ -2,76 +2,81 @@
 
 {% block body %}
 
-</header>
-    <div class="row adminmodel">
-        <div class="col m8 offset-m2">
+    <div class="row adminmodel z-depth-2">
+        <div class="col m10 offset-m1">
             <h1>Editer {{ article.nom }}</h1>
 
-        {{ form_start(edit_form) }}
+            {{ form_start(edit_form) }}
 
-        <div>
-            {{ form_label(edit_form.nom) }}
-            {{ form_errors(edit_form.nom) }}
-            {{ form_widget(edit_form.nom) }}
-        </div>
+            <div>
+                {{ form_label(edit_form.nom) }}
+                {{ form_errors(edit_form.nom) }}
+                {{ form_widget(edit_form.nom) }}
+            </div>
 
-        <div>
-            {{ form_label(edit_form.typeAffichage) }}
-            {{ form_errors(edit_form.typeAffichage) }}
-            {{ form_widget(edit_form.typeAffichage) }}
-        </div>
+            <div>
+                {{ form_label(edit_form.typeAffichage) }}
+                {{ form_errors(edit_form.typeAffichage) }}
+                {{ form_widget(edit_form.typeAffichage) }}
+            </div>
 
-        <div>
-            {{ form_label(edit_form.descriptif) }}
-            {{ form_errors(edit_form.descriptif) }}
-            {{ form_widget(edit_form.descriptif) }}
-        </div>
+            <div>
+                {{ form_label(edit_form.descriptif) }}
+                {{ form_errors(edit_form.descriptif) }}
+                {{ form_widget(edit_form.descriptif) }}
+            </div>
 
-        <div>
-            {{ form_label(edit_form.contenu) }}
-            {{ form_errors(edit_form.contenu) }}
-            {{ form_widget(edit_form.contenu) }}
-        </div>
+            <div>
+                {{ form_label(edit_form.contenu) }}
+                {{ form_errors(edit_form.contenu) }}
+                {{ form_widget(edit_form.contenu) }}
+            </div>
 
-        <div>
-            {{ form_label(edit_form.auteur) }}
-            {{ form_errors(edit_form.auteur) }}
-            {{ form_widget(edit_form.auteur) }}
-        </div>
-        <div class="row file-field input-field">
+            <div>
+                {{ form_label(edit_form.auteur) }}
+                {{ form_errors(edit_form.auteur) }}
+                {{ form_widget(edit_form.auteur) }}
+            </div>
+
+            <div class="row file-field input-field">
                 <div class="col s4 middleText">
                     Image actuelle
                 </div>
                 <div class="col s4">
                     <img class="imageAdmin" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                 </div>
-        </div>
-        <div class="row file-field input-field">
-            <div class="btn">
-                <span>Changer l'image</span>
-                {{ form_widget(edit_form.image.file) }}
             </div>
-            <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Cliquez pour modifier votre image.">
+
+            <div class="row file-field input-field">
+                <div class="btn">
+                    <span>Changer l'image</span>
+                    {{ form_widget(edit_form.image.file) }}
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Cliquez pour modifier votre image.">
+                    <p>Attention taille maximum de l'image 2mo</p>
+                </div>
+                {{ form_errors(edit_form.image.file) }}
             </div>
-            {{ form_errors(edit_form.image.file) }}
-        </div>
+
            <div class="row">
                Description de l'image
                {{ form_widget(edit_form.image.alt) }}
                {{ form_errors(edit_form.image.alt) }}
            </div>
+
+    {# Boutons #}
+            <div class="center">
+                <a class="waves-effect waves-light btn">
+                    <input type="submit" value="Modifier l'article" />
+                </a>
+
+            {{ form_end(edit_form) }}
+
+            <a class="waves-effect waves-light btn" href="{{ path('article_index') }}">
+                Liste des articles
+            </a>
+            </div>
         </div>
-
-        <input type="submit" value="Modifier l'article" />
-
-        {{ form_end(edit_form) }}
     </div>
-</div>
-
-<ul>
-    <li>
-        <a href="{{ path('article_index') }}">Liste des articles</a>
-    </li>
-</ul>
 {% endblock %}

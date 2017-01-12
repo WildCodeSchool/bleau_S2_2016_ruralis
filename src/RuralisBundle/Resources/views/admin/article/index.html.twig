@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row adminmodel">
-    <div class="col offset-m1 m8">
+
+<div class="row adminmodel z-depth-2">
+    <div class="col offset-m1 m10">
         <h1>Articles de blog</h1>
         <table>
             <thead>
@@ -14,34 +15,40 @@
                 <th>Auteur</th>
                 <th>Date</th>
                 <th>Image</th>
-                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
-            {% for article in articles %}
-                <tr>
-                    <td>{{ article.nom }}</td>
-                    <td>{{ article.typeAffichage }}</td>
-                    <td>{{ article.descriptif }}</td>
-                    <td>{{ article.contenu[:20] }}...</td> {#|raw pour que les balises ne s'affichent pas#}
-                    <td>{{ article.auteur }}</td>
-                    <td>{{ article.date|date('d M Y') }}</td>
-                    <td><img class="adminImg" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
-                    <td><a href="{{ path('article_show', { 'id': article.id }) }}">Voir</a></td>
-                    <td><a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a></td>
-                    <td><a href="{{ path('article_delete', { 'id': article.id }) }}">Supprimer</a></td>
-                </tr>
-            {% endfor %}
+
+    {% for article in articles %}
+            <tr>
+                <td>{{ article.nom }}</td>
+                <td>{{ article.typeAffichage }}</td>
+                <td>{{ article.descriptif }}</td>
+                <td>{{ article.contenu[:100] | raw }}...</td> {#|raw pour que les balises ne s'affichent pas#}
+                <td>{{ article.auteur }}</td>
+                <td>{{ article.date|date('d M Y') }}</td>
+                <td class="center"><img class="adminImg" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
+                <td><a href="{{ path('article_show', { 'id': article.id }) }}">Voir</a></td>
+                <td><a href="{{ path('article_edit', { 'id': article.id }) }}">Editer</a></td>
+                <td><a href="{{ path('article_delete', { 'id': article.id }) }}">Supprimer</a></td>
+            </tr>
+    {% endfor %}
+
             </tbody>
+
+            {# Pagination #}
             <div class="navigation">
                 {{ knp_pagination_render(articles) }}
             </div>
         </table>
-    </div>
-</div>
-    <div class="row">
-        <div class="col offset-s4 s4">
-            <a class="waves-effect waves-light btn" href="{{ path('article_new') }}">Ajouter un article</a>
+
+        {# Boutons #}
+        <div class="row">
+            <div class="col offset-s4 s4">
+                <a class="waves-effect waves-light btn" href="{{ path('article_new') }}">Ajouter un article</a>
+            </div>
         </div>
     </div>
+</div>
+
 {% endblock %}

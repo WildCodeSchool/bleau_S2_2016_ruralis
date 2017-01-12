@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row adminmodel">
+<div class="row adminmodel z-depth-2">
     <div class="col m8 offset-m2">
         <h1>Partenaire</h1>
 
@@ -24,19 +24,17 @@
             </tbody>
         </table>
 
-        <ul>
-            <li>
-                <a href="{{ path('partenaire_index') }}">Liste des partenaires</a>
-            </li>
-            <li>
-                <a href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">Editer</a>
-            </li>
-            <li>
-                {{ form_start(delete_form) }}
-                    <input type="submit" value="Supprimer">
-                {{ form_end(delete_form) }}
-            </li>
-        </ul>
+        {# Boutons #}
+        <div class="row center">
+            <a class="waves-effect waves-light btn" href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">
+                Editer
+            </a>
+
+            <a class="waves-effect waves-light btn" href="{{ path('partenaire_delete', { 'id': partenaire.id }) }}">Supprimer</a>
+
+            <a class="waves-effect waves-light btn" href="{{ path('partenaire_index') }}">
+                Liste des partenaires
+            </a>
     </div>
 </div>
 {% endblock %}

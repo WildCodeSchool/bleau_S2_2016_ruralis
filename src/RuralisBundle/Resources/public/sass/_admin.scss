@@ -1,26 +1,38 @@
-/*
-select {
-  display : block !important;
-}*/
-.adminmodel h1{
-  color:#00B82B;
+//
+//select {
+//  display : block !important;
+
+.adminmodel {
+   .input-field label,
+   label,
+   .dropdown-content li > a,
+   .dropdown-content li > span,
+   .descimg {
+     color: $orange;
+     background-color: #ebebeb;
+   }
+
+   h1{
+  color: #4c4c4c;
   text-align:center;
+  }
+
+  .adminImg{
+    width:50px;
+  }
 }
 
-.adminImg{
-  width:50px;
-}
 .btn{
   background-color: #00B82B;
 }
 
 .btn:hover{
-  background-color: #47d9bc;
+  background-color: #00f138;
 }
 
 .adminmodel {
   max-width: 90%;
-  background-color: rgba(117, 207, 80, 0.75);
+  background-color: #ebebeb;
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -32,7 +44,6 @@ select {
   margin-right: 2.25rem;
 }
 
-z
 .input-field label {
   color: white;
   left: 4px;
@@ -66,3 +77,6 @@ a {
   margin-top:75px;
 }
 
+textarea {
+background-color: #ebebeb !important;
+}
