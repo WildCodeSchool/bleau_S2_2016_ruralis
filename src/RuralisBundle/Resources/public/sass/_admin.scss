@@ -1,21 +1,33 @@
-/*
-select {
-  display : block !important;
-}*/
-.adminmodel h1{
+//
+//select {
+//  display : block !important;
+
+.adminmodel {
+   .input-field label,
+   label,
+   .dropdown-content li > a,
+   .dropdown-content li > span,
+   .descimg {
+     color: $orange;
+     background-color: #ebebeb;
+   }
+
+   h1{
   color: #4c4c4c;
   text-align:center;
+  }
+
+  .adminImg{
+    width:50px;
+  }
 }
 
-.adminImg{
-  width:50px;
-}
 .btn{
   background-color: #00B82B;
 }
 
 .btn:hover{
-  background-color: #47d9bc;
+  background-color: #00f138;
 }
 
 .adminmodel {
@@ -66,28 +78,6 @@ a {
   margin-top:75px;
 }
 
-.articlenew {
-  //input:not([type]),
-  //input[type="text"],
-  //input[type="password"],
-  //input[type="email"],
-  //input[type="url"],
-  //input[type="time"],
-  //input[type="date"],
-  //input[type="datetime"],
-  //input[type="datetime-local"],
-  //input[type="tel"],
-  //input[type="number"],
-  //input[type="search"],
-  //textarea.materialize-textarea{
-  //  background-color: #ebebeb;
-  //}
-
-  .input-field label,
-  label,
-  .dropdown-content li > a,
-  .dropdown-content li > span,
-  .descimg {
-    color: $orange;
-  }
+textarea {
+background-color: #ebebeb !important;
 }

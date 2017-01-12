@@ -4,68 +4,68 @@
 
     </header>
 
-    <div class="row adminmodel articlenew z-depth-2">
+    <div class="row adminmodel z-depth-2">
         <div class="col m8 offset-m2">
             <h1>Nouvel article</h1>
-                <div class="row">
-                    {{ form_start(form) }}
-                    <div class="row input-field">
-                        {{ form_label(form.nom) }}
-                        {{ form_errors(form.nom) }}
-                        {{ form_widget(form.nom) }}
+            <div class="row">
+                {{ form_start(form) }}
+                <div class="row input-field">
+                    {{ form_label(form.nom) }}
+                    {{ form_errors(form.nom) }}
+                    {{ form_widget(form.nom) }}
+                </div>
+                <div class="row left-align">
+                    {{ form_label(form.typeAffichage) }}
+                    {{ form_widget(form.typeAffichage) }}
+                    {{ form_errors(form.typeAffichage) }}
+                </div>
+                <div class="row input-field">
+                    {{ form_label(form.descriptif) }}
+                    {{ form_errors(form.descriptif) }}
+                    {{ form_widget(form.descriptif) }}
+                </div>
+                <div class="row input-field">
+                    {{ form_label(form.contenu) }}
+                    {{ form_errors(form.contenu) }}
+                    {{ form_widget(form.contenu ) }}
+                </div>
+                <div class="row input-field">
+                    {{ form_label(form.auteur) }}
+                    {{ form_errors(form.auteur) }}
+                    {{ form_widget(form.auteur) }}
+                </div>
+                <div class="row file-field input-field">
+                    <div class="btn">
+                        <div>Image</div>
+                        {{ form_widget(form.image.file) }}
                     </div>
-                    <div class="row left-align">
-                        {{ form_label(form.typeAffichage) }}
-                        {{ form_widget(form.typeAffichage) }}
-                        {{ form_errors(form.typeAffichage) }}
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Cliquez pour ajouter votre image" required>
                     </div>
-                    <div class="row input-field">
-                        {{ form_label(form.descriptif) }}
-                        {{ form_errors(form.descriptif) }}
-                        {{ form_widget(form.descriptif) }}
-                    </div>
-                    <div class="row input-field">
-                        {{ form_label(form.contenu) }}
-                        {{ form_errors(form.contenu) }}
-                        {{ form_widget(form.contenu ) }}
-                    </div>
-                    <div class="row input-field">
-                        {{ form_label(form.auteur) }}
-                        {{ form_errors(form.auteur) }}
-                        {{ form_widget(form.auteur) }}
-                    </div>
-                    <div class="row file-field input-field">
-                        <div class="btn">
-                            <div>Image</div>
-                            {{ form_widget(form.image.file) }}
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" placeholder="Cliquez pour ajouter votre image" required>
-                        </div>
-                        {{ form_errors(form.image.file) }}
-                    </div>
+                    {{ form_errors(form.image.file) }}
+                </div>
 
-                    <div class="row input-field descimg">
-                        Description de l'image
-                        {{ form_widget(form.image.alt) }}
-                        {{ form_errors(form.image.alt) }}
-                    </div>
+                <div class="row input-field descimg">
+                    Description de l'image
+                    {{ form_widget(form.image.alt) }}
+                    {{ form_errors(form.image.alt) }}
+                </div>
 
-                    <div class="boutons">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Ajouter un article
+                <div class="boutons">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Ajouter un article
+                        <i class="material-icons right">send</i>
+                    </button>
+
+                    {{ form_end(form) }}
+
+                    <a href="{{ path('article_index') }}">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Liste des articles
                             <i class="material-icons right">send</i>
                         </button>
+                    </a>
 
-                        {{ form_end(form) }}
-
-                        <a href="{{ path('article_index') }}">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Liste des articles
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </a>
-
-                    </div>
                 </div>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -32,18 +32,15 @@
                     {{ form_errors(form.image.alt) }}
                 </div>
 
-                <div class="boutons row">
-                    <div class=" col offset-s1 s5">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Ajouter un partenaire
-                        </button>
-                    </div>
-                    {{ form_end(form) }}
+                <div class="boutons row center">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Ajouter un partenaire
+                    </button>
 
-                    <div class="col offset-s1 s5">
-                        <a href="{{ path('article_index') }}" class="btn waves-effect waves-light">
-                            Liste des partenaires
-                        </a>
-                    </div>
+                {{ form_end(form) }}
+
+                    <a href="{{ path('partenaire_index') }}" class="btn waves-effect waves-light">
+                        Liste des partenaires
+                    </a>
                 </div>
             </div>
         </div>

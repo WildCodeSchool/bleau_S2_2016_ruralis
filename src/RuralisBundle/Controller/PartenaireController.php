@@ -57,11 +57,8 @@ class PartenaireController extends Controller
      */
     public function showAction(Partenaire $partenaire)
     {
-        $deleteForm = $this->createDeleteForm($partenaire);
-
         return $this->render('@Ruralis/admin/partenaire/show.html.twig', array(
             'partenaire' => $partenaire,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -71,7 +68,6 @@ class PartenaireController extends Controller
      */
     public function editAction(Request $request, Partenaire $partenaire)
     {
-        $deleteForm = $this->createDeleteForm($partenaire);
         $editForm = $this->createForm('RuralisBundle\Form\PartenaireType', $partenaire);
         $editForm->handleRequest($request);
 
@@ -84,7 +80,6 @@ class PartenaireController extends Controller
         return $this->render('@Ruralis/admin/partenaire/edit.html.twig', array(
             'partenaire' => $partenaire,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -92,33 +87,22 @@ class PartenaireController extends Controller
      * Deletes a partenaire entity.
      *
      */
-    public function deleteAction(Request $request, Partenaire $partenaire)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($partenaire);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
+//        Si l'$id est définie alors :
+        if ($id) {
             $em = $this->getDoctrine()->getManager();
+            // Recherche LE PARTENAIRE à supprimer parmi LES PARTENAIRES
+            $partenaire= $em->getRepository('RuralisBundle:Partenaire')->findOneById($id);
+            // Recherche L'IMAGE DE LE PARTENAIRE visé
+            $image = $em->getRepository('RuralisBundle:Image')->findOneById($partenaire->getImage()->getId());
+            // Supprime LE PARTENAIRE et SON IMAGE associée
             $em->remove($partenaire);
-            $em->flush($partenaire);
-        }
-
-        return $this->redirectToRoute('partenaire_index');
-    }
-
-    /**
-     * Creates a form to delete a partenaire entity.
-     *
-     * @param Partenaire $partenaire The partenaire entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Partenaire $partenaire)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('partenaire_delete', array('id' => $partenaire->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
+            $em->remove($image);
+            // Envoie la requête à la BDD
+            $em->flush();
+            return $this->redirectToRoute('partenaire_index');
+        } else
+            return $this->redirectToRoute('partenaire_index');
     }
 }

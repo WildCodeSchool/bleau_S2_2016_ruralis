@@ -21,4 +21,4 @@ partenaire_edit:
 partenaire_delete:
     path:     /{id}/delete
     defaults: { _controller: "RuralisBundle:Partenaire:delete" }
-    methods:  DELETE
+    methods:  GET
