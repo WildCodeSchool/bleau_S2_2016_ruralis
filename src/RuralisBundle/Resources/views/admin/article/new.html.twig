@@ -12,22 +12,22 @@
                     {{ form_errors(form.nom) }}
                     {{ form_widget(form.nom) }}
                 </div>
-                <div class="row left-align">
+                <div class="row left-align" id="type_affichage_new">
                     {{ form_label(form.typeAffichage) }}
                     {{ form_widget(form.typeAffichage) }}
                     {{ form_errors(form.typeAffichage) }}
                 </div>
-                <div class="row input-field">
+                <div class="row input-field" id="description_new">
                     {{ form_label(form.descriptif) }}
                     {{ form_errors(form.descriptif) }}
                     {{ form_widget(form.descriptif) }}
                 </div>
-                <div class="row input-field">
+                <div class="row input-field" id="contenu_new">
                     {{ form_label(form.contenu) }}
                     {{ form_errors(form.contenu) }}
                     {{ form_widget(form.contenu ) }}
                 </div>
-                <div class="row input-field">
+                <div class="row input-field" id="auteur_new">
                     {{ form_label(form.auteur) }}
                     {{ form_errors(form.auteur) }}
                     {{ form_widget(form.auteur) }}
@@ -68,4 +68,14 @@
         </div>
     </div>
 
+    [{%  block javascripts %}
+
+        {{ parent() }}
+
+        <script>
+
+        </script>
+    {% endblock %}
+
 {% endblock %}
+

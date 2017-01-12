@@ -24,7 +24,7 @@
                 <td>{{ article.nom }}</td>
                 <td>{{ article.typeAffichage }}</td>
                 <td>{{ article.descriptif }}</td>
-                <td>{{ article.contenu[:100] | raw }}...</td> {#|raw pour que les balises ne s'affichent pas#}
+                <td>{{ article.contenu[:100] | raw }}(...)</td> {#|raw pour que les balises ne s'affichent pas#}
                 <td>{{ article.auteur }}</td>
                 <td>{{ article.date|date('d M Y') }}</td>
                 <td class="center"><img class="adminImg" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}"></td>
