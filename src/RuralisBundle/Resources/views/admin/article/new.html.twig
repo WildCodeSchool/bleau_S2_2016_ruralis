@@ -2,10 +2,8 @@
 
 {% block body %}
 
-    </header>
-
     <div class="row adminmodel z-depth-2">
-        <div class="col m8 offset-m2">
+        <div class="col m10 offset-m1">
             <h1>Nouvel article</h1>
             <div class="row">
                 {{ form_start(form) }}
@@ -51,21 +49,22 @@
                     {{ form_errors(form.image.alt) }}
                 </div>
 
-                <div class="boutons">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Ajouter un article
-                        <i class="material-icons right">send</i>
+                {# Boutons #}
+                <div class="row center">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                        Ajouter un article
                     </button>
 
                     {{ form_end(form) }}
 
                     <a href="{{ path('article_index') }}">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Liste des articles
-                            <i class="material-icons right">send</i>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                            Liste des articles
                         </button>
                     </a>
-
                 </div>
             </div>
         </div>
     </div>
+
 {% endblock %}

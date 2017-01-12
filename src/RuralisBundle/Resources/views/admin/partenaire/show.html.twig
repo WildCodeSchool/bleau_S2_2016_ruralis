@@ -24,21 +24,13 @@
             </tbody>
         </table>
 
-        <ul>
-            <li>
-                <input type="submit" value="Supprimer">
-            </li>
-        </ul>
-
+        {# Boutons #}
         <div class="row center">
-
-            <a class="waves-effect waves-light btn">
-                <input type="submit" value="Supprimer">
-            </a>
-
             <a class="waves-effect waves-light btn" href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">
                 Editer
             </a>
+
+            <a class="waves-effect waves-light btn" href="{{ path('partenaire_delete', { 'id': partenaire.id }) }}">Supprimer</a>
 
             <a class="waves-effect waves-light btn" href="{{ path('partenaire_index') }}">
                 Liste des partenaires
