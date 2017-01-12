@@ -51,19 +51,19 @@
 
                     <div class="card-content">
                         <div class="card-title activator grey-text text-darken-4">
+                            <i class="material-icons right">more_vert</i>
                             <h5>
                                 {{ article_une.nom }}
                             </h5>
-                            <i class="material-icons right">more_vert</i>
                         </div>
                     </div>
                     {#    Information about the News revealed once clicked on      #}
                     <div class="card-reveal">
                         <div class="card-title grey-text text-darken-4">
+                            <i class="material-icons right">close</i>
                             <p>
                                 {{ article_une.descriptif | nl2br }}
                             </p>
-                            <i class="material-icons right">close</i>
                         </div>
                     </div>
                 </div>
@@ -93,15 +93,15 @@
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-title activator grey-text text-darken-4">
-                                                    <h5>{{ article.nom }}</h5>
                                                     <i class="material-icons right">more_vert</i>
+                                                    <h5>{{ article.nom }}</h5>
                                                 </div>
-                                                <p><a href="#" class="cardLink">Lien vers l'article 1</a></p>
                                             </div>
                                             {#    Information about the article 1 revealed once clicked on      #}
                                             <div class="card-reveal tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
                                                 <div class="row card-title grey-text text-darken-4">
-                                                   <p>
+                                                    <i class="material-icons right">close</i>
+                                                    <p>
                                                        {{ article.descriptif |nl2br }}
                                                    </p>
                                                 </div>
@@ -139,6 +139,7 @@
                             <div class="row article">
                                 <div class="col s12 hoverable">
                                     <h4 class="header">
+                                        <i class="material-icons right">more_vert</i>
                                         <h5>{{ article.nom  }}</h5>
                                     </h4>
                                     <div class="card horizontal">
@@ -147,6 +148,7 @@
                                         </div>
                                         <div class="card-stacked">
                                             <div class="card-content">
+                                                <i class="material-icons right">close</i>
                                                 <p>{{ article.descriptif }}</p>
                                             </div>
                                         </div>
@@ -167,7 +169,7 @@
                                         </div>
                                         <div class="card-stacked">
                                             <div class="card-content">
-                                                <p>{{ article.descriptif }}</p>
+                                                <p>{{ article.descriptif | nl2br }}</p>
                                             </div>
                                             <div class="card-action">
                                                 <a href="{{ path('ruralis_article', {id: article.id}) }}" class="cardLink">Lire l'article complet</a>

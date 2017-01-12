@@ -74,7 +74,7 @@ ivory_ck_editor:
     default_config:    my_custom_config
     configs:
         my_custom_config:
-            toolbar:                   [ [ 'Preview' ], [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ], [ 'Source' ], [ "About" ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink','Anchor' ], [ 'pbckcode', 'Image', 'Youtube', 'Table','SpecialChar','Iframe' ], '/', [ 'Styles', 'Format','Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
+            toolbar:                   [ [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], ['SpellChecker', 'Scayt' ], [ 'Source' ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript' ], [ 'NumberedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink' ], [ 'Image', 'SpecialChar','Iframe' ], '/', [ 'Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
             language: %locale%
        #     extraPlugins:               'youtube'
 
