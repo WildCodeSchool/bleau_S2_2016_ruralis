@@ -25,7 +25,7 @@ class ArticleType extends AbstractType
                     'Carré' => 'Carré',
                     'Rectangle + lien abonnement' => 'Rectangle + lien abonnement',
                     'Rectangle + descriptif' => 'Rectangle + descriptif',
-                    'Rectangle + lien abonnemnet complet' => 'Rectangle + article complet',
+                    'Rectangle + article complet' => 'Rectangle + article complet',
                 ),
                 'choices_as_values' => true,
             ))

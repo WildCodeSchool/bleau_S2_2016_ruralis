@@ -5,7 +5,7 @@
     <div class="col m8 offset-m2">
         <h1>{{ article.nom }}</h1>
         <div class="row">
-            <p>{{ article.contenu }}</p>
+            <p>{{ article.contenu | raw }}</p>
         </div>
         <div class="row">
             <p>Article rédigé par {{ article.auteur }}, le {{ article.date|date('d M Y') }}</p>

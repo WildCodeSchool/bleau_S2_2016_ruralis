@@ -507,48 +507,48 @@ footer img {
   margin-right: 2.25rem;
 }
 
-/* line 48, ../sass/_admin.scss */
+/* line 47, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 53, ../sass/_admin.scss */
+/* line 52, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 57, ../sass/_admin.scss */
+/* line 56, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 61, ../sass/_admin.scss */
+/* line 60, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 65, ../sass/_admin.scss */
+/* line 64, ../sass/_admin.scss */
 .file-path {
   color: white;
 }
 
-/* line 69, ../sass/_admin.scss */
+/* line 68, ../sass/_admin.scss */
 a {
   color: #00B82B;
 }
 
-/* line 73, ../sass/_admin.scss */
+/* line 72, ../sass/_admin.scss */
 .imageAdmin {
   height: 150px;
 }
 
-/* line 77, ../sass/_admin.scss */
+/* line 76, ../sass/_admin.scss */
 .middleText {
   margin-top: 75px;
 }
 
-/* line 81, ../sass/_admin.scss */
+/* line 80, ../sass/_admin.scss */
 textarea {
   background-color: #ebebeb !important;
 }
@@ -740,7 +740,7 @@ a.cardLink {
 /* line 54, ../sass/_blog.scss */
 .fixedSideNav .row {
   position: fixed;
-  top: 40%;
+  top: 20%;
   width: 120px;
   color: red;
   margin-left: 40px;
@@ -749,7 +749,7 @@ a.cardLink {
 
 /* line 63, ../sass/_blog.scss */
 .fixedSideNav div img {
-  width: 40px;
+  width: 100px;
 }
 
 /* line 67, ../sass/_blog.scss */
