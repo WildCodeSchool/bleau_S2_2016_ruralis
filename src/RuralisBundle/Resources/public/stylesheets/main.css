@@ -14,51 +14,52 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: navajowhite;
+  background-image: url("../images/fond_texture_blanc.jpg");
+  background-repeat: repeat;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 main {
   flex: 1 0 auto;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 .col {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 .size-large {
   width: 100%;
 }
 
-/* line 47, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 header {
   height: 168px !important;
   z-index: 1 !important;
 }
 
-/* line 51, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 p {
   font-size: 18px;
   font-family: 'Time New Roman', sans-serif;
 }
 
-/* line 55, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 h4 {
   font-family: 'Arial Bold';
   text-align: center;
 }
 
-/* line 59, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 h5 {
   font-size: 25px;
   font-family: 'Sakkal Majalla Bold';
   color: #ea640c;
 }
 
-/* line 66, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:focus:not([readonly]) + label,
 input[type=password]:focus:not([readonly]) + label,
@@ -75,7 +76,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #ea640c;
 }
 
-/* line 81, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -93,7 +94,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #ea640c;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 input:not([type]),
 input[type="text"],
 input[type="password"],
@@ -110,7 +111,7 @@ textarea.materialize-textarea {
   color: black;
 }
 
-/* line 112, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 [type="checkbox"]:checked + label:before {
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -118,18 +119,18 @@ textarea.materialize-textarea {
   border-bottom: 2px solid #ea640c;
 }
 
-/* line 118, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .input-field label {
   color: #ea640c;
 }
 
-/* line 124, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 .btn.nl {
   background-color: #ea640c;
   margin-top: -11px;
 }
 
-/* line 128, ../sass/main.scss */
+/* line 129, ../sass/main.scss */
 .btn.nl:hover {
   background-color: #ff8436;
 }
@@ -811,4 +812,8 @@ a.cardLink {
 .formulaire span {
   color: dimgrey;
   font-weight: bold;
+}
+/* line 7, ../sass/_formulaireAbonnement.scss */
+.formulaire label {
+  color: #ea640c;
 }
