@@ -6,7 +6,7 @@ use RuralisBundle\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class ViewsUserController extends Controller
 {
     public function indexAction(Request $request)
     {
@@ -21,7 +21,7 @@ class DefaultController extends Controller
             $request->query->getInt('page', 1),
             10)/*limit per page*/;
 
-        return $this->render('RuralisBundle:Default:index.html.twig', array(
+        return $this->render('@Ruralis/Default/index.html.twig', array(
             'articles' => $pagination,
             'article_une' => $article_une,
         ));
@@ -32,5 +32,25 @@ class DefaultController extends Controller
         return $this->render('@Ruralis/user/article.html.twig', array(
             'article' => $article,
         ));
+    }
+
+    public function partenairesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $partenaires = $em->getRepository('RuralisBundle:Partenaire')->findAll();
+
+        return $this->render('@Ruralis/user/partenaires.html.twig', array(
+            'partenaires' => $partenaires,
+        ));
+    }
+
+    public function abonnementAction()
+    {
+        return $this->render('@Ruralis/user/abonnement.html.twig');
+    }
+
+    public function ruralisAction()
+    {
+        return $this->render('@RuralisBundle/Resources/views/user/ruralis.html.twig');
     }
 }

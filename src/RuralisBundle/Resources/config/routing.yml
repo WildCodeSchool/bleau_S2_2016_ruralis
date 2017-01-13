@@ -1,19 +1,23 @@
 # Routes User
 ruralis_homepage:
     path:     /
-    defaults: { _controller: RuralisBundle:Default:index, page:1 }
+    defaults: { _controller: RuralisBundle:ViewsUser:index, page:1 }
 
 ruralis_presentation:
     path:     /ruralis
-    defaults: { _controller: RuralisBundle:Ruralis:index }
+    defaults: { _controller: RuralisBundle:ViewsUser:ruralis }
 
 ruralis_abonnement:
     path:     /abonnement
-    defaults: { _controller: RuralisBundle:Abonnement:index }
+    defaults: { _controller: RuralisBundle:ViewsUser:abonnement }
 
 ruralis_partenaire:
     path:     /partenaires
-    defaults: { _controller: RuralisBundle:Partenaires:index }
+    defaults: { _controller: RuralisBundle:ViewsUser:partenaires }
+
+ruralis_article:
+    path:     /{id}/article
+    defaults: { _controller: RuralisBundle:ViewsUser:article, id: null }
 
 ruralis_formulaire_abonnement:
     path:     /{type}/formulaire
@@ -30,10 +34,6 @@ ruralis_recapitulatif_abo:
 ruralis_admin_article:
     resource: "@RuralisBundle/Resources/config/routing/article.yml"
     prefix:   /article
-
-ruralis_article:
-    path:     /{id}/article
-    defaults: { _controller: RuralisBundle:Default:article, id: null }
 
 ruralis_admin_partenaire:
     resource: "@RuralisBundle/Resources/config/routing/partenaire.yml"
