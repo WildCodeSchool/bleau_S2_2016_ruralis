@@ -12,7 +12,8 @@
                     {{ form_errors(form.nom) }}
                     {{ form_widget(form.nom) }}
                 </div>
-                <div class="row left-align" id="type_affichage_new">
+
+                <div class="row left-align select">
                     {{ form_label(form.typeAffichage) }}
                     {{ form_widget(form.typeAffichage) }}
                     {{ form_errors(form.typeAffichage) }}
@@ -22,16 +23,19 @@
                     {{ form_errors(form.descriptif) }}
                     {{ form_widget(form.descriptif) }}
                 </div>
-                <div class="row input-field" id="contenu_new">
+
+                <div class="row hidden" id="newContenu">
                     {{ form_label(form.contenu) }}
                     {{ form_errors(form.contenu) }}
                     {{ form_widget(form.contenu ) }}
                 </div>
-                <div class="row input-field" id="auteur_new">
+
+                <div class="row input-field hidden" id="newAuteur">
                     {{ form_label(form.auteur) }}
                     {{ form_errors(form.auteur) }}
                     {{ form_widget(form.auteur) }}
                 </div>
+
                 <div class="row file-field input-field">
                     <div class="btn">
                         <div>Image</div>
@@ -68,14 +72,23 @@
         </div>
     </div>
 
-    [{%  block javascripts %}
-
+    {% block javascripts %}
         {{ parent() }}
 
         <script>
-
+            $(document).ready(function() {
+                // Je cache toutes les divs grâce à une classe qui va sélectionner le tout
+                // Je sélectionne le select et quand la valeur change on fait une action
+                $('select').change(function () {
+                    // Je créer l'id du div qui va être affiché
+                    // Et j'affiche seulement le Div que je souhaite
+                    $('div.hidden').hide();
+                    var sel = $("ul li.selected").find("span").html();
+                        if (sel == "Rectangle + article complet")
+                            $("#newContenu, #newAuteur").show();
+                });
+            })
         </script>
     {% endblock %}
-
 {% endblock %}
 

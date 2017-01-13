@@ -26,13 +26,13 @@
                 {{ form_widget(edit_form.descriptif) }}
             </div>
 
-            <div>
+            <div class="row hidden" id="newContenu">
                 {{ form_label(edit_form.contenu) }}
                 {{ form_errors(edit_form.contenu) }}
                 {{ form_widget(edit_form.contenu) }}
             </div>
 
-            <div>
+            <div class="row input-field hidden" id="newAuteur">
                 {{ form_label(edit_form.auteur) }}
                 {{ form_errors(edit_form.auteur) }}
                 {{ form_widget(edit_form.auteur) }}
@@ -79,4 +79,22 @@
             </div>
         </div>
     </div>
+    {% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            // Je cache toutes les divs grâce à une classe qui va sélectionner le tout
+            // Je sélectionne le select et quand la valeur change on fait une action
+            $('select').change(function () {
+                // Je créer l'id du div qui va être affiché
+                // Et j'affiche seulement le Div que je souhaite
+                $('div.hidden').hide();
+                var sel = $("ul li.selected").find("span").html();
+                if (sel == "Rectangle + article complet")
+                    $("#newContenu, #newAuteur").show();
+            });
+        })
+    </script>
+    {% endblock %}
 {% endblock %}
