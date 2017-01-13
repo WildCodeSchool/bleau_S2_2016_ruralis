@@ -26,10 +26,23 @@
             {#First line nav bar#}
             <div class="row first_line">
                 <div class="col m2">
-                    <a href="{{ path ('ruralis_homepage') }}">
-                        <img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="nav_logo">
-                    </a>
+                    <div class="row titreRuralis">
+                        <div class="col m2">
+                            <a href="{{ path ('ruralis_homepage') }}" class="majalla">
+                                Ruralis
+                                {#<img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="nav_logo">#}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m2">
+                            <a href="{{ path ('ruralis_homepage') }}" class="majallaSmall">
+                                Magazine
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col m1">
                     <img src="{{ asset ('bundles/ruralis/images/logoarbre1.png') }}" id="animation" alt="Logo arbre" class="smallarbre">
                 </div>
@@ -40,6 +53,7 @@
                     </div>
                 </div>
             </div>
+        <div class="row">
             {#Second line nav bar#}
             <div class="row second_line">
                 <ul class="col offset-m3 m9 navlinks">
