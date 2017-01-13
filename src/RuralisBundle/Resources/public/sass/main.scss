@@ -15,6 +15,14 @@
     padding: 0 0.30rem !important;
   }
 }
+
+@font-face {
+  font-family: 'majalla';
+  src: local('majjala'), url('../fonts/majalla.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $orange: rgb(234,100,12);
 $orange_pale: rgb(255, 132, 54);
 $gris: rgba(211, 211, 211, 0.5);
