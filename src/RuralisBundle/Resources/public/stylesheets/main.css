@@ -767,7 +767,7 @@ a.cardLink {
 .fixedSideNav .row {
   position: fixed;
   top: 20%;
-  width: 120px;
+  width: 10%;
   color: red;
   margin-left: 40px;
   text-align: center;
@@ -775,7 +775,7 @@ a.cardLink {
 
 /* line 63, ../sass/_blog.scss */
 .fixedSideNav div img {
-  width: 100px;
+  width: 70%;
 }
 
 /* line 67, ../sass/_blog.scss */
