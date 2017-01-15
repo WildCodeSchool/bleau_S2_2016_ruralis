@@ -29,17 +29,24 @@
   }
 }
 
-.majalla, .majallaSmall {
+.majalla, .majallaSmall, .majallaSmallItalic {
   font-family: 'majalla';
   color: white !important;
 }
+
 .majalla {
   font-size: 40px;
-
 }
+
 .majallaSmall {
   font-weight: 100;
   font-size: 20px;
+}
+
+.majallaSmallItalic {
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 27px;
 }
 
 div .titreRuralis {

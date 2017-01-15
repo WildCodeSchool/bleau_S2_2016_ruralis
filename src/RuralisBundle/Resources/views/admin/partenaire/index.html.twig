@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row adminmodel z-depth-2">
+<div class="row adminmodel z-depth-2 partenaire">
     <div class="col m10 offset-m1">
         <h1>Liste des partenaires</h1>
 
@@ -20,9 +20,9 @@
                     <td class="nomPart">{{ partenaire.nom }}</td>
                     <td>{{ partenaire.descriptif }}</td>
                     <td class="center"><img width="30%" src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
-                    <td><a href="{{ path('partenaire_show', { 'id': partenaire.id }) }}">Voir</a></td>
-                    <td><a href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">Editer</a></td>
-                    <td><a href="{{ path('partenaire_delete', { 'id': partenaire.id }) }}">Supprimer</a></td>
+                    <td><a class="lienAction" href="{{ path('partenaire_show', { 'id': partenaire.id }) }}">Voir</a></td>
+                    <td><a class="lienAction"  href="{{ path('partenaire_edit', { 'id': partenaire.id }) }}">Editer</a></td>
+                    <td><a class="lienAction"  href="{{ path('partenaire_delete', { 'id': partenaire.id }) }}">Supprimer</a></td>
                 </tr>
     {% endfor %}
 

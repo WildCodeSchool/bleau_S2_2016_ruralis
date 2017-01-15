@@ -27,6 +27,10 @@ ruralis_recapitulatif_abo:
     methods:  [POST]
 
 # Routes Admin
+#ruralis_admin:
+#    path:   /admin
+#    defaults: { _controller: RuralisBundle: }
+
 ruralis_admin_article:
     resource: "@RuralisBundle/Resources/config/routing/article.yml"
     prefix:   /article

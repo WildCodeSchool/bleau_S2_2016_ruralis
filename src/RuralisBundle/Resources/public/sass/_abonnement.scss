@@ -79,44 +79,53 @@
     margin : auto;
   }
 
-div .cadeau p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  div .cadeau p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hoverable a, .hoverable, .lecteur2 a{
+    border-color: black;
+    color: white;
+    text-align: center !important;
+  }
+
+  // NEW PROPOSITION MISE EN PAGE
+
+  .options {
+    position: fixed;
+    top: 48%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .abotop {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  .abovert{
+    margin-top:40px;
+    z-index: 99999999999999999999999999;
+  }
+
+  .lhsmall {
+    line-height: 1;
+  }
+
+  .logoabt{
+    position: relative;
+    z-index: 2;
+    max-width: 120px;
+  }
+
+  // Marge au dessus des lien dons et cadeau
+  // Ne Fontionne pas...
+  .margtop {
+    margin-top: 30px;
+    color: grey;
+  }
+
 
 }
-.hoverable a, .hoverable, .lecteur2 a{
-  border-color: black;
-  color:white ;
-  text-align:center !important;
-}
 
-// NEW PROPOSITION MISE EN PAGE
-
-.options {
-  position: fixed;
-  top: 48%;
-  text-align: center;
-  z-index: 1;
-}
-
-.abotop {
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.abovert{
-  margin-top:40px;
-  z-index: 99999999999999999999999999;
-}
-
-.lhsmall {
-  line-height: 1;
-}
-
-// Marge au dessus des lien dons et cadeau
-// Ne Fontionne pas...
-.margtop {
-  margin-top: 30px;
-  color: rgba(0, 184, 43, 1);
-}

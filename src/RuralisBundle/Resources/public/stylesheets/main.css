@@ -369,85 +369,92 @@ footer img {
 }
 
 /* line 32, ../sass/_navbar.scss */
-.majalla, .majallaSmall {
+.majalla, .majallaSmall, .majallaSmallItalic {
   font-family: 'majalla';
   color: white !important;
 }
 
-/* line 36, ../sass/_navbar.scss */
+/* line 37, ../sass/_navbar.scss */
 .majalla {
   font-size: 40px;
 }
 
-/* line 40, ../sass/_navbar.scss */
+/* line 41, ../sass/_navbar.scss */
 .majallaSmall {
   font-weight: 100;
   font-size: 20px;
 }
 
-/* line 45, ../sass/_navbar.scss */
+/* line 46, ../sass/_navbar.scss */
+.majallaSmallItalic {
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 27px;
+}
+
+/* line 52, ../sass/_navbar.scss */
 div .titreRuralis {
   max-height: 33px;
 }
 
-/* line 49, ../sass/_navbar.scss */
+/* line 56, ../sass/_navbar.scss */
 .first_line {
   background-color: #ea640c;
   max-height: 56px;
   margin-bottom: 0;
 }
 
-/* line 54, ../sass/_navbar.scss */
+/* line 61, ../sass/_navbar.scss */
 .nav_logo {
   width: 100%;
   max-height: 56px;
 }
 
-/* line 58, ../sass/_navbar.scss */
+/* line 65, ../sass/_navbar.scss */
 .smallarbre {
   max-width: 64%;
 }
 
-/* line 61, ../sass/_navbar.scss */
+/* line 68, ../sass/_navbar.scss */
 #animation {
   background-repeat: no-repeat;
 }
 
-/* line 64, ../sass/_navbar.scss */
+/* line 71, ../sass/_navbar.scss */
 #bottommark {
   position: absolute;
   bottom: 0;
   width: 0;
 }
 
-/* line 71, ../sass/_navbar.scss */
+/* line 78, ../sass/_navbar.scss */
 .second_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 73, ../sass/_navbar.scss */
+/* line 80, ../sass/_navbar.scss */
 .second_line a:hover {
   background-color: rgba(234, 100, 12, 0.48);
   color: #ea4c0a;
 }
-/* line 77, ../sass/_navbar.scss */
+/* line 84, ../sass/_navbar.scss */
 .second_line ul li {
   float: left;
 }
 
-/* line 82, ../sass/_navbar.scss */
+/* line 89, ../sass/_navbar.scss */
 .navlinks {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
 }
-/* line 86, ../sass/_navbar.scss */
+/* line 93, ../sass/_navbar.scss */
 .navlinks li {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 10%;
 }
-/* line 91, ../sass/_navbar.scss */
+/* line 98, ../sass/_navbar.scss */
 .navlinks li:after {
   content: '';
   height: .4em;
@@ -459,34 +466,34 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 103, ../sass/_navbar.scss */
+/* line 110, ../sass/_navbar.scss */
 .navlinks li:first-child {
   margin-left: 0px;
 }
 
-/* line 109, ../sass/_navbar.scss */
+/* line 116, ../sass/_navbar.scss */
 .third_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 111, ../sass/_navbar.scss */
+/* line 118, ../sass/_navbar.scss */
 .third_line ul {
   margin-bottom: 0px;
 }
 
-/* line 115, ../sass/_navbar.scss */
+/* line 122, ../sass/_navbar.scss */
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
 
-/* line 120, ../sass/_navbar.scss */
+/* line 127, ../sass/_navbar.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 125, ../sass/_navbar.scss */
+/* line 132, ../sass/_navbar.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
@@ -498,7 +505,7 @@ div .titreRuralis {
 .adminmodel .dropdown-content li > span,
 .adminmodel .descimg {
   color: #ea640c;
-  background-color: #ebebeb;
+  background-color: #A9AAAE;
 }
 /* line 15, ../sass/_admin.scss */
 .adminmodel h1 {
@@ -523,60 +530,68 @@ div .titreRuralis {
 /* line 33, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
-  background-color: #ebebeb;
+  background-color: #B3AFAF;
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
-  margin-top: 12%;
+  margin-top: 3%;
 }
 /* line 40, ../sass/_admin.scss */
 .adminmodel a {
+  color: white !important;
+}
+/* line 43, ../sass/_admin.scss */
+.adminmodel a:hover {
+  font-weight: bold;
+}
+/* line 46, ../sass/_admin.scss */
+.adminmodel a .lienAction {
   color: #00B82B;
 }
 
-/* line 45, ../sass/_admin.scss */
+/* line 51, ../sass/_admin.scss */
 .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
 
-/* line 50, ../sass/_admin.scss */
+/* line 56, ../sass/_admin.scss */
 .input-field label {
   color: white;
   left: 4px;
 }
 
-/* line 55, ../sass/_admin.scss */
+/* line 61, ../sass/_admin.scss */
 label {
   color: white;
 }
 
-/* line 59, ../sass/_admin.scss */
+/* line 65, ../sass/_admin.scss */
 .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
 
-/* line 63, ../sass/_admin.scss */
+/* line 69, ../sass/_admin.scss */
 .select-dropdown {
   color: #00B82B;
 }
 
-/* line 67, ../sass/_admin.scss */
+/* line 73, ../sass/_admin.scss */
 .file-path {
   color: white;
 }
 
-/* line 73, ../sass/_admin.scss */
+/* line 79, ../sass/_admin.scss */
 .imageAdmin {
   height: 150px;
 }
 
-/* line 77, ../sass/_admin.scss */
+/* line 83, ../sass/_admin.scss */
 .middleText {
   margin-top: 75px;
 }
 
-/* line 81, ../sass/_admin.scss */
+/* line 87, ../sass/_admin.scss */
 textarea {
   background-color: #ebebeb !important;
 }
@@ -667,43 +682,43 @@ textarea {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-/* line 88, ../sass/_abonnement.scss */
-.hoverable a, .hoverable, .lecteur2 a {
+/* line 87, ../sass/_abonnement.scss */
+.abonnement .hoverable a, .abonnement .hoverable, .abonnement .lecteur2 a {
   border-color: black;
   color: white;
   text-align: center !important;
 }
-
-/* line 96, ../sass/_abonnement.scss */
-.options {
+/* line 95, ../sass/_abonnement.scss */
+.abonnement .options {
   position: fixed;
   top: 48%;
   text-align: center;
   z-index: 1;
 }
-
-/* line 103, ../sass/_abonnement.scss */
-.abotop {
+/* line 102, ../sass/_abonnement.scss */
+.abonnement .abotop {
   margin-top: 30px;
   padding-top: 20px;
 }
-
-/* line 108, ../sass/_abonnement.scss */
-.abovert {
+/* line 107, ../sass/_abonnement.scss */
+.abonnement .abovert {
   margin-top: 40px;
   z-index: 99999999999999999999999999;
 }
-
-/* line 113, ../sass/_abonnement.scss */
-.lhsmall {
+/* line 112, ../sass/_abonnement.scss */
+.abonnement .lhsmall {
   line-height: 1;
 }
-
-/* line 119, ../sass/_abonnement.scss */
-.margtop {
+/* line 116, ../sass/_abonnement.scss */
+.abonnement .logoabt {
+  position: relative;
+  z-index: 2;
+  max-width: 120px;
+}
+/* line 124, ../sass/_abonnement.scss */
+.abonnement .margtop {
   margin-top: 30px;
-  color: #00b82b;
+  color: grey;
 }
 
 /* line 3, ../sass/_blog.scss */
@@ -814,25 +829,25 @@ a.cardLink {
   text-align: center;
 }
 /* line 4, ../sass/_partenaire.scss */
-.partenaire .partenaireTop {
-  margin-top: 150px;
-}
-/* line 8, ../sass/_partenaire.scss */
 .partenaire .nomPart {
   font-weight: bold;
   color: #EF651B;
 }
-/* line 13, ../sass/_partenaire.scss */
+/* line 9, ../sass/_partenaire.scss */
 .partenaire .photoPart {
   height: 150px;
 }
-/* line 17, ../sass/_partenaire.scss */
+/* line 13, ../sass/_partenaire.scss */
 .partenaire .photoPart img {
   display: inline-flex;
   margin-left: auto;
   margin-right: auto;
   max-width: 150px;
   max-height: 150px;
+}
+/* line 20, ../sass/_partenaire.scss */
+.partenaire img {
+  border-radius: 10px !important;
 }
 
 /* line 2, ../sass/_formulaireAbonnement.scss */
