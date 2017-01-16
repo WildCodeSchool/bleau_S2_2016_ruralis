@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<div class="row adminmodel z-depth-2">
+<div class="row adminmodel z-depth-2 partenaire">
     <div class="col m10 offset-m1">
         <h1>Editer {{ partenaire.nom }}</h1>
 
@@ -24,7 +24,7 @@
             <div class="middleText">
                 Image actuelle
             </div>
-            <img class="responsive-img thumbs" src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}">
+            <img class="responsive-img thumbs roundBorder" src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}">
         </div>
         <div class="row file-field input-field">
             <div class="btn">

@@ -9,7 +9,7 @@
    .dropdown-content li > span,
    .descimg {
      color: $orange;
-     background-color: #ebebeb;
+     background-color: #A9AAAE
    }
 
    h1{
@@ -32,11 +32,20 @@
 
 .adminmodel {
   max-width: 90%;
-  background-color: #ebebeb;
+  background-color: #B3AFAF;
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
-  margin-top:12%;
+  margin-top: 3%;
+  a {
+  color: white !important;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+  a .lienAction {
+    color: #00B82B;
+  }
 }
 
 .container .row {
@@ -65,9 +74,7 @@ label{
   color:white;
 }
 
-a {
-  color: #00B82B;
-}
+
 
 .imageAdmin{
   height:150px;

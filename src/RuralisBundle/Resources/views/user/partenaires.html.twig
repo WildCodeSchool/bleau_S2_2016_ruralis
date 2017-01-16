@@ -17,17 +17,17 @@
                 {% for partenaire in partenaires %}
                     <div class="col s3 part1">
                         <div class="row">
-                            <div class="col offset-s2 s10 nomPart">
+                            <div class="col offset-s1 s10 nomPart">
                                 {{ partenaire.nom }}
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col s12 photoPart">
-                                <img src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}"></td>
+                            <div class="col s12 valign-wrapper photoPart">
+                                <img src="{{ asset('/uploads/images/') }}{{ partenaire.image.url }}" alt="{{ partenaire.image.alt }}">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col offset-s2 s10 descPart">
+                            <div class="col offset-s1 s10 descPart">
                                 {{ partenaire.descriptif }}
                             </div>
                         </div>
