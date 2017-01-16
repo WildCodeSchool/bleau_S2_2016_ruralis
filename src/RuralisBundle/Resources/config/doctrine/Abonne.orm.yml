@@ -15,15 +15,15 @@ RuralisBundle\Entity\Abonne:
         prenom:
             type: string
             length: 255
-        mail:
-            type: string
-            length: 255
         rue:
             type: string
             length: 255
         cp:
             type: integer
         ville:
+            type: string
+            length: 255
+        pays:
             type: string
             length: 255
         telephone:

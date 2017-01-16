@@ -1,16 +1,46 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Newsletter creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="row adminmodel z-depth-2">
+        <div class="col m10 offset-m1">
+            <h1>Nouvelle newsletter</h1>
+            <div class="row">
+                {{ form_start(form) }}
+                <div class="row input-field">
+                    {{ form_label(form.nom) }}
+                    {{ form_errors(form.nom) }}
+                    {{ form_widget(form.nom) }}
+                </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                <div class="row hidden">
+                    {{ form_label(form.contenu) }}
+                    {{ form_errors(form.contenu) }}
+                    {{ form_widget(form.contenu ) }}
+                </div>
+
+                <div class="row input-field hidden">
+                    {{ form_label(form.date) }}
+                    {{ form_errors(form.date) }}
+                    {{ form_widget(form.date) }}
+                </div>
+
+                {# Boutons #}
+                <div class="row center">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                        Ajouter une newsletter
+                    </button>
+
+                    {{ form_end(form) }}
+
+                    <a href="{{ path('article_index') }}">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                            Liste des articles
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
