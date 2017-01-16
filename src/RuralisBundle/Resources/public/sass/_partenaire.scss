@@ -1,10 +1,6 @@
 .partenaire {
     text-align: center;
 
-    .partenaireTop {
-        margin-top: 150px;
-    }
-
     .nomPart {
         font-weight: bold;
         color: #EF651B;
@@ -21,4 +17,8 @@
         max-width: 150px;
         max-height: 150px;
     }
+    img {
+        border-radius: 10px !important;
+    }
+
 }

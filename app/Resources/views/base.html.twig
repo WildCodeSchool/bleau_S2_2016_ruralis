@@ -25,19 +25,30 @@
         <div class="row fixed_nav navigation">
             {#First line nav bar#}
             <div class="row first_line">
-                <div class="col m2">
-                    <a href="{{ path ('ruralis_homepage') }}">
-                        <img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="nav_logo">
-                    </a>
+                <div class="col m1">
+                    <div class="row titreRuralis">
+                        <div class="col m2">
+                            <a href="{{ path ('ruralis_homepage') }}" class="majalla">
+                                Ruralis
+                                {#<img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="nav_logo">#}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m2">
+                            <a href="{{ path ('ruralis_homepage') }}" class="majallaSmall">
+                                Magazine
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col m1">
                     <img src="{{ asset ('bundles/ruralis/images/logoarbre1.png') }}" id="animation" alt="Logo arbre" class="smallarbre">
                 </div>
                 <div id="bottommark"></div>
-                <div class="col m6">
-                    <div class="row">
-                        <img src="{{ asset ('bundles/ruralis/images/textlogo.png') }}" alt="Demain s'invente dans les campagnes" class="nav_slogan">
-                    </div>
+                <div class="col m6 majallaSmallItalic">
+                    Demain s'invente dans les campagnes.
                 </div>
                 <div class="col m3">
                     <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/?fref=ts">
@@ -51,34 +62,36 @@
                     </a>
                 </div>
             </div>
-            {#Second line nav bar#}
-            <div class="row second_line">
-                <ul class="col offset-m3 m9 navlinks">
-                    <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
-                    <li><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
-                    <li><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
-                    <li><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
-                    <li><a href="{{ path('article_index') }}">Admin</a></li>
-                </ul>
-            </div>
-            {#Third line nav bar#}
-            <div class="row third_line">
-                <form action="" method="post">
-                    <ul class="col offset-m3 m9">
-                        <li class="col m2 offset-m1 nl">
-                            Newsletter
-                        </li>
-                        <li class="col m4 input-field mailbox">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </li>
-                        <li class="col m1">
-                            <button class="btn waves-effect waves-light nl" type="submit" name="action">Ok
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </li>
+            <div class="row">
+                {#Second line nav bar#}
+                <div class="row second_line">
+                    <ul class="col offset-m3 m9 navlinks">
+                        <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
+                        <li><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
+                        <li><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
+                        <li><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
+                        <li><a href="{{ path('article_index') }}">Admin</a></li>
                     </ul>
-                </form>
+                </div>
+                {#Third line nav bar#}
+                <div class="row third_line">
+                    <form action="" method="post">
+                        <ul class="col offset-m3 m9">
+                            <li class="col m2 offset-m1 nl">
+                                Newsletter
+                            </li>
+                            <li class="col m4 input-field mailbox">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </li>
+                            <li class="col m1">
+                                <button class="btn waves-effect waves-light nl" type="submit" name="action">Ok
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
     </header>
@@ -90,26 +103,26 @@
     </main>
 
     {% block footer %}
-        <footer class="page-footer">
-            <div class="row valign-wrapper">
-                <div class="col s12 m3 valign">
-                    <img class="logoruralis" src="{{ asset('bundles/ruralis/images/logo_mini.png') }}" alt="logo">
-                </div>
-                <div class="col s12 m6 white-text valign">
-                    <p>NOUS CONTACTER</p>
-                    <p>Association APRIORI / Ruralis Magazine</p>
-                    <p>12, rue du Four-Dieu</p>
-                    <p>45200 Montargis</p>
-                    <p>06 80 73 88 34</p>
-                    <p>contact@ruralismagazine.fr</p>
-                </div>
-                <div class="col s12 m3 valign">
-                    <a href="http://www.wildcodeschool.fr" target="_blank">
-                        <img class="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
-                    </a>
-                </div>
+    <footer class="page-footer">
+        <div class="row valign-wrapper">
+            <div class="col s12 m3 valign">
+                <img class="logoruralis" src="{{ asset('bundles/ruralis/images/logo_mini.png') }}" alt="logo">
             </div>
-        </footer>
+            <div class="col s12 m6 white-text valign">
+                <p>NOUS CONTACTER</p>
+                <p>Association APRIORI / Ruralis Magazine</p>
+                <p>12, rue du Four-Dieu</p>
+                <p>45200 Montargis</p>
+                <p>06 80 73 88 34</p>
+                <p>contact@ruralismagazine.fr</p>
+            </div>
+            <div class="col s12 m3 valign">
+                <a href="http://www.wildcodeschool.fr" target="_blank">
+                    <img class="logowcs" src="{{ asset('bundles/ruralis/images/logowcs.png') }}" alt="logo de la Wild Code School" />
+                </a>
+            </div>
+        </div>
+    </footer>
     {% endblock footer %}
     {% block javascripts %}
         <script>
