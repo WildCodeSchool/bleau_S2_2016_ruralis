@@ -33,9 +33,9 @@ ruralis_recapitulatif_abo:
 # Routes
 
 # Routes Admin
-#ruralis_admin:
-#    path:   /admin
-#    defaults: { _controller: RuralisBundle: }
+ruralis_admin:
+    path:     /admin
+    defaults: { _controller: RuralisBundle:Admin:admin }
 
 ruralis_admin_article:
     resource: "@RuralisBundle/Resources/config/routing/article.yml"
@@ -44,6 +44,10 @@ ruralis_admin_article:
 ruralis_admin_partenaire:
     resource: "@RuralisBundle/Resources/config/routing/partenaire.yml"
     prefix:   /admin/partenaire
+
+ruralis_admin_newsletter:
+    resource: "@RuralisBundle/Resources/config/routing/newsletter.yml"
+    prefix:   /admin/newsletter
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Newsletters</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Date</th>
+                <th>Contenu</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for newsletter in newsletters %}
+            <tr>
+                <td>{{ newsletter.titre }}</td>
+                <td>{% if newsletter.date %}{{ newsletter.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ newsletter.contenu }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('newsletter_new') }}">Create a new newsletter</a>
+        </li>
+    </ul>
+{% endblock %}
