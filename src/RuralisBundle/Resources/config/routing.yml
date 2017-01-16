@@ -1,19 +1,23 @@
 # Routes User
 ruralis_homepage:
     path:     /
-    defaults: { _controller: RuralisBundle:Default:index, page:1 }
+    defaults: { _controller: RuralisBundle:ViewsUser:index, page:1 }
 
 ruralis_presentation:
     path:     /ruralis
-    defaults: { _controller: RuralisBundle:Ruralis:index }
+    defaults: { _controller: RuralisBundle:ViewsUser:ruralis }
 
 ruralis_abonnement:
     path:     /abonnement
-    defaults: { _controller: RuralisBundle:Abonnement:index }
+    defaults: { _controller: RuralisBundle:ViewsUser:abonnement }
 
 ruralis_partenaire:
     path:     /partenaires
-    defaults: { _controller: RuralisBundle:Partenaires:index }
+    defaults: { _controller: RuralisBundle:ViewsUser:partenaires }
+
+ruralis_article:
+    path:     /{id}/article
+    defaults: { _controller: RuralisBundle:ViewsUser:article, id: null }
 
 ruralis_formulaire_abonnement:
     path:     /{type}/formulaire
@@ -26,6 +30,8 @@ ruralis_recapitulatif_abo:
     defaults: { _controller:  RuralisBundle:Formulaire:recapAbo}
     methods:  [POST]
 
+# Routes
+
 # Routes Admin
 #ruralis_admin:
 #    path:   /admin
@@ -33,12 +39,27 @@ ruralis_recapitulatif_abo:
 
 ruralis_admin_article:
     resource: "@RuralisBundle/Resources/config/routing/article.yml"
-    prefix:   /article
-
-ruralis_article:
-    path:     /{id}/article
-    defaults: { _controller: RuralisBundle:Default:article, id: null }
+    prefix:   /admin/article
 
 ruralis_admin_partenaire:
     resource: "@RuralisBundle/Resources/config/routing/partenaire.yml"
     prefix:   /admin/partenaire
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
