@@ -7,7 +7,3 @@ $('.datepicker').pickadate({
 $(document).ready(function() {
     $('select').material_select();
 });
-        var height_side_nav = $("header").height();
-        var height_footer = $(".page-footer").height();
-        $(".fixedSideNav").css("top", height_side_nav);
-        $(".fixedSideNav").css("bottom", height_footer);
