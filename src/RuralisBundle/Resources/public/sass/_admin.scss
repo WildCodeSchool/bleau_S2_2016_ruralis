@@ -1,20 +1,19 @@
-//
-//select {
-//  display : block !important;
+// Admin Général
 
 .adminmodel {
-   .input-field label,
-   label,
-   .dropdown-content li > a,
-   .dropdown-content li > span,
-   .descimg {
-     color: $orange;
-     background-color: #A9AAAE
-   }
+ .input-field label,
+ label,
+ .dropdown-content li > a,
+ .dropdown-content li > span,
+ .descimg {
+   color: $orange;
+   background-color: #A9AAAE;
+ }
 
-   h1{
-  color: #4c4c4c;
-  text-align:center;
+  h1{
+	color: #4c4c4c;
+	text-align:center;
+    font-family: majalla;
   }
 
   .adminImg{
@@ -41,10 +40,10 @@
   color: white !important;
   }
   a:hover {
-    font-weight: bold;
+	font-weight: bold;
   }
   a .lienAction {
-    color: #00B82B;
+	color: #00B82B;
   }
 }
 
@@ -86,4 +85,15 @@ label{
 
 textarea {
 background-color: #ebebeb !important;
+}
+
+
+// Menu Admin
+
+.menuAdmin {
+  .caseMenu {
+    border: 2px solid #4c4c4c;
+    border-radius: 20px;
+    height: 200px;
+  }
 }
