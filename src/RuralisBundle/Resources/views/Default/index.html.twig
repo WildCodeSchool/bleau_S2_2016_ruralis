@@ -4,42 +4,43 @@
 
 <div>
     <div class="row">
-        <div class="col s2 fixedSideNav">
+        <div class="fixedSideNav center">
             <div class="row">
-                <div class="col s12">
+
+            </div>
+                <div class="row">
                     <p>
                         Je m'abonne
                     </p>
                 </div>
-                <div class="col s12">
+                <div class="row">
                     <a class="vert" href="{{ asset('bundles/ruralis/images/abonnement_de_lecteur.pdf') }}" target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}" alt="logo48"  />
                     </a>
                 </div>
-                <div class="col s12">
+                <div class="row">
                     <a href="{{ asset('bundles/ruralis/images/abonnement_de_soutien.pdf') }}"  target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}" alt="logo150"  />
                     </a>
                 </div>
-                <div class="col s12">
+                <div class="row">
                     <a href="{{ asset('bundles/ruralis/images/abonnement_ambassadeur.pdf') }}"  target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}" alt="logo250"  />
                     </a>
                 </div>
-                <div class="col s12">
+                <div class="row">
                     <p>
                         J'encourage Ruralis Magazine
                     </p>
                 </div>
-                <div class="col s12">
+                <div class="row">
                     <a href="{{ asset('/') }}" target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
                     </a>
                 </div>
-            </div>
         </div>
 
-        <div class="col s9 blogTop">
+        <div class="col s9 offset-s2 blogTop">
             {#      CARD DE UNE      #}
 
             {% if article_une.typeAffichage is defined %}
@@ -187,18 +188,27 @@
                     {{ knp_pagination_render(articles) }}
                 </div>
             </div>
-            </div>
         </div>
+    </div>
 
     {% block javascripts %}
         {{ parent() }}
         <script>
+                console.log('plop');
+
                 $('.carre').each(function (index){
                     if (index % 2 == 0)
                     {
                         $(this).removeClass("offset-s2");
                     }
                 });
+                var bottom_fixedSideNav = $("footer").height() + 40;
+                var top_fixedSideNav = $("header").height() + 10;
+                $(".fixedSideNav").css({
+                    "top": top_fixedSideNav,
+                    "bottom": bottom_fixedSideNav
+                });
+
         </script>
     {% endblock %}
 

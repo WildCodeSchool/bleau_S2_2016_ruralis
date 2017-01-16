@@ -780,22 +780,19 @@ a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 54, ../sass/_blog.scss */
+/* line 53, ../sass/_blog.scss */
 .fixedSideNav .row {
   position: fixed;
-  top: 20%;
-  width: 120px;
-  color: red;
-  margin-left: 40px;
-  text-align: center;
+  width: 16.6666666667%;
+  height: auto;
+  background-color: red;
+}
+/* line 54, ../sass/_blog.scss */
+.fixedSideNav .row img {
+  width: 90%;
 }
 
-/* line 63, ../sass/_blog.scss */
-.fixedSideNav div img {
-  width: 100px;
-}
-
-/* line 67, ../sass/_blog.scss */
+/* line 79, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
@@ -803,13 +800,13 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 75, ../sass/_blog.scss */
+/* line 87, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 80, ../sass/_blog.scss */
+/* line 92, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
@@ -818,7 +815,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 90, ../sass/_blog.scss */
+/* line 102, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;

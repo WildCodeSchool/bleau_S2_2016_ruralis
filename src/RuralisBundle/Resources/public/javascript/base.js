@@ -1,4 +1,3 @@
-console.log(asset);
 $(document).ready(function(){
     var offset2 = $(document).height();
     var lineHF = offset2 - $("#bottommark").position().top;
