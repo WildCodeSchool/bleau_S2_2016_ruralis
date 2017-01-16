@@ -115,9 +115,9 @@
                             {# Second card #}
                             <div class="row article">
                                 <div class="col s12 hoverable">
-                                    <h4 class="header">
-                                        <h5>{{ article.nom }}</h5>
-                                    </h4>
+                                    <h5 class="header">
+                                        {{ article.nom }}
+                                    </h5>
                                     <div class="card horizontal">
                                         <div class="card-image">
                                             <img width=20% src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
@@ -138,10 +138,10 @@
                         {% elseif article.typeAffichage == 'Rectangle + descriptif' %}
                             <div class="row article">
                                 <div class="col s12 hoverable">
-                                    <h4 class="header">
+                                    <h5 class="header">
                                         <i class="material-icons right">more_vert</i>
-                                        <h5>{{ article.nom  }}</h5>
-                                    </h4>
+                                        {{ article.nom  }}
+                                    </h5>
                                     <div class="card horizontal">
                                         <div class="card-image">
                                             <img width=20% src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
@@ -159,9 +159,9 @@
                         {% elseif article.typeAffichage == 'Rectangle + article complet' %}
                             <div class="row">
                                 <div class="col s12 hoverable">
-                                    <h4 class="header">
-                                        <h5>{{ article.nom  }}</h5>
-                                    </h4>
+                                    <h5 class="header">
+                                        {{ article.nom  }}
+                                    </h5>
                                     <div class="card horizontal">
                                         <div class="card-image">
                                             <img width=20% src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
