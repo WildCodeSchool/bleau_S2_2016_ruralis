@@ -1,99 +1,118 @@
 // Admin Général
 
 .adminmodel {
- .input-field label,
- label,
- .dropdown-content li > a,
- .dropdown-content li > span,
- .descimg {
-   color: $orange;
-   background-color: #A9AAAE;
- }
-
-  h1{
-	color: #4c4c4c;
-	text-align:center;
-    font-family: majalla;
-  }
-
-  .adminImg{
-    width:50px;
-  }
-}
-
-.btn{
-  background-color: #00B82B;
-}
-
-.btn:hover{
-  background-color: #00f138;
-}
-
-.adminmodel {
   max-width: 90%;
   background-color: #B3AFAF;
   padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
+
+  h1{
+    color: #4c4c4c;
+    text-align:center;
+    font-family: 'majalla';
+  }
+
   a {
-  color: white !important;
+    color: white !important;
   }
+
   a:hover {
-	font-weight: bold;
+    font-weight: bold;
   }
+
   a .lienAction {
-	color: #00B82B;
+    color: #00B82B;
   }
-}
 
-.container .row {
-  margin-left: 2.25rem;
-  margin-right: 2.25rem;
-}
+  .container .row {
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
 
-.input-field label {
-  color: white;
-  left: 4px;
-}
+  .input-field label {
+    color: white;
+    left: 4px;
+  }
 
-label{
-  color:white;
-}
+  .select-wrapper input.select-dropdown{
+    border-bottom-color:white;
+  }
 
-.select-wrapper input.select-dropdown{
-  border-bottom-color:white;
-}
+  .select-dropdown{
+    color: #00B82B;
+  }
 
-.select-dropdown{
-  color: #00B82B;
-}
+  .file-path {
+    color:white;
+  }
 
-.file-path {
-  color:white;
-}
+  .imageAdmin{
+    height:150px;
+  }
 
+  // Texte 'image actuelle' dans les édit partenaires et article
+  .middleText{
+    margin-top:75px;
+  }
 
+  textarea {
+    background-color: #ebebeb !important;
+  }
 
-.imageAdmin{
-  height:150px;
-}
+  label{
+    color:white;
+  }
 
-.middleText{
-  margin-top:75px;
-}
+  .input-field label,
+  label,
+  .dropdown-content li > a,
+  .dropdown-content li > span,
+  .descimg {
+    color: $orange;
+    background-color: #A9AAAE;
+ }
 
-textarea {
-background-color: #ebebeb !important;
+  .adminImg{
+    width:50px;
+  }
+
+  .btn{
+    background-color: #00B82B;
+  }
+
+  .btn:hover{
+    background-color: #00f138;
+  }
 }
 
 
 // Menu Admin
 
 .menuAdmin {
-  .caseMenu {
+  .valign-wrapper {
     border: 2px solid #4c4c4c;
     border-radius: 20px;
     height: 200px;
+    justify-content: center;
+  }
+  div .hoverable {
+    background-image: url("../images/fond_texture_jaune.png");
+    background-size: 0.7%;
+    background-repeat: repeat;
+  }
+
+  a {
+    color:  #4c4c4c !important;
+    font-size: 50px;
+    font-family: 'majalla';
+  }
+  a:hover {
+    color: $orange !important;
   }
 }
+
+
+// Abonnés Admin
+

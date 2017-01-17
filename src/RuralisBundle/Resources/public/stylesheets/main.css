@@ -517,37 +517,7 @@ div .titreRuralis {
   border-bottom: 1px solid #ea640c;
 }
 
-/* line 4, ../sass/_admin.scss */
-.adminmodel .input-field label,
-.adminmodel label,
-.adminmodel .dropdown-content li > a,
-.adminmodel .dropdown-content li > span,
-.adminmodel .descimg {
-  color: #ea640c;
-  background-color: #A9AAAE;
-}
-/* line 13, ../sass/_admin.scss */
-.adminmodel h1 {
-  color: #4c4c4c;
-  text-align: center;
-  font-family: majalla;
-}
-/* line 19, ../sass/_admin.scss */
-.adminmodel .adminImg {
-  width: 50px;
-}
-
-/* line 24, ../sass/_admin.scss */
-.btn {
-  background-color: #00B82B;
-}
-
-/* line 28, ../sass/_admin.scss */
-.btn:hover {
-  background-color: #00f138;
-}
-
-/* line 32, ../sass/_admin.scss */
+/* line 3, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: #B3AFAF;
@@ -556,71 +526,106 @@ div .titreRuralis {
   border-radius: 15px;
   margin-top: 3%;
 }
-/* line 39, ../sass/_admin.scss */
+/* line 11, ../sass/_admin.scss */
+.adminmodel h1 {
+  color: #4c4c4c;
+  text-align: center;
+  font-family: 'majalla';
+}
+/* line 17, ../sass/_admin.scss */
 .adminmodel a {
   color: white !important;
 }
-/* line 42, ../sass/_admin.scss */
+/* line 21, ../sass/_admin.scss */
 .adminmodel a:hover {
   font-weight: bold;
 }
-/* line 45, ../sass/_admin.scss */
+/* line 25, ../sass/_admin.scss */
 .adminmodel a .lienAction {
   color: #00B82B;
 }
-
-/* line 50, ../sass/_admin.scss */
-.container .row {
+/* line 29, ../sass/_admin.scss */
+.adminmodel .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
-
-/* line 55, ../sass/_admin.scss */
-.input-field label {
+/* line 34, ../sass/_admin.scss */
+.adminmodel .input-field label {
   color: white;
   left: 4px;
 }
-
-/* line 60, ../sass/_admin.scss */
-label {
-  color: white;
-}
-
-/* line 64, ../sass/_admin.scss */
-.select-wrapper input.select-dropdown {
+/* line 39, ../sass/_admin.scss */
+.adminmodel .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
-
-/* line 68, ../sass/_admin.scss */
-.select-dropdown {
+/* line 43, ../sass/_admin.scss */
+.adminmodel .select-dropdown {
   color: #00B82B;
 }
-
-/* line 72, ../sass/_admin.scss */
-.file-path {
+/* line 47, ../sass/_admin.scss */
+.adminmodel .file-path {
   color: white;
 }
-
-/* line 78, ../sass/_admin.scss */
-.imageAdmin {
+/* line 51, ../sass/_admin.scss */
+.adminmodel .imageAdmin {
   height: 150px;
 }
-
-/* line 82, ../sass/_admin.scss */
-.middleText {
+/* line 56, ../sass/_admin.scss */
+.adminmodel .middleText {
   margin-top: 75px;
 }
-
-/* line 86, ../sass/_admin.scss */
-textarea {
+/* line 60, ../sass/_admin.scss */
+.adminmodel textarea {
   background-color: #ebebeb !important;
+}
+/* line 64, ../sass/_admin.scss */
+.adminmodel label {
+  color: white;
+}
+/* line 68, ../sass/_admin.scss */
+.adminmodel .input-field label,
+.adminmodel label,
+.adminmodel .dropdown-content li > a,
+.adminmodel .dropdown-content li > span,
+.adminmodel .descimg {
+  color: #ea640c;
+  background-color: #A9AAAE;
+}
+/* line 77, ../sass/_admin.scss */
+.adminmodel .adminImg {
+  width: 50px;
+}
+/* line 81, ../sass/_admin.scss */
+.adminmodel .btn {
+  background-color: #00B82B;
+}
+/* line 85, ../sass/_admin.scss */
+.adminmodel .btn:hover {
+  background-color: #00f138;
 }
 
 /* line 94, ../sass/_admin.scss */
-.menuAdmin .caseMenu {
+.menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
+  justify-content: center;
+}
+/* line 100, ../sass/_admin.scss */
+.menuAdmin div .hoverable {
+  background-image: url("../images/fond_texture_jaune.png");
+  background-size: 0.7%;
+  background-repeat: repeat;
+}
+/* line 106, ../sass/_admin.scss */
+.menuAdmin a {
+  color: #4c4c4c !important;
+  font-size: 50px;
+  font-family: 'majalla';
+}
+/* line 111, ../sass/_admin.scss */
+.menuAdmin a:hover {
+  color: #ea640c !important;
 }
 
 /* line 1, ../sass/_abonnement.scss */
