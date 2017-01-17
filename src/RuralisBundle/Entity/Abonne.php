@@ -7,8 +7,9 @@ namespace RuralisBundle\Entity;
  */
 class Abonne
 {
+    
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -25,15 +26,10 @@ class Abonne
     /**
      * @var string
      */
-    private $mail;
-
-    /**
-     * @var string
-     */
     private $rue;
 
     /**
-     * @var int
+     * @var integer
      */
     private $cp;
 
@@ -43,7 +39,12 @@ class Abonne
     private $ville;
 
     /**
-     * @var int
+     * @var string
+     */
+    private $pays;
+
+    /**
+     * @var integer
      */
     private $telephone;
 
@@ -53,12 +54,12 @@ class Abonne
     private $dateAbonnement;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $newsletter;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $abonne;
 
@@ -71,7 +72,7 @@ class Abonne
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -127,30 +128,6 @@ class Abonne
     }
 
     /**
-     * Set mail
-     *
-     * @param string $mail
-     *
-     * @return Abonne
-     */
-    public function setMail($mail)
-    {
-        $this->mail = $mail;
-
-        return $this;
-    }
-
-    /**
-     * Get mail
-     *
-     * @return string
-     */
-    public function getMail()
-    {
-        return $this->mail;
-    }
-
-    /**
      * Set rue
      *
      * @param string $rue
@@ -191,7 +168,7 @@ class Abonne
     /**
      * Get cp
      *
-     * @return int
+     * @return integer
      */
     public function getCp()
     {
@@ -223,6 +200,30 @@ class Abonne
     }
 
     /**
+     * Set pays
+     *
+     * @param string $pays
+     *
+     * @return Abonne
+     */
+    public function setPays($pays)
+    {
+        $this->pays = $pays;
+
+        return $this;
+    }
+
+    /**
+     * Get pays
+     *
+     * @return string
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    /**
      * Set telephone
      *
      * @param integer $telephone
@@ -239,7 +240,7 @@ class Abonne
     /**
      * Get telephone
      *
-     * @return int
+     * @return integer
      */
     public function getTelephone()
     {
@@ -287,7 +288,7 @@ class Abonne
     /**
      * Get newsletter
      *
-     * @return bool
+     * @return boolean
      */
     public function getNewsletter()
     {
@@ -311,7 +312,7 @@ class Abonne
     /**
      * Get abonne
      *
-     * @return bool
+     * @return boolean
      */
     public function getAbonne()
     {

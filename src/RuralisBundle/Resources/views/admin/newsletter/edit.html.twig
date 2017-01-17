@@ -1,21 +1,43 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Newsletter edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    <div class="row adminmodel z-depth-2">
+        <div class="col m10 offset-m1">
+            <h1>Editer {{ article.nom }}</h1>
 
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            {{ form_start(edit_form) }}
+
+            <div>
+                {{ form_label(edit_form.titre) }}
+                {{ form_errors(edit_form.titre) }}
+                {{ form_widget(edit_form.titre) }}
+            </div>
+
+            <div class="row hidden" id="newContenu">
+                {{ form_label(edit_form.date) }}
+                {{ form_errors(edit_form.date) }}
+                {{ form_widget(edit_form.date) }}
+            </div>
+
+            <div class="row hidden" id="newContenu">
+                {{ form_label(edit_form.contenu) }}
+                {{ form_errors(edit_form.contenu) }}
+                {{ form_widget(edit_form.contenu) }}
+            </div>
+
+            {# Boutons #}
+            <div class="center">
+                <a class="waves-effect waves-light btn">
+                    <input type="submit" value="Modifier la newsletter" />
+                </a>
+
+                {{ form_end(edit_form) }}
+
+                <a class="waves-effect waves-light btn" href="{{ path('article_index') }}">
+                    Liste des newsletters
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

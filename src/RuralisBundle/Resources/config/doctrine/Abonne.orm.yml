@@ -15,9 +15,6 @@ RuralisBundle\Entity\Abonne:
         prenom:
             type: string
             length: 255
-        mail:
-            type: string
-            length: 255
         rue:
             type: string
             length: 255
@@ -26,17 +23,12 @@ RuralisBundle\Entity\Abonne:
         ville:
             type: string
             length: 255
+        pays:
+            type: string
+            length: 255
         telephone:
             type: integer
         dateAbonnement:
             type: date
             column: date_abonnement
-        newsletter:
-            type: boolean
-        abonne:
-            type: boolean
-        typeAbonnement:
-            type: string
-            length: 255
-            column: type_abonnement
     lifecycleCallbacks: {  }
