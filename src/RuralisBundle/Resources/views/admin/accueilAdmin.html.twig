@@ -1,52 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="row adminmodel z-depth-2">
+
+    <div class="row adminmodel menuAdmin box z-depth-2">
         <div class="col m10 offset-m1">
             <h1>Bienvenue sur l'administration du site</h1>
 
             {# Ligne 1 #}
             <div class="row">
-                <div class="col s4 offset-s1">
-                    <a href="#">
+                <div class="col s4 offset-s1 hoverable valign-wrapper">
+                    <a href="{{ path('article_index') }}">
                         Blog
                     </a>
                 </div>
 
-                <div class="col s4 offset-s1">
-                    <a href="#">
-                        Abonnement
+                <div class="col s4 offset-s2 hoverable valign-wrapper">
+                    <a href="{{ path('partenaire_index') }}">
+                        Partenaires
                     </a>
                 </div>
             </div>
 
             {# Ligne 2#}
             <div class="row">
-                <div class="col s4 offset-s1">
-                    <a href="#">
-                       Partenaires
-                    </a>
-                </div>
-                <div class="col s4 offset-s1">
-                    <a href="#">
-                        Ruralis
-                    </a>
-                </div>
-            </div>
-
-            {# Ligne 3 #}
-            <div class="row">
-                <div class="col s4 offset-s1">
-                    <a href="#">
-                        Newsletter
-                    </a>
-                </div>
-                <div class="col s4 offset-s1">
+                <div class="col s4 offset-s1 hoverable valign-wrapper">
                     <a href="#">
                         Abonnés
                     </a>
                 </div>
+                <div class="col s4 offset-s2 hoverable valign-wrapper">
+                    <a href="#">
+                        Newsletter
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+
 {% endblock %}
