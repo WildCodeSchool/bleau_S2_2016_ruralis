@@ -17,10 +17,6 @@ class FormulaireController extends Controller
         $session = $this->get('request')->getSession();
         $session->set('type', $type);
 
-//        $infoUser = array(
-//            'typeAbo' => $type,
-//        );
-
         $type = $session->get('type');
 
         return $this->render('@Ruralis/user/formulaireAbonnement.html.twig', array(
@@ -37,6 +33,7 @@ class FormulaireController extends Controller
         $rue = $_POST['rue'];
         $cp = $_POST['cp'];
         $ville = $_POST['ville'];
+        $pays = $_POST['pays'];
 
         $session = $this->get('request')->getSession();
         $session->set('details', array(
@@ -47,6 +44,7 @@ class FormulaireController extends Controller
             'rue' => $rue,
             'cp' => $cp,
             'ville' => $ville,
+            'pays' => $pays,
         ));
 
         $details = $session->get('details');
