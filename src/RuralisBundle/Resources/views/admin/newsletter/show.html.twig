@@ -1,40 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Newsletter</h1>
+    <div class="row adminmodel z-depth-2">
+        <div class="col m10 offset-m1">
+            <h1>{{ newsletter.titre }}</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ newsletter.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ newsletter.titre }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{% if newsletter.date %}{{ newsletter.date|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Contenu</th>
-                <td>{{ newsletter.contenu }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Titre</th>
+                    <td>{{ newsletter.titre }}</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>{{ newsletter.date|date('d M Y') }}</td>
+                </tr>
+                <tr>
+                    <th>Contenu</th>
+                    <td>{{ newsletter.contenu | raw}}</td>
+                </tr>
+                </tbody>
+            </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            {# Boutons #}
+            <div class="center">
+                <a class="waves-effect waves-light btn" href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">
+                    Editer
+                </a>
+
+                <a class="waves-effect waves-light btn" href="{{ path('newsletter_delete', { 'id': newsletter.id }) }}">Supprimer
+                </a>
+
+                <a class="waves-effect waves-light btn" href="{{ path('newsletter_index') }}">
+                    Liste des newsletters
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

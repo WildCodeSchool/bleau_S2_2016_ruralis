@@ -30,6 +30,11 @@ ruralis_recapitulatif_abo:
     defaults: { _controller:  RuralisBundle:Formulaire:recapAbo}
     methods:  [POST]
 
+ruralis_send_newsletter:
+    path:     /sendnewsletter
+    defaults: { _controller:  RuralisBundle:Contact:send}
+    methods:  [GET, POST]
+
 # Routes
 
 # Routes Admin
@@ -49,6 +54,7 @@ ruralis_admin_newsletter:
     resource: "@RuralisBundle/Resources/config/routing/newsletter.yml"
     prefix:   /admin/newsletter
 
+#FOS USER
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
