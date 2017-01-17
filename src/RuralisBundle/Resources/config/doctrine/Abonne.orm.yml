@@ -31,12 +31,4 @@ RuralisBundle\Entity\Abonne:
         dateAbonnement:
             type: date
             column: date_abonnement
-        newsletter:
-            type: boolean
-        abonne:
-            type: boolean
-        typeAbonnement:
-            type: string
-            length: 255
-            column: type_abonnement
     lifecycleCallbacks: {  }

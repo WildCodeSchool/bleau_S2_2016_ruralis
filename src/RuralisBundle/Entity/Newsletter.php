@@ -109,4 +109,50 @@ class Newsletter
     {
         return $this->contenu;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $abonnements;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->abonnements = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add abonnement
+     *
+     * @param \RuralisBundle\Entity\Abonnement $abonnement
+     *
+     * @return Newsletter
+     */
+    public function addAbonnement(\RuralisBundle\Entity\Abonnement $abonnement)
+    {
+        $this->abonnements[] = $abonnement;
+
+        return $this;
+    }
+
+    /**
+     * Remove abonnement
+     *
+     * @param \RuralisBundle\Entity\Abonnement $abonnement
+     */
+    public function removeAbonnement(\RuralisBundle\Entity\Abonnement $abonnement)
+    {
+        $this->abonnements->removeElement($abonnement);
+    }
+
+    /**
+     * Get abonnements
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAbonnements()
+    {
+        return $this->abonnements;
+    }
 }

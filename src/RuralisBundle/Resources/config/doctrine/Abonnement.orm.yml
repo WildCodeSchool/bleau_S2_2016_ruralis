@@ -1,0 +1,18 @@
+RuralisBundle\Entity\Abonnement:
+    type: entity
+    table: null
+    repositoryClass: RuralisBundle\Repository\AbonnementRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
+    manyToOne:
+        contact:
+            targetEntity: RuralisBundle\Entity\Contact
+        type_abo:
+            targetEntity: RuralisBundle\Entity\TypeAbo
+        abonne:
+            targetEntity: RuralisBundle\Entity\Abonne

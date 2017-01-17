@@ -1,0 +1,16 @@
+RuralisBundle\Entity\Contact:
+    type: entity
+    table: null
+    repositoryClass: RuralisBundle\Repository\ContactRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        mail:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks: {  }
