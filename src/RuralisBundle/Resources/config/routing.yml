@@ -49,6 +49,8 @@ ruralis_admin_newsletter:
     resource: "@RuralisBundle/Resources/config/routing/newsletter.yml"
     prefix:   /admin/newsletter
 
+
+#FOS USER
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
