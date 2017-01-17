@@ -12,7 +12,4 @@ RuralisBundle\Entity\TypeAbo:
         type:
             type: string
             length: 255
-            nullable: true
-        newsletter:
-            type: boolean
     lifecycleCallbacks: {  }

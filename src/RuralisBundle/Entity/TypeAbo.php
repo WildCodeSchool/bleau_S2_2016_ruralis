@@ -7,8 +7,9 @@ namespace RuralisBundle\Entity;
  */
 class TypeAbo
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -17,16 +18,11 @@ class TypeAbo
      */
     private $type;
 
-    /**
-     * @var bool
-     */
-    private $newsletter;
-
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -55,29 +51,5 @@ class TypeAbo
     public function getType()
     {
         return $this->type;
-    }
-
-    /**
-     * Set newsletter
-     *
-     * @param boolean $newsletter
-     *
-     * @return TypeAbo
-     */
-    public function setNewsletter($newsletter)
-    {
-        $this->newsletter = $newsletter;
-
-        return $this;
-    }
-
-    /**
-     * Get newsletter
-     *
-     * @return bool
-     */
-    public function getNewsletter()
-    {
-        return $this->newsletter;
     }
 }

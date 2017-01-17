@@ -8,6 +8,9 @@ RuralisBundle\Entity\Abonnement:
             id: true
             generator:
                 strategy: AUTO
+    fields:
+        newsletter:
+            type: boolean
     lifecycleCallbacks: {  }
     manyToOne:
         contact:

@@ -7,26 +7,66 @@ namespace RuralisBundle\Entity;
  */
 class Abonnement
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
-
     /**
-     * Get id
-     *
-     * @return int
+     * @var boolean
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $newsletter;
+
     /**
      * @var \RuralisBundle\Entity\Contact
      */
     private $contact;
 
+    /**
+     * @var \RuralisBundle\Entity\TypeAbo
+     */
+    private $type_abo;
+
+    /**
+     * @var \RuralisBundle\Entity\Abonne
+     */
+    private $abonne;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set newsletter
+     *
+     * @param boolean $newsletter
+     *
+     * @return Abonnement
+     */
+    public function setNewsletter($newsletter)
+    {
+        $this->newsletter = $newsletter;
+
+        return $this;
+    }
+
+    /**
+     * Get newsletter
+     *
+     * @return boolean
+     */
+    public function getNewsletter()
+    {
+        return $this->newsletter;
+    }
 
     /**
      * Set contact
@@ -51,16 +91,6 @@ class Abonnement
     {
         return $this->contact;
     }
-    /**
-     * @var \RuralisBundle\Entity\TypeAbo
-     */
-    private $type_abo;
-
-    /**
-     * @var \RuralisBundle\Entity\Abonne
-     */
-    private $abonne;
-
 
     /**
      * Set typeAbo
