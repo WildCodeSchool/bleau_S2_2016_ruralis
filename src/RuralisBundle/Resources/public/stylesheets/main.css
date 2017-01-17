@@ -361,22 +361,22 @@ footer img {
 /* line 23, ../sass/_navbar.scss */
 .navigation a, .navigation li {
   color: #ea640c;
-  font-weight: 800;
 }
-/* line 27, ../sass/_navbar.scss */
+/* line 26, ../sass/_navbar.scss */
 .navigation li {
   text-align: center;
 }
 
-/* line 32, ../sass/_navbar.scss */
+/* line 31, ../sass/_navbar.scss */
 .majalla, .majallaSmall, .majallaSmallItalic {
   font-family: 'majalla';
   color: white !important;
 }
 
-/* line 37, ../sass/_navbar.scss */
+/* line 36, ../sass/_navbar.scss */
 .majalla {
   font-size: 40px;
+  font-weight: 800;
 }
 
 /* line 41, ../sass/_navbar.scss */
