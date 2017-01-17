@@ -1,89 +1,118 @@
-//
-//select {
-//  display : block !important;
+// Admin Général
 
 .adminmodel {
-   .input-field label,
-   label,
-   .dropdown-content li > a,
-   .dropdown-content li > span,
-   .descimg {
-     color: $orange;
-     background-color: #A9AAAE
-   }
+    max-width: 90%;
+    background-color: #B3AFAF;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-top: 3%;
 
-   h1{
-  color: #4c4c4c;
-  text-align:center;
-  }
+    h1{
+        color: #4c4c4c;
+        text-align:center;
+        font-family: 'majalla';
+    }
 
-  .adminImg{
-    width:50px;
-  }
+    a {
+        color: white !important;
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+
+    a .lienAction {
+        color: #00B82B;
+    }
+
+    .container .row {
+        margin-left: 2.25rem;
+        margin-right: 2.25rem;
+    }
+
+    .input-field label {
+        color: white;
+        left: 4px;
+    }
+
+    .select-wrapper input.select-dropdown{
+        border-bottom-color:white;
+    }
+
+    .select-dropdown{
+        color: #00B82B;
+    }
+
+    .file-path {
+        color:white;
+    }
+
+    .imageAdmin{
+        height:150px;
+    }
+
+    // Texte 'image actuelle' dans les édit partenaires et article
+    .middleText{
+        margin-top:75px;
+    }
+
+    textarea {
+        background-color: #ebebeb !important;
+    }
+
+    label{
+        color:white;
+    }
+
+    .input-field label,
+    label,
+    .dropdown-content li > a,
+    .dropdown-content li > span,
+    .descimg {
+        color: $orange;
+        background-color: #A9AAAE;
+    }
+
+    .adminImg{
+        width:50px;
+    }
+
+    .btn{
+        background-color: #00B82B;
+    }
+
+    .btn:hover{
+        background-color: #00f138;
+    }
 }
 
-.btn{
-  background-color: #00B82B;
-}
 
-.btn:hover{
-  background-color: #00f138;
-}
+// Menu Admin
 
-.adminmodel {
-  max-width: 90%;
-  background-color: #B3AFAF;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  margin-top: 3%;
-  a {
-  color: white !important;
-  }
-  a:hover {
-    font-weight: bold;
-  }
-  a .lienAction {
-    color: #00B82B;
-  }
-}
+.menuAdmin {
+    .valign-wrapper {
+        border: 2px solid #4c4c4c;
+        border-radius: 20px;
+        height: 200px;
+        justify-content: center;
+    }
+    div .hoverable {
+        background-image: url("../images/fond_texture_jaune.png");
+        background-size: 0.7%;
+        background-repeat: repeat;
+    }
 
-.container .row {
-  margin-left: 2.25rem;
-  margin-right: 2.25rem;
-}
-
-.input-field label {
-  color: white;
-  left: 4px;
-}
-
-label{
-  color:white;
-}
-
-.select-wrapper input.select-dropdown{
-  border-bottom-color:white;
-}
-
-.select-dropdown{
-  color: #00B82B;
-}
-
-.file-path {
-  color:white;
+    a {
+        color:  #4c4c4c !important;
+        font-size: 50px;
+        font-family: 'majalla';
+    }
+    a:hover {
+        color: $orange !important;
+    }
 }
 
 
+// Abonnés Admin
 
-.imageAdmin{
-  height:150px;
-}
-
-.middleText{
-  margin-top:75px;
-}
-
-textarea {
-background-color: #ebebeb !important;
-}
