@@ -1,26 +1,26 @@
 /* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 /*==================================================================== */
 /* ----------------------- Mixins + Variables ----------------------- */
 /*==================================================================== */
 
 @mixin multiple_img_line(){
-  img{
-    width: 100%;
-  }
-  .col{
-    padding: 0 0.30rem !important;
-  }
+    img{
+        width: 100%;
+    }
+    .col{
+        padding: 0 0.30rem !important;
+    }
 }
 
 @font-face {
-  font-family: 'majalla';
-  src: local('majjala'), url('../fonts/majalla.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'majalla';
+    src: local('majjala'), url('../fonts/majalla.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 $orange: rgb(234,100,12);
@@ -33,42 +33,42 @@ $gris: rgba(211, 211, 211, 0.5);
 
 //Permet de garder le footer on the button
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-image: url('../images/fond_texture_blanc.jpg');
-  background-repeat: repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('../images/fond_texture_blanc.jpg');
+    background-repeat: repeat;
 }
 main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 //Suppression du padding right and left sur les col (surcharge materialize)
 .col{
-  padding-right: 0 !important;
-  padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 //Class à utiliser pour mettre les images en width 100%
 .size-large{
-  width: 100%;
+    width: 100%;
 }
 header{
-  height: 168px !important;
-  z-index: 1 !important;
+    height: 168px !important;
+    z-index: 1 !important;
 }
 p{
-  font-size: 18px;
-  font-family: 'Time New Roman', sans-serif;
+    font-size: 18px;
+    font-family: 'Time New Roman', sans-serif;
 }
 h4{
-  font-family: 'Arial Bold';
-  text-align: center;
+    font-family: 'Arial Bold';
+    text-align: center;
 }
 h5{
-  font-size: 25px;
-  font-family: 'Sakkal Majalla Bold';
-  color: $orange;
+    font-size: 25px;
+    font-family: 'Sakkal Majalla Bold';
+    color: $orange;
 }
 
 // Mise en forme form
@@ -85,7 +85,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: $orange;
+    color: $orange;
 }
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
@@ -100,8 +100,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid $orange;
-  box-shadow: 0 1px 0 0 $orange;
+    border-bottom: 1px solid $orange;
+    box-shadow: 0 1px 0 0 $orange;
 }
 input:not([type]),
 input[type="text"],
@@ -116,26 +116,26 @@ input[type="tel"],
 input[type="number"],
 input[type="search"],
 textarea.materialize-textarea {
-  color: black;
+    color: black;
 }
 [type="checkbox"]:checked + label:before {
-  border-top: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-right: 2px solid $orange;
-  border-bottom: 2px solid $orange;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid $orange;
+    border-bottom: 2px solid $orange;
 }
 .input-field label {
-  color: $orange;
+    color: $orange;
 }
 
 // Style bouton
 
 .btn.nl {
-  background-color: $orange;
-  margin-top: -11px;
+    background-color: $orange;
+    margin-top: -11px;
 }
 .btn.nl:hover{
-  background-color: $orange_pale;
+    background-color: $orange_pale;
 }
 
 //Import des feuille de style

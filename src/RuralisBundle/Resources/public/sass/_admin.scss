@@ -1,116 +1,116 @@
 // Admin Général
 
 .adminmodel {
-  max-width: 90%;
-  background-color: #B3AFAF;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  margin-top: 3%;
+    max-width: 90%;
+    background-color: #B3AFAF;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-top: 3%;
 
-  h1{
-    color: #4c4c4c;
-    text-align:center;
-    font-family: 'majalla';
-  }
+    h1{
+        color: #4c4c4c;
+        text-align:center;
+        font-family: 'majalla';
+    }
 
-  a {
-    color: white !important;
-  }
+    a {
+        color: white !important;
+    }
 
-  a:hover {
-    font-weight: bold;
-  }
+    a:hover {
+        font-weight: bold;
+    }
 
-  a .lienAction {
-    color: #00B82B;
-  }
+    a .lienAction {
+        color: #00B82B;
+    }
 
-  .container .row {
-    margin-left: 2.25rem;
-    margin-right: 2.25rem;
-  }
+    .container .row {
+        margin-left: 2.25rem;
+        margin-right: 2.25rem;
+    }
 
-  .input-field label {
-    color: white;
-    left: 4px;
-  }
+    .input-field label {
+        color: white;
+        left: 4px;
+    }
 
-  .select-wrapper input.select-dropdown{
-    border-bottom-color:white;
-  }
+    .select-wrapper input.select-dropdown{
+        border-bottom-color:white;
+    }
 
-  .select-dropdown{
-    color: #00B82B;
-  }
+    .select-dropdown{
+        color: #00B82B;
+    }
 
-  .file-path {
-    color:white;
-  }
+    .file-path {
+        color:white;
+    }
 
-  .imageAdmin{
-    height:150px;
-  }
+    .imageAdmin{
+        height:150px;
+    }
 
-  // Texte 'image actuelle' dans les édit partenaires et article
-  .middleText{
-    margin-top:75px;
-  }
+    // Texte 'image actuelle' dans les édit partenaires et article
+    .middleText{
+        margin-top:75px;
+    }
 
-  textarea {
-    background-color: #ebebeb !important;
-  }
+    textarea {
+        background-color: #ebebeb !important;
+    }
 
-  label{
-    color:white;
-  }
+    label{
+        color:white;
+    }
 
-  .input-field label,
-  label,
-  .dropdown-content li > a,
-  .dropdown-content li > span,
-  .descimg {
-    color: $orange;
-    background-color: #A9AAAE;
- }
+    .input-field label,
+    label,
+    .dropdown-content li > a,
+    .dropdown-content li > span,
+    .descimg {
+        color: $orange;
+        background-color: #A9AAAE;
+    }
 
-  .adminImg{
-    width:50px;
-  }
+    .adminImg{
+        width:50px;
+    }
 
-  .btn{
-    background-color: #00B82B;
-  }
+    .btn{
+        background-color: #00B82B;
+    }
 
-  .btn:hover{
-    background-color: #00f138;
-  }
+    .btn:hover{
+        background-color: #00f138;
+    }
 }
 
 
 // Menu Admin
 
 .menuAdmin {
-  .valign-wrapper {
-    border: 2px solid #4c4c4c;
-    border-radius: 20px;
-    height: 200px;
-    justify-content: center;
-  }
-  div .hoverable {
-    background-image: url("../images/fond_texture_jaune.png");
-    background-size: 0.7%;
-    background-repeat: repeat;
-  }
+    .valign-wrapper {
+        border: 2px solid #4c4c4c;
+        border-radius: 20px;
+        height: 200px;
+        justify-content: center;
+    }
+    div .hoverable {
+        background-image: url("../images/fond_texture_jaune.png");
+        background-size: 0.7%;
+        background-repeat: repeat;
+    }
 
-  a {
-    color:  #4c4c4c !important;
-    font-size: 50px;
-    font-family: 'majalla';
-  }
-  a:hover {
-    color: $orange !important;
-  }
+    a {
+        color:  #4c4c4c !important;
+        font-size: 50px;
+        font-family: 'majalla';
+    }
+    a:hover {
+        color: $orange !important;
+    }
 }
 
 
