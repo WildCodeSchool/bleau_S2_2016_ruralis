@@ -22,7 +22,7 @@ class NewsletterController extends Controller
 
         $newsletters = $em->getRepository('RuralisBundle:Newsletter')->findAll();
 
-        return $this->render('newsletter/index.html.twig', array(
+        return $this->render('@Ruralis/admin/newsletter/index.html.twig', array(
             'newsletters' => $newsletters,
         ));
     }
@@ -45,7 +45,7 @@ class NewsletterController extends Controller
             return $this->redirectToRoute('newsletter_show', array('id' => $newsletter->getId()));
         }
 
-        return $this->render('newsletter/new.html.twig', array(
+        return $this->render('@Ruralis/admin/newsletter/new.html.twig', array(
             'newsletter' => $newsletter,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class NewsletterController extends Controller
     {
         $deleteForm = $this->createDeleteForm($newsletter);
 
-        return $this->render('newsletter/show.html.twig', array(
+        return $this->render('@Ruralis/admin/newsletter/show.html.twig', array(
             'newsletter' => $newsletter,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class NewsletterController extends Controller
             return $this->redirectToRoute('newsletter_edit', array('id' => $newsletter->getId()));
         }
 
-        return $this->render('newsletter/edit.html.twig', array(
+        return $this->render('@Ruralis/admin/newsletter/edit.html.twig', array(
             'newsletter' => $newsletter,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
