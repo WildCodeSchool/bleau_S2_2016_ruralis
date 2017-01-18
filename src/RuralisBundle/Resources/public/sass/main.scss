@@ -26,6 +26,7 @@
 $orange: rgb(234,100,12);
 $orange_pale: rgb(255, 132, 54);
 $gris: rgba(211, 211, 211, 0.5);
+$darkgrey: rgb(76, 76, 76);
 
 /*==================================================================== */
 /* ----------------------- GENERAL CSS ----------------------- */
@@ -62,8 +63,9 @@ p{
     font-family: 'Time New Roman', sans-serif;
 }
 h4{
-    font-family: 'Arial Bold';
+    font-family: 'majalla';
     text-align: center;
+    font-size: 63px;
 }
 h5{
     font-size: 25px;
