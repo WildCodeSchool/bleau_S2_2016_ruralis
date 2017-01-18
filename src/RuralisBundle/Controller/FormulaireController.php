@@ -39,7 +39,8 @@ class FormulaireController extends Controller
 
         $session = $this->get('request')->getSession();
         $session->set('details', array(
-            'prennom' => $prenom,
+
+            'prenom' => $prenom,
             'nom' => $nom,
             'email' => $email,
             'tel' => $tel,

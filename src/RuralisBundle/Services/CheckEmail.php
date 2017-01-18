@@ -6,7 +6,6 @@ use Doctrine\ORM\EntityManager;
 use RuralisBundle\Entity\Abonnement;
 use RuralisBundle\Entity\Contact;
 use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class CheckEmail {
 
