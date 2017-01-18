@@ -771,14 +771,18 @@ a.cardLink {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
-  background-color: red;
+  background-color: #ff7fc6;
 }
 /* line 54, ../sass/_blog.scss */
 .fixedSideNav .row img {
-  width: 90%;
+  width: 70%;
+}
+/* line 57, ../sass/_blog.scss */
+.fixedSideNav .row .paypal {
+  width: 50% !important;
 }
 
-/* line 79, ../sass/_blog.scss */
+/* line 83, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
@@ -786,13 +790,13 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 87, ../sass/_blog.scss */
+/* line 91, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 92, ../sass/_blog.scss */
+/* line 96, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
@@ -801,7 +805,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 102, ../sass/_blog.scss */
+/* line 106, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;

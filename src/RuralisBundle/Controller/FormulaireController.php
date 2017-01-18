@@ -35,10 +35,18 @@ class FormulaireController extends Controller
         $cp = $_POST['cp'];
         $ville = $_POST['ville'];
         $pays = $_POST['pays'];
-        $newsletter = $_POST['newsletter'];
+
+//        Si Newsletter est cochée $newsletter='on'
+        if (isset($_POST['newsletter'])) {
+            $newsletter = "on";
+        }
+        else {
+            $newsletter = 'off';
+        }
 
         $session = $this->get('request')->getSession();
         $session->set('details', array(
+
             'prenom' => $prenom,
             'nom' => $nom,
             'email' => $email,
