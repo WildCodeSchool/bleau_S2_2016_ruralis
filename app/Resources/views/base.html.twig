@@ -98,6 +98,13 @@
 
     {% endblock %}
     <main>
+        {% for flash_message in app.session.flashBag.get('notice') %}
+            <div class="row container">
+                <div class="flash-notice center">
+                    {{ flash_message }}
+                </div>
+            </div>
+        {% endfor %}
         {% block body %}
         {% endblock %}
     </main>

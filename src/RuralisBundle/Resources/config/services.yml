@@ -1,4 +1,4 @@
 services:
-#    ruralis.example:
-#        class: RuralisBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    ruralis.checkEmail:
+        class: RuralisBundle\Services\CheckEmail
+        arguments: ["@doctrine.orm.entity_manager", "@service_container"]

@@ -17,5 +17,9 @@ RuralisBundle\Entity\Abonnement:
             targetEntity: RuralisBundle\Entity\Contact
         type_abo:
             targetEntity: RuralisBundle\Entity\TypeAbo
+            joinColumn:
+                nullable: true
         abonne:
             targetEntity: RuralisBundle\Entity\Abonne
+            joinColumn:
+                nullable: true

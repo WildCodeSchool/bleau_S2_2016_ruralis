@@ -19,30 +19,48 @@ class ContactController extends Controller
     {
         $email = $_POST['email'];
 
-        //Vérifier si l'email existe déjà dans une table Contact
+        //Récupération de la route en cours
+       // $request = $this->container->get('request');
+        $lastUrl = $this->get('request')->headers->get('referer');
+
+        $this->container->get('ruralis.checkemail')->checkEmail($email);
+/*        //Vérifier si l'email existe déjà dans une table Contact
         $em = $this->getDoctrine()->getManager();
         $contact = $em->getRepository('RuralisBundle:Contact')->findOneByEmail($email);
-        $plop = $contact->getEmail();
-        dump($plop);die();
+        if ($contact == null) {
         //S'il n'existe pas
-/*            if ($contact($email) = $email) {
-                $contact = new Contact();
-                $contact->setEmail($email);
-                $abonnement = new Abonnement();
-                $abonnement->setContact($contact);
-            }*/
+            $newContact = new Contact();
+            $newContact->setEmail($email);
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($contact);
-        $em->flush();
+            $abonnement = new Abonnement();
+            $abonnement->setContact($newContact);
+            $abonnement->setNewsletter(true);
+            $em->persist($newContact);
 
+            $this->setFlash('notice', 'Vous êtes maintenant inscrit à la newsletter');
 
+        }
+        else {
+            $abonnement = $em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
+            if ($abonnement->getNewsletter() == true) {
+                $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
 
+            }
 
-        return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
-            'contact' => $contact,
-        ));
+            //Abonnement déjà dans la base mais pas encore abonné à la newsletter
+            else {
+                $abonnement->setNewsletter(true);
+                $this->setFlash('notice', 'Vous êtes maintenant abonné et inscrit à la newsletter');
+            }
+        }
+        $em->persist($abonnement);
+        $em->flush();*/
+
+        return $this->redirect($lastUrl);
     }
+
+
+
 /*
             // Instanciation d'un nouveau message vers l'utilisateur avec la prise en compte des variables
             $message = \Swift_Message::newInstance()
