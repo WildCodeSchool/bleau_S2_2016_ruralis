@@ -4,20 +4,12 @@
 
     <div class="row adminmodel z-depth-2">
         <div class="col m10 offset-m1">
-            <h1>Editer {{ article.nom }}</h1>
-
             {{ form_start(edit_form) }}
 
             <div>
                 {{ form_label(edit_form.titre) }}
                 {{ form_errors(edit_form.titre) }}
                 {{ form_widget(edit_form.titre) }}
-            </div>
-
-            <div class="row hidden" id="newContenu">
-                {{ form_label(edit_form.date) }}
-                {{ form_errors(edit_form.date) }}
-                {{ form_widget(edit_form.date) }}
             </div>
 
             <div class="row hidden" id="newContenu">
@@ -34,7 +26,7 @@
 
                 {{ form_end(edit_form) }}
 
-                <a class="waves-effect waves-light btn" href="{{ path('article_index') }}">
+                <a class="waves-effect waves-light btn" href="{{ path('newsletter_index') }}">
                     Liste des newsletters
                 </a>
             </div>

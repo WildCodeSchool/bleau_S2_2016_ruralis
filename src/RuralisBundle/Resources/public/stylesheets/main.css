@@ -846,3 +846,9 @@ a.cardLink {
 .formulaire label {
   color: #ea640c;
 }
+
+/* line 1, ../sass/_newsletter.scss */
+.small_image {
+  width: 50px;
+  margin-right: 10px;
+}

@@ -121,4 +121,32 @@ class NewsletterController extends Controller
             ->getForm()
         ;
     }
+
+    public function emailAction(Request $request)
+    {
+        $from = $this->getParameter('mailer_user');
+// Instanciation des variables name, firstname, mail, sujet, msg pour récupérer la data
+        $mail = $request->request->get('mail');
+        $titre = $request->request->get('Titre');
+        $contenu = $request->request->get('contenu');
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Hello Email')
+            ->setFrom(array($from => 'Ruralis Magazine'))
+            ->setTo($mail)
+            ->setBody(
+                $this->renderView(
+                    '@Ruralis/user/newsletter.html.twig',
+                    array(
+                        'mail' => $mail,
+                        'titre' => $titre,
+                        'contenu' => $contenu
+                    )
+                ),
+                'text/html'
+            )
+        ;
+        $this->get('mailer')->send($message);
+
+        return $this->render('@Ruralis/user/newsletter.html.twig');
+    }
 }

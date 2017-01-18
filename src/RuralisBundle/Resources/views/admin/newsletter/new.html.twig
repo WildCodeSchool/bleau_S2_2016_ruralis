@@ -13,13 +13,7 @@
                     {{ form_widget(form.titre) }}
                 </div>
 
-                <div class="row input-field hidden">
-                    {{ form_label(form.date) }}
-                    {{ form_errors(form.date) }}
-                    {{ form_widget(form.date) }}
-                </div>
-
-                <div class="row hidden">
+                <div class="row">
                     {{ form_label(form.contenu) }}
                     {{ form_errors(form.contenu) }}
                     {{ form_widget(form.contenu ) }}
@@ -35,12 +29,12 @@
 
                     <a href="{{ path('article_index') }}">
                         <button class="btn waves-effect waves-light" type="submit" name="action">
-                            Liste des articles
+                            Liste des newsletters
                         </button>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
 
+{% endblock %}
