@@ -9,7 +9,7 @@ RuralisBundle\Entity\Contact:
             generator:
                 strategy: AUTO
     fields:
-        mail:
+        email:
             type: string
             length: 255
             unique: true

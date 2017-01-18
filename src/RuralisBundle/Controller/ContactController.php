@@ -2,9 +2,12 @@
 
 namespace RuralisBundle\Controller;
 
+use RuralisBundle\Entity\Abonnement;
 use RuralisBundle\Entity\Contact;
+use RuralisBundle\Entity\TypeAbo;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+
 
 /**
  * Contact controller.
@@ -14,20 +17,51 @@ class ContactController extends Controller
 {
     public function sendAction(Request $request)
     {
-        $from = $this->getParameter('mailer_user');
-        // Instanciation de la variable mail
-        $mail = $request->request->get('mail');
+        $email = $_POST['email'];
 
-        // Stockage du mail dans la table Contact
-        $contact = new Contact();
-        $form = $this->createForm('RuralisBundle\Form\ContactType', $contact);
-        $form->handleRequest($request);
+        //Récupération de la route en cours
+       // $request = $this->container->get('request');
+        $lastUrl = $this->get('request')->headers->get('referer');
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush($contact);
+        $this->container->get('ruralis.checkemail')->checkEmail($email);
+/*        //Vérifier si l'email existe déjà dans une table Contact
+        $em = $this->getDoctrine()->getManager();
+        $contact = $em->getRepository('RuralisBundle:Contact')->findOneByEmail($email);
+        if ($contact == null) {
+        //S'il n'existe pas
+            $newContact = new Contact();
+            $newContact->setEmail($email);
 
+            $abonnement = new Abonnement();
+            $abonnement->setContact($newContact);
+            $abonnement->setNewsletter(true);
+            $em->persist($newContact);
+
+            $this->setFlash('notice', 'Vous êtes maintenant inscrit à la newsletter');
+
+        }
+        else {
+            $abonnement = $em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
+            if ($abonnement->getNewsletter() == true) {
+                $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
+
+            }
+
+            //Abonnement déjà dans la base mais pas encore abonné à la newsletter
+            else {
+                $abonnement->setNewsletter(true);
+                $this->setFlash('notice', 'Vous êtes maintenant abonné et inscrit à la newsletter');
+            }
+        }
+        $em->persist($abonnement);
+        $em->flush();*/
+
+        return $this->redirect($lastUrl);
+    }
+
+
+
+/*
             // Instanciation d'un nouveau message vers l'utilisateur avec la prise en compte des variables
             $message = \Swift_Message::newInstance()
                 ->setSubject("Confirmation d'inscription à la newsletter")
@@ -40,7 +74,7 @@ class ContactController extends Controller
                             'mail' => $mail,
                             /*                            'sujet' => $sujet,
                                                         'message' => $msg*/
-                        )
+                     /*   )
                     ),
                     'text/html'
                 );
@@ -49,12 +83,12 @@ class ContactController extends Controller
             $this->addFlash(
                 'notice',
                 'Vous êtes maintenant inscrit à la newsletter'
-            );
+            );*/
 
-            return $this->redirectToRoute('ruralis_homepage');
-
+/*            return $this->redirectToRoute('ruralis_homepage');*/
+/*
         }
-        return $this->redirectToRoute('ruralis_homepage');
+        return $this->redirectToRoute('ruralis_homepage');*/
 
-    }
+/*    } */
 }

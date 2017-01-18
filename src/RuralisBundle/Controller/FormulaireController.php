@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 
+
 class FormulaireController extends Controller
 {
     const ABO_LECTEUR = 'lecteur';
@@ -38,7 +39,7 @@ class FormulaireController extends Controller
 
         $session = $this->get('request')->getSession();
         $session->set('details', array(
-            'prenom' => $prenom,
+            'Prénom' => $prenom,
             'nom' => $nom,
             'email' => $email,
             'tel' => $tel,
