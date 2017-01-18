@@ -34,6 +34,7 @@ class FormulaireController extends Controller
         $cp = $_POST['cp'];
         $ville = $_POST['ville'];
         $pays = $_POST['pays'];
+        $newsletter = $_POST['newsletter'];
 
         $session = $this->get('request')->getSession();
         $session->set('details', array(
@@ -45,6 +46,7 @@ class FormulaireController extends Controller
             'cp' => $cp,
             'ville' => $ville,
             'pays' => $pays,
+            'newsletter' => $newsletter,
         ));
 
         $details = $session->get('details');
