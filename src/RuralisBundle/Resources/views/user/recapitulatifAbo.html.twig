@@ -1,10 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>{{ app.session.get('type') }}</h1>
-    {% for value in app.session.get('details') %}
-            <p>
-                {{ value }}
-            </p>
-        {% endfor %}
+    <div class="abonnement">
+        <h4>Récapitulatif de votre abonnement</h4>
+
+        <div class="row abomodel z-depth-2">
+            <div class="col m10 offset-m1">
+                <p>
+                    Vous souhaitez vous abonner en tant que <b>{{ app.session.get('type') }}</b> pour une durée d'un an.
+                </p>
+
+                <p class="recaptitres"> Vos coordonnées :</p>
+                <div class="row">
+                    <div class="col s4 offset-s1">
+                        Prénom : {{ details.prenom }}
+                    </div>
+                    <div class="col s4 offset-s1">
+                        Nom : {{ details.nom }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s4 offset-s1">
+                        Mail : {{ details.email }}
+                    </div>
+                    <div class="col s4 offset-s1">
+                        Téléphone : {{ details.email }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s4 offset-s1">
+                        Adresse :
+                        <div class="row">
+                            <div class="col s10 offset-s1">
+                                <p>{{ details.rue }} {{ details.cp }} {{ details.ville }}</p>
+                                <p>{{ details.pays }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s4 offset-s1">
+                        {% if newsletter.isChecked %}
+                            <p>Vous avez coché la case m'abonner à la {{ details.newsletter }} </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#ajout du prix#}
+    {#ajout durée de paiement#}
+
 {% endblock %}
