@@ -7,38 +7,33 @@
         <div class="fixedSideNav center">
             <div class="row">
 
-            </div>
-                <div class="row">
+            {# SideNav#}
                     <p>
-                        Je m'abonne
+                        M'abonner
                     </p>
-                </div>
-                <div class="row">
+
                     <a class="vert" href="{{ path('ruralis_formulaire_abonnement', {'type':'lecteur'}) }}" target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}" alt="logo48"  />
                     </a>
-                </div>
-                <div class="row">
+
                     <a href="{{ path('ruralis_formulaire_abonnement', {'type':'donateur'}) }}"  target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}" alt="logo150"  />
                     </a>
-                </div>
-                <div class="row">
+
                     <a href="{{ path('ruralis_formulaire_abonnement', {'type':'ambassadeur'}) }}" target="_blank">
                         <img class="logoabt" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}" alt="logo250"  />
                     </a>
-                </div>
-                <div class="row">
+
                     <p>
                         J'encourage Ruralis Magazine
                     </p>
-                </div>
-                <div class="row">
+
                     <a href="{{ asset('/') }}" target="_blank">
-                        <img class="logoabt" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
+                        <img class="paypal" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
                     </a>
-                </div>
+            </div>
         </div>
+
 
         <div class="col s9 offset-s2 blogTop">
             {#      CARD DE UNE      #}
