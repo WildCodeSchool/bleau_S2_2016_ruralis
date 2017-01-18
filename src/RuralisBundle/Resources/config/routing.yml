@@ -35,6 +35,11 @@ ruralis_send_newsletter:
     defaults: { _controller:  RuralisBundle:Contact:send}
     methods:  [GET, POST]
 
+ruralis_template_newsletter:
+    path:     /{id}/newsletter
+    defaults: { _controller:  RuralisBundle:ViewsUser:templateNewsletter, id: null}
+
+
 # Routes
 
 # Routes Admin

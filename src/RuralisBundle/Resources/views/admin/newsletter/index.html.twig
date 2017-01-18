@@ -7,7 +7,6 @@
         <thead>
             <tr>
                 <th>Titre</th>
-                <th>Date</th>
                 <th>Contenu</th>
                 <th>Actions</th>
             </tr>
@@ -16,15 +15,14 @@
         {% for newsletter in newsletters %}
             <tr>
                 <td>{{ newsletter.titre }}</td>
-                <td>{% if newsletter.date %}{{ newsletter.date|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ newsletter.contenu }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">show</a>
+                            <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">edit</a>
+                            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">éditer</a>
                         </li>
                     </ul>
                 </td>
@@ -35,7 +33,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('newsletter_new') }}">Create a new newsletter</a>
+            <a href="{{ path('newsletter_new') }}">Ajouter une newsletter</a>
         </li>
     </ul>
 {% endblock %}
