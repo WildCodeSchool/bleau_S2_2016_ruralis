@@ -35,6 +35,11 @@ class CheckEmail {
         }
         else {
             $abonnement = $this->em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
+            //Si Contact existe dans abonnment mais n'est pas abonné au magazine
+            if (isset($abonnement->getContact())) {
+                $abonnement->setAbonne($newAbonne);
+                $abonnement->setTypeAbo($newTypeAbo);
+            }
             if ($abonnement->getNewsletter() == true) {
                 $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
 
@@ -46,10 +51,8 @@ class CheckEmail {
                 $this->setFlash('notice', 'Vous êtes maintenant abonné et inscrit à la newsletter');
             }
         }
-        $this->em->persist($abonnement);
-        $this->em->flush();
 
-        return ;
+        return $abonnement;
     }
 
     private function setFlash($action, $value)

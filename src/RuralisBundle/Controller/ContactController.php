@@ -2,16 +2,10 @@
 
 namespace RuralisBundle\Controller;
 
-use Doctrine\ORM\EntityManager;
 use RuralisBundle\Entity\Abonne;
-use RuralisBundle\Entity\Abonnement;
-use RuralisBundle\Entity\Contact;
 use RuralisBundle\Entity\TypeAbo;
-use RuralisBundle\Repository\AbonneRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\Session;
 
 
 /**
@@ -22,6 +16,8 @@ class ContactController extends Controller
 {
     public function sendAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+
         //Récupération de l'email saisi dans la barre de navigation
         $email = $_POST['email'];
 
@@ -29,8 +25,10 @@ class ContactController extends Controller
         $lastUrl = $this->get('request')->headers->get('referer');
 
         //Appel du service CheckEmail
-        $this->container->get('ruralis.checkemail')->checkEmail($email);
+        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
 
+        $em->persist($abonnement);
+        $em->flush();
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
         return $this->redirect($lastUrl);
     }
@@ -39,11 +37,28 @@ class ContactController extends Controller
 //    CODE AURORE
 
 
-    public function abosendAction(Request $request, $details)
+    public function abosendAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $typeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findAll();
+        if (empty($typeAbo)){
+            $lecteur = new TypeAbo();
+            $donateur = new TypeAbo();
+            $ambassadeur = new TypeAbo();
+
+            $lecteur->setType('lecteur');
+            $donateur->setType('donateur');
+            $ambassadeur->setType('ambassadeur');
+
+            $em->persist($lecteur);
+            $em->persist($donateur);
+            $em->persist($ambassadeur);
+
+            $em->flush();
+        }
+
         $session = $this->get('request')->getSession();
-        $details = $this->get('session')->get('details');
+        $details = $session->get('details');
 
         $prenom =  $details['prenom'];
         $nom =  $details['nom'];
@@ -54,71 +69,67 @@ class ContactController extends Controller
         $ville =  $details['ville'];
         $pays =  $details['pays'];
 
-//        //Appel du service CheckEmail
-//        $this->container->get('ruralis.checkemail')->checkEmail($email);
-
-        $session->set('details', array(
-
-            'prenom' => $prenom,
-            'nom' => $nom,
-            'email' => $email,
-            'tel' => $tel,
-            'rue' => $rue,
-            'cp' => $cp,
-            'ville' => $ville,
-            'pays' => $pays,
-        ));
-
-        $details = $session->get('details');
-
-        //Vérifie si l'email existe déjà dans une table Contact
-        $contact = $em->getRepository('RuralisBundle:Contact')->findOneByEmail($email);
-
         //Vérifie si l'abonne existe déjà dans une table abonnement
-//        $abonne = $em->getRepository('RuralisBundle:Abonne')->findOneBy($);
+//        $abonne = $em->getRepository('RuralisBundle:Abonne')->findOneBy($???);
 
-        if ($contact == null) {
-            //S'il n'existe pas je créer un contact
-            $newContact = new Contact();
-            $newContact->setEmail($email);
+        //Appel du service CheckEmail
+        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
 
-            $em->persist($newContact);
+        //Je créé un nouvel abonne avec les infos de $details
+        $newAbonne = new Abonne();
+        $newAbonne->setNom($nom);
+        $newAbonne->setPrenom($prenom);
+        $newAbonne->setRue($rue);
+        $newAbonne->setTelephone($tel);
+        $newAbonne->setCp($cp);
+        $newAbonne->setVille($ville);
+        $newAbonne->setPays($pays);
+        //Je récupère la date d'abonnement
+        $newAbonne->setDateAbonnement(new \DateTime());
 
-            //Je créé un nouvel abonne avec les info de $details
-            $newAbonne = new Abonne();
-            $newAbonne->setNom($nom);
-            $newAbonne->setPrenom($prenom);
-            $newAbonne->setRue($rue);
-            $newAbonne->setTelephone($tel);
-            $newAbonne->setCp($cp);
-            $newAbonne->setVille($ville);
-            $newAbonne->setPays($pays);
+        //Je créé un nouveau TypeAbo avec les données de $type
+        $type = $session->get('type');
+        $newTypeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findOneByType($type);
 
-            $em->persist($newContact);
+        $abonnement->setAbonne($newAbonne);
+        $abonnement->setTypeAbo($newTypeAbo);
 
-            //Je créé un nouveAu TypeAbo avec les donnés de $type
-            $newTypeAbo = new TypeAbo();
-            $type = $session->get('type');
-            $newTypeAbo->setType($type);
+        $em->persist($abonnement);
+        $em->flush();
 
-            $em->persist($newTypeAbo);
+//        else {
+//            //Je créé un nouvel abonne avec les infos de $details
+//            $newAbonne = new Abonne();
+//            $newAbonne->setNom($nom);
+//            $newAbonne->setPrenom($prenom);
+//            $newAbonne->setRue($rue);
+//            $newAbonne->setTelephone($tel);
+//            $newAbonne->setCp($cp);
+//            $newAbonne->setVille($ville);
+//            $newAbonne->setPays($pays);
+//
+//            $em->persist($newAbonne);
+//
+//            //Je créé un nouveAu TypeAbo avec les donnés de $type
+//            $newTypeAbo = new TypeAbo();
+//            $type = $session->get('type');
+//            $newTypeAbo->setType($type);
+//
+//            $em->persist($newTypeAbo);
+//
+//            // Je récupère les nouveaux objets abonne et typeAbo et j'injecte contact
+//            $newAbonnement = new Abonnement();
+//            $newAbonnement->getContact('email');
+//            $newAbonnement->setAbonne($newAbonne);
+//            $newAbonnement->setTypeAbo($newTypeAbo);
+//            $newAbonnement->setNewsletter(true);
+//
+//            $em->persist($newAbonnement);
+//
+//            dump($newAbonnement);
+//            die();
 
-            // Je récupère les nouveaux objets contact, abonne et typeAbo
-            $newAbonnement = new Abonnement();
-            $newAbonnement->setContact($newContact);
-            $newAbonnement->setAbonne($newAbonne);
-            $newAbonnement->setTypeAbo($newTypeAbo);
-            $newAbonnement->setNewsletter(true);
 
-            $em->persist($newAbonnement);
-
-            dump($newAbonnement);
-            die();
-
-
-//            $this->setFlash('notice', 'Vous êtes maintenant inscrit à la newsletter');
-        }
-       
             //        else {
 //            $abonnement = $this->em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
 //            if ($abonnement->getNewsletter() == true) {
@@ -136,8 +147,6 @@ class ContactController extends Controller
 //        $em->flush();
 //
 //        dump($details); die();
-
-
 
 
         //Lien vers l'API
