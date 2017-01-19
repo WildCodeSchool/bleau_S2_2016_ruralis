@@ -2,6 +2,7 @@
 
 namespace RuralisBundle\Controller;
 
+use RuralisBundle\Entity\Contact;
 use RuralisBundle\Entity\Newsletter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -122,31 +123,55 @@ class NewsletterController extends Controller
         ;
     }
 
-    public function emailAction(Request $request)
+    public function sendAction($id, Newsletter $newsletters)
     {
+        $em = $this->getDoctrine()->getManager();
+        $abonnesNl = $em->getRepository('RuralisBundle:Abonnement')->findByNewsletter(true);
+        $mailAboNl = $em->getRepository('RuralisBundle:Abonnement')->ContactAboNewsletter();
+        $newsletter = $em->getRepository('RuralisBundle:Newsletter')->findOneById($id);
+
+
+        //Structure du mail à enovyer
         $from = $this->getParameter('mailer_user');
-// Instanciation des variables name, firstname, mail, sujet, msg pour récupérer la data
-        $mail = $request->request->get('mail');
-        $titre = $request->request->get('Titre');
-        $contenu = $request->request->get('contenu');
+
+        // Instanciation des variables mail, titre, contenu pour récupérer la data
+/*        $email = $mailAboNl;*/
+
+        $emails=[];
+
+        foreach ($mailAboNl as $value) {
+            $emails[] = $value['email'];
+        }
+        $titre = $newsletter->getTitre();
+        $contenu = $newsletter->getContenu();
+        $envoi = $newsletter->setEnvoi(true);
+        $em->persist($envoi);
+        $em->flush();
+
+
         $message = \Swift_Message::newInstance()
-            ->setSubject('Hello Email')
+            ->setSubject($titre)
             ->setFrom(array($from => 'Ruralis Magazine'))
-            ->setTo($mail)
+            ->setBcc($emails)
             ->setBody(
                 $this->renderView(
                     '@Ruralis/user/newsletter.html.twig',
                     array(
-                        'mail' => $mail,
                         'titre' => $titre,
                         'contenu' => $contenu
                     )
                 ),
                 'text/html'
-            )
-        ;
+            );
         $this->get('mailer')->send($message);
+        //Renvoie vers la vue index, avec "newsletter envoyée cochée"
+        return $this->redirectToRoute('newsletter_index', array(
+            'newsletters' => $newsletters
+            ));
 
-        return $this->render('@Ruralis/user/newsletter.html.twig');
+/*        return $this->render('@Ruralis/user/newsletter.html.twig', array(
+            'titre' => $titre,
+            'contenu' => $contenu
+    ));*/
     }
 }

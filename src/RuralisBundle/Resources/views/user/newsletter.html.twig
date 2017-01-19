@@ -1,16 +1,11 @@
-{% extends 'base.html.twig' %}
-
 {% block body %}
 <div class="container">
     <div class="center">
         <img class="small_image" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
-        <h1>{{ newsletter.titre }}</h1>
+        <h1>{{ titre }}</h1>
     </div>
     <div>
-        {{ newsletter.contenu | raw }}
+        {{ contenu | raw }}
     </div>
 </div>
-
-
-
 {% endblock %}

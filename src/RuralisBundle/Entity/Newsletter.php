@@ -155,4 +155,33 @@ class Newsletter
     {
         return $this->abonnements;
     }
+    /**
+     * @var boolean
+     */
+    private $envoi;
+
+
+    /**
+     * Set envoi
+     *
+     * @param boolean $envoi
+     *
+     * @return Newsletter
+     */
+    public function setEnvoi($envoi)
+    {
+        $this->envoi = $envoi;
+
+        return $this;
+    }
+
+    /**
+     * Get envoi
+     *
+     * @return boolean
+     */
+    public function getEnvoi()
+    {
+        return $this->envoi;
+    }
 }

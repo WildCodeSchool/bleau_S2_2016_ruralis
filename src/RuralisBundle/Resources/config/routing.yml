@@ -30,9 +30,9 @@ ruralis_recapitulatif_abo:
     defaults: { _controller:  RuralisBundle:Formulaire:recapAbo}
     methods:  [POST]
 
-ruralis_send_newsletter:
-    path:     /sendnewsletter
-    defaults: { _controller:  RuralisBundle:Contact:send}
+ruralis_inscription_newsletter:
+    path:     /inscriptionnewsletter
+    defaults: { _controller:  RuralisBundle:Contact:inscription}
     methods:  [GET, POST]
 
 ruralis_template_newsletter:
@@ -44,6 +44,9 @@ ruralis_abosend:
     defaults: { _controller:  RuralisBundle:Contact:abosend, details: null }
     methods:  [GET, POST]
 
+ruralis_send_newsletter:
+    path:     /{id}/sendnewsletter
+    defaults: { _controller:  RuralisBundle:Newsletter:send, id: null }
 
 # Routes
 
