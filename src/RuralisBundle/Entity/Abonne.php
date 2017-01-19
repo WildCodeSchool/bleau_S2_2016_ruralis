@@ -7,8 +7,6 @@ namespace RuralisBundle\Entity;
  */
 class Abonne
 {
-
-
     /**
      * @var integer
      */
@@ -53,21 +51,6 @@ class Abonne
      * @var \DateTime
      */
     private $dateAbonnement;
-
-    /**
-     * @var boolean
-     */
-    private $newsletter;
-
-    /**
-     * @var boolean
-     */
-    private $abonne;
-
-    /**
-     * @var string
-     */
-    private $typeAbonnement;
 
 
     /**
@@ -270,77 +253,5 @@ class Abonne
     public function getDateAbonnement()
     {
         return $this->dateAbonnement;
-    }
-
-    /**
-     * Set newsletter
-     *
-     * @param boolean $newsletter
-     *
-     * @return Abonne
-     */
-    public function setNewsletter($newsletter)
-    {
-        $this->newsletter = $newsletter;
-
-        return $this;
-    }
-
-    /**
-     * Get newsletter
-     *
-     * @return boolean
-     */
-    public function getNewsletter()
-    {
-        return $this->newsletter;
-    }
-
-    /**
-     * Set abonne
-     *
-     * @param boolean $abonne
-     *
-     * @return Abonne
-     */
-    public function setAbonne($abonne)
-    {
-        $this->abonne = $abonne;
-
-        return $this;
-    }
-
-    /**
-     * Get abonne
-     *
-     * @return boolean
-     */
-    public function getAbonne()
-    {
-        return $this->abonne;
-    }
-
-    /**
-     * Set typeAbonnement
-     *
-     * @param string $typeAbonnement
-     *
-     * @return Abonne
-     */
-    public function setTypeAbonnement($typeAbonnement)
-    {
-        $this->typeAbonnement = $typeAbonnement;
-
-        return $this;
-    }
-
-    /**
-     * Get typeAbonnement
-     *
-     * @return string
-     */
-    public function getTypeAbonnement()
-    {
-        return $this->typeAbonnement;
     }
 }
