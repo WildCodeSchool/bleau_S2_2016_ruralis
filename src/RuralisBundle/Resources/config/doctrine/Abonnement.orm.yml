@@ -15,11 +15,16 @@ RuralisBundle\Entity\Abonnement:
     manyToOne:
         contact:
             targetEntity: RuralisBundle\Entity\Contact
+            cascade: ["persist", "remove"]
+
         type_abo:
             targetEntity: RuralisBundle\Entity\TypeAbo
             joinColumn:
                 nullable: true
+            cascade: ["persist", "remove"]
+
         abonne:
             targetEntity: RuralisBundle\Entity\Abonne
             joinColumn:
                 nullable: true
+            cascade: ["persist", "remove"]
