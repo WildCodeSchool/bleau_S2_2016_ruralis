@@ -45,7 +45,7 @@ class CheckEmail {
             }
 
             // Si déjà abonné à la newsletter
-            if ($abonnement->getNewsletter() == true) {
+            elseif ($abonnement->getNewsletter() == true) {
                 $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
             }
 

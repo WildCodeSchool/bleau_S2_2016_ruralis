@@ -27,8 +27,15 @@ class ContactController extends Controller
         //Appel du service CheckEmail
         $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
 
-        $em->persist($abonnement);
-        $em->flush();
+        if ($abonnement == 400) {
+            return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
+        }
+        
+        else {
+            $em->persist($abonnement);
+            $em->flush();
+        }
+
 
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
         return $this->redirect($lastUrl);
@@ -38,6 +45,19 @@ class ContactController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $typeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findAll();
+
+        $session = $this->get('request')->getSession();
+        $details = $session->get('details');
+
+        $prenom =  $details['prenom'];
+        $nom =  $details['nom'];
+        $email = $details['email'];
+        $tel =  $details['tel'];
+        $rue =  $details['rue'];
+        $cp =  $details['cp'];
+        $ville =  $details['ville'];
+        $pays =  $details['pays'];
+
         if (empty($typeAbo)){
             $lecteur = new TypeAbo();
             $donateur = new TypeAbo();
@@ -54,51 +74,41 @@ class ContactController extends Controller
             $em->flush();
         }
 
-        $session = $this->get('request')->getSession();
-        $details = $session->get('details');
-
-        $prenom =  $details['prenom'];
-        $nom =  $details['nom'];
-        $email = $details['email'];
-        $tel =  $details['tel'];
-        $rue =  $details['rue'];
-        $cp =  $details['cp'];
-        $ville =  $details['ville'];
-        $pays =  $details['pays'];
-
         //Appel du service CheckEmail
         $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
+
         if ($abonnement == 400){
             return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
         }
-        else{
-        //Je créé un nouvel abonne avec les infos de $details
-        $newAbonne = new Abonne();
-        $newAbonne->setNom($nom);
-        $newAbonne->setPrenom($prenom);
-        $newAbonne->setRue($rue);
-        $newAbonne->setTelephone($tel);
-        $newAbonne->setCp($cp);
-        $newAbonne->setVille($ville);
-        $newAbonne->setPays($pays);
-        //Je récupère la date d'abonnement
-        $newAbonne->setDateAbonnement(new \DateTime());
 
-        //Je créé un nouveau TypeAbo avec les données de $type
-        $type = $session->get('type');
-        $newTypeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findOneByType($type);
+        else {
+            //Je créé un nouvel abonne avec les infos de $details
+            $newAbonne = new Abonne();
+            $newAbonne->setNom($nom);
+            $newAbonne->setPrenom($prenom);
+            $newAbonne->setRue($rue);
+            $newAbonne->setTelephone($tel);
+            $newAbonne->setCp($cp);
+            $newAbonne->setVille($ville);
+            $newAbonne->setPays($pays);
+            //Je récupère la date d'abonnement
+            $newAbonne->setDateAbonnement(new \DateTime());
 
-        $abonnement->setAbonne($newAbonne);
-        $abonnement->setTypeAbo($newTypeAbo);
+            //Je créé un nouveau TypeAbo avec les données de $type
+            $type = $session->get('type');
+            $newTypeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findOneByType($type);
 
-        $em->persist($abonnement);
-        $em->flush();
+            $abonnement->setAbonne($newAbonne);
+            $abonnement->setTypeAbo($newTypeAbo);
 
-        //Lien vers l'API
+            $em->persist($abonnement);
+            $em->flush();
 
-        return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
-            'details' => $details,
-        ));
+            //Lien vers l'API
+
+            return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
+                'details' => $details,
+            ));
         }
     }
 }
