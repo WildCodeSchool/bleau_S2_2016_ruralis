@@ -33,16 +33,20 @@ class CheckEmail {
 
             $this->setFlash('notice', 'Vous êtes maintenant inscrit à la newsletter');
         }
+        // Si le mail existe dans la table
         else {
             $abonnement = $this->em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
-            //Si Contact existe dans abonnment mais n'est pas abonné au magazine
-            if (isset($abonnement->getContact())) {
-                $abonnement->setAbonne($newAbonne);
-                $abonnement->setTypeAbo($newTypeAbo);
+            // Je vérifie qu'il est déjà dans abonné au journal
+            // S'il est déjà abonné renvoie message Flash
+            if ($abonnement->getAbonne() != null)
+            {
+                $this->setFlash('notice', 'Vous êtes déjà abonné à Ruralis Magazine et à la Newsletter');
+                return $abonnement = 400;
             }
+            
+            // Si déjà abonné à la newsletter
             if ($abonnement->getNewsletter() == true) {
                 $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
-
             }
 
             //Abonnement déjà dans la base mais pas encore abonné à la newsletter

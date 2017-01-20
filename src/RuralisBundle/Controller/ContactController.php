@@ -33,10 +33,6 @@ class ContactController extends Controller
         return $this->redirect($lastUrl);
     }
 
-
-//    CODE AURORE
-
-
     public function abosendAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -69,12 +65,12 @@ class ContactController extends Controller
         $ville =  $details['ville'];
         $pays =  $details['pays'];
 
-        //Vérifie si l'abonne existe déjà dans une table abonnement
-//        $abonne = $em->getRepository('RuralisBundle:Abonne')->findOneBy($???);
-
         //Appel du service CheckEmail
         $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
-
+        if ($abonnement == 400){
+            return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
+        }
+        else{
         //Je créé un nouvel abonne avec les infos de $details
         $newAbonne = new Abonne();
         $newAbonne->setNom($nom);
@@ -97,62 +93,11 @@ class ContactController extends Controller
         $em->persist($abonnement);
         $em->flush();
 
-//        else {
-//            //Je créé un nouvel abonne avec les infos de $details
-//            $newAbonne = new Abonne();
-//            $newAbonne->setNom($nom);
-//            $newAbonne->setPrenom($prenom);
-//            $newAbonne->setRue($rue);
-//            $newAbonne->setTelephone($tel);
-//            $newAbonne->setCp($cp);
-//            $newAbonne->setVille($ville);
-//            $newAbonne->setPays($pays);
-//
-//            $em->persist($newAbonne);
-//
-//            //Je créé un nouveAu TypeAbo avec les donnés de $type
-//            $newTypeAbo = new TypeAbo();
-//            $type = $session->get('type');
-//            $newTypeAbo->setType($type);
-//
-//            $em->persist($newTypeAbo);
-//
-//            // Je récupère les nouveaux objets abonne et typeAbo et j'injecte contact
-//            $newAbonnement = new Abonnement();
-//            $newAbonnement->getContact('email');
-//            $newAbonnement->setAbonne($newAbonne);
-//            $newAbonnement->setTypeAbo($newTypeAbo);
-//            $newAbonnement->setNewsletter(true);
-//
-//            $em->persist($newAbonnement);
-//
-//            dump($newAbonnement);
-//            die();
-
-
-            //        else {
-//            $abonnement = $this->em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
-//            if ($abonnement->getNewsletter() == true) {
-//                $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
-//
-//            }
-//
-//            //Abonnement déjà dans la base mais pas encore abonné à la newsletter
-//            else {
-//                $abonnement->setNewsletter(true);
-//                $this->setFlash('notice', 'Vous êtes maintenant abonné et inscrit à la newsletter');
-//            }
-//        }
-//        $em->persist($abonnement);
-//        $em->flush();
-//
-//        dump($details); die();
-
-
         //Lien vers l'API
 
         return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
             'details' => $details,
         ));
+        }
     }
 }
