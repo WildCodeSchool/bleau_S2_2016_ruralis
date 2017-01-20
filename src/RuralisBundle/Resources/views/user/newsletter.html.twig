@@ -1,11 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .logo {
+            width: 40%;
+            margin-left: 30%;
+        }
+        .container {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid dimgrey;
+            border-radius: 15px;
+        }
+        .message {
+            text-align: justify;
+            margin-top: 25px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+
 {% block body %}
 <div class="container">
+    <img src="{{ cid }}" alt="logo">
     <div class="center">
-        <img class="small_image" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="Logo">
         <h1>{{ titre }}</h1>
     </div>
-    <div>
+    <div class="message">
         {{ contenu | raw }}
     </div>
 </div>
 {% endblock %}
+</html>
+

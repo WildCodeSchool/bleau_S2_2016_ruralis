@@ -149,7 +149,9 @@ class NewsletterController extends Controller
         $em->flush();
 
 
-        $message = \Swift_Message::newInstance()
+        $message = \Swift_Message::newInstance();
+        $cid = $message->embed(\Swift_Image::fromPath('/var/www/html/bleau_S2_2016_ruralis/web/bundles/ruralis/images/Logo_Ruralis.png'));
+        $message
             ->setSubject($titre)
             ->setFrom(array($from => 'Ruralis Magazine'))
             ->setBcc($emails)
@@ -158,20 +160,17 @@ class NewsletterController extends Controller
                     '@Ruralis/user/newsletter.html.twig',
                     array(
                         'titre' => $titre,
-                        'contenu' => $contenu
+                        'cid' => $cid,
+                        'contenu' => $contenu,
                     )
                 ),
                 'text/html'
             );
         $this->get('mailer')->send($message);
+
         //Renvoie vers la vue index, avec "newsletter envoyée cochée"
         return $this->redirectToRoute('newsletter_index', array(
             'newsletters' => $newsletters
             ));
-
-/*        return $this->render('@Ruralis/user/newsletter.html.twig', array(
-            'titre' => $titre,
-            'contenu' => $contenu
-    ));*/
     }
 }
