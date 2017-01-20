@@ -150,7 +150,7 @@ class NewsletterController extends Controller
 
 
         $message = \Swift_Message::newInstance();
-        $cid = $message->embed(\Swift_Image::fromPath('/var/www/html/bleau_S2_2016_ruralis/web/bundles/ruralis/images/Logo_Ruralis.png'));
+        $cid = $message->embed(\Swift_Image::fromPath('../web/bundles/ruralis/images/Logo_Ruralis.png'));
         $message
             ->setSubject($titre)
             ->setFrom(array($from => 'Ruralis Magazine'))
