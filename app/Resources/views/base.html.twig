@@ -62,7 +62,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div id="second_line_no_scroll" class="row">
                 {#Second line nav bar#}
                 <div class="row second_line">
                     <ul class="col offset-m3 m9 navlinks">
@@ -91,6 +91,33 @@
                             </li>
                         </ul>
                     </form>
+                </div>
+            </div>
+            <div id="second_line_scroll" class="row hide">
+                <div class="row second_line">
+                    <ul class="col m12 navlinks_on_scroll">
+                        <li class="li_nav_menu"><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
+                        <li class="li_nav_menu"><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
+                        <li class="li_nav_menu"><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
+                        <li class="li_nav_menu"><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
+                        <li class="li_nav_menu"><a href="{{ path('ruralis_admin') }}">Admin</a></li>
+                        <li class="last right">
+                            <form action="{{ path('ruralis_inscription_newsletter') }}" method="post">
+                                <ul>
+                                    <li class="col m3 nl">Newsletter</li>
+                                    <li class="col m6 input-field mailbox">
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" class="validate" name="email">
+                                    </li>
+                                    <li class="col m1">
+                                        <button class="btn waves-effect waves-light nl" type="submit" name="action">Ok
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -132,10 +159,25 @@
     </footer>
     {% endblock footer %}
     {% block javascripts %}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script>
             var asset = '{{ asset('') }}';
+            $(window).scroll(function() {
+                 if ($(this).scrollTop()>200){
+                    $("#second_line_scroll").fadeIn("slow", function() {
+                        $(this).removeClass("hide");
+                    });
+                }
+                else if ($(this).scrollTop()>0){
+                    $("#second_line_no_scroll").fadeOut();
+                }
+                else{
+                     $("#second_line_no_scroll").fadeIn();
+                     $("#second_line_scroll").fadeOut();
+                 }
+            });
         </script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
         <script type="text/javascript" src="{{ asset('bundles/ruralis/materialize/js/materialize.min.js') }}"></script>
         <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
         <script src="{{ asset('bundles/ruralis/javascript/blog.js') }}"></script>

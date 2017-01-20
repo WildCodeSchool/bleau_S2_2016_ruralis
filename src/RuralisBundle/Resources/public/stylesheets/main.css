@@ -495,29 +495,60 @@ div .titreRuralis {
   margin-left: 0px;
 }
 
-/* line 135, ../sass/_navbar.scss */
+/* line 133, ../sass/_navbar.scss */
+.navlinks_on_scroll {
+  margin-top: -15px;
+  margin-bottom: 0;
+  list-style: none;
+  height: 30px;
+}
+/* line 138, ../sass/_navbar.scss */
+.navlinks_on_scroll .li_nav_menu {
+  margin-bottom: 1em;
+  padding-left: 1em;
+  position: relative;
+  margin-left: 60px;
+}
+/* line 143, ../sass/_navbar.scss */
+.navlinks_on_scroll .li_nav_menu:after {
+  content: '';
+  height: .4em;
+  width: .4em;
+  background: #ea640c;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: .5em;
+  left: 2px;
+}
+/* line 155, ../sass/_navbar.scss */
+.navlinks_on_scroll .last {
+  margin-right: 2% !important;
+}
+
+/* line 161, ../sass/_navbar.scss */
 .third_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 137, ../sass/_navbar.scss */
+/* line 163, ../sass/_navbar.scss */
 .third_line ul {
   margin-bottom: 0px;
 }
 
-/* line 141, ../sass/_navbar.scss */
+/* line 167, ../sass/_navbar.scss */
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
 
-/* line 146, ../sass/_navbar.scss */
+/* line 172, ../sass/_navbar.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 151, ../sass/_navbar.scss */
+/* line 177, ../sass/_navbar.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
@@ -771,7 +802,6 @@ a.cardLink {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
-  background-color: #ff7fc6;
 }
 /* line 54, ../sass/_blog.scss */
 .fixedSideNav .row img {
@@ -779,10 +809,10 @@ a.cardLink {
 }
 /* line 57, ../sass/_blog.scss */
 .fixedSideNav .row .paypal {
-  width: 50% !important;
+  width: 30% !important;
 }
 
-/* line 83, ../sass/_blog.scss */
+/* line 66, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
@@ -790,13 +820,13 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 91, ../sass/_blog.scss */
+/* line 74, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 96, ../sass/_blog.scss */
+/* line 79, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
@@ -805,7 +835,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 106, ../sass/_blog.scss */
+/* line 89, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;

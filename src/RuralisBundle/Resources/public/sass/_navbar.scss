@@ -130,6 +130,32 @@ div .titreRuralis {
         margin-left: 0px;
     }
 }
+.navlinks_on_scroll{
+    margin-top: -15px;
+    margin-bottom: 0;
+    list-style: none;
+    height: 30px;
+    .li_nav_menu {
+        margin-bottom: 1em;
+        padding-left: 1em;
+        position: relative;
+        margin-left: 60px;
+        &:after {
+            content: '';
+            height: .4em;
+            width: .4em;
+            background: $orange;
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            top: .5em;
+            left: 2px;
+        }
+    }
+    .last{
+        margin-right: 2% !important;
+    }
+}
 
 //Third line nav bar
 .third_line {
