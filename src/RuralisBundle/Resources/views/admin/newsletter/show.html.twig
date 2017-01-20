@@ -31,8 +31,8 @@
                 <a class="waves-effect waves-light btn" href="{{ path('newsletter_delete', { 'id': newsletter.id }) }}">Supprimer
                 </a>
 
-                //Bouton pour envoyer la newsletter à tous les contacts
-                <a class="waves-effect waves-light btn" href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">Envoyer la newsletter
+                {# Bouton pour envoyer la newsletter à tous les contacts #}
+                <a class="waves-effect waves-light btn" href="{{ path('ruralis_send_newsletter', { 'id': newsletter.id }) }}">Envoyer la newsletter
                 </a>
 
                 <a class="waves-effect waves-light btn" href="{{ path('newsletter_index') }}">

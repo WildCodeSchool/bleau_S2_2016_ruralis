@@ -10,4 +10,13 @@ namespace RuralisBundle\Repository;
  */
 class AbonnementRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function ContactAboNewsletter()
+    {
+        $qb = $this->createQueryBuilder('a');
+        $qb->select('c.email')
+            ->join('a.contact', 'c')
+            ->where('a.newsletter = true');
+
+        return $qb->getQuery()->getResult();
+    }
 }

@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
  */
 class ContactController extends Controller
 {
-    public function sendAction(Request $request)
+    public function inscriptionAction(Request $request)
     {
         //Récupération de l'email saisi dans la barre de navigation
         $email = $_POST['email'];
@@ -26,7 +26,6 @@ class ContactController extends Controller
 
         //Appel du service CheckEmail
         $this->container->get('ruralis.checkemail')->checkEmail($email);
-
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
         return $this->redirect($lastUrl);
     }
