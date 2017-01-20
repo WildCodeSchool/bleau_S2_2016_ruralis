@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class ContactController extends Controller
 {
-    public function sendAction(Request $request)
+    public function inscriptionAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -29,6 +29,7 @@ class ContactController extends Controller
 
         $em->persist($abonnement);
         $em->flush();
+
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
         return $this->redirect($lastUrl);
     }

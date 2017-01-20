@@ -7,6 +7,7 @@ namespace RuralisBundle\Entity;
  */
 class Abonne
 {
+
     /**
      * @var integer
      */

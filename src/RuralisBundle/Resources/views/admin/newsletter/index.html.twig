@@ -8,6 +8,7 @@
             <tr>
                 <th>Titre</th>
                 <th>Contenu</th>
+                <th>Envoyée ?</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -15,7 +16,11 @@
         {% for newsletter in newsletters %}
             <tr>
                 <td>{{ newsletter.titre }}</td>
-                <td>{{ newsletter.contenu }}</td>
+                <td>{{ newsletter.contenu[:100] | raw }}</td>
+                <td>{% if newsletter.envoi == true %}
+                        newsletter déjà envoyée
+                    {% endif %}
+                </td>
                 <td>
                     <ul>
                         <li>
@@ -25,6 +30,10 @@
                             <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">éditer</a>
                         </li>
                     </ul>
+                </td>
+                <td>
+                    {# Si newsletter envoyée, case à cocher #}
+
                 </td>
             </tr>
         {% endfor %}
