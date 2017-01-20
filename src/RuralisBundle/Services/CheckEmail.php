@@ -41,12 +41,12 @@ class CheckEmail {
             if ($abonnement->getAbonne() != null)
             {
                 $this->setFlash('notice', 'Vous êtes déjà abonné à Ruralis Magazine et à la Newsletter');
-                return $abonnement = 400;
+/*                return $abonnement = 400;*/
             }
 
             // Si déjà abonné à la newsletter
             elseif ($abonnement->getNewsletter() == true) {
-                $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
+                $this->setFlash('notice', 'Vous étiez déjà inscrit à la newsletter, vous êtes maintenant abonné');
             }
 
             //Abonnement déjà dans la base mais pas encore abonné à la newsletter

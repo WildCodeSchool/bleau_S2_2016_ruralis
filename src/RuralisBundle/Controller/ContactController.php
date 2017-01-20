@@ -26,15 +26,15 @@ class ContactController extends Controller
 
         //Appel du service CheckEmail
         $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
+/*        if ($abonnement == 400) {
 
-        if ($abonnement == 400) {
             return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
-        }
+        }*/
         
-        else {
+/*        else {*/
             $em->persist($abonnement);
             $em->flush();
-        }
+        /*}*/
 
 
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
@@ -77,11 +77,11 @@ class ContactController extends Controller
         //Appel du service CheckEmail
         $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
 
-        if ($abonnement == 400){
+/*        if ($abonnement == 400){
             return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
-        }
+        }*/
 
-        else {
+/*        else {*/
             //Je créé un nouvel abonne avec les infos de $details
             $newAbonne = new Abonne();
             $newAbonne->setNom($nom);
@@ -109,6 +109,6 @@ class ContactController extends Controller
             return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
                 'details' => $details,
             ));
-        }
+/*        }*/
     }
 }
