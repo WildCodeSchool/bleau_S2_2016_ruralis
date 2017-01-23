@@ -7,13 +7,16 @@
 
 //ERASE MATERIALIZE CSS
 .navigation .col {
-        padding: initial !important;
+    padding: initial !important;
 }
 .navigation .row{
     margin-bottom: 0 !important;
 }
 
 //NAV BAR
+.nav_responsive{
+    display: none;
+}
 .fixed_nav {
     position: fixed;
     width: 100%;
@@ -176,4 +179,28 @@ div .titreRuralis {
 
 .navigation input[type="email"] {
     border-bottom: 1px solid $orange;
+}
+
+
+//Responsive navbar
+@media screen and (max-width: 600px) {
+    header{
+        .nav_responsive{
+            display: block;
+            background-color: $orange;
+            position: fixed;
+            z-index: 999;
+        }
+        height: 56px !important;
+        .fixed_nav{
+            display: none;
+        }
+        nav .brand-logo{
+            height:100%;
+            img{
+                height:100%;
+            }
+        }
+    }
+
 }

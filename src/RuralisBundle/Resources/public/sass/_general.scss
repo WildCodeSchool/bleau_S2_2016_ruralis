@@ -31,15 +31,25 @@ Author: Marielle Lautrou and Aurore David
 
 
 /*Top image*/
-.ruralis_img_top {
-
-    margin-bottom: 0;
+.header-bandeau{
+    .ruralis_img_top {
+        margin-bottom: 0;
+    }
+    .logo{
+        position: relative;
+        bottom: 565px;
+        margin-bottom: -320px;
+        z-index: 2;
+    }
 }
-.logo{
-    position: relative;
-    bottom: 565px;
-    margin-bottom: -320px;
-    z-index: 2;
+
+
+@media screen and (max-width: 600px) {
+    .header-bandeau{
+        .logo{
+            display: none;
+        }
+    }
 }
 
 /*==================================================================== */
@@ -83,6 +93,15 @@ Author: Marielle Lautrou and Aurore David
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    .arpenteurs.valign-wrapper{
+        display: block;
+        img{
+            width: 50%;
+        }
+    }
+}
+
 // Peuples
 .peuple {
     text-align: center;
@@ -117,6 +136,9 @@ Author: Marielle Lautrou and Aurore David
     span{
         color: $orange;
     }
+    .btn_en_savoir_plus{
+        height: inherit;
+    }
 }
 
 // Abonnement
@@ -124,6 +146,14 @@ Author: Marielle Lautrou and Aurore David
     padding: 0 5%;
     background-color: $gris;
     @include multiple_img_line();
+}
+
+@media screen and (max-width: 600px) {
+    .abonnement_ruralis{
+        div:last-child{
+            margin-left: 25% !important;
+        }
+    }
 }
 
 
@@ -151,6 +181,9 @@ Author: Marielle Lautrou and Aurore David
     .col{
         padding: 0 0.30rem !important;
     }
+    img{
+        width: 100%;
+    }
 }
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
@@ -168,5 +201,16 @@ footer{
     }
     img{
         width: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer{
+        .valign-wrapper{
+            display: block;
+        }
+        .logowcs{
+            margin-top: 35px;
+        }
     }
 }
