@@ -3,14 +3,17 @@
 {% block body %}
     <body>
         {# IMAGES TOP PAGE #}
-        <div class="row ruralis_img_top">
-            <div class="col m12">
-                <img class="size-large" src="{{ asset("bundles/ruralis/images/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi.png") }}" alt="home">
-            </div>
-            <div class="col m2 offset-m5 logotopruralis">
-                <img class="logo responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo ruralis magazine" />
+        <div class="header-bandeau">
+            <div class="row ruralis_img_top">
+                <div class="col m12">
+                    <img class="size-large" src="{{ asset("bundles/ruralis/images/Saint-Pierre-d'Entremont-en-Chartreuse-72-dpi.png") }}" alt="home">
+                </div>
+                <div class="col m2 offset-m5 logotopruralis">
+                    <img class="logo responsive-img" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo ruralis magazine" />
+                </div>
             </div>
         </div>
+
 
         {# DESCRIPTION #}
         <div class="row description">
@@ -21,21 +24,25 @@
 
         {# TERRITOIRES EN DEVENIR #}
         <div class="row territoire">
-            <h4>TERRITOIRES EN DEVENIR</h4>
-            <div class="col m2 offset-m1">
-                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-1.jpg') }}" alt="Paysage Clocher">
+            <div class="row">
+                <h4>TERRITOIRES EN DEVENIR</h4>
             </div>
-            <div class="col m2">
-                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-2.jpg') }}" alt="Paysage Clocher 2">
-            </div>
-            <div class="col m2">
-                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 3">
-            </div>
-            <div class="col m2">
-                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 4">
-            </div>
-            <div class="col m2">
-                <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-9.jpg') }}" alt="Paysage clocher 5">
+            <div class="row">
+                <div class="col m2 s4 offset-m1">
+                    <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-1.jpg') }}" alt="Paysage Clocher">
+                </div>
+                <div class="col s4 m2">
+                    <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-2.jpg') }}" alt="Paysage Clocher 2">
+                </div>
+                <div class="col s4 m2">
+                    <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 3">
+                </div>
+                <div class="col s4 m2">
+                    <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-4.jpg') }}" alt="Paysage Clocher 4">
+                </div>
+                <div class="col s4 m2">
+                    <img src="{{ asset('bundles/ruralis/images/Paysage-Clocher-9.jpg') }}" alt="Paysage clocher 5">
+                </div>
             </div>
         </div>
 
@@ -63,10 +70,10 @@
     {# ARPENTEURS #}
 
         <div class="row arpenteurs valign-wrapper">
-            <div class="col m3 offset-m2">
+            <div class="col m3 s12 offset-m2">
                 <img class="size-large" src="{{ asset('bundles/ruralis/images/Couverture.png') }}" alt="Couverture magazine" />
             </div>
-            <div class="col m4 offset-m1 valign">
+            <div class="col m4 s12 offset-m1 valign">
                 <h5>Arpenteurs des territoires</h5>
                 <p>Photographie, dessins et infographie seront les principales clés de lecture des sujets. Ce parti pris d’une maquette visuelle renforce le pouvoir immersif des reportages au plus près de l’action et complète le travail pertinent d’un rédactionnel de terrain. Ce magazine papier, à diffusion nationale, veut explorer la géo-diversité des campagnes françaises en rendant vivante et immersive chaque part d’humanité sous forme d’histoires incarnées.</p>
             </div>
@@ -76,19 +83,19 @@
 
         <div class="row peuple">
             <h4>PEUPLE DES CAMPAGNES</h4>
-            <div class="col m2 offset-m1">
+            <div class="col m2 s4 offset-m1">
                 <img src="{{ asset('bundles/ruralis/images/Editing_Culture_bandeau.png') }}" alt="1">
             </div>
-            <div class="col m2">
+            <div class="col s4 m2">
                 <img src="{{ asset('bundles/ruralis/images/Festival-de-Montsapey-bandeau.png') }}" alt="2">
             </div>
-            <div class="col m2">
+            <div class="col s4 m2">
                 <img src="{{ asset('bundles/ruralis/images/guylaine_bandeau.png') }}" alt="3">
             </div>
-            <div class="col m2">
+            <div class="col s4 m2">
                 <img src="{{ asset('bundles/ruralis/images/Olivier_Chaloches_bandeau.png') }}" alt="4">
             </div>
-            <div class="col m2">
+            <div class="col s4 m2">
                 <img src="{{ asset('bundles/ruralis/images/Tro-Breizh-bandeau.png') }}" alt="5">
             </div>
         </div>
@@ -121,7 +128,7 @@
                         <img src="{{ asset('bundles/ruralis/images/fleche.png') }}" alt="fleche" />
                     </div>
                     <div class="col m4 valign">
-                        <a href="{{ asset('bundles/ruralis/images/Business_plan_Ruralis_Magazine.pdf') }}" target="_blank" class="waves-effect waves-light btn">En savoir plus</a>
+                        <a href="{{ asset('bundles/ruralis/images/Business_plan_Ruralis_Magazine.pdf') }}" target="_blank" class="waves-effect waves-light btn btn_en_savoir_plus">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -130,18 +137,18 @@
 
     {# Abonnement #}
 
-        <div class="row abonnement_ruralis">
-            <div class="col m4">
+        <div class="row abonnement_ruralis ">
+            <div class="col m4 s6">
                 <a href="{{ asset('bundles/ruralis/images/abonnement_de_lecteur.pdf') }}" target="_blank">
                     <img src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}" alt="logo48"  />
                 </a>
             </div>
-            <div class="col m4">
+            <div class="col m4 s6">
                 <a href="{{ asset('bundles/ruralis/images/abonnement_de_soutien.pdf') }}"  target="_blank">
                     <img src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}" alt="logo150"  />
                 </a>
             </div>
-            <div class="col m4">
+            <div class="col m4 s6">
                 <a href="{{ asset('bundles/ruralis/images/abonnement_ambassadeur.pdf') }}"  target="_blank">
                     <img src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}" alt="logo250"  />
                 </a>

@@ -121,8 +121,20 @@
                 </div>
             </div>
         </div>
+        <nav class="nav_responsive">
+            <div class="nav-wrapper">
+                <a href="{{ path('ruralis_homepage') }}" class="brand-logo"><img src="{{ asset('bundles/ruralis/images/logo.png') }}" alt=""></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{ path('ruralis_homepage') }}">Accueil</a></li>
+                    <li><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
+                    <li><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
+                    <li><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
+                    <li><a href="{{ path('ruralis_admin') }}">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-
     {% endblock %}
     <main>
         {% for flash_message in app.session.flashBag.get('notice') %}
@@ -160,10 +172,13 @@
     {% endblock footer %}
     {% block javascripts %}
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles/ruralis/materialize/js/materialize.min.js') }}"></script>
+        <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
+        <script src="{{ asset('bundles/ruralis/javascript/blog.js') }}"></script>
         <script>
             var asset = '{{ asset('') }}';
             $(window).scroll(function() {
-                 if ($(this).scrollTop()>200){
+                if ($(this).scrollTop()>200){
                     $("#second_line_scroll").fadeIn("slow", function() {
                         $(this).removeClass("hide");
                     });
@@ -172,15 +187,12 @@
                     $("#second_line_no_scroll").fadeOut();
                 }
                 else{
-                     $("#second_line_no_scroll").fadeIn();
-                     $("#second_line_scroll").fadeOut();
-                 }
+                    $("#second_line_no_scroll").fadeIn();
+                    $("#second_line_scroll").fadeOut();
+                }
             });
+            $(".button-collapse").sideNav();
         </script>
-
-        <script type="text/javascript" src="{{ asset('bundles/ruralis/materialize/js/materialize.min.js') }}"></script>
-        <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
-        <script src="{{ asset('bundles/ruralis/javascript/blog.js') }}"></script>
     {% endblock %}
 </body>
 </html>
