@@ -23,19 +23,13 @@ class ContactController extends Controller
 
         //Récupération de la route en cours
         $lastUrl = $this->get('request')->headers->get('referer');
-
+        $newsletter = "on";
+        $type = false;
         //Appel du service CheckEmail
-        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
-/*        if ($abonnement == 400) {
+        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email, $newsletter, $type);
 
-            return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
-        }*/
-        
-/*        else {*/
-            $em->persist($abonnement);
-            $em->flush();
-        /*}*/
-
+        $em->persist($abonnement);
+        $em->flush();
 
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
         return $this->redirect($lastUrl);
@@ -57,7 +51,9 @@ class ContactController extends Controller
         $cp =  $details['cp'];
         $ville =  $details['ville'];
         $pays =  $details['pays'];
+        $newsletter = $details['newsletter'];
 
+        $type = true;
         if (empty($typeAbo)){
             $lecteur = new TypeAbo();
             $donateur = new TypeAbo();
@@ -75,7 +71,7 @@ class ContactController extends Controller
         }
 
         //Appel du service CheckEmail
-        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email);
+        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email, $newsletter, $type);
 
 /*        if ($abonnement == 400){
             return $this->render('@Ruralis/admin/accueilAdmin.html.twig');

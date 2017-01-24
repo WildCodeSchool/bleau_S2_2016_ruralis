@@ -664,71 +664,66 @@ div .titreRuralis {
   border-bottom-color: white;
 }
 /* line 43, ../sass/_admin.scss */
-.adminmodel .select-dropdown {
-  color: #00B82B;
-}
-/* line 47, ../sass/_admin.scss */
 .adminmodel .file-path {
   color: white;
 }
-/* line 51, ../sass/_admin.scss */
+/* line 47, ../sass/_admin.scss */
 .adminmodel .imageAdmin {
   height: 150px;
 }
-/* line 56, ../sass/_admin.scss */
+/* line 52, ../sass/_admin.scss */
 .adminmodel .middleText {
   margin-top: 75px;
 }
-/* line 60, ../sass/_admin.scss */
+/* line 56, ../sass/_admin.scss */
 .adminmodel textarea {
   background-color: #ebebeb !important;
 }
-/* line 64, ../sass/_admin.scss */
+/* line 60, ../sass/_admin.scss */
 .adminmodel label {
   color: white;
 }
-/* line 68, ../sass/_admin.scss */
+/* line 64, ../sass/_admin.scss */
 .adminmodel .input-field label,
 .adminmodel label,
 .adminmodel .dropdown-content li > a,
 .adminmodel .dropdown-content li > span,
 .adminmodel .descimg {
   color: #ea640c;
-  background-color: #A9AAAE;
 }
-/* line 77, ../sass/_admin.scss */
+/* line 72, ../sass/_admin.scss */
 .adminmodel .adminImg {
   width: 50px;
 }
-/* line 81, ../sass/_admin.scss */
+/* line 76, ../sass/_admin.scss */
 .adminmodel .btn {
   background-color: #00B82B;
 }
-/* line 85, ../sass/_admin.scss */
+/* line 80, ../sass/_admin.scss */
 .adminmodel .btn:hover {
   background-color: #00f138;
 }
 
-/* line 94, ../sass/_admin.scss */
+/* line 89, ../sass/_admin.scss */
 .menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
   justify-content: center;
 }
-/* line 100, ../sass/_admin.scss */
+/* line 95, ../sass/_admin.scss */
 .menuAdmin div .hoverable {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 106, ../sass/_admin.scss */
+/* line 101, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;
   font-family: 'majalla';
 }
-/* line 111, ../sass/_admin.scss */
+/* line 106, ../sass/_admin.scss */
 .menuAdmin a:hover {
   color: #ea640c !important;
 }
