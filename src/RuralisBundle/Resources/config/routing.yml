@@ -35,9 +35,17 @@ ruralis_inscription_newsletter:
     defaults: { _controller:  RuralisBundle:Contact:inscription}
     methods:  [GET, POST]
 
+ruralis_inscrits_newsletter:
+    path:     /admin/inscritsnewsletter
+    defaults: { _controller:  RuralisBundle:Admin:InscritsNewsletter }
+
 ruralis_template_newsletter:
     path:     /{id}/newsletter
     defaults: { _controller:  RuralisBundle:ViewsUser:templateNewsletter, id: null}
+
+ruralis_abonnes:
+    path:     /admin/abonnes
+    defaults: { _controller:  RuralisBundle:Admin:abonnes }
 
 ruralis_abosend:
     path:     /abosend
