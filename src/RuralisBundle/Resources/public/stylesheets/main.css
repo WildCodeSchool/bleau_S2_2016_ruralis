@@ -711,21 +711,29 @@ div .titreRuralis {
   height: 200px;
   justify-content: center;
 }
-/* line 95, ../sass/_admin.scss */
-.menuAdmin div .hoverable {
+/* line 96, ../sass/_admin.scss */
+.menuAdmin div .jaune {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 101, ../sass/_admin.scss */
+/* line 102, ../sass/_admin.scss */
+.menuAdmin div .vert {
+  background-image: url("../images/fond_texture_vert.png");
+  background-size: 0.7%;
+  background-repeat: repeat;
+}
+/* line 108, ../sass/_admin.scss */
+.menuAdmin div .orange {
+  background-image: url("../images/fond_texture_orange.png");
+  background-size: 0.7%;
+  background-repeat: repeat;
+}
+/* line 114, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;
   font-family: 'majalla';
-}
-/* line 106, ../sass/_admin.scss */
-.menuAdmin a:hover {
-  color: #ea640c !important;
 }
 
 /* line 1, ../sass/_abonnement.scss */
