@@ -333,10 +333,14 @@ Author: Marielle Lautrou and Aurore David
   color: #ea640c;
 }
 /* line 175, ../sass/_general.scss */
+.trombi p {
+  font-family: 'Courier New', sans-serif !important;
+}
+/* line 179, ../sass/_general.scss */
 .trombi .col {
   padding: 0 0.30rem !important;
 }
-/* line 178, ../sass/_general.scss */
+/* line 182, ../sass/_general.scss */
 .trombi img {
   width: 100%;
 }
@@ -344,32 +348,32 @@ Author: Marielle Lautrou and Aurore David
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 186, ../sass/_general.scss */
+/* line 190, ../sass/_general.scss */
 footer {
   background-color: #ea640c !important;
   padding: 20px;
   bottom: 0;
   text-align: center;
 }
-/* line 192, ../sass/_general.scss */
+/* line 196, ../sass/_general.scss */
 footer a {
   color: white;
 }
-/* line 196, ../sass/_general.scss */
+/* line 200, ../sass/_general.scss */
 footer a:hover {
   font-weight: bold;
 }
-/* line 200, ../sass/_general.scss */
+/* line 204, ../sass/_general.scss */
 footer img {
   width: 30%;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 207, ../sass/_general.scss */
+  /* line 211, ../sass/_general.scss */
   footer .valign-wrapper {
     display: block;
   }
-  /* line 210, ../sass/_general.scss */
+  /* line 214, ../sass/_general.scss */
   footer .logowcs {
     margin-top: 35px;
   }
@@ -419,106 +423,108 @@ footer img {
 }
 
 /* line 42, ../sass/_navbar.scss */
-.majalla {
+a.majalla {
   font-size: 40px;
-  font-weight: 800;
-}
-
-/* line 47, ../sass/_navbar.scss */
-.majallaSmall {
   font-weight: 100;
-  font-size: 20px;
+  margin-left: 10px;
 }
 
-/* line 52, ../sass/_navbar.scss */
+/* line 48, ../sass/_navbar.scss */
+a.majallaSmall {
+  font-weight: 100 !important;
+  font-size: 20px;
+  letter-spacing: 2.5px !important;
+  margin-left: -12px;
+}
+
+/* line 55, ../sass/_navbar.scss */
 .majallaSmallItalic {
   font-style: italic;
   font-size: 25px;
   margin-top: 27px;
 }
 
-/* line 58, ../sass/_navbar.scss */
+/* line 61, ../sass/_navbar.scss */
 div .titreRuralis {
   max-height: 33px;
 }
 
-/* line 62, ../sass/_navbar.scss */
+/* line 65, ../sass/_navbar.scss */
 .first_line {
   background-color: #ea640c;
   max-height: 56px;
   margin-bottom: 0;
 }
 
-/* line 67, ../sass/_navbar.scss */
+/* line 70, ../sass/_navbar.scss */
 .nav_logo {
   width: 100%;
   max-height: 56px;
 }
 
-/* line 72, ../sass/_navbar.scss */
+/* line 75, ../sass/_navbar.scss */
 .logoFb {
   height: 45px;
   padding-top: 5px;
-  padding-left: 50px;
 }
 
-/* line 78, ../sass/_navbar.scss */
+/* line 80, ../sass/_navbar.scss */
 .logoTw {
   height: 45px;
   padding-top: 5px;
 }
 
-/* line 83, ../sass/_navbar.scss */
+/* line 85, ../sass/_navbar.scss */
 .logoIn {
   height: 45px;
   padding-top: 5px;
 }
 
-/* line 87, ../sass/_navbar.scss */
+/* line 89, ../sass/_navbar.scss */
 .smallarbre {
   max-width: 64%;
 }
 
-/* line 90, ../sass/_navbar.scss */
+/* line 92, ../sass/_navbar.scss */
 #animation {
   background-repeat: no-repeat;
 }
 
-/* line 93, ../sass/_navbar.scss */
+/* line 95, ../sass/_navbar.scss */
 #bottommark {
   position: absolute;
   bottom: 0;
   width: 0;
 }
 
-/* line 100, ../sass/_navbar.scss */
+/* line 102, ../sass/_navbar.scss */
 .second_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 102, ../sass/_navbar.scss */
+/* line 104, ../sass/_navbar.scss */
 .second_line a:hover {
   background-color: rgba(234, 100, 12, 0.48);
   color: #ea4c0a;
 }
-/* line 106, ../sass/_navbar.scss */
+/* line 108, ../sass/_navbar.scss */
 .second_line ul li {
   float: left;
 }
 
-/* line 111, ../sass/_navbar.scss */
+/* line 113, ../sass/_navbar.scss */
 .navlinks {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
 }
-/* line 115, ../sass/_navbar.scss */
+/* line 117, ../sass/_navbar.scss */
 .navlinks li {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 10%;
 }
-/* line 120, ../sass/_navbar.scss */
+/* line 122, ../sass/_navbar.scss */
 .navlinks li:after {
   content: '';
   height: .4em;
@@ -530,26 +536,26 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 132, ../sass/_navbar.scss */
+/* line 134, ../sass/_navbar.scss */
 .navlinks li:first-child {
   margin-left: 0px;
 }
 
-/* line 136, ../sass/_navbar.scss */
+/* line 138, ../sass/_navbar.scss */
 .navlinks_on_scroll {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
   height: 30px;
 }
-/* line 141, ../sass/_navbar.scss */
+/* line 143, ../sass/_navbar.scss */
 .navlinks_on_scroll .li_nav_menu {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 60px;
 }
-/* line 146, ../sass/_navbar.scss */
+/* line 148, ../sass/_navbar.scss */
 .navlinks_on_scroll .li_nav_menu:after {
   content: '';
   height: .4em;
@@ -561,59 +567,59 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 158, ../sass/_navbar.scss */
+/* line 160, ../sass/_navbar.scss */
 .navlinks_on_scroll .last {
   margin-right: 2% !important;
 }
 
-/* line 164, ../sass/_navbar.scss */
+/* line 166, ../sass/_navbar.scss */
 .third_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 166, ../sass/_navbar.scss */
+/* line 168, ../sass/_navbar.scss */
 .third_line ul {
   margin-bottom: 0px;
 }
 
-/* line 170, ../sass/_navbar.scss */
+/* line 172, ../sass/_navbar.scss */
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
 
-/* line 175, ../sass/_navbar.scss */
+/* line 177, ../sass/_navbar.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 180, ../sass/_navbar.scss */
+/* line 182, ../sass/_navbar.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 187, ../sass/_navbar.scss */
+  /* line 189, ../sass/_navbar.scss */
   header {
     height: 56px !important;
   }
-  /* line 188, ../sass/_navbar.scss */
+  /* line 190, ../sass/_navbar.scss */
   header .nav_responsive {
     display: block;
     background-color: #ea640c;
     position: fixed;
     z-index: 999;
   }
-  /* line 195, ../sass/_navbar.scss */
+  /* line 197, ../sass/_navbar.scss */
   header .fixed_nav {
     display: none;
   }
-  /* line 198, ../sass/_navbar.scss */
+  /* line 200, ../sass/_navbar.scss */
   header nav .brand-logo {
     height: 100%;
   }
-  /* line 200, ../sass/_navbar.scss */
+  /* line 202, ../sass/_navbar.scss */
   header nav .brand-logo img {
     height: 100%;
   }
@@ -789,7 +795,7 @@ div .titreRuralis {
   line-height: 15px;
   font-family: 'Time New Roman', Regular;
 }
-/* line 68, ../sass/_abonnement.scss */
+/* line 63, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
   font-weight: bold;
   margin-top: 55px;
