@@ -49,24 +49,25 @@ header {
 /* line 61, ../sass/main.scss */
 p {
   font-size: 18px;
-  font-family: 'Time New Roman', sans-serif;
+  font-family: 'Time New Roman', Regular !important;
 }
 
 /* line 65, ../sass/main.scss */
-h4 {
+h1 {
   font-family: 'Arial Bold';
   text-align: center;
   font-size: 35px;
 }
 
-/* line 70, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 h5 {
+  text-align: center;
   font-size: 25px;
   font-family: 'Sakkal Majalla Bold';
   color: #ea640c;
 }
 
-/* line 77, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:focus:not([readonly]) + label,
 input[type=password]:focus:not([readonly]) + label,
@@ -83,7 +84,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #ea640c;
 }
 
-/* line 92, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -101,7 +102,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #ea640c;
 }
 
-/* line 108, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 input:not([type]),
 input[type="text"],
 input[type="password"],
@@ -118,7 +119,7 @@ textarea.materialize-textarea {
   color: black;
 }
 
-/* line 123, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 [type="checkbox"]:checked + label:before {
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -126,18 +127,18 @@ textarea.materialize-textarea {
   border-bottom: 2px solid #ea640c;
 }
 
-/* line 129, ../sass/main.scss */
+/* line 131, ../sass/main.scss */
 .input-field label {
   color: #ea640c;
 }
 
-/* line 135, ../sass/main.scss */
+/* line 137, ../sass/main.scss */
 .btn.nl {
   background-color: #ea640c;
   margin-top: -11px;
 }
 
-/* line 139, ../sass/main.scss */
+/* line 141, ../sass/main.scss */
 .btn.nl:hover {
   background-color: #ff8436;
 }
@@ -190,27 +191,22 @@ Author: Marielle Lautrou and Aurore David
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
 /* line 60, ../sass/_general.scss */
-.editorial p, .objectifs p, .arpenteurs p {
-  font-family: 'Time New Roman';
-}
-
-/* line 65, ../sass/_general.scss */
 .description {
   text-align: center;
   margin-top: -20px;
   padding-top: -20px;
 }
-/* line 69, ../sass/_general.scss */
+/* line 64, ../sass/_general.scss */
 .description p {
   color: #ea640c;
 }
 
-/* line 75, ../sass/_general.scss */
+/* line 70, ../sass/_general.scss */
 .territoire {
   padding: 0;
   width: 100%;
 }
-/* line 78, ../sass/_general.scss */
+/* line 73, ../sass/_general.scss */
 .territoire h4 {
   padding: 15px 0;
 }
@@ -223,16 +219,16 @@ Author: Marielle Lautrou and Aurore David
   padding: 0 0.30rem !important;
 }
 
-/* line 85, ../sass/_general.scss */
+/* line 80, ../sass/_general.scss */
 .editorial {
   text-align: center;
 }
-/* line 87, ../sass/_general.scss */
+/* line 82, ../sass/_general.scss */
 .editorial .edit {
   padding-left: 5px !important;
 }
 
-/* line 93, ../sass/_general.scss */
+/* line 88, ../sass/_general.scss */
 .arpenteurs {
   padding: 8px 0;
   margin-top: 7%;
@@ -241,16 +237,16 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 101, ../sass/_general.scss */
+  /* line 96, ../sass/_general.scss */
   .arpenteurs.valign-wrapper {
     display: block;
   }
-  /* line 103, ../sass/_general.scss */
+  /* line 98, ../sass/_general.scss */
   .arpenteurs.valign-wrapper img {
     width: 50%;
   }
 }
-/* line 110, ../sass/_general.scss */
+/* line 105, ../sass/_general.scss */
 .peuple {
   text-align: center;
 }
@@ -263,44 +259,42 @@ Author: Marielle Lautrou and Aurore David
   padding: 0 0.30rem !important;
 }
 
-/* line 117, ../sass/_general.scss */
+/* line 112, ../sass/_general.scss */
 .objectifs div:first-child {
   text-align: center;
 }
-/* line 120, ../sass/_general.scss */
+/* line 115, ../sass/_general.scss */
 .objectifs .txtorange {
   color: #ea640c;
 }
 
-/* line 125, ../sass/_general.scss */
+/* line 120, ../sass/_general.scss */
 .abonnes p {
   text-align: center;
-  font-size: 150%;
-  font-family: 'courier new', sans-serif;
   font-weight: bold;
 }
-/* line 131, ../sass/_general.scss */
+/* line 124, ../sass/_general.scss */
 .abonnes img {
   width: 50%;
 }
-/* line 134, ../sass/_general.scss */
+/* line 127, ../sass/_general.scss */
 .abonnes a {
   background-color: #ea640c;
 }
-/* line 137, ../sass/_general.scss */
+/* line 130, ../sass/_general.scss */
 .abonnes a:hover {
   background-color: #ff8436;
 }
-/* line 140, ../sass/_general.scss */
+/* line 133, ../sass/_general.scss */
 .abonnes span {
   color: #ea640c;
 }
-/* line 143, ../sass/_general.scss */
+/* line 136, ../sass/_general.scss */
 .abonnes .btn_en_savoir_plus {
   height: inherit;
 }
 
-/* line 149, ../sass/_general.scss */
+/* line 142, ../sass/_general.scss */
 .abonnement_ruralis {
   padding: 0 5%;
   background-color: rgba(211, 211, 211, 0.5);
@@ -315,39 +309,34 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 157, ../sass/_general.scss */
+  /* line 150, ../sass/_general.scss */
   .abonnement_ruralis div:last-child {
     margin-left: 25% !important;
   }
 }
-/* line 165, ../sass/_general.scss */
+/* line 158, ../sass/_general.scss */
 .citation {
   color: #ea640c;
 }
-/* line 167, ../sass/_general.scss */
+/* line 160, ../sass/_general.scss */
 .citation img {
   width: 7%;
 }
-/* line 170, ../sass/_general.scss */
+/* line 163, ../sass/_general.scss */
 .citation span {
   font-size: 80%;
   color: black;
 }
 
-/* line 178, ../sass/_general.scss */
+/* line 171, ../sass/_general.scss */
 .trombi h6 {
   color: #ea640c;
 }
-/* line 181, ../sass/_general.scss */
-.trombi p {
-  font-size: 12px;
-  font-family: 'courier new', sans-serif;
-}
-/* line 185, ../sass/_general.scss */
+/* line 175, ../sass/_general.scss */
 .trombi .col {
   padding: 0 0.30rem !important;
 }
-/* line 188, ../sass/_general.scss */
+/* line 178, ../sass/_general.scss */
 .trombi img {
   width: 100%;
 }
@@ -355,43 +344,32 @@ Author: Marielle Lautrou and Aurore David
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 196, ../sass/_general.scss */
+/* line 186, ../sass/_general.scss */
 footer {
   background-color: #ea640c !important;
   padding: 20px;
   bottom: 0;
   text-align: center;
 }
-/* line 202, ../sass/_general.scss */
-footer .contact {
-  font-weight: bold;
-}
-/* line 205, ../sass/_general.scss */
-footer p {
-  line-height: 0.2;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-}
-/* line 211, ../sass/_general.scss */
+/* line 192, ../sass/_general.scss */
 footer a {
   color: white;
-  font-family: "Roboto", sans-serif;
 }
-/* line 216, ../sass/_general.scss */
+/* line 196, ../sass/_general.scss */
 footer a:hover {
   font-weight: bold;
 }
-/* line 220, ../sass/_general.scss */
+/* line 200, ../sass/_general.scss */
 footer img {
   width: 30%;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 227, ../sass/_general.scss */
+  /* line 207, ../sass/_general.scss */
   footer .valign-wrapper {
     display: block;
   }
-  /* line 230, ../sass/_general.scss */
+  /* line 210, ../sass/_general.scss */
   footer .logowcs {
     margin-top: 35px;
   }
@@ -789,22 +767,15 @@ div .titreRuralis {
   z-index: 2;
   max-width: 120px;
 }
-/* line 39, ../sass/_abonnement.scss */
-.abonnement h1 {
-  font-family: 'majalla';
-  color: #4c4c4c !important;
-}
-/* line 43, ../sass/_abonnement.scss */
-.abonnement .darkgrey {
-  color: #4c4c4c;
-}
-/* line 49, ../sass/_abonnement.scss */
+/* line 41, ../sass/_abonnement.scss */
 .abonnement .margtop {
   margin-top: 30px;
   color: grey;
+  font-family: 'Time New Roman', Regular;
+  font-size: 18px;
 }
 
-/* line 56, ../sass/_abonnement.scss */
+/* line 50, ../sass/_abonnement.scss */
 .abomodel {
   max-width: 90%;
   background-image: url("../images/fond_texture_jaune.png");
@@ -816,46 +787,33 @@ div .titreRuralis {
   margin-top: 3%;
   font-size: 22px;
   line-height: 15px;
+  font-family: 'Time New Roman', Regular;
 }
 /* line 68, ../sass/_abonnement.scss */
-.abomodel p {
-  font-size: 22px;
-}
-/* line 72, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
-  text-decoration: underline;
   font-weight: bold;
   margin-top: 55px;
 }
 
 /* line 3, ../sass/_blog.scss */
-h1 {
-  text-align: center;
-}
-
-/* line 7, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
 }
 
-/* line 10, ../sass/_blog.scss */
+/* line 6, ../sass/_blog.scss */
 .article {
   max-height: 200px;
   overflow: none;
   margin-bottom: 70px;
 }
 
-/* line 16, ../sass/_blog.scss */
+/* line 12, ../sass/_blog.scss */
 .card-image > img, .card-content {
   max-height: 190px;
   width: auto;
 }
 
-/*.card.large {
-height : 33.3333333333%;
-width : 33.3333333333%;
-}*/
-/* line 26, ../sass/_blog.scss */
+/* line 17, ../sass/_blog.scss */
 .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -866,7 +824,7 @@ width : 33.3333333333%;
   height: auto;
 }
 
-/* line 36, ../sass/_blog.scss */
+/* line 27, ../sass/_blog.scss */
 .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -877,32 +835,32 @@ width : 33.3333333333%;
   height: auto;
 }
 
-/* line 46, ../sass/_blog.scss */
+/* line 37, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 50, ../sass/_blog.scss */
+/* line 41, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 53, ../sass/_blog.scss */
+/* line 44, ../sass/_blog.scss */
 .fixedSideNav .row {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
 }
-/* line 54, ../sass/_blog.scss */
+/* line 45, ../sass/_blog.scss */
 .fixedSideNav .row img {
   width: 70%;
 }
-/* line 57, ../sass/_blog.scss */
+/* line 48, ../sass/_blog.scss */
 .fixedSideNav .row .paypal {
   width: 30% !important;
 }
 
-/* line 66, ../sass/_blog.scss */
+/* line 57, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
@@ -910,13 +868,13 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 74, ../sass/_blog.scss */
+/* line 65, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 79, ../sass/_blog.scss */
+/* line 70, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
@@ -925,7 +883,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 89, ../sass/_blog.scss */
+/* line 80, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;

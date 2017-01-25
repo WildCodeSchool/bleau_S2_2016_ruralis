@@ -60,14 +60,16 @@ header{
 }
 p{
     font-size: 18px;
-    font-family: 'Time New Roman', sans-serif;
+    font-family: 'Time New Roman', Regular !important;
 }
-h4{
+h1{
     font-family: 'Arial Bold';
     text-align: center;
     font-size: 35px;
 }
+
 h5{
+    text-align:center;
     font-size: 25px;
     font-family: 'Sakkal Majalla Bold';
     color: $orange;

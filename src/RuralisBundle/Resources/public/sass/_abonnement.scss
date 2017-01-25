@@ -36,19 +36,13 @@
         max-width: 120px;
     }
 
-    h1 {
-        font-family: 'majalla';
-        color: $darkgrey !important;
-    }
-    .darkgrey {
-        color: $darkgrey;
-    }
-
     // Marge au dessus des lien dons et cadeau
     // Ne Fontionne pas...
     .margtop {
         margin-top: 30px;
         color: grey;
+        font-family: 'Time New Roman', Regular;
+        font-size: 18px;
     }
 
 }
@@ -64,13 +58,14 @@
         margin-top: 3%;
         font-size: 22px;
         line-height: 15px;
+        font-family: 'Time New Roman', Regular;
 
-        p {
-            font-size: 22px;
-        }
+
+        //p {
+        //    font-size: 22px;
+        //}
 
         .recaptitres {
-            text-decoration: underline;
             font-weight: bold;
             margin-top: 55px;
         }

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h4 class="darkgrey">Vous abonner en tant que {{ app.session.get('type') }}</h4>
+    <h1>Vous abonner en tant que {{ app.session.get('type') }}</h1>
     <div class="row">
         <form name="formAbo" class="col s12 formulaire" action="{{ path('ruralis_recapitulatif_abo') }}" method="post">
             <div class="row">
