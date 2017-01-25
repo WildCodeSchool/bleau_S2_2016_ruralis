@@ -71,7 +71,6 @@
                         <li><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
                         <li><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
                         <li><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
-                        <li><a href="{{ path('ruralis_admin') }}">Admin</a></li>
                     </ul>
                 </div>
                 {#Third line nav bar#}
@@ -101,7 +100,6 @@
                         <li class="li_nav_menu"><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
                         <li class="li_nav_menu"><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
                         <li class="li_nav_menu"><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
-                        <li class="li_nav_menu"><a href="{{ path('ruralis_admin') }}">Admin</a></li>
                         <li class="last right">
                             <form action="{{ path('ruralis_inscription_newsletter') }}" method="post">
                                 <ul>
@@ -131,7 +129,6 @@
                     <li><a href="{{ path('ruralis_presentation') }}">Ruralis</a></li>
                     <li><a href="{{ path('ruralis_abonnement') }}">S'abonner</a></li>
                     <li><a href="{{ path('ruralis_partenaire') }}">Partenaires</a></li>
-                    <li><a href="{{ path('ruralis_admin') }}">Admin</a></li>
                 </ul>
             </div>
         </nav>
@@ -163,7 +160,8 @@
                     45200 Montargis<br>
                     06 80 73 88 34<br>
                     contact@ruralismagazine.fr<br>
-                    <a href="#">Mentions légales</a>
+                    <a href="#">Mentions légales</a><br>
+                    <a href="{{ path('ruralis_admin') }}"><i class="material-icons">lock</i></a>
                 </p>
             </div>
             <div class="col s12 m3 valign">
