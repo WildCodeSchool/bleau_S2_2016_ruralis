@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row adminmodel">
+        <div class="col m10 offset-m1">
+            <h1>Inscrits à la newsletter</h1>
+            {% for inscritsNewsletter in inscritsNewsletter %}
+                <div>{{ inscritsNewsletter.contact.email }}</div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock body %}
