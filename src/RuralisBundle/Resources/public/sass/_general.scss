@@ -56,6 +56,10 @@ Author: Marielle Lautrou and Aurore David
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
 
+// Editorial, Objectif p
+.editorial p, .objectifs p, .arpenteurs p {
+    font-family: 'Time New Roman';
+}
 
 // Description
 .description{
@@ -194,11 +198,25 @@ footer{
     padding: 20px;
     bottom: 0;
     text-align: center;
+
+    .contact {
+        font-weight: bold;
+    }
     p{
         line-height: 0.2;
         font-size: 12px;
-        font-family: 'courier new', sans-serif;
+        font-family: "Roboto", sans-serif;
     }
+
+    a {
+        color: white;
+        font-family: "Roboto", sans-serif;
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+
     img{
         width: 30%;
     }
