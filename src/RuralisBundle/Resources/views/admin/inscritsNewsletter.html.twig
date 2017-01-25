@@ -4,11 +4,37 @@
     <div class="row adminmodel">
         <div class="col m10 offset-m1">
             <h1>Inscrits à la newsletter</h1>
-            {% for inscritsNewsletter in inscritsNewsletter %}
-                <div>{{ inscritsNewsletter.contact.email }}</div>
-            {% endfor %}
+            <table id="datatable">
+                <thead>
+                    <tr>
+                        <th>
+                            emails
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for inscritsNewsletter in inscritsNewsletter %}
+                        <tr>
+                            <td>
+                                {{ inscritsNewsletter.contact.email }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
         </div>
 
     </div>
 
+    {% block javascripts %}
+
+        {{ parent() }}
+        <script>
+            $(document).ready(function(){
+                $('#datatable').DataTable();
+            });
+        </script>
+        {% endblock javascripts %}
 {% endblock body %}
