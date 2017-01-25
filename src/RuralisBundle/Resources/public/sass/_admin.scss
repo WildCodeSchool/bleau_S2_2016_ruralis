@@ -40,10 +40,6 @@
         border-bottom-color:white;
     }
 
-    .select-dropdown{
-        color: #00B82B;
-    }
-
     .file-path {
         color:white;
     }
@@ -71,7 +67,6 @@
     .dropdown-content li > span,
     .descimg {
         color: $orange;
-        background-color: #A9AAAE;
     }
 
     .adminImg{
@@ -97,20 +92,34 @@
         height: 200px;
         justify-content: center;
     }
-    div .hoverable {
+
+    div .jaune{
         background-image: url("../images/fond_texture_jaune.png");
         background-size: 0.7%;
         background-repeat: repeat;
     }
 
+    div .vert{
+        background-image: url("../images/fond_texture_vert.png");
+        background-size: 0.7%;
+        background-repeat: repeat;
+        }
+
+    div .orange{
+        background-image: url("../images/fond_texture_orange.png");
+        background-size: 0.7%;
+        background-repeat: repeat;
+        }
+
     a {
         color:  #4c4c4c !important;
         font-size: 50px;
         font-family: 'majalla';
-    }
-    a:hover {
-        color: $orange !important;
-    }
+        }
+    //Couleur à garder
+    //a:hover {
+    //    color: $orange !important;
+    //}
 }
 
 
