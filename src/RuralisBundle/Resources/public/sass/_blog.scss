@@ -1,9 +1,5 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
 
-h1{
-    text-align:center;
-}
-
 .hoverable.header, .hoverable.card{
     height:2% !important;
 }
@@ -17,11 +13,6 @@ h1{
     max-height: 190px;
     width: auto;
 }
-
-/*.card.large {
-height : 33.3333333333%;
-width : 33.3333333333%;
-}*/
 
 .la_une .card-image img{
     display: block;
