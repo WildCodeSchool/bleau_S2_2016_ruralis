@@ -61,23 +61,10 @@
                         </a>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="AUJPY5RMCGQX8">
+                            <input class="acheter" type="hidden" name="hosted_button_id" value="">
                             <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
                             <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                         </form>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="RDHX34X98AEB2">
-                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                        </form>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="Z8SEB45LSL3LQ">
-                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                        </form>
-
                     </div>
                 </div>
             </div>
@@ -93,12 +80,16 @@
             $(document).ready(function() {
                 if ('{{ app.session.get("type") }}' == 'lecteur'){
                     $('.abomodel').css('background-color', 'rgba(138,225,58,0.75)');
+                    $('.acheter').val('AUJPY5RMCGQX8');
                 }
                 else if ('{{ app.session.get("type") }}' == 'donateur'){
                     $(".abomodel").css('background-color', 'rgba(239,255,0,0.55)');
+                    $('.acheter').val('RDHX34X98AEB2')
+
                 }
                 else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
                     $(".abomodel").css('background-color', 'rgba(247,113,24,0.75)');
+                    $('.acheter').val('Z8SEB45LSL3LQ')
                 }
             });
         </script>

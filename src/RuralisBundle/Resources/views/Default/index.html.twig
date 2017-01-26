@@ -6,23 +6,22 @@
     <div class="row">
         <div class="fixedSideNav center">
             <div class="row">
+            {#       SideNav      #}
+                <p>
+                    Je m'abonne
+                </p>
 
-            {# SideNav#}
-                    <p>
-                        Je m'abonne
-                    </p>
+                <a href="{{ path('ruralis_abonnement') }}" target="_blank">
+                    <img class="logoabt" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo250"  />
+                </a>
 
-                    <a href="{{ path('ruralis_abonnement') }}" target="_blank">
-                        <img class="logoabt" src="{{ asset('bundles/ruralis/images/logo.png') }}" alt="logo250"  />
-                    </a>
+                <p>
+                    J'encourage Ruralis Magazine
+                </p>
 
-                    <p>
-                        J'encourage Ruralis Magazine
-                    </p>
-
-                    <a href="{{ asset('/') }}" target="_blank">
-                        <img class="paypal" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
-                    </a>
+                <a href="{{ asset('/') }}" target="_blank">
+                    <img class="paypal" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
+                </a>
             </div>
         </div>
 

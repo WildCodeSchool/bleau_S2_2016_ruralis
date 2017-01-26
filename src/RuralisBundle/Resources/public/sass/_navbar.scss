@@ -40,16 +40,20 @@
 }
 
 a.majalla {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 100;
     margin-left: 10px;
 }
 
+div.majallaSmall {
+    margin-top:12px;
+    margin-left: 5px !important;
+
+}
 a.majallaSmall {
     font-weight: 100 !important;
     font-size: 20px;
     letter-spacing: 2.5px !important;
-    margin-left: -12px;
 }
 
 .majallaSmallItalic {
@@ -60,6 +64,7 @@ a.majallaSmall {
 
 div .titreRuralis {
     max-height: 33px;
+    margin-top:-15px;
 }
 //First line nav bar
 .first_line {
