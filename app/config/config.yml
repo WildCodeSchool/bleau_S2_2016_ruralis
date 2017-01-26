@@ -77,6 +77,13 @@ ivory_ck_editor:
             toolbar:                   [ [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], ['SpellChecker', 'Scayt' ], [ 'Source' ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript' ], [ 'NumberedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink' ], [ 'Image', 'SpecialChar','Iframe' ], '/', [ 'Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
             language: %locale%
        #     extraPlugins:               'youtube'
+#            filebrowserBrowseRoute:           "../../web/uploads/images/"
+#            filebrowserBrowseRouteParameters: { slug: "my-slug" }
+#            filebrowserBrowseRouteAbsolute:   true
+#    filebrowsers:
+#            - VideoBrowse
+#            - VideoUpload
+
 
 
 knp_paginator:
