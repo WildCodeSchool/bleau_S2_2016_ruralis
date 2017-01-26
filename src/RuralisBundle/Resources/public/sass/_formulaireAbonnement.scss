@@ -1,10 +1,44 @@
 .formulaire {
+    //Les inputs
+    label {
+        color: $darkgrey;
+    }
+    .input-field label {
+        color: black !important;
+    }
+
+    input:not([type]):focus:not([readonly]),
+    input[type=text]:focus:not([readonly]),
+    input[type=password]:focus:not([readonly]),
+    input[type=email]:focus:not([readonly]),
+    input[type=url]:focus:not([readonly]),
+    input[type=time]:focus:not([readonly]),
+    input[type=date]:focus:not([readonly]),
+    input[type=datetime]:focus:not([readonly]),
+    input[type=datetime-local]:focus:not([readonly]),
+    input[type=tel]:focus:not([readonly]),
+    input[type=number]:focus:not([readonly]),
+    input[type=search]:focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid $darkgrey;
+        box-shadow: 0 1px 0 0 $gris;
+    }
+    input.validate .active {
+        border-bottom-color: black;
+    }
+
+    // Texte de la case Newsletter
     span {
         color: dimgrey;
         font-weight: bold;
     }
 
-    label {
-        color: $orange;
+    // Boutons
+    .btn{
+        background-color: #00B82B;
+    }
+
+    .btn:hover{
+        background-color: #00f138;
     }
 }
