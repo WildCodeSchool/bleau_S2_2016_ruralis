@@ -14,10 +14,18 @@ class NewsletterType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')->add('contenu', CKEditorType::class, array(
-            'config' => array(
-                'config_name' => 'my_config',
-                'uiColor' => '#ffffff')))        ;
+        $builder
+            ->add('titre')
+            ->add('contenu', CKEditorType::class, array(
+                'config' => array(
+                    'uiColor' => '#ffffff',
+                    'filebrowserBrowseRoute' => 'elfinder',
+                    'filebrowserBrowseRouteParameters' => array(
+                        'instance' => 'default',
+                        'homeFolder' => ''
+                    )
+                )))
+        ;
     }
     
     /**
