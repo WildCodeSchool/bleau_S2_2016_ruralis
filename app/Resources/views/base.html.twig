@@ -52,15 +52,23 @@
                     Demain s'invente dans les campagnes.
                 </div>
                 <div class="col m3">
-                    <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/?fref=ts">
-                        <img src="{{ asset ('bundles/ruralis/images/facebook2.png') }}" class="logoFb" alt="Logo Facebook">
-                    </a>
-                    <a href="https://twitter.com/Ruralismagazine">
-                        <img src="{{ asset ('bundles/ruralis/images/twitter2.png') }}" class="logoTw" alt="Logo Twitter">
-                    </a>
-                    <a href="http://www.instagram.com/">
-                        <img src="{{ asset ('bundles/ruralis/images/instagram2.png') }}" class="logoIn" alt="Logo Instagram">
-                    </a>
+                    <div class="row">
+                        <div class="col s4">
+                            <a href="https://www.facebook.com/Ruralis-Magazine-488687077922669/?fref=ts">
+                                <img src="{{ asset ('bundles/ruralis/images/facebook2.png') }}" class="logoFb" alt="Logo Facebook">
+                            </a>
+                        </div>
+                        <div class="col s4">
+                            <a href="https://twitter.com/Ruralismagazine">
+                                <img src="{{ asset ('bundles/ruralis/images/twitter2.png') }}" class="logoTw" alt="Logo Twitter">
+                            </a>
+                        </div>
+                        <div class="col s4">
+                            <a href="http://www.instagram.com/">
+                                <img src="{{ asset ('bundles/ruralis/images/instagram2.png') }}" class="logoIn" alt="Logo Instagram">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="second_line_no_scroll" class="row">
@@ -178,6 +186,7 @@
         <script type="text/javascript" src="{{ asset('bundles/ruralis/materialize/js/materialize.min.js') }}"></script>
         <script src="{{ asset('bundles/ruralis/javascript/base.js') }}"></script>
         <script src="{{ asset('bundles/ruralis/javascript/blog.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/ruralis/javascript/backgroundColors.js') }}"></script>
         <script>
             var asset = '{{ asset('') }}';
             $(window).scroll(function() {
