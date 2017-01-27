@@ -5,7 +5,7 @@
         <h1>Récapitulatif de votre abonnement</h1>
 
         <div class="row abomodel formulaire z-depth-2">
-            <div class="col m10 offset-m1">
+            <div class="col m10 offset-m1 champsForm">
                 <p>
                     Vous souhaitez vous abonner en tant que <b>{{ app.session.get('type') }}</b> pour une durée d'un an.
                 </p>
@@ -13,29 +13,43 @@
                 <p class="recaptitres"> Vos coordonnées :</p>
                 <div class="row">
                     <div class="col s4 offset-s1">
-                        Prénom : {{ details.prenom }}
+                       <p>
+                           Prénom : {{ details.prenom }}
+                       </p>
                     </div>
                     <div class="col s4 offset-s1">
-                        Nom : {{ details.nom }}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col s4 offset-s1">
-                        Mail : {{ details.email }}
-                    </div>
-                    <div class="col s4 offset-s1">
-                        Téléphone : {{ details.tel }}
+                        <p>
+                            Nom : {{ details.nom }}
+                        </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col s4 offset-s1">
-                        Adresse :
+                        <p>
+                            Mail : {{ details.email }}
+                        </p>
+                    </div>
+                    <div class="col s4 offset-s1">
+                        <p>
+                            Téléphone : {{ details.tel }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s4 offset-s1">
+                        <p>
+                            Adresse :
+                        </p>
                         <div class="row">
                             <div class="col s10 offset-s1">
-                                <p>{{ details.rue }} {{ details.cp }} {{ details.ville }}</p>
-                                <p>{{ details.pays }}</p>
+                                <p>
+                                    {{ details.rue }}<br>
+                                    {{ details.cp }}<br>
+                                    {{ details.ville }}<br>
+                                    {{ details.pays }}
+                                </p>
                             </div>
                         </div>
                     </div>

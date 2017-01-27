@@ -116,7 +116,7 @@ input[type="tel"],
 input[type="number"],
 input[type="search"],
 textarea.materialize-textarea {
-  color: black;
+  color: #414141;
 }
 
 /* line 128, ../sass/main.scss */
@@ -232,7 +232,7 @@ Author: Marielle Lautrou and Aurore David
 .arpenteurs {
   padding: 8px 0;
   margin-top: 7%;
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: rgba(220, 220, 220, 0.5);
   text-align: center;
 }
 
@@ -297,7 +297,7 @@ Author: Marielle Lautrou and Aurore David
 /* line 142, ../sass/_general.scss */
 .abonnement_ruralis {
   padding: 0 5%;
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: rgba(220, 220, 220, 0.5);
 }
 /* line 11, ../sass/main.scss */
 .abonnement_ruralis img {
@@ -787,21 +787,27 @@ div .titreRuralis {
   font-size: 18px;
 }
 
-/* line 51, ../sass/_abonnement.scss */
+/* line 50, ../sass/_abonnement.scss */
 .abomodel {
   max-width: 90%;
-  padding-bottom: 5px;
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
-  font-size: 22px;
-  line-height: 15px;
+  font-size: 18px;
   font-family: 'Time New Roman', Regular;
 }
-/* line 61, ../sass/_abonnement.scss */
+/* line 59, ../sass/_abonnement.scss */
+.abomodel p {
+  line-height: 20px !important;
+}
+/* line 63, ../sass/_abonnement.scss */
+.abomodel .row {
+  margin-bottom: 0 !important;
+}
+/* line 66, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
   font-weight: bold;
-  margin-top: 55px;
+  margin-top: 30px;
 }
 
 /* line 3, ../sass/_blog.scss */
@@ -926,11 +932,11 @@ a.cardLink {
 
 /* line 3, ../sass/_formulaireAbonnement.scss */
 .formulaire label {
-  color: #4c4c4c;
+  color: #414141;
 }
 /* line 6, ../sass/_formulaireAbonnement.scss */
 .formulaire .input-field label {
-  color: black !important;
+  color: #414141 !important;
 }
 /* line 10, ../sass/_formulaireAbonnement.scss */
 .formulaire input:not([type]):focus:not([readonly]),
@@ -946,25 +952,49 @@ a.cardLink {
 .formulaire input[type=number]:focus:not([readonly]),
 .formulaire input[type=search]:focus:not([readonly]),
 .formulaire textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #4c4c4c;
-  box-shadow: 0 1px 0 0 rgba(211, 211, 211, 0.5);
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+  box-shadow: 0 1px 0 0 #414141;
 }
 /* line 26, ../sass/_formulaireAbonnement.scss */
 .formulaire input.validate .active {
   border-bottom-color: black;
 }
-/* line 31, ../sass/_formulaireAbonnement.scss */
+/* line 30, ../sass/_formulaireAbonnement.scss */
+.formulaire input:not([type]),
+.formulaire input[type="text"],
+.formulaire input[type="password"],
+.formulaire input[type="email"],
+.formulaire input[type="url"],
+.formulaire input[type="time"],
+.formulaire input[type="date"],
+.formulaire input[type="datetime"],
+.formulaire input[type="datetime-local"],
+.formulaire input[type="tel"],
+.formulaire input[type="number"],
+.formulaire input[type="search"],
+.formulaire extarea.materialize-textarea {
+  border-bottom: 1px solid #414141;
+}
+/* line 47, ../sass/_formulaireAbonnement.scss */
 .formulaire span {
-  color: dimgrey;
+  color: #414141;
   font-weight: bold;
 }
-/* line 37, ../sass/_formulaireAbonnement.scss */
+/* line 53, ../sass/_formulaireAbonnement.scss */
 .formulaire .btn {
   background-color: #00B82B;
 }
-/* line 41, ../sass/_formulaireAbonnement.scss */
+/* line 57, ../sass/_formulaireAbonnement.scss */
 .formulaire .btn:hover {
   background-color: #00f138;
+}
+/* line 62, ../sass/_formulaireAbonnement.scss */
+.formulaire .champsForm {
+  font-size: 18px !important;
+}
+/* line 64, ../sass/_formulaireAbonnement.scss */
+.formulaire .champsForm p {
+  color: #414141;
 }
 
 /* line 1, ../sass/_newsletter.scss */

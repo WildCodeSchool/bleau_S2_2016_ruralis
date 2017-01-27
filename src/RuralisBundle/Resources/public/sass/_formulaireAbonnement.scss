@@ -4,7 +4,7 @@
         color: $darkgrey;
     }
     .input-field label {
-        color: black !important;
+        color: $darkgrey !important;
     }
 
     input:not([type]):focus:not([readonly]),
@@ -20,16 +20,32 @@
     input[type=number]:focus:not([readonly]),
     input[type=search]:focus:not([readonly]),
     textarea.materialize-textarea:focus:not([readonly]) {
-        border-bottom: 1px solid $darkgrey;
-        box-shadow: 0 1px 0 0 $gris;
+        border-bottom: 1px solid $gris;
+        box-shadow: 0 1px 0 0 $darkgrey;
     }
     input.validate .active {
         border-bottom-color: black;
     }
 
+    input:not([type]),
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="time"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    extarea.materialize-textarea {
+        border-bottom: 1px solid $darkgrey;
+    }
+
     // Texte de la case Newsletter
     span {
-        color: dimgrey;
+        color: $darkgrey;
         font-weight: bold;
     }
 
@@ -40,5 +56,13 @@
 
     .btn:hover{
         background-color: #00f138;
+    }
+
+    // Récapitulatif Abonnement
+    .champsForm {
+        font-size: 18px !important;
+        p {
+            color: $darkgrey;
+        }
     }
 }

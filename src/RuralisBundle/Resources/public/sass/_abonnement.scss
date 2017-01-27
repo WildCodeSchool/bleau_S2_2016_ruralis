@@ -44,23 +44,28 @@
         font-family: 'Time New Roman', Regular;
         font-size: 18px;
     }
-
 }
 
-    //Modele en box = .abomodel
+    // Modele en box = .abomodel
     .abomodel {
         max-width: 90%;
-        padding-bottom: 5px;
+        //padding-bottom: 5px;
         margin-bottom: 20px;
         border-radius: 15px;
         margin-top: 3%;
-        font-size: 22px;
-        line-height: 15px;
+        font-size: 18px;
         font-family: 'Time New Roman', Regular;
 
+        p {
+            line-height: 20px !important;
+        }
+
+        .row {
+            margin-bottom: 0 !important;
+        }
         .recaptitres {
             font-weight: bold;
-            margin-top: 55px;
+            margin-top: 30px;
         }
     }
 

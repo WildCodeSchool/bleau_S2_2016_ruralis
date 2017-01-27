@@ -25,8 +25,8 @@
 
 $orange: rgb(234,100,12);
 $orange_pale: rgb(255, 132, 54);
-$gris: rgba(211, 211, 211, 0.5);
-$darkgrey: rgb(76, 76, 76);
+$gris: rgba(220, 220, 220, 0.5);
+$darkgrey: rgb(65, 65, 65);
 $greenbg: rgba(138,225,58,0.75);
 $yellowbg: rgba(239,255,0,0.55);
 $orangebg: rgba(247,113,24,0.75);
@@ -123,7 +123,7 @@ input[type="tel"],
 input[type="number"],
 input[type="search"],
 textarea.materialize-textarea {
-    color: black;
+    color: $darkgrey;
 }
 [type="checkbox"]:checked + label:before {
     border-top: 2px solid transparent;
