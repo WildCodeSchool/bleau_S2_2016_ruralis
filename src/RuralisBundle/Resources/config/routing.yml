@@ -51,6 +51,10 @@ ruralis_inscrits_newsletter:
     path:     /admin/inscritsnewsletter
     defaults: { _controller:  RuralisBundle:Admin:InscritsNewsletter }
 
+ruralis_inscrits_magazine:
+    path:     /admin/inscritsmagazine
+    defaults: { _controller:  RuralisBundle:Admin:InscritsMagazine }
+
 ruralis_template_newsletter:
     path:     /{id}/newsletter
     defaults: { _controller:  RuralisBundle:ViewsUser:templateNewsletter, id: null}

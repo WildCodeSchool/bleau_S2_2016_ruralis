@@ -351,7 +351,7 @@ Author: Marielle Lautrou and Aurore David
 /* line 190, ../sass/_general.scss */
 footer {
   background-color: #ea640c !important;
-  padding: 20px;
+  padding-top: 20px;
   bottom: 0;
   text-align: center;
 }
@@ -367,13 +367,22 @@ footer a:hover {
 footer img {
   width: 30%;
 }
+/* line 208, ../sass/_general.scss */
+footer p {
+  font-size: 14px;
+}
+/* line 212, ../sass/_general.scss */
+footer .valign-wrapper {
+  margin-top: -25px;
+  margin-bottom: 0;
+}
 
 @media screen and (max-width: 600px) {
-  /* line 211, ../sass/_general.scss */
+  /* line 220, ../sass/_general.scss */
   footer .valign-wrapper {
     display: block;
   }
-  /* line 214, ../sass/_general.scss */
+  /* line 223, ../sass/_general.scss */
   footer .logowcs {
     margin-top: 35px;
   }

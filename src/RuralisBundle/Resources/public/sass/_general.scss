@@ -189,7 +189,7 @@ Author: Marielle Lautrou and Aurore David
 
 footer{
     background-color: $orange !important;
-    padding: 20px;
+    padding-top: 20px;
     bottom: 0;
     text-align: center;
 
@@ -203,6 +203,15 @@ footer{
 
     img{
         width: 30%;
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    .valign-wrapper{
+        margin-top:-25px;
+        margin-bottom:0;
     }
 }
 
