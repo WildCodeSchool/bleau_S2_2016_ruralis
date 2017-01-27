@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="">
+    <div class="row">
+        <div class="col offset-m1 m10">
+            <h1>Liste des abonnés à Ruralis Magazine</h1>
+            <table id="datatable" class="centered">
+                <thead>
+                <tr>
+                    <th>
+                        Type d'abonnement
+                    </th>
+                    <th>
+                        Nom
+                    </th>
+                    <th>
+                        Prénom
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Téléphone
+                    </th>
+                    <th>
+                        Rue
+                    </th>
+                    <th>
+                        Code postal
+                    </th>
+                    <th>
+                        Ville
+                    </th>
+                    <th>
+                        Pays
+                    </th>
+                    <th>
+                        Newsletter
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for inscritsMagazine in inscritsMagazine %}
+                    {% if inscritsMagazine.typeAbo != null %}
+                        <tr>
+                            <td>
+                                {{ inscritsMagazine.typeAbo.type }}
+                            </td>
+                            {% if inscritsMagazine.abonne != null %}
+                                <td>
+                                    {{ inscritsMagazine.abonne.nom }}
+                                </td>
+                                <td>
+                                    {{ inscritsMagazine.abonne.prenom }}
+                                </td>
+                                <td>
+                                    {{ inscritsMagazine.contact.email }}
+                                </td>
+                                {% if inscritsMagazine.abonne.telephone != null %}
+                                    <td>
+                                        {{ inscritsMagazine.abonne.telephone }}
+                                    </td>
+                                {% endif %}
+                                <td>
+                                    {{ inscritsMagazine.abonne.rue }}
+                                </td>
+                                <td>
+                                    {{ inscritsMagazine.abonne.cp }}
+                                </td>
+                                <td>
+                                    {{ inscritsMagazine.abonne.ville }}
+                                </td>
+                                <td>
+                                    {{ inscritsMagazine.abonne.pays }}
+                                </td>
+                                {% if inscritsMagazine.newsletter == true %}
+                                    <td>
+                                        oui
+                                    </td>
+                                {% else %}
+                                    <td>
+                                        non
+                                    </td>
+                                {% endif %}
+                            {% endif %}
+                        </tr>
+                    {% endif %}
+
+                {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    {% block javascripts %}
+
+        {{ parent() }}
+        <script>
+            $(document).ready(function(){
+                $('#datatable').DataTable();
+            });
+        </script>
+    {% endblock javascripts %}
+{% endblock body %}

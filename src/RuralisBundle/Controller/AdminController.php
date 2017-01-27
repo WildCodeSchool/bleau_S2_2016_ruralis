@@ -22,6 +22,17 @@ class AdminController extends Controller
         );
     }
 
+    public function inscritsMagazineAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $inscritsMagazine = $em->getRepository('RuralisBundle:Abonnement')->findAll();
+
+        return $this->render('@Ruralis/admin/inscritsMagazine.html.twig', array(
+                'inscritsMagazine' => $inscritsMagazine,
+            )
+        );
+    }
+
     public function abonnesAction()
     {
         return $this->render('@Ruralis/admin/abonnes.html.twig');
