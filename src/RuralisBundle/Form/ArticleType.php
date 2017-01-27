@@ -33,13 +33,12 @@ class ArticleType extends AbstractType
             ->add('descriptif')
             ->add('contenu', CKEditorType::class, array(
                 'config' => array(
-                    'config_name' => 'my_config',
                     'uiColor' => '#ffffff')))
             ->add('auteur')
             ->add('image', ImageType::class)
            ;
     }
-    
+
     /**
      * {@inheritdoc}
      */

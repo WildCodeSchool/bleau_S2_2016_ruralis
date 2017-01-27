@@ -1,3 +1,6 @@
 ruralis:
     resource: "@RuralisBundle/Resources/config/routing.yml"
     prefix:   /
+
+elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"
