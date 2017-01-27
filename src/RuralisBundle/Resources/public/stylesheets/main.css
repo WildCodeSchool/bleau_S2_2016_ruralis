@@ -795,16 +795,17 @@ div .titreRuralis {
   margin-top: 3%;
   font-size: 18px;
   font-family: 'Time New Roman', Regular;
+  padding-bottom: 20px;
 }
-/* line 59, ../sass/_abonnement.scss */
+/* line 75, ../sass/_abonnement.scss */
 .abomodel p {
   line-height: 20px !important;
 }
-/* line 63, ../sass/_abonnement.scss */
+/* line 79, ../sass/_abonnement.scss */
 .abomodel .row {
   margin-bottom: 0 !important;
 }
-/* line 66, ../sass/_abonnement.scss */
+/* line 82, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
   font-weight: bold;
   margin-top: 30px;
@@ -979,14 +980,6 @@ a.cardLink {
 .formulaire span {
   color: #414141;
   font-weight: bold;
-}
-/* line 53, ../sass/_formulaireAbonnement.scss */
-.formulaire .btn {
-  background-color: #00B82B;
-}
-/* line 57, ../sass/_formulaireAbonnement.scss */
-.formulaire .btn:hover {
-  background-color: #00f138;
 }
 /* line 62, ../sass/_formulaireAbonnement.scss */
 .formulaire .champsForm {
