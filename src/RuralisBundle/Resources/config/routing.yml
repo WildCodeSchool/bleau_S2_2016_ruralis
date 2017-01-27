@@ -1,23 +1,19 @@
-# Routes User
+# Routes USER
+
+# HOME
 ruralis_homepage:
     path:     /
     defaults: { _controller: RuralisBundle:ViewsUser:index, page:1 }
 
+# RURALIS
 ruralis_presentation:
     path:     /ruralis
     defaults: { _controller: RuralisBundle:ViewsUser:ruralis }
 
+# ABONNMENT
 ruralis_abonnement:
     path:     /abonnement
     defaults: { _controller: RuralisBundle:ViewsUser:abonnement }
-
-ruralis_partenaire:
-    path:     /partenaires
-    defaults: { _controller: RuralisBundle:ViewsUser:partenaires }
-
-ruralis_article:
-    path:     /{id}/article
-    defaults: { _controller: RuralisBundle:ViewsUser:article, id: null }
 
 ruralis_formulaire_abonnement:
     path:     /{type}/formulaire
@@ -29,6 +25,22 @@ ruralis_recapitulatif_abo:
     path:     /recapitulatif
     defaults: { _controller:  RuralisBundle:Formulaire:recapAbo}
     methods:  [POST]
+
+ruralis_abonnes:
+    path:     /admin/abonnes
+    defaults: { _controller:  RuralisBundle:Admin:abonnes }
+
+# PARTENAIRES
+ruralis_partenaire:
+    path:     /partenaires
+    defaults: { _controller: RuralisBundle:ViewsUser:partenaires }
+
+# BLOG
+ruralis_article:
+    path:     /{id}/article
+    defaults: { _controller: RuralisBundle:ViewsUser:article, id: null }
+
+# NEWSLETTER
 
 ruralis_inscription_newsletter:
     path:     /inscriptionnewsletter
@@ -42,19 +54,6 @@ ruralis_inscrits_newsletter:
 ruralis_template_newsletter:
     path:     /{id}/newsletter
     defaults: { _controller:  RuralisBundle:ViewsUser:templateNewsletter, id: null}
-
-ruralis_abonnes:
-    path:     /admin/abonnes
-    defaults: { _controller:  RuralisBundle:Admin:abonnes }
-
-ruralis_abosend:
-    path:     /abosend
-    defaults: { _controller:  RuralisBundle:Contact:abosend, details: null }
-    methods:  [GET, POST]
-
-ruralis_send_newsletter:
-    path:     /{id}/sendnewsletter
-    defaults: { _controller:  RuralisBundle:Newsletter:send, id: null }
 
 # Routes
 
@@ -74,6 +73,15 @@ ruralis_admin_partenaire:
 ruralis_admin_newsletter:
     resource: "@RuralisBundle/Resources/config/routing/newsletter.yml"
     prefix:   /admin/newsletter
+
+ruralis_abosend:
+    path:     /abosend
+    defaults: { _controller:  RuralisBundle:Contact:abosend, details: null }
+    methods:  [GET, POST]
+
+ruralis_send_newsletter:
+    path:     /{id}/sendnewsletter
+    defaults: { _controller:  RuralisBundle:Newsletter:send, id: null }
 
 #FOS USER
 fos_user_security:

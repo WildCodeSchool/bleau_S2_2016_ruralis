@@ -100,7 +100,7 @@ class ContactController extends Controller
             $em->persist($abonnement);
             $em->flush();
 
-            //Lien vers l'API
+            // Retour vue "success"
 
             return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
                 'details' => $details,

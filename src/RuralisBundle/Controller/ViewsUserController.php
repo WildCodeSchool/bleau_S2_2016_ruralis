@@ -54,12 +54,12 @@ class ViewsUserController extends Controller
     {
         return $this->render('@RuralisBundle/Resources/views/user/ruralis.html.twig');
     }
-/*
+
     public function templateNewsletterAction(Newsletter $newsletter)
     {
         return $this->render('@Ruralis/user/newsletter.html.twig', array(
             'newsletter' => $newsletter)
         );
-    }*/
+    }
 
 }
