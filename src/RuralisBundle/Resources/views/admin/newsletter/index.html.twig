@@ -3,42 +3,45 @@
 {% block body %}
     <h1>Newsletters</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Titre</th>
-                <th>Contenu</th>
-                <th>Envoyée ?</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for newsletter in newsletters %}
-            <tr>
-                <td>{{ newsletter.titre }}</td>
-                <td>{{ newsletter.contenu[:100] | raw }}</td>
-                <td>{% if newsletter.envoi == true %}
-                        newsletter déjà envoyée
-                    {% endif %}
-                </td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">éditer</a>
-                        </li>
-                    </ul>
-                </td>
-                <td>
-                    {# Si newsletter envoyée, case à cocher #}
+    <div class="row">
+        <div class="col m8 offset-m2">
+            <table>
+                <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Envoyée ?</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for newsletter in newsletters %}
+                    <tr>
+                        <td>{{ newsletter.titre }}</td>
+                        <td>{% if newsletter.envoi == true %}
+                                newsletter déjà envoyée
+                            {% endif %}
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">voir</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">éditer</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            {# Si newsletter envoyée, case à cocher #}
 
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 
     <ul>
         <li>
