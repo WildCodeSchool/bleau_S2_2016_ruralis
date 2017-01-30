@@ -145,7 +145,7 @@ textarea.materialize-textarea {
 
 /* line 149, ../sass/main.scss */
 .btn.nl:hover {
-  background-color: #ff8436;
+  background-color: rgba(255, 132, 54, 0.19);
 }
 
 /*Theme Name: Ruralis
@@ -288,7 +288,7 @@ Author: Marielle Lautrou and Aurore David
 }
 /* line 130, ../sass/_general.scss */
 .abonnes a:hover {
-  background-color: #ff8436;
+  background-color: rgba(255, 132, 54, 0.19);
 }
 /* line 133, ../sass/_general.scss */
 .abonnes span {
@@ -845,30 +845,29 @@ div .titreRuralis {
     display: block;
   }
 
-  padding-bottom: 20px;
-  /* line 101, ../sass/_abonnement.scss */
+  /* line 100, ../sass/_abonnement.scss */
   p {
     line-height: 20px !important;
   }
 
-  /* line 105, ../sass/_abonnement.scss */
+  /* line 104, ../sass/_abonnement.scss */
   .row {
     margin-bottom: 0 !important;
   }
 
-  /* line 108, ../sass/_abonnement.scss */
+  /* line 107, ../sass/_abonnement.scss */
   .recaptitres {
     font-weight: bold;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 115, ../sass/_abonnement.scss */
+  /* line 114, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: none;
   }
 
-  /* line 118, ../sass/_abonnement.scss */
+  /* line 117, ../sass/_abonnement.scss */
   .fixed {
     display: block;
   }
@@ -881,7 +880,7 @@ div .titreRuralis {
 /* line 6, ../sass/_blog.scss */
 .article {
   max-height: 200px;
-  overflow: none;
+  overflow: hidden;
   margin-bottom: 70px;
 }
 
@@ -1066,4 +1065,22 @@ a.cardLink {
 .small_image {
   width: 50px;
   margin-right: 10px;
+}
+
+/* line 1, ../sass/_erreurs.scss */
+.erreur {
+  max-width: 90%;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-top: 3%;
+  height: 87%;
+}
+/* line 9, ../sass/_erreurs.scss */
+.erreur .btn {
+  background-color: #00B82B;
+}
+/* line 13, ../sass/_erreurs.scss */
+.erreur .btn:hover {
+  background-color: #00f138;
 }

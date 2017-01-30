@@ -24,7 +24,7 @@
 }
 
 $orange: rgb(234,100,12);
-$orange_pale: rgb(255, 132, 54);
+$orange_pale: rgba(255, 132, 54, 0.19);
 $gris: rgba(220, 220, 220, 0.5);
 $darkgrey: rgb(65, 65, 65);
 $greenbg: rgba(138,225,58,0.75);
@@ -159,3 +159,4 @@ textarea.materialize-textarea {
 @import "_partenaire";
 @import "_formulaireAbonnement";
 @import "_newsletter" ;
+@import "erreurs";
