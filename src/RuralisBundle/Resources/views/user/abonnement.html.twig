@@ -2,70 +2,64 @@
 
 {% block body %}
 
-	<div class="container abonnement">
+	<div class="abonnement">
         <div class="row center">
         {#div générale#}
 			<div class="col s12">
 				<h1 class="center">Abonnez-vous ! Soutenez-nous !</h1>
-
 				<p class="center">
 					Chers(ères) lecteurs(trices), acteurs(trices) des territoires ruraux, citoyens engagés, amoureux (...) de la campagne
 				</p>
 			</div>
+		</div>
 
-			<div class="row">
+		<div class="row center">
+			<div class="col s4 fixed options">
+				<p>
+					Ce projet fait sens pous vous ?
+				</p>
+				<p>
+					<a class="hoverable margtop" href="{{ path('ruralis_abonnement') }}">
+						J'encourage Ruralis Magazine
+					</a>
+				</p>
+				<p>
+					<a href="{{ path('ruralis_abonnement') }}" target="_blank">
+						<img class="logoabt hoverable" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
+					</a>
+				</p>
+			</div>
+
+			<div class="offset-s4 col s4">
 				<div class="col s12 abovert">
 					<a href="{{ path('ruralis_formulaire_abonnement', {'type':'lecteur'}) }}">
 						<img class="hoverable responsive-img imgvert" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>
 					</a>
 				</div>
-			</div>
 
-			<div class="row fixed options">
-                <div class="col s12">
-                    <div class="row">
-                        <div class="col s2 lhsmall">
-                            <p>
-                                Ce projet fait sens pous vous ?
-                            </p>
-                            <a class="hoverable margtop" href="{{ path('ruralis_abonnement') }}">
-                                J'encourage Ruralis Magazine
-                            </a>
-							<div class="center margtop">
-                                <a href="{{ path('ruralis_abonnement') }}" target="_blank">
-                                    <img class="logoabt hoverable" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
-                                </a>
-							</div>
-                        </div>
-
-                        <div class="col s3 offset-s5 lhsmall">
-                            <p>
-                                Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.
-                            </p>
-                            <a class="hoverable margtop" href="{{ path('ruralis_abonnement') }}">
-                                J'offre un abonnement à un proche
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-			<div class="row">
 				<div class="col s12 abotop">
 					<a href="{{ path('ruralis_formulaire_abonnement', {'type':'donateur'}) }}">
 						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}"/>
-                    </a>
+					</a>
 				</div>
-			</div>
 
-			<div class="row">
 				<div class="col s12 abotop">
 					<a href="{{ path('ruralis_formulaire_abonnement', {'type':'ambassadeur'}) }}">
 						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}"/>
 					</a>
 				</div>
 			</div>
-        </div>
-	</div>
 
+			<div class="offset-s8 col s4 fixed options">
+				<p>
+					Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.<br/>
+				</p>
+				<p>
+					<a class="hoverable margtop" href="{{ path('ruralis_abonnement') }}">
+					J'offre un abonnement à un proche
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
 {% endblock %}

@@ -624,7 +624,7 @@ div .titreRuralis {
     display: block;
     background-color: #ea640c;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
   }
   /* line 202, ../sass/_navbar.scss */
   header .fixed_nav {
@@ -637,6 +637,11 @@ div .titreRuralis {
   /* line 207, ../sass/_navbar.scss */
   header nav .brand-logo img {
     height: 100%;
+  }
+
+  /* line 212, ../sass/_navbar.scss */
+  #sidenav-overlay {
+    z-index: 1 !important;
   }
 }
 /* line 3, ../sass/_admin.scss */
@@ -764,7 +769,7 @@ div .titreRuralis {
 /* line 12, ../sass/_abonnement.scss */
 .abonnement .options {
   position: fixed;
-  top: 48%;
+  top: 45%;
   text-align: center;
   z-index: 1;
 }
@@ -913,6 +918,16 @@ a.cardLink {
   z-index: 2;
 }
 
+/***********************************/
+/*        SideNav Responsive       */
+/***********************************/
+@media screen and (max-width: 640px) {
+  /* line 92, ../sass/_blog.scss */
+  .fixedSideNav {
+    display: block;
+    visibility: hidden;
+  }
+}
 /* line 1, ../sass/_partenaire.scss */
 .partenaire {
   text-align: center;
