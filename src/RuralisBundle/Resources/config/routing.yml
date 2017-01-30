@@ -78,11 +78,6 @@ ruralis_admin_newsletter:
     resource: "@RuralisBundle/Resources/config/routing/newsletter.yml"
     prefix:   /admin/newsletter
 
-ruralis_abosend:
-    path:     /abosend
-    defaults: { _controller:  RuralisBundle:Contact:abosend, details: null }
-    methods:  [GET, POST]
-
 ruralis_send_newsletter:
     path:     /{id}/sendnewsletter
     defaults: { _controller:  RuralisBundle:Newsletter:send, id: null }
@@ -106,3 +101,13 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+ruralis_abosend:
+    path:     /validationabonnement
+    defaults: { _controller:  RuralisBundle:Contact:abosend, details: null }
+    methods:  [GET, POST]
+
+ruralis_aboannul:
+    path:     /annulationabonnement
+    defaults: { _controller:  RuralisBundle:Contact:aboannul}
+    methods:  [GET, POST]
