@@ -9,9 +9,9 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class FormulaireController extends Controller
 {
-    const ABO_LECTEUR = 'lecteur';
-    const ABO_DONATEUR = 'donateur';
-    const ABO_AMBASSADEUR = 'ambassadeur';
+    const ABO_LECTEUR = 'lecteur(trice)';
+    const ABO_DONATEUR = 'donateur(trice)';
+    const ABO_AMBASSADEUR = 'ambassadeur(drice)';
 
     public function indexAction(Request $request, $type)
     {

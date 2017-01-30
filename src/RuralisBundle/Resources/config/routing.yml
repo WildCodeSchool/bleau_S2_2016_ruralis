@@ -103,7 +103,7 @@ fos_user_change_password:
     prefix: /profile
 
 ruralis_abosend:
-    path:     /validationabonnment
+    path:     /validationabonnement
     defaults: { _controller:  RuralisBundle:Contact:abosend, details: null }
     methods:  [GET, POST]
 
