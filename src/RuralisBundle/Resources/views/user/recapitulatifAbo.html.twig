@@ -98,26 +98,48 @@
     {#ajout du prix#}
     {#ajout durée de paiement#}
 
-    {% block javascripts %}
-        {{ parent() }}
-        <script>
-            $(document).ready(function() {
-                if ('{{ app.session.get("type") }}' == 'lecteur'){
-                    $('.abomodel').css('background-color', 'rgba(138,225,58,0.75)');
-                    $('.acheter').val('AUJPY5RMCGQX8');
-                }
-                else if ('{{ app.session.get("type") }}' == 'donateur'){
-                    $(".abomodel").css('background-color', 'rgba(239,255,0,0.55)');
-                    $('.acheter').val('RDHX34X98AEB2')
+{% endblock %}
 
-                }
-                else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
-                    $(".abomodel").css('background-color', 'rgba(247,113,24,0.75)');
-                    $('.acheter').val('Z8SEB45LSL3LQ')
-                }
-            });
-        </script>
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+            if ('{{ app.session.get("type") }}' == 'lecteur'){
+                $('.abomodel').css('background-color', 'rgba(138,225,58,0.75)');
+                $('.acheter').val('AUJPY5RMCGQX8');
+            }
+            else if ('{{ app.session.get("type") }}' == 'donateur'){
+                $(".abomodel").css('background-color', 'rgba(239,255,0,0.55)');
+                $('.acheter').val('RDHX34X98AEB2')
 
-    {% endblock %}
+            }
+            else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
+                $(".abomodel").css('background-color', 'rgba(247,113,24,0.75)');
+                $('.acheter').val('Z8SEB45LSL3LQ')
+            }
+        });
+    </script>
 
 {% endblock %}
+
+{# JQuery avec background demandés par clients #}
+{#{% block javascripts %}#}
+    {#{{ parent() }}#}
+    {#<script>#}
+        {#$(document).ready(function() {#}
+            {#if ('{{ app.session.get("type") }}' == 'lecteur'){#}
+                {#$('.abomodel').css('background-color', 'rgba(138,225,58,0.75)');#}
+                {#$('.acheter').val('AUJPY5RMCGQX8');#}
+            {#}#}
+            {#else if ('{{ app.session.get("type") }}' == 'donateur'){#}
+                {#$(".abomodel").css('background-color', 'rgba(239,255,0,0.55)');#}
+                {#$('.acheter').val('RDHX34X98AEB2')#}
+            {#}#}
+            {#else if ('{{ app.session.get("type") }}' == 'ambassadeur'){#}
+                {#$(".abomodel").css('background-color', 'rgba(247,113,24,0.75)');#}
+                {#$('.acheter').val('Z8SEB45LSL3LQ')#}
+            {#}#}
+        {#});#}
+    {#</script>#}
+
+{#{% endblock %}#}
