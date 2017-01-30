@@ -810,21 +810,22 @@ div .titreRuralis {
 .abomodel {
   margin-left: 5%;
   max-width: 90%;
+  padding-bottom: 20px;
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
   font-size: 18px;
   font-family: 'Time New Roman', Regular;
 }
-/* line 59, ../sass/_abonnement.scss */
+/* line 60, ../sass/_abonnement.scss */
 .abomodel p {
   line-height: 20px !important;
 }
-/* line 63, ../sass/_abonnement.scss */
+/* line 64, ../sass/_abonnement.scss */
 .abomodel .row {
   margin-bottom: 0 !important;
 }
-/* line 66, ../sass/_abonnement.scss */
+/* line 67, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
   font-weight: bold;
   margin-top: 30px;
@@ -834,40 +835,40 @@ div .titreRuralis {
 /*         Responsive         */
 /******************************/
 @media screen and (max-width: 640px) {
-  /* line 77, ../sass/_abonnement.scss */
+  /* line 78, ../sass/_abonnement.scss */
   .fixed {
     display: none;
   }
 
-  /* line 80, ../sass/_abonnement.scss */
+  /* line 81, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: block;
   }
 
   padding-bottom: 20px;
-  /* line 100, ../sass/_abonnement.scss */
+  /* line 101, ../sass/_abonnement.scss */
   p {
     line-height: 20px !important;
   }
 
-  /* line 104, ../sass/_abonnement.scss */
+  /* line 105, ../sass/_abonnement.scss */
   .row {
     margin-bottom: 0 !important;
   }
 
-  /* line 107, ../sass/_abonnement.scss */
+  /* line 108, ../sass/_abonnement.scss */
   .recaptitres {
     font-weight: bold;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 114, ../sass/_abonnement.scss */
+  /* line 115, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: none;
   }
 
-  /* line 117, ../sass/_abonnement.scss */
+  /* line 118, ../sass/_abonnement.scss */
   .fixed {
     display: block;
   }
