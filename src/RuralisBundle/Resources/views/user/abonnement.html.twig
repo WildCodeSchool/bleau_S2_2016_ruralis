@@ -61,5 +61,36 @@
 				</p>
 			</div>
 		</div>
+
+        {# Si responsive#}
+		<div class="row center fixedResponsive ">
+			<div class="col s12 fixedResponsive">
+				<p>
+					Ce projet fait sens pous vous ?
+				</p>
+				<p>
+					<a class="hoverable margtop" href="{{ path('ruralis_abonnement') }}">
+						J'encourage Ruralis Magazine
+					</a>
+				</p>
+				<p>
+					<a href="{{ path('ruralis_abonnement') }}" target="_blank">
+						<img class="logoabt hoverable" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"  />
+					</a>
+				</p>
+			</div>
+
+			<div class="col s12 fixedResponsive">
+				<p>
+					Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.<br/>
+				</p>
+				<p>
+					<a class="hoverable margtop" href="{{ path('ruralis_abonnement') }}">
+						J'offre un abonnement à un proche
+					</a>
+				</p>
+			</div>
+		</div>
 	</div>
+
 {% endblock %}

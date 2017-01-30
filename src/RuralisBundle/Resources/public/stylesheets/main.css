@@ -824,6 +824,31 @@ div .titreRuralis {
   margin-top: 30px;
 }
 
+/******************************/
+/*         Responsive         */
+/******************************/
+@media screen and (max-width: 640px) {
+  /* line 77, ../sass/_abonnement.scss */
+  .fixed {
+    display: none;
+  }
+
+  /* line 80, ../sass/_abonnement.scss */
+  .fixedResponsive {
+    display: block;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* line 86, ../sass/_abonnement.scss */
+  .fixedResponsive {
+    display: none;
+  }
+
+  /* line 89, ../sass/_abonnement.scss */
+  .fixed {
+    display: block;
+  }
+}
 /* line 3, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
