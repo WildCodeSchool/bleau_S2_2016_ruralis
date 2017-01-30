@@ -78,7 +78,7 @@ class ContactController extends Controller
         }*/
 
 /*        else {*/
-            //Je créé un nouvel abonne avec les infos de $details
+            //Je créé un nouvel abonné avec les infos de $details
             $newAbonne = new Abonne();
             $newAbonne->setNom($nom);
             $newAbonne->setPrenom($prenom);
@@ -100,11 +100,17 @@ class ContactController extends Controller
             $em->persist($abonnement);
             $em->flush();
 
-            // Retour vue "success"
+            // Si abonnement et paiement validé sur Paypal vue "validation"
 
-            return $this->render('@Ruralis/admin/accueilAdmin.html.twig', array(
+            return $this->render('@Ruralis/user/validationAbonnement.html.twig', array(
                 'details' => $details,
             ));
 /*        }*/
+    }
+
+    public function aboannulAction()
+    {
+        // Si echec d'abonnement via Paypal : renvoie la vue "annulation"
+        return $this->render('@Ruralis/user/annulationAbonnement.html.twig');
     }
 }
