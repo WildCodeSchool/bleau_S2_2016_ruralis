@@ -10,7 +10,9 @@
                     Vous souhaitez vous abonner en tant que <b>{{ app.session.get('type') }}</b> pour une durée d'un an.
                 </p>
 
-                <p class="recaptitres"> Vos coordonnées :</p>
+                <p class="recaptitres">
+                    Vos coordonnées :
+                </p>
                 <div class="row">
                     <div class="col s4 offset-s1">
                        <p>
@@ -66,19 +68,27 @@
                         </p>
                 {% endif %}
 
+                {# Boutons #}
                 <div class="row">
                     <div class="col s2 offset-s5 center">
-                        <a href="{{ path('ruralis_abosend') }}">
-                            <button class="btn waves-effect waves-light" type="submit" name="valider">
-                                Valider
-                            </button>
-                        </a>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input  class="acheter" type="hidden" name="hosted_button_id" value="TYJXWFXKWDMPN">
+                            <a href="{{ path('ruralis_abosend') }}">
+                                <button class="btn waves-effect waves-light" type="submit" name="valider">
+                                    Valider
+                                </button>
+                            </a>
+                        </form>
+
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
-                            <input class="acheter" type="hidden" name="hosted_button_id" value="">
+                            <input type="hidden" name="hosted_button_id" value="AUJPY5RMCGQX8">
                             <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
                             <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                         </form>
+
+
                     </div>
                 </div>
             </div>
@@ -88,26 +98,58 @@
     {#ajout du prix#}
     {#ajout durée de paiement#}
 
-    {% block javascripts %}
-        {{ parent() }}
-        <script>
-            $(document).ready(function() {
-                if ('{{ app.session.get("type") }}' == 'lecteur'){
-                    $('.abomodel').css('background-color', 'rgba(138,225,58,0.75)');
-                    $('.acheter').val('AUJPY5RMCGQX8');
-                }
-                else if ('{{ app.session.get("type") }}' == 'donateur'){
-                    $(".abomodel").css('background-color', 'rgba(239,255,0,0.55)');
-                    $('.acheter').val('RDHX34X98AEB2')
-
-                }
-                else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
-                    $(".abomodel").css('background-color', 'rgba(247,113,24,0.75)');
-                    $('.acheter').val('Z8SEB45LSL3LQ')
-                }
-            });
-        </script>
-
-    {% endblock %}
-
 {% endblock %}
+
+{# JQuery avec background demandés par clients #}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+            if ('{{ app.session.get("type") }}' == 'lecteur'){
+                $('.abomodel').css('background-color', 'rgba(138,225,58,0.75)');
+                $('.acheter').val('AUJPY5RMCGQX8');
+            }
+            else if ('{{ app.session.get("type") }}' == 'donateur'){
+                $(".abomodel").css('background-color', 'rgba(239,255,0,0.55)');
+                $('.acheter').val('RDHX34X98AEB2')
+            }
+            else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
+                $(".abomodel").css('background-color', 'rgba(247,113,24,0.75)');
+                $('.acheter').val('Z8SEB45LSL3LQ')
+            }
+        });
+    </script>
+{% endblock %}
+
+{# Test Jquery couleurs ailleurs #}
+{#{% block javascripts %}#}
+    {#{{ parent() }}#}
+    {#<script>#}
+        {#$(document).ready(function() {#}
+            {#Materialize.updateTextFields();#}
+            {#if ('{{ app.session.get("type") }}' == 'lecteur'){#}
+                {#$('.formulaire').css(' box-shadow', '0 4px 5px 0 rgba(234,100,12, 0.65), 0 1px 10px 0  rgba(234,100,12, 0.94), 0 2px 4px -1px rgba(234,100,12, 0.65)');#}
+                {#$('.btn').css('background-color', 'green').hover(function() {#}
+                    {#$(this).css('background-color', 'rgb(0,184,43)');#}
+                {#})#}
+            {#}#}
+            {#else if ('{{ app.session.get("type") }}' == 'donateur'){#}
+                {#$(".abomodel").css(' box-shadow', 'rgba(239,255,0,0.55)');#}
+                {#$('.btn').css({#}
+                    {#'background-color':'yellow',#}
+                    {#'color': 'rgb(65, 65, 65)'#}
+                {#})#}
+                {#.hover(function() {#}
+                    {#$(this).css('background-color', 'rgb(255,242,21)')#}
+                {#})#}
+            {#}#}
+            {#else if ('{{ app.session.get("type") }}' == 'ambassadeur'){#}
+                {#$(".abomodel").css(' box-shadow', 'rgba(247,113,24,0.75)');#}
+                {#$('.btn').css('background-color', 'orange').hover(function() {#}
+                    {#$(this).css('background-color', 'rgb(255,109,13)');#}
+                {#})#}
+            {#}#}
+        {#});#}
+    {#</script>#}
+
+{#{% endblock %}#}

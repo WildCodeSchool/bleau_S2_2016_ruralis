@@ -809,23 +809,22 @@ div .titreRuralis {
 /* line 50, ../sass/_abonnement.scss */
 .abomodel {
   margin-left: 5%;
-  margin-right: 5%;
-  padding-bottom: 5px;
+  max-width: 90%;
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
   font-size: 18px;
   font-family: 'Time New Roman', Regular;
 }
-/* line 60, ../sass/_abonnement.scss */
+/* line 59, ../sass/_abonnement.scss */
 .abomodel p {
   line-height: 20px !important;
 }
-/* line 64, ../sass/_abonnement.scss */
+/* line 63, ../sass/_abonnement.scss */
 .abomodel .row {
   margin-bottom: 0 !important;
 }
-/* line 67, ../sass/_abonnement.scss */
+/* line 66, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
   font-weight: bold;
   margin-top: 30px;
@@ -835,23 +834,40 @@ div .titreRuralis {
 /*         Responsive         */
 /******************************/
 @media screen and (max-width: 640px) {
-  /* line 78, ../sass/_abonnement.scss */
+  /* line 77, ../sass/_abonnement.scss */
   .fixed {
     display: none;
   }
 
-  /* line 81, ../sass/_abonnement.scss */
+  /* line 80, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: block;
   }
+
+  padding-bottom: 20px;
+  /* line 100, ../sass/_abonnement.scss */
+  p {
+    line-height: 20px !important;
+  }
+
+  /* line 104, ../sass/_abonnement.scss */
+  .row {
+    margin-bottom: 0 !important;
+  }
+
+  /* line 107, ../sass/_abonnement.scss */
+  .recaptitres {
+    font-weight: bold;
+    margin-top: 30px;
+  }
 }
 @media screen and (min-width: 640px) {
-  /* line 87, ../sass/_abonnement.scss */
+  /* line 114, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: none;
   }
 
-  /* line 90, ../sass/_abonnement.scss */
+  /* line 117, ../sass/_abonnement.scss */
   .fixed {
     display: block;
   }
@@ -1035,14 +1051,6 @@ a.cardLink {
 .formulaire span {
   color: #414141;
   font-weight: bold;
-}
-/* line 53, ../sass/_formulaireAbonnement.scss */
-.formulaire .btn {
-  background-color: #00B82B;
-}
-/* line 57, ../sass/_formulaireAbonnement.scss */
-.formulaire .btn:hover {
-  background-color: #00f138;
 }
 /* line 62, ../sass/_formulaireAbonnement.scss */
 .formulaire .champsForm {

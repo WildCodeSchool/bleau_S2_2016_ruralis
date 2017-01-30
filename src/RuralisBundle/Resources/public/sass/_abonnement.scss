@@ -49,8 +49,7 @@
 // Modele en box = .abomodel
 .abomodel {
     margin-left:5%;
-    margin-right:5%;
-    padding-bottom: 5px;
+    max-width: 90%;
     margin-bottom: 20px;
     border-radius: 15px;
     margin-top: 3%;
@@ -80,6 +79,34 @@
     }
     .fixedResponsive {
         display:block;
+    }
+    padding-bottom: 20px;
+
+    // Orange shadow
+    //box-shadow: 0 4px 5px 0 rgba(234,100,12, 0.65), 0 1px 10px 0  rgba(234,100,12, 0.94), 0 2px 4px -1px rgba(234,100,12, 0.65);
+    // Green shadow
+    //box-shadow: 0 4px 5px 0 rgba(0,184,43, 0.65), 0 1px 10px 0  rgba(0,184,43, 0.94), 0 2px 4px -1px rgba(0,184,43, 0.65);
+    // Yellow shadow
+    //box-shadow: 0 4px 5px 0 rgba(239,255,0, 0.65), 0 1px 10px 0  rgba(239,255,0, 0.94), 0 2px 4px -1px rgba(239,255,0, 0.65);
+    //
+    //.btn{
+    //    background-color: #00B82B;
+    //}
+    //
+    //.btn:hover{
+    //    background-color: #00f138;
+    //}
+
+    p {
+        line-height: 20px !important;
+    }
+
+    .row {
+        margin-bottom: 0 !important;
+    }
+    .recaptitres {
+        font-weight: bold;
+        margin-top: 30px;
     }
 }
 
