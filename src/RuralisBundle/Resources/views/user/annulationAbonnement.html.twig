@@ -2,38 +2,39 @@
 
 {% block body %}
 
+    <div class="container abomodel">
+        <h1>Attention {{ details.prenom }} {{ details.nom }}</h1>
+        <p class="center">Une erreur s'est produite lors de votre abonnement à Ruralis magazine en tant que {{ app.session.get('type') }}. </p>
 
-    <h1> Attention {{ details.prenom }} {{ details.nom }}.</h1>
-    <p class="center">Une erreur s'est produite lors de votre abonnement à Ruralis magazine en tant que {{ app.session.get('type') }}. </p>
+        {# Bouton réessayer #}
+        <form class="center" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="TYJXWFXKWDMPN">
+            <a href="{{ path('ruralis_abosend') }}">
+                <button class="btn waves-effect waves-light" type="submit" name="valider">
+                    Réessayer
+                </button>
+            </a>
+        </form>
+    </div>
 
-    {# Boutons réessayer #}
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="TYJXWFXKWDMPN">
-        <a href="{{ path('ruralis_abosend') }}">
-            <button class="btn waves-effect waves-light" type="submit" name="valider">
-                Réessayer
-            </button>
-        </a>
-    </form>
+{% endblock %}
 
-    {% block javascripts %}
-        {{ parent() }}
-        <script>
-            $(document).ready(function() {
-                if ('{{ app.session.get("type") }}' == 'lecteur'){
-                    $('.acheter').val('AUJPY5RMCGQX8');
-                }
-                else if ('{{ app.session.get("type") }}' == 'donateur'){
-                    $('.acheter').val('RDHX34X98AEB2')
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+            if ('{{ app.session.get("type") }}' == 'lecteur'){
+                $('.acheter').val('AUJPY5RMCGQX8');
+            }
+            else if ('{{ app.session.get("type") }}' == 'donateur'){
+                $('.acheter').val('RDHX34X98AEB2')
 
-                }
-                else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
-                    $('.acheter').val('Z8SEB45LSL3LQ')
-                }
-            });
-        </script>
-
-    {% endblock %}
+            }
+            else if ('{{ app.session.get("type") }}' == 'ambassadeur'){
+                $('.acheter').val('Z8SEB45LSL3LQ')
+            }
+        });
+    </script>
 
 {% endblock %}

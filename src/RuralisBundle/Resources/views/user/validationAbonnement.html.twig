@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Merci de votre soutien {{ details.prenom }} {{ details.nom }}.</h1>
+    <h1>Merci de votre soutien {{ details.prenom }} {{ details.nom }}</h1>
     <p class="center">Vous êtes maintenant abonné(e) à Ruralis Magazine en tant que {{ app.session.get('type') }}. </p>
 
 {% endblock %}

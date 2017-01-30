@@ -110,7 +110,12 @@ class ContactController extends Controller
 
     public function aboannulAction()
     {
+        $session = $this->get('request')->getSession();
+        $details = $session->get('details');
+
         // Si echec d'abonnement via Paypal : renvoie la vue "annulation"
-        return $this->render('@Ruralis/user/annulationAbonnement.html.twig');
+        return $this->render('@Ruralis/user/annulationAbonnement.html.twig', array(
+            'details' => $details,
+        ));
     }
 }
