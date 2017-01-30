@@ -39,7 +39,29 @@ class NewsletterController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
+
+//            On réccupère toutes les balises images et leurs contenus à l'intérieur de contenu de la news et on les stock dans un tableau
+            $doc = new \DOMDocument();
+            $doc->loadHTML($newsletter->getContenu());
+            $imageTags = $doc->getElementsByTagName('img');
+
+//            Parcours de tous les éléments image de notre contenu
+            foreach($imageTags as $tag) {
+//                Récupération du lien de de l'image sur notre serveur
+                $path = __DIR__ . '../../../../../..' .  $tag->getAttribute('src');
+//                Récupération de l'extension du fichier
+                $type = pathinfo($path, PATHINFO_EXTENSION);
+//                Récupération de l'image au "format txt"
+                $data = file_get_contents($path);
+//                Encodage de l'image au format base64
+                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+//                Remplacement du lien de l'image a l'intérieur du contenu par l'image au format base64
+                $newsletter->setContenu(str_replace($tag->getAttribute('src'), $base64, $newsletter->getContenu()));
+            }
+
             $em->persist($newsletter);
             $em->flush($newsletter);
 
