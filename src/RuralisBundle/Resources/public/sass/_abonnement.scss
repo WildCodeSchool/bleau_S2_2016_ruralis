@@ -11,7 +11,7 @@
 
     .options {
         position: fixed;
-        top: 48%;
+        top: 45%;
         text-align: center;
         z-index: 1;
     }
@@ -48,13 +48,38 @@
 
 // Modele en box = .abomodel
 .abomodel {
+    margin-left:5%;
     max-width: 90%;
-    //padding-bottom: 5px;
     margin-bottom: 20px;
     border-radius: 15px;
     margin-top: 3%;
     font-size: 18px;
     font-family: 'Time New Roman', Regular;
+
+    p {
+        line-height: 20px !important;
+    }
+
+    .row {
+        margin-bottom: 0 !important;
+    }
+    .recaptitres {
+        font-weight: bold;
+        margin-top: 30px;
+    }
+}
+/******************************/
+/*         Responsive         */
+/******************************/
+
+
+@media screen and (max-width: 640px) {
+    .fixed {
+        display:none;
+    }
+    .fixedResponsive {
+        display:block;
+    }
     padding-bottom: 20px;
 
     // Orange shadow
@@ -85,3 +110,11 @@
     }
 }
 
+@media screen and (min-width: 640px){
+    .fixedResponsive {
+        display:none;
+    }
+    .fixed {
+        display:block;
+    }
+}

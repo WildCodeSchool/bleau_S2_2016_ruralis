@@ -196,7 +196,7 @@ div .titreRuralis {
             display: block;
             background-color: $orange;
             position: fixed;
-            z-index: 999;
+            z-index: 998;
         }
         height: 56px !important;
         .fixed_nav{
@@ -209,5 +209,9 @@ div .titreRuralis {
             }
         }
     }
+    #sidenav-overlay {
+        z-index: 1 !important;
+    }
+
 
 }

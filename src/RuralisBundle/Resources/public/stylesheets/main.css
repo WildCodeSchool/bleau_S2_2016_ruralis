@@ -135,10 +135,15 @@ textarea.materialize-textarea {
 /* line 140, ../sass/main.scss */
 .btn.nl {
   background-color: #ea640c;
-  margin-top: -11px;
+  height: 25px;
+  margin-block-start: 34px;
+  margin-top: -3px;
+  padding-bottom: 31px;
+  padding-inline-start: 20px;
+  padding-right: 20px;
 }
 
-/* line 144, ../sass/main.scss */
+/* line 149, ../sass/main.scss */
 .btn.nl:hover {
   background-color: #ff8436;
 }
@@ -624,7 +629,7 @@ div .titreRuralis {
     display: block;
     background-color: #ea640c;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
   }
   /* line 202, ../sass/_navbar.scss */
   header .fixed_nav {
@@ -637,6 +642,11 @@ div .titreRuralis {
   /* line 207, ../sass/_navbar.scss */
   header nav .brand-logo img {
     height: 100%;
+  }
+
+  /* line 212, ../sass/_navbar.scss */
+  #sidenav-overlay {
+    z-index: 1 !important;
   }
 }
 /* line 3, ../sass/_admin.scss */
@@ -764,7 +774,7 @@ div .titreRuralis {
 /* line 12, ../sass/_abonnement.scss */
 .abonnement .options {
   position: fixed;
-  top: 48%;
+  top: 45%;
   text-align: center;
   z-index: 1;
 }
@@ -798,28 +808,70 @@ div .titreRuralis {
 
 /* line 50, ../sass/_abonnement.scss */
 .abomodel {
+  margin-left: 5%;
   max-width: 90%;
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
   font-size: 18px;
   font-family: 'Time New Roman', Regular;
-  padding-bottom: 20px;
 }
-/* line 75, ../sass/_abonnement.scss */
+/* line 59, ../sass/_abonnement.scss */
 .abomodel p {
   line-height: 20px !important;
 }
-/* line 79, ../sass/_abonnement.scss */
+/* line 63, ../sass/_abonnement.scss */
 .abomodel .row {
   margin-bottom: 0 !important;
 }
-/* line 82, ../sass/_abonnement.scss */
+/* line 66, ../sass/_abonnement.scss */
 .abomodel .recaptitres {
   font-weight: bold;
   margin-top: 30px;
 }
 
+/******************************/
+/*         Responsive         */
+/******************************/
+@media screen and (max-width: 640px) {
+  /* line 77, ../sass/_abonnement.scss */
+  .fixed {
+    display: none;
+  }
+
+  /* line 80, ../sass/_abonnement.scss */
+  .fixedResponsive {
+    display: block;
+  }
+
+  padding-bottom: 20px;
+  /* line 100, ../sass/_abonnement.scss */
+  p {
+    line-height: 20px !important;
+  }
+
+  /* line 104, ../sass/_abonnement.scss */
+  .row {
+    margin-bottom: 0 !important;
+  }
+
+  /* line 107, ../sass/_abonnement.scss */
+  .recaptitres {
+    font-weight: bold;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* line 114, ../sass/_abonnement.scss */
+  .fixedResponsive {
+    display: none;
+  }
+
+  /* line 117, ../sass/_abonnement.scss */
+  .fixed {
+    display: block;
+  }
+}
 /* line 3, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
@@ -914,6 +966,16 @@ a.cardLink {
   z-index: 2;
 }
 
+/***********************************/
+/*        SideNav Responsive       */
+/***********************************/
+@media screen and (max-width: 640px) {
+  /* line 92, ../sass/_blog.scss */
+  .fixedSideNav {
+    display: block;
+    visibility: hidden;
+  }
+}
 /* line 1, ../sass/_partenaire.scss */
 .partenaire {
   text-align: center;
