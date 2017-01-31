@@ -72,7 +72,6 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                max-height: 100px;
                 width: auto;
                 height: auto;
                 min-height: 200px;
@@ -89,6 +88,10 @@
             margin-left : auto;
             margin-right: auto;
             margin-bottom: auto;
+        }
+        // Rajoute une possibilité de scroll quand descriptif trop long
+        .card-stacked .card-content {
+            overflow-y: auto;
         }
     }
 
@@ -124,5 +127,31 @@
             display: block;
             visibility: hidden;
         }
+        .card.horizontal {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            position: relative;
+        }
+
+        .carre {
+            min-height: 300px;
+            .card-image {
+                img {
+                    width: 100%;
+                    height: inherit;
+                    min-height: inherit;
+                }
+            }
+        }
     }
 }
+
+
+

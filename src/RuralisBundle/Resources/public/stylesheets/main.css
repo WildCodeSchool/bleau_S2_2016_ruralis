@@ -1009,43 +1009,69 @@ div .titreRuralis {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-height: 100px;
   width: auto;
   height: auto;
   min-height: 200px;
 }
-/* line 84, ../sass/_blog.scss */
+/* line 83, ../sass/_blog.scss */
 .blog .horizontal {
   min-height: 265px;
   max-height: 300px;
 }
-/* line 87, ../sass/_blog.scss */
+/* line 86, ../sass/_blog.scss */
 .blog .horizontal .card-image img {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
 }
-/* line 99, ../sass/_blog.scss */
+/* line 93, ../sass/_blog.scss */
+.blog .horizontal .card-stacked .card-content {
+  overflow-y: auto;
+}
+/* line 102, ../sass/_blog.scss */
 .blog .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
-/* line 104, ../sass/_blog.scss */
+/* line 107, ../sass/_blog.scss */
 .blog .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
 }
-/* line 113, ../sass/_blog.scss */
+/* line 116, ../sass/_blog.scss */
 .blog .logoabt {
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 640px) {
-  /* line 123, ../sass/_blog.scss */
+  /* line 126, ../sass/_blog.scss */
   .blog .fixedSideNav {
     display: block;
     visibility: hidden;
+  }
+  /* line 130, ../sass/_blog.scss */
+  .blog .card.horizontal {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+  }
+  /* line 143, ../sass/_blog.scss */
+  .blog .carre {
+    min-height: 300px;
+  }
+  /* line 146, ../sass/_blog.scss */
+  .blog .carre .card-image img {
+    width: 100%;
+    height: inherit;
+    min-height: inherit;
   }
 }
 
