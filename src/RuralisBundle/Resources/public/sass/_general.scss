@@ -167,25 +167,49 @@ Author: Marielle Lautrou and Aurore David
 }
 
 // Trombinoscope + présentation équipe
-.trombi{
+.trombi {
     h6 {
         color: $orange;
     }
 
-    p{
-    font-family: 'Courier New', sans-serif !important;
+    p {
+        font-family: 'Courier New', sans-serif !important;
     }
 
-    .col{
-        padding: 0 0.30rem !important;
+    .col {
+        padding: 0 0.50rem !important;
     }
 
-    .m4{
-        height:400px;
-    }
-    img{
+    img {
         width: 100%;
     }
+
+    @media all and (max-width:992px) and (min-width: 865px){
+        .m4:nth-child(1), .m4:nth-child(2) {
+            height: 375px;
+        }
+    }
+    @media only screen and (max-width:864px) and (min-width: 805px){
+        .m4:nth-child(1), .m4:nth-child(2) {
+            height: 425px;
+        }
+    }
+    @media only screen and (max-width:804px) and (min-width: 771px){
+        .m4:nth-child(1), .m4:nth-child(2) {
+            height: 450px;
+        }
+    }
+    @media only screen and (max-width:770px) and (min-width: 738px){
+        .m4:nth-child(1), .m4:nth-child(2) {
+            height: 475px;
+        }
+    }
+    @media only screen and (max-width:737px) and (min-width: 601px){
+        .m4:nth-child(1), .m4:nth-child(2) {
+            height: 550px;
+        }
+    }
+
 }
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */

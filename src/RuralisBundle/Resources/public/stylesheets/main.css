@@ -343,55 +343,81 @@ Author: Marielle Lautrou and Aurore David
 }
 /* line 179, ../sass/_general.scss */
 .trombi .col {
-  padding: 0 0.30rem !important;
+  padding: 0 0.50rem !important;
 }
 /* line 183, ../sass/_general.scss */
-.trombi .m4 {
-  height: 400px;
-}
-/* line 186, ../sass/_general.scss */
 .trombi img {
   width: 100%;
+}
+@media all and (max-width: 992px) and (min-width: 865px) {
+  /* line 188, ../sass/_general.scss */
+  .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
+    height: 375px;
+  }
+}
+@media only screen and (max-width: 864px) and (min-width: 805px) {
+  /* line 193, ../sass/_general.scss */
+  .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
+    height: 425px;
+  }
+}
+@media only screen and (max-width: 804px) and (min-width: 771px) {
+  /* line 198, ../sass/_general.scss */
+  .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 770px) and (min-width: 738px) {
+  /* line 203, ../sass/_general.scss */
+  .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
+    height: 475px;
+  }
+}
+@media only screen and (max-width: 737px) and (min-width: 601px) {
+  /* line 208, ../sass/_general.scss */
+  .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
+    height: 550px;
+  }
 }
 
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 194, ../sass/_general.scss */
+/* line 218, ../sass/_general.scss */
 footer {
   background-color: #ea640c !important;
   padding-top: 20px;
   bottom: 0;
   text-align: center;
 }
-/* line 200, ../sass/_general.scss */
+/* line 224, ../sass/_general.scss */
 footer a {
   color: white;
 }
-/* line 204, ../sass/_general.scss */
+/* line 228, ../sass/_general.scss */
 footer a:hover {
   font-weight: bold;
 }
-/* line 208, ../sass/_general.scss */
+/* line 232, ../sass/_general.scss */
 footer img {
   width: 30%;
 }
-/* line 212, ../sass/_general.scss */
+/* line 236, ../sass/_general.scss */
 footer p {
   font-size: 14px;
 }
-/* line 216, ../sass/_general.scss */
+/* line 240, ../sass/_general.scss */
 footer .valign-wrapper {
   margin-top: -25px;
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 224, ../sass/_general.scss */
+  /* line 248, ../sass/_general.scss */
   footer .valign-wrapper {
     display: block;
   }
-  /* line 227, ../sass/_general.scss */
+  /* line 251, ../sass/_general.scss */
   footer .logowcs {
     margin-top: 35px;
   }
