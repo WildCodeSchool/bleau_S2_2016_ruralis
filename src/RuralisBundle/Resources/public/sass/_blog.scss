@@ -3,10 +3,11 @@
 .hoverable.header, .hoverable.card{
     height:2% !important;
 }
+
 .article {
-    max-height: 200px;
-    overflow: hidden;
-    margin-bottom:70px;
+    max-height: 311px;
+    //overflow: hidden;
+    margin-bottom:20px;
 }
 
 .card-image > img, .card-content{
@@ -24,73 +25,81 @@
     height: auto;
 }
 
-.carre .card-image img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width:100px;
-    max-height:100px;
-    width: auto;
-    height: auto;
-}
-
-h4, .card-content{
-    color:black;
-}
-
-a.cardLink{
-    color:#ffd8a6;
-}
-.fixedSideNav .row{
-    img{
-        width: 70%;
-    }
-    .paypal {
-        width: 30% !important;
-    }
-
-    position: fixed;
-    width: 16.6666666667%;
-    height: auto;
-}
-
-.current a {
-    background-color: rgba(234, 100, 12, 0.8) !important;
-}
-
-/****************************/
-/*        row  & col        */
-/****************************/
-
-.rowCustom {
-    padding: 0px !important;
-    margin: 0px !important;
-}
-
-.colCustom {
-    padding:0px !important;
-    margin:0px;
-}
-
-/***********************************/
-/*        Images abonnement        */
-/***********************************/
-
-
-.logoabt{
-    position: relative;
-    z-index: 2;
-    //min-width: 200px;
-}
-
-/***********************************/
-/*        SideNav Responsive       */
-/***********************************/
-
-
-@media screen and (max-width: 640px) {
-    .fixedSideNav {
-        display:block;
-        visibility:hidden;
+.carre {
+    min-height: 300px;
+    .card-image {
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            //max-width:100px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+            min-height: 200px;
+        }
     }
 }
+    h4, .card-content{
+        color:black;
+    }
+
+    a.cardLink{
+        color:#ffd8a6;
+    }
+    .fixedSideNav .row{
+        img{
+            width: 70%;
+        }
+        .paypal {
+            width: 30% !important;
+        }
+
+        position: fixed;
+        width: 16.6666666667%;
+        height: auto;
+    }
+
+    .current a {
+        background-color: rgba(234, 100, 12, 0.8) !important;
+    }
+
+    /****************************/
+    /*        row  & col        */
+    /****************************/
+
+    .rowCustom {
+        padding: 0px !important;
+        //margin: 0px !important;
+        margin-bottom: 45px;
+    }
+
+    .colCustom {
+        padding:0px !important;
+        //margin:0px;
+        //max-height: 224px;
+        margin-bottom: 19px !important;
+    }
+
+    /***********************************/
+    /*        Images abonnement        */
+    /***********************************/
+
+
+    .logoabt{
+        position: relative;
+        z-index: 2;
+        //min-width: 200px;
+    }
+
+    /***********************************/
+    /*        SideNav Responsive       */
+    /***********************************/
+
+
+    @media screen and (max-width: 640px) {
+        .fixedSideNav {
+            display:block;
+            visibility:hidden;
+        }
+    }
