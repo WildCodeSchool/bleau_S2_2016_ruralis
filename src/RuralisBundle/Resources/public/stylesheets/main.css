@@ -922,24 +922,54 @@ div .titreRuralis {
     display: block;
   }
 }
-/* line 3, ../sass/_blog.scss */
+/* line 2, ../sass/_blog.scss */
+h4, .card-content {
+  color: black;
+}
+
+/* line 6, ../sass/_blog.scss */
+a.cardLink {
+  color: #ffd8a6;
+}
+
+/* line 9, ../sass/_blog.scss */
+.fixedSideNav .row {
+  position: fixed;
+  width: 16.6666666667%;
+  height: auto;
+}
+/* line 10, ../sass/_blog.scss */
+.fixedSideNav .row img {
+  width: 70%;
+}
+/* line 13, ../sass/_blog.scss */
+.fixedSideNav .row .paypal {
+  width: 30% !important;
+}
+
+/* line 22, ../sass/_blog.scss */
+.current a {
+  background-color: rgba(234, 100, 12, 0.8) !important;
+}
+
+/* line 26, ../sass/_blog.scss */
 .hoverable.header, .hoverable.card {
   height: 2% !important;
 }
 
-/* line 7, ../sass/_blog.scss */
+/* line 30, ../sass/_blog.scss */
 .article {
   max-height: 311px;
   margin-bottom: 20px;
 }
 
-/* line 13, ../sass/_blog.scss */
+/* line 36, ../sass/_blog.scss */
 .card-image > img, .card-content {
   max-height: 190px;
   width: auto;
 }
 
-/* line 18, ../sass/_blog.scss */
+/* line 41, ../sass/_blog.scss */
 .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -950,11 +980,11 @@ div .titreRuralis {
   height: auto;
 }
 
-/* line 28, ../sass/_blog.scss */
+/* line 52, ../sass/_blog.scss */
 .carre {
   min-height: 300px;
 }
-/* line 31, ../sass/_blog.scss */
+/* line 55, ../sass/_blog.scss */
 .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -965,46 +995,21 @@ div .titreRuralis {
   min-height: 200px;
 }
 
-/* line 43, ../sass/_blog.scss */
-h4, .card-content {
-  color: black;
-}
-
-/* line 47, ../sass/_blog.scss */
-a.cardLink {
-  color: #ffd8a6;
-}
-
-/* line 50, ../sass/_blog.scss */
-.fixedSideNav .row {
-  position: fixed;
-  width: 16.6666666667%;
-  height: auto;
-}
-/* line 51, ../sass/_blog.scss */
-.fixedSideNav .row img {
-  width: 70%;
-}
-/* line 54, ../sass/_blog.scss */
-.fixedSideNav .row .paypal {
-  width: 30% !important;
-}
-
-/* line 63, ../sass/_blog.scss */
-.current a {
-  background-color: rgba(234, 100, 12, 0.8) !important;
+/* line 69, ../sass/_blog.scss */
+.horizontal {
+  min-height: 265px;
 }
 
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 71, ../sass/_blog.scss */
+/* line 77, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
 
-/* line 77, ../sass/_blog.scss */
+/* line 83, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
@@ -1013,7 +1018,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 89, ../sass/_blog.scss */
+/* line 95, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;
@@ -1023,7 +1028,7 @@ a.cardLink {
 /*        SideNav Responsive       */
 /***********************************/
 @media screen and (max-width: 640px) {
-  /* line 101, ../sass/_blog.scss */
+  /* line 107, ../sass/_blog.scss */
   .fixedSideNav {
     display: block;
     visibility: hidden;

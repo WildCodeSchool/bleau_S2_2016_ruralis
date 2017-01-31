@@ -1,4 +1,27 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
+h4, .card-content{
+    color:black;
+}
+
+a.cardLink{
+    color:#ffd8a6;
+}
+.fixedSideNav .row{
+    img{
+        width: 70%;
+    }
+    .paypal {
+        width: 30% !important;
+    }
+
+    position: fixed;
+    width: 16.6666666667%;
+    height: auto;
+}
+
+.current a {
+    background-color: rgba(234, 100, 12, 0.8) !important;
+}
 
 .hoverable.header, .hoverable.card{
     height:2% !important;
@@ -25,6 +48,7 @@
     height: auto;
 }
 
+// CARTE CARREE
 .carre {
     min-height: 300px;
     .card-image {
@@ -40,66 +64,48 @@
         }
     }
 }
-    h4, .card-content{
-        color:black;
+
+// CARTE HORIZONTALE
+.horizontal{
+    min-height: 265px;
+}
+
+/****************************/
+/*        row  & col        */
+/****************************/
+
+.rowCustom {
+    padding: 0px !important;
+    //margin: 0px !important;
+    margin-bottom: 45px;
+}
+
+.colCustom {
+    padding:0px !important;
+    //margin:0px;
+    //max-height: 224px;
+    margin-bottom: 19px !important;
+}
+
+/***********************************/
+/*        Images abonnement        */
+/***********************************/
+
+
+.logoabt{
+    position: relative;
+    z-index: 2;
+    //min-width: 200px;
+}
+
+/***********************************/
+/*        SideNav Responsive       */
+/***********************************/
+
+
+@media screen and (max-width: 640px) {
+    .fixedSideNav {
+        display:block;
+        visibility:hidden;
     }
-
-    a.cardLink{
-        color:#ffd8a6;
-    }
-    .fixedSideNav .row{
-        img{
-            width: 70%;
-        }
-        .paypal {
-            width: 30% !important;
-        }
-
-        position: fixed;
-        width: 16.6666666667%;
-        height: auto;
-    }
-
-    .current a {
-        background-color: rgba(234, 100, 12, 0.8) !important;
-    }
-
-    /****************************/
-    /*        row  & col        */
-    /****************************/
-
-    .rowCustom {
-        padding: 0px !important;
-        //margin: 0px !important;
-        margin-bottom: 45px;
-    }
-
-    .colCustom {
-        padding:0px !important;
-        //margin:0px;
-        //max-height: 224px;
-        margin-bottom: 19px !important;
-    }
-
-    /***********************************/
-    /*        Images abonnement        */
-    /***********************************/
-
-
-    .logoabt{
-        position: relative;
-        z-index: 2;
-        //min-width: 200px;
-    }
-
-    /***********************************/
-    /*        SideNav Responsive       */
-    /***********************************/
-
-
-    @media screen and (max-width: 640px) {
-        .fixedSideNav {
-            display:block;
-            visibility:hidden;
-        }
-    }
+}
