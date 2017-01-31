@@ -22,6 +22,7 @@
     width: 100%;
     height: auto;
 }
+
 .navigation{
     a, li{
         color : $orange;
@@ -31,6 +32,21 @@
     }
     a, .nl {
         font-weight: 800;
+    }
+}
+.logoArbre{
+    margin-left:15px;
+    display:block;
+}
+@media only screen and (min-width: 993px)
+{
+    .majallaSmallItalic{
+        margin-left:3% !important;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .logoArbre{
+        display:none;
     }
 }
 
