@@ -1,96 +1,128 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
 
-.hoverable.header, .hoverable.card{
-    height:2% !important;
-}
-.article {
-    max-height: 200px;
-    overflow: hidden;
-    margin-bottom:70px;
-}
-
-.card-image > img, .card-content{
-    max-height: 190px;
-    width: auto;
-}
-
-.la_une .card-image img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width:230px;
-    max-height:200px;
-    width: auto;
-    height: auto;
-}
-
-.carre .card-image img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width:100px;
-    max-height:100px;
-    width: auto;
-    height: auto;
-}
-
-h4, .card-content{
-    color:black;
-}
-
-a.cardLink{
-    color:#ffd8a6;
-}
-.fixedSideNav .row{
-    img{
-        width: 70%;
-    }
-    .paypal {
-        width: 30% !important;
+.blog {
+    h4, .card-content {
+        color: black;
     }
 
-    position: fixed;
-    width: 16.6666666667%;
-    height: auto;
-}
+    a.cardLink {
+        color: #ffd8a6;
+    }
+    .fixedSideNav .row {
+        img {
+            width: 70%;
+        }
+        .paypal {
+            width: 30% !important;
+        }
 
-.current a {
-    background-color: rgba(234, 100, 12, 0.8) !important;
-}
+        position: fixed;
+        width: 16.6666666667%;
+        height: auto;
+    }
 
-/****************************/
-/*        row  & col        */
-/****************************/
+    .current a {
+        background-color: rgba(234, 100, 12, 0.8) !important;
+    }
 
-.rowCustom {
-    padding: 0px !important;
-    margin: 0px !important;
-}
+    .hoverable.header, .hoverable.card {
+        height: 2% !important;
+    }
 
-.colCustom {
-    padding:0px !important;
-    margin:0px;
-}
+    .article {
+        max-height: 311px;
+        margin-bottom: 20px;
+    }
 
-/***********************************/
-/*        Images abonnement        */
-/***********************************/
+    .card-image{
+        min-width: 260px;
+    }
 
+    .card img {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
 
-.logoabt{
-    position: relative;
-    z-index: 2;
-    //min-width: 200px;
-}
+    .card-image > img, .card-content {
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+    }
 
-/***********************************/
-/*        SideNav Responsive       */
-/***********************************/
+    .la_une .card-image img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+    }
+    // CARTE LARGE (UNE)
+    .large {
+        max-height: 500px !important;
+        img {
+            max-height: 410px;
+        }
+    }
 
+    // CARTE CARREE
+    .carre {
+        min-height: 300px;
+        .card-image {
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 100px;
+                width: auto;
+                height: auto;
+                min-height: 200px;
+            }
+        }
+    }
 
-@media screen and (max-width: 640px) {
-    .fixedSideNav {
-        display:block;
-        visibility:hidden;
+    // CARTE HORIZONTALE
+    .horizontal {
+        min-height: 265px;
+        max-height: 300px;
+        .card-image img {
+            margin-top: 5px;
+            margin-left : auto;
+            margin-right: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    /****************************/
+    /*        row  & col        */
+    /****************************/
+
+    .rowCustom {
+        padding: 0px !important;
+        margin-bottom: 45px;
+    }
+
+    .colCustom {
+        padding: 0px !important;
+        margin-bottom: 19px !important;
+    }
+
+    /***********************************/
+    /*        Images abonnement        */
+    /***********************************/
+
+    .logoabt {
+        position: relative;
+        z-index: 2;
+    }
+
+    /***********************************/
+    /*        SideNav Responsive       */
+    /***********************************/
+
+    @media screen and (max-width: 640px) {
+        .fixedSideNav {
+            display: block;
+            visibility: hidden;
+        }
     }
 }
