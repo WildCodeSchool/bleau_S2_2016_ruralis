@@ -4,9 +4,13 @@
     height:2% !important;
 }
 .article {
-    max-height: 200px;
+    max-height: 250px; //311px pour Aurore
     overflow: hidden;
     margin-bottom:70px;
+
+    .la_une {
+        max-height: 500px;
+    }
 }
 
 .card-image > img, .card-content{

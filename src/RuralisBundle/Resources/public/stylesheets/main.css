@@ -929,18 +929,22 @@ div .titreRuralis {
 
 /* line 6, ../sass/_blog.scss */
 .article {
-  max-height: 200px;
+  max-height: 250px;
   overflow: hidden;
   margin-bottom: 70px;
 }
+/* line 11, ../sass/_blog.scss */
+.article .la_une {
+  max-height: 500px;
+}
 
-/* line 12, ../sass/_blog.scss */
+/* line 16, ../sass/_blog.scss */
 .card-image > img, .card-content {
   max-height: 190px;
   width: auto;
 }
 
-/* line 17, ../sass/_blog.scss */
+/* line 21, ../sass/_blog.scss */
 .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -951,7 +955,7 @@ div .titreRuralis {
   height: auto;
 }
 
-/* line 27, ../sass/_blog.scss */
+/* line 31, ../sass/_blog.scss */
 .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -962,32 +966,32 @@ div .titreRuralis {
   height: auto;
 }
 
-/* line 37, ../sass/_blog.scss */
+/* line 41, ../sass/_blog.scss */
 h4, .card-content {
   color: black;
 }
 
-/* line 41, ../sass/_blog.scss */
+/* line 45, ../sass/_blog.scss */
 a.cardLink {
   color: #ffd8a6;
 }
 
-/* line 44, ../sass/_blog.scss */
+/* line 48, ../sass/_blog.scss */
 .fixedSideNav .row {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
 }
-/* line 45, ../sass/_blog.scss */
+/* line 49, ../sass/_blog.scss */
 .fixedSideNav .row img {
   width: 70%;
 }
-/* line 48, ../sass/_blog.scss */
+/* line 52, ../sass/_blog.scss */
 .fixedSideNav .row .paypal {
   width: 30% !important;
 }
 
-/* line 57, ../sass/_blog.scss */
+/* line 61, ../sass/_blog.scss */
 .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
@@ -995,13 +999,13 @@ a.cardLink {
 /****************************/
 /*        row  & col        */
 /****************************/
-/* line 65, ../sass/_blog.scss */
+/* line 69, ../sass/_blog.scss */
 .rowCustom {
   padding: 0px !important;
   margin: 0px !important;
 }
 
-/* line 70, ../sass/_blog.scss */
+/* line 74, ../sass/_blog.scss */
 .colCustom {
   padding: 0px !important;
   margin: 0px;
@@ -1010,7 +1014,7 @@ a.cardLink {
 /***********************************/
 /*        Images abonnement        */
 /***********************************/
-/* line 80, ../sass/_blog.scss */
+/* line 84, ../sass/_blog.scss */
 .logoabt {
   position: relative;
   z-index: 2;
@@ -1020,7 +1024,7 @@ a.cardLink {
 /*        SideNav Responsive       */
 /***********************************/
 @media screen and (max-width: 640px) {
-  /* line 92, ../sass/_blog.scss */
+  /* line 96, ../sass/_blog.scss */
   .fixedSideNav {
     display: block;
     visibility: hidden;
