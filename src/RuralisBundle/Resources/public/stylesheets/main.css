@@ -145,7 +145,7 @@ textarea.materialize-textarea {
 
 /* line 149, ../sass/main.scss */
 .btn.nl:hover {
-  background-color: #ff8436;
+  background-color: rgba(255, 132, 54, 0.19);
 }
 
 /*Theme Name: Ruralis
@@ -288,7 +288,7 @@ Author: Marielle Lautrou and Aurore David
 }
 /* line 130, ../sass/_general.scss */
 .abonnes a:hover {
-  background-color: #ff8436;
+  background-color: rgba(255, 132, 54, 0.19);
 }
 /* line 133, ../sass/_general.scss */
 .abonnes span {
@@ -663,54 +663,55 @@ div .titreRuralis {
   color: #4c4c4c;
   text-align: center;
   font-family: 'majalla';
+  font-size: 55px;
 }
-/* line 17, ../sass/_admin.scss */
+/* line 18, ../sass/_admin.scss */
 .adminmodel a {
   color: white !important;
 }
-/* line 21, ../sass/_admin.scss */
+/* line 22, ../sass/_admin.scss */
 .adminmodel a:hover {
   font-weight: bold;
 }
-/* line 25, ../sass/_admin.scss */
+/* line 26, ../sass/_admin.scss */
 .adminmodel a .lienAction {
   color: #00B82B;
 }
-/* line 29, ../sass/_admin.scss */
+/* line 30, ../sass/_admin.scss */
 .adminmodel .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
-/* line 34, ../sass/_admin.scss */
+/* line 35, ../sass/_admin.scss */
 .adminmodel .input-field label {
   color: white;
   left: 4px;
 }
-/* line 39, ../sass/_admin.scss */
+/* line 40, ../sass/_admin.scss */
 .adminmodel .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
-/* line 43, ../sass/_admin.scss */
+/* line 44, ../sass/_admin.scss */
 .adminmodel .file-path {
   color: white;
 }
-/* line 47, ../sass/_admin.scss */
+/* line 48, ../sass/_admin.scss */
 .adminmodel .imageAdmin {
   height: 150px;
 }
-/* line 52, ../sass/_admin.scss */
+/* line 53, ../sass/_admin.scss */
 .adminmodel .middleText {
   margin-top: 75px;
 }
-/* line 56, ../sass/_admin.scss */
+/* line 57, ../sass/_admin.scss */
 .adminmodel textarea {
   background-color: #ebebeb !important;
 }
-/* line 60, ../sass/_admin.scss */
+/* line 61, ../sass/_admin.scss */
 .adminmodel label {
   color: white;
 }
-/* line 64, ../sass/_admin.scss */
+/* line 65, ../sass/_admin.scss */
 .adminmodel .input-field label,
 .adminmodel label,
 .adminmodel .dropdown-content li > a,
@@ -718,45 +719,45 @@ div .titreRuralis {
 .adminmodel .descimg {
   color: #ea640c;
 }
-/* line 72, ../sass/_admin.scss */
+/* line 73, ../sass/_admin.scss */
 .adminmodel .adminImg {
   width: 50px;
 }
-/* line 76, ../sass/_admin.scss */
+/* line 77, ../sass/_admin.scss */
 .adminmodel .btn {
   background-color: #00B82B;
 }
-/* line 80, ../sass/_admin.scss */
+/* line 81, ../sass/_admin.scss */
 .adminmodel .btn:hover {
   background-color: #00f138;
 }
 
-/* line 89, ../sass/_admin.scss */
+/* line 90, ../sass/_admin.scss */
 .menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
   justify-content: center;
 }
-/* line 96, ../sass/_admin.scss */
+/* line 97, ../sass/_admin.scss */
 .menuAdmin div .jaune {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 102, ../sass/_admin.scss */
+/* line 103, ../sass/_admin.scss */
 .menuAdmin div .vert {
   background-image: url("../images/fond_texture_vert.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 108, ../sass/_admin.scss */
+/* line 109, ../sass/_admin.scss */
 .menuAdmin div .orange {
   background-image: url("../images/fond_texture_orange.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 114, ../sass/_admin.scss */
+/* line 115, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;
@@ -845,30 +846,29 @@ div .titreRuralis {
     display: block;
   }
 
-  padding-bottom: 20px;
-  /* line 101, ../sass/_abonnement.scss */
+  /* line 100, ../sass/_abonnement.scss */
   p {
     line-height: 20px !important;
   }
 
-  /* line 105, ../sass/_abonnement.scss */
+  /* line 104, ../sass/_abonnement.scss */
   .row {
     margin-bottom: 0 !important;
   }
 
-  /* line 108, ../sass/_abonnement.scss */
+  /* line 107, ../sass/_abonnement.scss */
   .recaptitres {
     font-weight: bold;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 115, ../sass/_abonnement.scss */
+  /* line 114, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: none;
   }
 
-  /* line 118, ../sass/_abonnement.scss */
+  /* line 117, ../sass/_abonnement.scss */
   .fixed {
     display: block;
   }
@@ -881,7 +881,7 @@ div .titreRuralis {
 /* line 6, ../sass/_blog.scss */
 .article {
   max-height: 200px;
-  overflow: none;
+  overflow: hidden;
   margin-bottom: 70px;
 }
 
@@ -1066,4 +1066,27 @@ a.cardLink {
 .small_image {
   width: 50px;
   margin-right: 10px;
+}
+
+/* line 1, ../sass/_erreurs.scss */
+.erreur {
+  max-width: 90%;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-top: 3%;
+  height: 87%;
+}
+/* line 9, ../sass/_erreurs.scss */
+.erreur .orangetxt {
+  color: #ea640c;
+  font-weight: bold;
+}
+/* line 14, ../sass/_erreurs.scss */
+.erreur .btn {
+  background-color: #00B82B;
+}
+/* line 18, ../sass/_erreurs.scss */
+.erreur .btn:hover {
+  background-color: #00f138;
 }
