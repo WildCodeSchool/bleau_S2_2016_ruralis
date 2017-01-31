@@ -1,111 +1,128 @@
 // ----------------------------------- USER BLOG CARDS ------------------------------------------\\
-h4, .card-content{
-    color:black;
-}
 
-a.cardLink{
-    color:#ffd8a6;
-}
-.fixedSideNav .row{
-    img{
-        width: 70%;
-    }
-    .paypal {
-        width: 30% !important;
+.blog {
+    h4, .card-content {
+        color: black;
     }
 
-    position: fixed;
-    width: 16.6666666667%;
-    height: auto;
-}
-
-.current a {
-    background-color: rgba(234, 100, 12, 0.8) !important;
-}
-
-.hoverable.header, .hoverable.card{
-    height:2% !important;
-}
-
-.article {
-    max-height: 311px;
-    //overflow: hidden;
-    margin-bottom:20px;
-}
-
-.card-image > img, .card-content{
-    max-height: 190px;
-    width: auto;
-}
-
-.la_une .card-image img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width:230px;
-    max-height:200px;
-    width: auto;
-    height: auto;
-}
-
-// CARTE CARREE
-.carre {
-    min-height: 300px;
-    .card-image {
+    a.cardLink {
+        color: #ffd8a6;
+    }
+    .fixedSideNav .row {
         img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            //max-width:100px;
-            max-height: 100px;
-            width: auto;
-            height: auto;
-            min-height: 200px;
+            width: 70%;
+        }
+        .paypal {
+            width: 30% !important;
+        }
+
+        position: fixed;
+        width: 16.6666666667%;
+        height: auto;
+    }
+
+    .current a {
+        background-color: rgba(234, 100, 12, 0.8) !important;
+    }
+
+    .hoverable.header, .hoverable.card {
+        height: 2% !important;
+    }
+
+    .article {
+        max-height: 311px;
+        margin-bottom: 20px;
+    }
+
+    .card-image{
+        min-width: 260px;
+    }
+
+    .card img {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .card-image > img, .card-content {
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+    }
+
+    .la_une .card-image img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+    }
+    // CARTE LARGE (UNE)
+    .large {
+        max-height: 500px !important;
+        img {
+            max-height: 410px;
         }
     }
-}
 
-// CARTE HORIZONTALE
-.horizontal{
-    min-height: 265px;
-}
+    // CARTE CARREE
+    .carre {
+        min-height: 300px;
+        .card-image {
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 100px;
+                width: auto;
+                height: auto;
+                min-height: 200px;
+            }
+        }
+    }
 
-/****************************/
-/*        row  & col        */
-/****************************/
+    // CARTE HORIZONTALE
+    .horizontal {
+        min-height: 265px;
+        max-height: 300px;
+        .card-image img {
+            margin-top: 5px;
+            margin-left : auto;
+            margin-right: auto;
+            margin-bottom: auto;
+        }
+    }
 
-.rowCustom {
-    padding: 0px !important;
-    //margin: 0px !important;
-    margin-bottom: 45px;
-}
+    /****************************/
+    /*        row  & col        */
+    /****************************/
 
-.colCustom {
-    padding:0px !important;
-    //margin:0px;
-    //max-height: 224px;
-    margin-bottom: 19px !important;
-}
+    .rowCustom {
+        padding: 0px !important;
+        margin-bottom: 45px;
+    }
 
-/***********************************/
-/*        Images abonnement        */
-/***********************************/
+    .colCustom {
+        padding: 0px !important;
+        margin-bottom: 19px !important;
+    }
 
+    /***********************************/
+    /*        Images abonnement        */
+    /***********************************/
 
-.logoabt{
-    position: relative;
-    z-index: 2;
-    //min-width: 200px;
-}
+    .logoabt {
+        position: relative;
+        z-index: 2;
+    }
 
-/***********************************/
-/*        SideNav Responsive       */
-/***********************************/
+    /***********************************/
+    /*        SideNav Responsive       */
+    /***********************************/
 
-
-@media screen and (max-width: 640px) {
-    .fixedSideNav {
-        display:block;
-        visibility:hidden;
+    @media screen and (max-width: 640px) {
+        .fixedSideNav {
+            display: block;
+            visibility: hidden;
+        }
     }
 }

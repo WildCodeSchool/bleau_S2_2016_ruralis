@@ -151,7 +151,7 @@ textarea.materialize-textarea {
 }
 
 //Import des feuille de style
-@import "_general";
+@import "_ruralis";
 @import "_navbar";
 @import "_admin";
 @import "_abonnement";
@@ -159,4 +159,4 @@ textarea.materialize-textarea {
 @import "_partenaire";
 @import "_formulaireAbonnement";
 @import "_newsletter" ;
-@import "erreurs";
+@import "_erreurs";

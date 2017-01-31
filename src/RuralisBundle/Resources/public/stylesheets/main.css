@@ -174,11 +174,11 @@ Author: Marielle Lautrou and Aurore David
 /* -------------------------- IMAGES TOP PAGE ----------------------- */
 /*==================================================================== */
 /*Top image*/
-/* line 35, ../sass/_general.scss */
+/* line 35, ../sass/_ruralis.scss */
 .header-bandeau .ruralis_img_top {
   margin-bottom: 0;
 }
-/* line 38, ../sass/_general.scss */
+/* line 38, ../sass/_ruralis.scss */
 .header-bandeau .logo {
   position: relative;
   bottom: 565px;
@@ -187,7 +187,7 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 49, ../sass/_general.scss */
+  /* line 49, ../sass/_ruralis.scss */
   .header-bandeau .logo {
     display: none;
   }
@@ -195,23 +195,23 @@ Author: Marielle Lautrou and Aurore David
 /*==================================================================== */
 /* -------------------------- BODY RURALIS --------------------------- */
 /*==================================================================== */
-/* line 60, ../sass/_general.scss */
+/* line 60, ../sass/_ruralis.scss */
 .description {
   text-align: center;
   margin-top: -20px;
   padding-top: -20px;
 }
-/* line 64, ../sass/_general.scss */
+/* line 64, ../sass/_ruralis.scss */
 .description p {
   color: #ea640c;
 }
 
-/* line 70, ../sass/_general.scss */
+/* line 70, ../sass/_ruralis.scss */
 .territoire {
   padding: 0;
   width: 100%;
 }
-/* line 73, ../sass/_general.scss */
+/* line 73, ../sass/_ruralis.scss */
 .territoire h4 {
   padding: 15px 0;
 }
@@ -224,16 +224,16 @@ Author: Marielle Lautrou and Aurore David
   padding: 0 0.30rem !important;
 }
 
-/* line 80, ../sass/_general.scss */
+/* line 80, ../sass/_ruralis.scss */
 .editorial {
   text-align: center;
 }
-/* line 82, ../sass/_general.scss */
+/* line 82, ../sass/_ruralis.scss */
 .editorial .edit {
   padding-left: 5px !important;
 }
 
-/* line 88, ../sass/_general.scss */
+/* line 88, ../sass/_ruralis.scss */
 .arpenteurs {
   padding: 8px 0;
   margin-top: 7%;
@@ -242,16 +242,16 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 96, ../sass/_general.scss */
+  /* line 96, ../sass/_ruralis.scss */
   .arpenteurs.valign-wrapper {
     display: block;
   }
-  /* line 98, ../sass/_general.scss */
+  /* line 98, ../sass/_ruralis.scss */
   .arpenteurs.valign-wrapper img {
     width: 50%;
   }
 }
-/* line 105, ../sass/_general.scss */
+/* line 105, ../sass/_ruralis.scss */
 .peuple {
   text-align: center;
 }
@@ -264,42 +264,42 @@ Author: Marielle Lautrou and Aurore David
   padding: 0 0.30rem !important;
 }
 
-/* line 112, ../sass/_general.scss */
+/* line 112, ../sass/_ruralis.scss */
 .objectifs div:first-child {
   text-align: center;
 }
-/* line 115, ../sass/_general.scss */
+/* line 115, ../sass/_ruralis.scss */
 .objectifs .txtorange {
   color: #ea640c;
 }
 
-/* line 120, ../sass/_general.scss */
+/* line 120, ../sass/_ruralis.scss */
 .abonnes p {
   text-align: center;
   font-weight: bold;
 }
-/* line 124, ../sass/_general.scss */
+/* line 124, ../sass/_ruralis.scss */
 .abonnes img {
   width: 50%;
 }
-/* line 127, ../sass/_general.scss */
+/* line 127, ../sass/_ruralis.scss */
 .abonnes a {
   background-color: #ea640c;
 }
-/* line 130, ../sass/_general.scss */
+/* line 130, ../sass/_ruralis.scss */
 .abonnes a:hover {
   background-color: rgba(255, 132, 54, 0.19);
 }
-/* line 133, ../sass/_general.scss */
+/* line 133, ../sass/_ruralis.scss */
 .abonnes span {
   color: #ea640c;
 }
-/* line 136, ../sass/_general.scss */
+/* line 136, ../sass/_ruralis.scss */
 .abonnes .btn_en_savoir_plus {
   height: inherit;
 }
 
-/* line 142, ../sass/_general.scss */
+/* line 142, ../sass/_ruralis.scss */
 .abonnement_ruralis {
   padding: 0 5%;
   background-color: rgba(220, 220, 220, 0.5);
@@ -314,67 +314,67 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 150, ../sass/_general.scss */
+  /* line 150, ../sass/_ruralis.scss */
   .abonnement_ruralis div:last-child {
     margin-left: 25% !important;
   }
 }
-/* line 158, ../sass/_general.scss */
+/* line 158, ../sass/_ruralis.scss */
 .citation {
   color: #ea640c;
 }
-/* line 160, ../sass/_general.scss */
+/* line 160, ../sass/_ruralis.scss */
 .citation img {
   width: 7%;
 }
-/* line 163, ../sass/_general.scss */
+/* line 163, ../sass/_ruralis.scss */
 .citation span {
   font-size: 80%;
   color: black;
 }
 
-/* line 171, ../sass/_general.scss */
+/* line 171, ../sass/_ruralis.scss */
 .trombi h6 {
   color: #ea640c;
 }
-/* line 175, ../sass/_general.scss */
+/* line 175, ../sass/_ruralis.scss */
 .trombi p {
   font-family: 'Courier New', sans-serif !important;
 }
-/* line 179, ../sass/_general.scss */
+/* line 179, ../sass/_ruralis.scss */
 .trombi .col {
   padding: 0 0.50rem !important;
 }
-/* line 183, ../sass/_general.scss */
+/* line 183, ../sass/_ruralis.scss */
 .trombi img {
   width: 100%;
 }
 @media all and (max-width: 992px) and (min-width: 865px) {
-  /* line 188, ../sass/_general.scss */
+  /* line 188, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 375px;
   }
 }
 @media only screen and (max-width: 864px) and (min-width: 805px) {
-  /* line 193, ../sass/_general.scss */
+  /* line 193, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 425px;
   }
 }
 @media only screen and (max-width: 804px) and (min-width: 771px) {
-  /* line 198, ../sass/_general.scss */
+  /* line 198, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 450px;
   }
 }
 @media only screen and (max-width: 770px) and (min-width: 738px) {
-  /* line 203, ../sass/_general.scss */
+  /* line 203, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 475px;
   }
 }
 @media only screen and (max-width: 737px) and (min-width: 601px) {
-  /* line 208, ../sass/_general.scss */
+  /* line 208, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 550px;
   }
@@ -383,41 +383,41 @@ Author: Marielle Lautrou and Aurore David
 /*==================================================================== */
 /* ----------------------------- FOOTER ------------------------------ */
 /*==================================================================== */
-/* line 218, ../sass/_general.scss */
+/* line 218, ../sass/_ruralis.scss */
 footer {
   background-color: #ea640c !important;
   padding-top: 20px;
   bottom: 0;
   text-align: center;
 }
-/* line 224, ../sass/_general.scss */
+/* line 224, ../sass/_ruralis.scss */
 footer a {
   color: white;
 }
-/* line 228, ../sass/_general.scss */
+/* line 228, ../sass/_ruralis.scss */
 footer a:hover {
   font-weight: bold;
 }
-/* line 232, ../sass/_general.scss */
+/* line 232, ../sass/_ruralis.scss */
 footer img {
   width: 30%;
 }
-/* line 236, ../sass/_general.scss */
+/* line 236, ../sass/_ruralis.scss */
 footer p {
   font-size: 14px;
 }
-/* line 240, ../sass/_general.scss */
+/* line 240, ../sass/_ruralis.scss */
 footer .valign-wrapper {
   margin-top: -25px;
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 248, ../sass/_general.scss */
+  /* line 248, ../sass/_ruralis.scss */
   footer .valign-wrapper {
     display: block;
   }
-  /* line 251, ../sass/_general.scss */
+  /* line 251, ../sass/_ruralis.scss */
   footer .logowcs {
     margin-top: 35px;
   }
@@ -922,70 +922,90 @@ div .titreRuralis {
     display: block;
   }
 }
-/* line 2, ../sass/_blog.scss */
-h4, .card-content {
+/* line 3, ../sass/_blog.scss */
+.blog {
+  /****************************/
+  /*        row  & col        */
+  /****************************/
+  /***********************************/
+  /*        Images abonnement        */
+  /***********************************/
+  /***********************************/
+  /*        SideNav Responsive       */
+  /***********************************/
+}
+/* line 4, ../sass/_blog.scss */
+.blog h4, .blog .card-content {
   color: black;
 }
-
-/* line 6, ../sass/_blog.scss */
-a.cardLink {
+/* line 8, ../sass/_blog.scss */
+.blog a.cardLink {
   color: #ffd8a6;
 }
-
-/* line 9, ../sass/_blog.scss */
-.fixedSideNav .row {
+/* line 11, ../sass/_blog.scss */
+.blog .fixedSideNav .row {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
 }
-/* line 10, ../sass/_blog.scss */
-.fixedSideNav .row img {
+/* line 12, ../sass/_blog.scss */
+.blog .fixedSideNav .row img {
   width: 70%;
 }
-/* line 13, ../sass/_blog.scss */
-.fixedSideNav .row .paypal {
+/* line 15, ../sass/_blog.scss */
+.blog .fixedSideNav .row .paypal {
   width: 30% !important;
 }
-
-/* line 22, ../sass/_blog.scss */
-.current a {
+/* line 24, ../sass/_blog.scss */
+.blog .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
-
-/* line 26, ../sass/_blog.scss */
-.hoverable.header, .hoverable.card {
+/* line 28, ../sass/_blog.scss */
+.blog .hoverable.header, .blog .hoverable.card {
   height: 2% !important;
 }
-
-/* line 30, ../sass/_blog.scss */
-.article {
+/* line 32, ../sass/_blog.scss */
+.blog .article {
   max-height: 311px;
   margin-bottom: 20px;
 }
-
-/* line 36, ../sass/_blog.scss */
-.card-image > img, .card-content {
-  max-height: 190px;
+/* line 37, ../sass/_blog.scss */
+.blog .card-image {
+  min-width: 260px;
+}
+/* line 41, ../sass/_blog.scss */
+.blog .card img {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+/* line 46, ../sass/_blog.scss */
+.blog .card-image > img, .blog .card-content {
+  max-width: 90%;
+  max-height: 90%;
   width: auto;
 }
-
-/* line 41, ../sass/_blog.scss */
-.la_une .card-image img {
+/* line 52, ../sass/_blog.scss */
+.blog .la_une .card-image img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 230px;
-  max-height: 200px;
   width: auto;
   height: auto;
 }
-
-/* line 52, ../sass/_blog.scss */
-.carre {
+/* line 60, ../sass/_blog.scss */
+.blog .large {
+  max-height: 500px !important;
+}
+/* line 62, ../sass/_blog.scss */
+.blog .large img {
+  max-height: 410px;
+}
+/* line 68, ../sass/_blog.scss */
+.blog .carre {
   min-height: 300px;
 }
-/* line 55, ../sass/_blog.scss */
-.carre .card-image img {
+/* line 71, ../sass/_blog.scss */
+.blog .carre .card-image img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -994,46 +1014,41 @@ a.cardLink {
   height: auto;
   min-height: 200px;
 }
-
-/* line 69, ../sass/_blog.scss */
-.horizontal {
+/* line 84, ../sass/_blog.scss */
+.blog .horizontal {
   min-height: 265px;
+  max-height: 300px;
 }
-
-/****************************/
-/*        row  & col        */
-/****************************/
-/* line 77, ../sass/_blog.scss */
-.rowCustom {
+/* line 87, ../sass/_blog.scss */
+.blog .horizontal .card-image img {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+/* line 99, ../sass/_blog.scss */
+.blog .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
-
-/* line 83, ../sass/_blog.scss */
-.colCustom {
+/* line 104, ../sass/_blog.scss */
+.blog .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
 }
-
-/***********************************/
-/*        Images abonnement        */
-/***********************************/
-/* line 95, ../sass/_blog.scss */
-.logoabt {
+/* line 113, ../sass/_blog.scss */
+.blog .logoabt {
   position: relative;
   z-index: 2;
 }
-
-/***********************************/
-/*        SideNav Responsive       */
-/***********************************/
 @media screen and (max-width: 640px) {
-  /* line 107, ../sass/_blog.scss */
-  .fixedSideNav {
+  /* line 123, ../sass/_blog.scss */
+  .blog .fixedSideNav {
     display: block;
     visibility: hidden;
   }
 }
+
 /* line 1, ../sass/_partenaire.scss */
 .partenaire {
   text-align: center;
