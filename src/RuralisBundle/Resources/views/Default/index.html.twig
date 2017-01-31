@@ -33,12 +33,14 @@
             <div class="row article">
                 <div class="card large col s12 hoverable la_une">
                     <div style="z-index: 0 !important;" class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" width="20%" src="{{ asset('/uploads/images/') }}{{ article_une.image.url }}" alt="{{ article_une.image.alt }}">
+                        <img class="activator" src="{{ asset('/uploads/images/') }}{{ article_une.image.url }}" alt="{{ article_une.image.alt }}">
                     </div>
 
                     <div class="card-content">
                         <div class="card-title activator grey-text text-darken-4">
-                            <i class="material-icons right">more_vert</i>
+                            <i class="material-icons right">
+                                more_vert
+                            </i>
                             <h5>
                                 {{ article_une.nom }}
                             </h5>
@@ -47,7 +49,9 @@
                     {#    Information about the News revealed once clicked on      #}
                     <div class="card-reveal">
                         <div class="card-title grey-text text-darken-4">
-                            <i class="material-icons right">close</i>
+                            <i class="material-icons right">
+                                close
+                            </i>
                             <p>
                                 {{ article_une.descriptif | nl2br }}
                             </p>
@@ -72,11 +76,11 @@
                                 <div class="row article rowCustom">
                                 {% set is_row = true %}
                             {%  endif %}
-                                    <div class="col offset-s2 s5 carre card hoverable colCustom">
+                                    <div class="col offset-m2 m5 s12 carre card hoverable colCustom">
                                         {# First card #}
                                         <div class="card cardCarre">
                                             <div class="card-image waves-effect waves-block waves-light">
-                                                <img class="activator" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                                                <img class="activator responsive-img" src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-title activator grey-text text-darken-4">
@@ -107,7 +111,7 @@
                                     </h5>
                                     <div class="card horizontal">
                                         <div class="card-image">
-                                            <img width=20% src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                                            <img src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                                         </div>
                                         <div class="card-stacked">
                                             <div class="card-content">
@@ -130,7 +134,7 @@
                                     </h5>
                                     <div class="card horizontal">
                                         <div class="card-image">
-                                            <img width=20% src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                                            <img src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                                         </div>
                                         <div class="card-stacked">
                                             <div class="card-content">
@@ -150,7 +154,7 @@
                                     </h5>
                                     <div class="card horizontal">
                                         <div class="card-image">
-                                            <img width=20% src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
+                                            <img src="{{ asset('/uploads/images/') }}{{ article.image.url }}" alt="{{ article.image.alt }}">
                                         </div>
                                         <div class="card-stacked">
                                             <div class="card-content">
@@ -185,7 +189,7 @@
                 $('.carre').each(function (index){
                     if (index % 2 == 0)
                     {
-                        $(this).removeClass("offset-s2");
+                        $(this).removeClass("offset-m2");
                     }
                 });
                 var bottom_fixedSideNav = $("footer").height() + 40;

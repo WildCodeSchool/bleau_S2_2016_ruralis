@@ -922,7 +922,7 @@ div .titreRuralis {
     display: block;
   }
 }
-/* line 2, ../sass/_blog.scss */
+/* line 3, ../sass/_blog.scss */
 .blog {
   /****************************/
   /*        row  & col        */
@@ -934,37 +934,37 @@ div .titreRuralis {
   /*        SideNav Responsive       */
   /***********************************/
 }
-/* line 3, ../sass/_blog.scss */
+/* line 4, ../sass/_blog.scss */
 .blog h4, .blog .card-content {
   color: black;
 }
-/* line 7, ../sass/_blog.scss */
+/* line 8, ../sass/_blog.scss */
 .blog a.cardLink {
   color: #ffd8a6;
 }
-/* line 10, ../sass/_blog.scss */
+/* line 11, ../sass/_blog.scss */
 .blog .fixedSideNav .row {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
 }
-/* line 11, ../sass/_blog.scss */
+/* line 12, ../sass/_blog.scss */
 .blog .fixedSideNav .row img {
   width: 70%;
 }
-/* line 14, ../sass/_blog.scss */
+/* line 15, ../sass/_blog.scss */
 .blog .fixedSideNav .row .paypal {
   width: 30% !important;
 }
-/* line 23, ../sass/_blog.scss */
+/* line 24, ../sass/_blog.scss */
 .blog .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
-/* line 27, ../sass/_blog.scss */
+/* line 28, ../sass/_blog.scss */
 .blog .hoverable.header, .blog .hoverable.card {
   height: 2% !important;
 }
-/* line 31, ../sass/_blog.scss */
+/* line 32, ../sass/_blog.scss */
 .blog .article {
   max-height: 311px;
   margin-bottom: 20px;
@@ -974,25 +974,37 @@ div .titreRuralis {
   min-width: 260px;
 }
 /* line 41, ../sass/_blog.scss */
-.blog .card-image > img, .blog .card-content {
-  max-height: 190px;
-  width: auto;
+.blog .card img {
+  margin-left: 5px;
+  margin-top: 5px;
 }
 /* line 46, ../sass/_blog.scss */
+.blog .card-image > img, .blog .card-content {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+}
+/* line 52, ../sass/_blog.scss */
 .blog .la_une .card-image img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 230px;
-  max-height: 200px;
   width: auto;
   height: auto;
 }
-/* line 57, ../sass/_blog.scss */
+/* line 60, ../sass/_blog.scss */
+.blog .large {
+  max-height: 500px !important;
+}
+/* line 62, ../sass/_blog.scss */
+.blog .large img {
+  max-height: 410px;
+}
+/* line 68, ../sass/_blog.scss */
 .blog .carre {
   min-height: 300px;
 }
-/* line 60, ../sass/_blog.scss */
+/* line 71, ../sass/_blog.scss */
 .blog .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -1002,27 +1014,35 @@ div .titreRuralis {
   height: auto;
   min-height: 200px;
 }
-/* line 74, ../sass/_blog.scss */
+/* line 84, ../sass/_blog.scss */
 .blog .horizontal {
   min-height: 265px;
+  max-height: 300px;
 }
-/* line 82, ../sass/_blog.scss */
+/* line 87, ../sass/_blog.scss */
+.blog .horizontal .card-image img {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+/* line 99, ../sass/_blog.scss */
 .blog .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
-/* line 88, ../sass/_blog.scss */
+/* line 104, ../sass/_blog.scss */
 .blog .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
 }
-/* line 100, ../sass/_blog.scss */
+/* line 113, ../sass/_blog.scss */
 .blog .logoabt {
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 640px) {
-  /* line 112, ../sass/_blog.scss */
+  /* line 123, ../sass/_blog.scss */
   .blog .fixedSideNav {
     display: block;
     visibility: hidden;
