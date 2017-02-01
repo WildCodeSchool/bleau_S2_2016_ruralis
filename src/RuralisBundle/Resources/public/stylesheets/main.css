@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /***********************************************************************/
 /*                         Mixins + Variables                          */
@@ -170,7 +170,7 @@ textarea.materialize-textarea {
 }
 
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /************************************************/
 /*                   MENU                       */
@@ -446,7 +446,7 @@ footer .valign-wrapper {
   }
 }
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /*****************************************/
 /*         BARRE DE NAVIGATION           */
@@ -744,7 +744,7 @@ div .titreRuralis {
   }
 }
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /********************************/
 /*         ADMIN GENERAL        */
@@ -890,7 +890,7 @@ AuthorS: Marielle Lautrou and Aurore David
 }
 
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /* line 6, ../sass/_abonnement.scss */
 .abonnement {
@@ -976,8 +976,23 @@ AuthorS: Marielle Lautrou and Aurore David
     display: block;
   }
 }
-/* line 3, ../sass/_blog.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/***********************************/
+/*         USER BLOG CARDS         */
+/***********************************/
+/* line 10, ../sass/_blog.scss */
 .blog {
+  /***************************************/
+  /*        // CARTE LARGE (UNE)         */
+  /***************************************/
+  /**********************************/
+  /*        CARTE CARREE            */
+  /**********************************/
+  /**********************************/
+  /*        CARTE HORIZONTALE       */
+  /**********************************/
   /****************************/
   /*        row  & col        */
   /****************************/
@@ -988,57 +1003,57 @@ AuthorS: Marielle Lautrou and Aurore David
   /*        SideNav Responsive       */
   /***********************************/
 }
-/* line 4, ../sass/_blog.scss */
+/* line 11, ../sass/_blog.scss */
 .blog h4, .blog .card-content {
   color: black;
 }
-/* line 8, ../sass/_blog.scss */
+/* line 15, ../sass/_blog.scss */
 .blog a.cardLink {
   color: #ffd8a6;
 }
-/* line 11, ../sass/_blog.scss */
+/* line 19, ../sass/_blog.scss */
 .blog .fixedSideNav .row {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
 }
-/* line 12, ../sass/_blog.scss */
+/* line 20, ../sass/_blog.scss */
 .blog .fixedSideNav .row img {
   width: 70%;
 }
-/* line 15, ../sass/_blog.scss */
+/* line 23, ../sass/_blog.scss */
 .blog .fixedSideNav .row .paypal {
   width: 30% !important;
 }
-/* line 24, ../sass/_blog.scss */
+/* line 32, ../sass/_blog.scss */
 .blog .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
-/* line 28, ../sass/_blog.scss */
+/* line 36, ../sass/_blog.scss */
 .blog .hoverable.header, .blog .hoverable.card {
   height: 2% !important;
 }
-/* line 32, ../sass/_blog.scss */
+/* line 40, ../sass/_blog.scss */
 .blog .article {
   max-height: 311px;
   margin-bottom: 20px;
 }
-/* line 37, ../sass/_blog.scss */
+/* line 45, ../sass/_blog.scss */
 .blog .card-image {
   min-width: 260px;
 }
-/* line 41, ../sass/_blog.scss */
+/* line 49, ../sass/_blog.scss */
 .blog .card img {
   margin-left: 5px;
   margin-top: 5px;
 }
-/* line 46, ../sass/_blog.scss */
+/* line 54, ../sass/_blog.scss */
 .blog .card-image > img, .blog .card-content {
   max-width: 90%;
   max-height: 90%;
   width: auto;
 }
-/* line 52, ../sass/_blog.scss */
+/* line 60, ../sass/_blog.scss */
 .blog .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -1046,19 +1061,19 @@ AuthorS: Marielle Lautrou and Aurore David
   width: auto;
   height: auto;
 }
-/* line 60, ../sass/_blog.scss */
+/* line 73, ../sass/_blog.scss */
 .blog .large {
   max-height: 500px !important;
 }
-/* line 62, ../sass/_blog.scss */
+/* line 75, ../sass/_blog.scss */
 .blog .large img {
   max-height: 410px;
 }
-/* line 68, ../sass/_blog.scss */
+/* line 85, ../sass/_blog.scss */
 .blog .carre {
   min-height: 300px;
 }
-/* line 71, ../sass/_blog.scss */
+/* line 88, ../sass/_blog.scss */
 .blog .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -1067,44 +1082,44 @@ AuthorS: Marielle Lautrou and Aurore David
   height: auto;
   min-height: 200px;
 }
-/* line 83, ../sass/_blog.scss */
+/* line 104, ../sass/_blog.scss */
 .blog .horizontal {
   min-height: 265px;
   max-height: 300px;
 }
-/* line 86, ../sass/_blog.scss */
+/* line 107, ../sass/_blog.scss */
 .blog .horizontal .card-image img {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
 }
-/* line 93, ../sass/_blog.scss */
+/* line 114, ../sass/_blog.scss */
 .blog .horizontal .card-stacked .card-content {
   overflow-y: auto;
 }
-/* line 102, ../sass/_blog.scss */
+/* line 123, ../sass/_blog.scss */
 .blog .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
-/* line 107, ../sass/_blog.scss */
+/* line 128, ../sass/_blog.scss */
 .blog .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
 }
-/* line 116, ../sass/_blog.scss */
+/* line 137, ../sass/_blog.scss */
 .blog .logoabt {
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 640px) {
-  /* line 126, ../sass/_blog.scss */
+  /* line 147, ../sass/_blog.scss */
   .blog .fixedSideNav {
     display: block;
     visibility: hidden;
   }
-  /* line 130, ../sass/_blog.scss */
+  /* line 152, ../sass/_blog.scss */
   .blog .card.horizontal {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1117,11 +1132,11 @@ AuthorS: Marielle Lautrou and Aurore David
     flex: 1;
     position: relative;
   }
-  /* line 143, ../sass/_blog.scss */
+  /* line 165, ../sass/_blog.scss */
   .blog .carre {
     min-height: 300px;
   }
-  /* line 146, ../sass/_blog.scss */
+  /* line 168, ../sass/_blog.scss */
   .blog .carre .card-image img {
     width: 100%;
     height: inherit;
@@ -1130,7 +1145,7 @@ AuthorS: Marielle Lautrou and Aurore David
 }
 
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /* line 6, ../sass/_partenaire.scss */
 .partenaire {
@@ -1159,7 +1174,7 @@ AuthorS: Marielle Lautrou and Aurore David
 }
 
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /* line 6, ../sass/_formulaireAbonnement.scss */
 .formulaire {
@@ -1259,7 +1274,7 @@ AuthorS: Marielle Lautrou and Aurore David
 }
 
 /* Theme Name: Ruralis
-AuthorS: Marielle Lautrou and Aurore David
+Authors: Marielle Lautrou and Aurore David
 */
 /* line 6, ../sass/_newsletter.scss */
 .small_image {
@@ -1267,7 +1282,10 @@ AuthorS: Marielle Lautrou and Aurore David
   margin-right: 10px;
 }
 
-/* line 1, ../sass/_erreurs.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/* line 6, ../sass/_erreurs.scss */
 .erreur {
   max-width: 90%;
   padding-bottom: 5px;
@@ -1276,16 +1294,16 @@ AuthorS: Marielle Lautrou and Aurore David
   margin-top: 3%;
   height: 87%;
 }
-/* line 9, ../sass/_erreurs.scss */
+/* line 14, ../sass/_erreurs.scss */
 .erreur .orangetxt {
   color: #ea640c;
   font-weight: bold;
 }
-/* line 14, ../sass/_erreurs.scss */
+/* line 19, ../sass/_erreurs.scss */
 .erreur .btn {
   background-color: #00B82B;
 }
-/* line 18, ../sass/_erreurs.scss */
+/* line 23, ../sass/_erreurs.scss */
 .erreur .btn:hover {
   background-color: #00f138;
 }
