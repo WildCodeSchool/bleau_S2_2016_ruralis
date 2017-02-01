@@ -17,78 +17,70 @@ class CheckEmail {
         $this->container = $container;
     }
 
-    public function checkEmail($email, $newsletter, $type){
+    public function checkEmail($email, $newsletter, $type, $newsByNav){
+        $alert = null;
+        $oldAbo = false;
+        /*
+         * Type d'erreur:
+         * alert = 1 ==> New abonnement mais déja inscrit à la news
+         * alert = 2 ==> Essai de se rébonner
+         * alert = 3 ==> Newsletter = true
+        */
 
         //Vérifier si l'email existe déjà dans une table Contact
         $contact = $this->em->getRepository('RuralisBundle:Contact')->findOneByEmail($email);
         if ($contact == null) {
-            $newContact = new Contact();
-            $newContact->setEmail($email);
 
+            $contact = new Contact();
             $abonnement = new Abonnement();
-            $abonnement->setContact($newContact);
+            $abonnement->setContact($contact);
+            $abonnement->getContact()->setEmail($email);
 
             if ($newsletter == 'on') {
                 $abonnement->setNewsletter(true);
-
 
                 //typeabo
                 if ($type == false){
                     $this->setFlash('notice', 'Vous êtes maintenant inscrit à la newsletter');
                 }
-                else{
-                    $this->setFlash('notice', 'Vous êtes maintenant inscrit à la newsletter et au journal');
-                }
             }
             else {
                 $abonnement->setNewsletter(false);
-                $this->setFlash('notice', 'Vous êtes maintenant abonné au magazine');
             }
-
-            $this->em->persist($newContact);
-
-
         }
         // Si le mail existe dans la table
         else {
             $abonnement = $this->em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
-            // Je vérifie qu'il est déjà dans abonné au journal
-            // S'il est déjà abonné renvoie message Flash
-            if ($abonnement->getAbonne() != null)
-            {
-                if ($abonnement->getNewsletter() == true)
-                {
-                    if ($abonnement->getAbonne() != null){
-                        $this->setFlash('notice', 'Vous êtes déjà abonné à la Newsletter et au magazine');
-                    }
-                    else {
-                        $this->setFlash('notice', 'Vous étiez déjà abonné à la Newsletter');
-                    }
+//            TODO: a remplacer par le status de l'abonnement (expriré ou en cours)
+            if ($abonnement->getStatus() == true && $newsByNav == false){
+                $alert = 2;
+            }
+            else if ($type == false){
+                if ($abonnement->getNewsletter() == 1 && $newsletter == 'on'){
+                    $this->setFlash('notice', 'Vous êtes déja abonné à la Newsletter');
                 }
-                elseif ($abonnement->getNewsletter() == 'off' && $type != null) {
-                    $abonnement->setNewsletter(false);
-                    $this->setFlash('notice', 'Vous êtes déjà abonné à Ruralis Magazine mais pas à la newsletter');
-                }
-                else {
+                if ($abonnement->getNewsletter() == 0 && $newsletter == 'on') {
                     $abonnement->setNewsletter(true);
-                    $this->setFlash('notice', 'Vous êtes déjà abonné à Ruralis Magazine, vous êtes maintenant inscrit à la newsletter');
-                    /*                return $abonnement = 400;*/
+                    $this->setFlash('notice', 'Vous êtes maintenant inscrit à la Newsletter');
                 }
             }
-
-            // Si déjà abonné à la newsletter
-            elseif ($abonnement->getNewsletter() == true) {
-                $this->setFlash('notice', 'Vous êtes déjà inscrit à la newsletter');
-            }
-
-            //Abonnement déjà dans la base mais pas encore abonné à la newsletter
-            else {
-                $abonnement->setNewsletter(true);
-                $this->setFlash('notice', 'Vous êtes maintenant abonné et inscrit à la newsletter');
+            else{
+                $oldAbo = true;
+                if ($abonnement->getNewsletter() == 1 && $newsletter == 'on'){
+                    $alert = 1;
+                }
+                if ($abonnement->getNewsletter() == 0 && $newsletter == 'on') {
+                    $alert = 3;
+                }
             }
         }
 
-        return $abonnement;
+        return array(
+            'abonnement' => $abonnement,
+            'alert' => $alert,
+            'contact' => $contact,
+            'oldabo' => $oldAbo
+        );
     }
 
     private function setFlash($action, $value)

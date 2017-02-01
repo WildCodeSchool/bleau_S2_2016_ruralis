@@ -25,8 +25,12 @@ class FormulaireController extends Controller
         ));
     }
 
-    public function recapAboAction(Request $request)
+    public function recapAboAction()
     {
+        $newsByNav = false;
+
+        $session = $this->get('request')->getSession();
+
         $prenom = $_POST['prenom'];
         $nom = $_POST['nom'];
         $email = $_POST['email'];
@@ -35,6 +39,7 @@ class FormulaireController extends Controller
         $cp = $_POST['cp'];
         $ville = $_POST['ville'];
         $pays = $_POST['pays'];
+        $type = $session->get('type');
 
 //        Si Newsletter est cochée $newsletter='on'
         if (isset($_POST['newsletter'])) {
@@ -44,18 +49,32 @@ class FormulaireController extends Controller
             $newsletter = 'off';
         }
 
+
+        //Appel du service CheckEmail
+        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email, $newsletter, $type, $newsByNav);
+
+        if ($abonnement['alert'] == 2){
+            $this->container->get('session')->getFlashBag()->set(
+                'notice', 'Vous etes déja abonné au journal pour l\'année en cours'
+            );
+            return $this->redirectToRoute('ruralis_homepage');
+        }
+
         $session = $this->get('request')->getSession();
         $session->set('details', array(
-
             'prenom' => $prenom,
             'nom' => $nom,
-            'email' => $email,
             'tel' => $tel,
             'rue' => $rue,
             'cp' => $cp,
             'ville' => $ville,
             'pays' => $pays,
+            'email' => $email,
             'newsletter' => $newsletter,
+            'abonnement' => $abonnement['abonnement'],
+            'contact' => $abonnement['contact'],
+            'alert' => $abonnement['alert'],
+            'oldabo' => $abonnement['oldabo']
         ));
 
         $details = $session->get('details');
@@ -63,6 +82,7 @@ class FormulaireController extends Controller
         //Lien vers l'API
         return $this->render('@Ruralis/user/recapitulatifAbo.html.twig', array(
             'details' => $details,
+            'alert' => $abonnement['alert']
         ));
     }
 }
