@@ -1,8 +1,11 @@
 .formulaire {
+
     //Les inputs
+
     label {
         color: $darkgrey;
     }
+
     .input-field label {
         color: $darkgrey !important;
     }
@@ -23,6 +26,7 @@
         border-bottom: 1px solid $gris;
         box-shadow: 0 1px 0 0 $darkgrey;
     }
+
     input.validate .active {
         border-bottom-color: black;
     }
@@ -43,26 +47,48 @@
         border-bottom: 1px solid $darkgrey;
     }
 
-    // Texte de la case Newsletter
+// Texte de la case Newsletter
+
     span {
         color: $darkgrey;
         font-weight: bold;
     }
 
-    //// Boutons
-    //.btn{
-    //    background-color: #00B82B;
-    //}
-    //
-    //.btn:hover{
-    //    background-color: #00f138;
-    //}
-
     // Récapitulatif Abonnement
     .champsForm {
         font-size: 18px !important;
+
         p {
             color: $darkgrey;
         }
+    }
+}
+
+
+/*************************************************************/
+/*         BOX FORMULAIRE ABONNEMENT ET RECAPITULATIF        */
+/*************************************************************/
+
+.abomodel {
+    margin-left:5%;
+    max-width: 90%;
+    padding-bottom:20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-top: 3%;
+    padding-left:6%;
+    font-size: 18px;
+    font-family: 'Time New Roman', Regular;
+
+    p {
+        line-height: 20px !important;
+    }
+
+    .row {
+        margin-bottom: 0 !important;
+    }
+    .recaptitres {
+        font-weight: bold;
+        margin-top: 30px;
     }
 }
