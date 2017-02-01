@@ -4,6 +4,7 @@ namespace RuralisBundle\Controller;
 
 use RuralisBundle\Entity\Contact;
 use RuralisBundle\Entity\Newsletter;
+use RuralisBundle\RuralisBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -171,4 +172,5 @@ class NewsletterController extends Controller
             'newsletters' => $newsletters
             ));
     }
+
 }

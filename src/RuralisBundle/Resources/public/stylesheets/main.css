@@ -708,10 +708,7 @@ div .titreRuralis {
     z-index: 1 !important;
   }
 }
-/********************************/
-/*         ADMIN GENERAL        */
-/********************************/
-/* line 5, ../sass/_admin.scss */
+/* line 3, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: #B3AFAF;
@@ -719,87 +716,61 @@ div .titreRuralis {
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
-  font-family: 'Time New Roman', Regular;
-  font-size: 20px;
 }
-/* line 16, ../sass/_admin.scss */
-.adminmodel label {
-  font-size: inherit;
-}
-/* line 20, ../sass/_admin.scss */
-.adminmodel input:not([type]),
-.adminmodel input[type="text"],
-.adminmodel input[type="password"],
-.adminmodel input[type="email"],
-.adminmodel input[type="url"],
-.adminmodel input[type="time"],
-.adminmodel input[type="date"],
-.adminmodel input[type="datetime"],
-.adminmodel input[type="datetime-local"],
-.adminmodel input[type="tel"],
-.adminmodel input[type="number"],
-.adminmodel input[type="search"],
-.adminmodel textarea.materialize-textarea {
-  font-size: inherit;
-}
-/* line 40, ../sass/_admin.scss */
+/* line 11, ../sass/_admin.scss */
 .adminmodel h1 {
   color: #4c4c4c;
   text-align: center;
   font-family: 'majalla';
   font-size: 55px;
 }
-/* line 47, ../sass/_admin.scss */
+/* line 18, ../sass/_admin.scss */
 .adminmodel a {
   color: white !important;
 }
-/* line 51, ../sass/_admin.scss */
+/* line 22, ../sass/_admin.scss */
 .adminmodel a:hover {
   font-weight: bold;
 }
-/* line 55, ../sass/_admin.scss */
+/* line 26, ../sass/_admin.scss */
 .adminmodel a .lienAction {
   color: #00B82B;
 }
-/* line 59, ../sass/_admin.scss */
+/* line 30, ../sass/_admin.scss */
 .adminmodel .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
-/* line 64, ../sass/_admin.scss */
+/* line 35, ../sass/_admin.scss */
 .adminmodel .input-field label {
   color: white;
   left: 4px;
 }
-/* line 69, ../sass/_admin.scss */
+/* line 40, ../sass/_admin.scss */
 .adminmodel .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
-/* line 73, ../sass/_admin.scss */
+/* line 44, ../sass/_admin.scss */
 .adminmodel .file-path {
   color: white;
 }
-/* line 77, ../sass/_admin.scss */
+/* line 48, ../sass/_admin.scss */
 .adminmodel .imageAdmin {
   height: 150px;
 }
-/* line 81, ../sass/_admin.scss */
-.adminmodel img.responsive-img, .adminmodel video.responsive-video {
-  max-width: 350px;
-}
-/* line 87, ../sass/_admin.scss */
+/* line 53, ../sass/_admin.scss */
 .adminmodel .middleText {
-  margin-top: 30px;
+  margin-top: 75px;
 }
-/* line 91, ../sass/_admin.scss */
+/* line 57, ../sass/_admin.scss */
 .adminmodel textarea {
   background-color: #ebebeb !important;
 }
-/* line 95, ../sass/_admin.scss */
+/* line 61, ../sass/_admin.scss */
 .adminmodel label {
   color: white;
 }
-/* line 99, ../sass/_admin.scss */
+/* line 65, ../sass/_admin.scss */
 .adminmodel .input-field label,
 .adminmodel label,
 .adminmodel .dropdown-content li > a,
@@ -807,54 +778,49 @@ div .titreRuralis {
 .adminmodel .descimg {
   color: #ea640c;
 }
-/* line 107, ../sass/_admin.scss */
+/* line 73, ../sass/_admin.scss */
 .adminmodel .adminImg {
   width: 50px;
 }
-/* line 111, ../sass/_admin.scss */
+/* line 77, ../sass/_admin.scss */
 .adminmodel .btn {
   background-color: #00B82B;
 }
-/* line 115, ../sass/_admin.scss */
+/* line 81, ../sass/_admin.scss */
 .adminmodel .btn:hover {
   background-color: #00f138;
 }
 
-/* line 124, ../sass/_admin.scss */
+/* line 90, ../sass/_admin.scss */
 .menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
   justify-content: center;
 }
-/* line 131, ../sass/_admin.scss */
+/* line 97, ../sass/_admin.scss */
 .menuAdmin div .jaune {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 137, ../sass/_admin.scss */
+/* line 103, ../sass/_admin.scss */
 .menuAdmin div .vert {
   background-image: url("../images/fond_texture_vert.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 143, ../sass/_admin.scss */
+/* line 109, ../sass/_admin.scss */
 .menuAdmin div .orange {
   background-image: url("../images/fond_texture_orange.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 149, ../sass/_admin.scss */
+/* line 115, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;
   font-family: 'majalla';
-}
-
-/* line 162, ../sass/_admin.scss */
-.file-path input:-ms-input-placeholder, .file-path input::-webkit-input-placeholder, .file-path input::-moz-placeholder {
-  color: black !important;
 }
 
 /* line 1, ../sass/_abonnement.scss */
