@@ -1,3 +1,7 @@
+// Theme Name: Ruralis
+// Authors: Marielle Lautrou and Aurore David
+
+
 $(document).ready(function() {
     if ('{{ app.session.get("type") }}' == 'lecteur'){
         $('#abomodel').css('background-color', 'rgba(138,225,58,0.75)');
