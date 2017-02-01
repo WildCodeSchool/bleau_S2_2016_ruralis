@@ -1,6 +1,14 @@
+/* Theme Name: Ruralis
+AuthorS: Marielle Lautrou and Aurore David
+*/
+
+
 .formulaire {
 
-    //Les inputs
+
+    /************************************/
+    /*         INPUTS                   */
+    /************************************/
 
     label {
         color: $darkgrey;
@@ -47,14 +55,17 @@
         border-bottom: 1px solid $darkgrey;
     }
 
-// Texte de la case Newsletter
-
+    // Texte de la case Newsletter
     span {
         color: $darkgrey;
         font-weight: bold;
     }
 
-    // Récapitulatif Abonnement
+
+    /************************************************/
+    /*         RECAPITULATIF ABONNEMENT             */
+    /************************************************/
+
     .champsForm {
         font-size: 18px !important;
 
@@ -66,7 +77,7 @@
 
 
 /*************************************************************/
-/*         BOX FORMULAIRE ABONNEMENT ET RECAPITULATIF        */
+/*         BOXS FORMULAIRE ABONNEMENT ET RECAPITULATIF        */
 /*************************************************************/
 
 .abomodel {
@@ -87,6 +98,7 @@
     .row {
         margin-bottom: 0 !important;
     }
+
     .recaptitres {
         font-weight: bold;
         margin-top: 30px;

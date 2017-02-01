@@ -1,3 +1,8 @@
+/* Theme Name: Ruralis
+AuthorS: Marielle Lautrou and Aurore David
+*/
+
+
 /********************************/
 /*         ADMIN GENERAL        */
 /********************************/
@@ -11,7 +16,31 @@
     border-radius: 15px;
     margin-top: 3%;
     font-family:  'Time New Roman', Regular;
-    font-size: 20px;
+    font-size: 18px;
+
+    // Permet que la date ne soit que sur une ligne
+    .datewidth {
+        width: 150px;
+    }
+
+    h1{
+        color: #4c4c4c;
+        text-align: center;
+        font-family: 'majalla';
+        font-size: 55px;
+    }
+
+    a {
+        color: white !important;
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+
+    a .lienAction {
+        color: #00B82B;
+    }
 
     label {
         font-size: inherit;
@@ -33,37 +62,14 @@
         font-size: inherit;
     }
 
-    //.btn {
-    //    font-size: 15px;
-    //}
-
-    h1{
-        color: #4c4c4c;
-        text-align: center;
-        font-family: 'majalla';
-        font-size: 55px;
-    }
-
-    a {
-        color: white !important;
-    }
-
-    a:hover {
-        font-weight: bold;
-    }
-
-    a .lienAction {
-        color: #00B82B;
+    .input-field label {
+        color: white;
+        left: 4px;
     }
 
     .container .row {
         margin-left: 2.25rem;
         margin-right: 2.25rem;
-    }
-
-    .input-field label {
-        color: white;
-        left: 4px;
     }
 
     .select-wrapper input.select-dropdown{
@@ -82,7 +88,7 @@
         max-width: 350px;
     }
 
-// Texte 'image actuelle' dans les édit partenaires et article
+    // Texte 'image actuelle' dans les édit partenaires et article
 
     .middleText{
         margin-top: 30px;
@@ -107,18 +113,12 @@
     .adminImg{
         width:50px;
     }
-
-    .btn{
-        background-color: #00B82B;
-    }
-
-    .btn:hover{
-        background-color: #00f138;
-    }
 }
 
 
-// Menu Admin
+/********************************/
+/*         MENU ADMIN           */
+/********************************/
 
 .menuAdmin {
     .valign-wrapper {
@@ -151,17 +151,4 @@
         font-size: 50px;
         font-family: 'majalla';
         }
-
-    //Couleur à garder
-    //a:hover {
-    //    color: $orange !important;
-    //}
 }
-
-.file-path{
-    input:-ms-input-placeholder, input::-webkit-input-placeholder, input::-moz-placeholder {
-        color:black !important ;
-    }
-}
-// Abonnés Admin
-

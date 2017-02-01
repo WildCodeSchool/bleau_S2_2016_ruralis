@@ -1,11 +1,11 @@
-/* Welcome to Compass.
-* In this file you should write your main styles. (or centralize your imports)
-* Import this file using the following HTML or equivalent:
-* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Theme Name: Ruralis
+AuthorS: Marielle Lautrou and Aurore David
+*/
 
-/*==================================================================== */
-/* ----------------------- Mixins + Variables ----------------------- */
-/*==================================================================== */
+
+/***********************************************************************/
+/*                         Mixins + Variables                          */
+/***********************************************************************/
 
 @mixin multiple_img_line(){
     img{
@@ -31,11 +31,12 @@ $greenbg: rgba(138,225,58,0.75);
 $yellowbg: rgba(239,255,0,0.55);
 $orangebg: rgba(247,113,24,0.75);
 
-    /*==================================================================== */
-/* ----------------------- GENERAL CSS ----------------------- */
-/*==================================================================== */
 
-//Permet de garder le footer on the button
+/***********************************************************************/
+/*                        GENERAL CSS                                  */
+/***********************************************************************/
+
+// Permet de garder le footer on the button
 body {
     display: flex;
     min-height: 100vh;
@@ -148,7 +149,17 @@ textarea.materialize-textarea {
     color: $orange;
 }
 
-// Style bouton
+// Style boutons
+
+
+.btn{
+    margin-top: 20px;
+    background-color: #00B82B;
+}
+
+.btn:hover{
+    background-color: #00f138;
+}
 
 .btn.nl {
     background-color: $orange;
@@ -163,7 +174,7 @@ textarea.materialize-textarea {
     background-color: $orange_pale;
 }
 
-//Import des feuille de style
+//Import des feuilles de style
 @import "_ruralis";
 @import "_navbar";
 @import "_admin";

@@ -1,14 +1,17 @@
-/*Theme Name: Ruralis
-Author: Marielle Lautrou and Aurore David
+/* Theme Name: Ruralis
+AuthorS: Marielle Lautrou and Aurore David
 */
 
 // ATTENTION ==> DES MIXINS, VARIABLE ET STYLE SUR DIV GLOBAL SONT DEFINIE DANS MAIN.SCSS
 
-/*==================================================================== */
-/* ------------------------------ MENU ------------------------------- */
-/*==================================================================== */
+
+
+/************************************************/
+/*                   MENU                       */
+/************************************************/
 
 /*
+
 1. IMAGES TOP
 
 2. BODY RURALIS
@@ -23,12 +26,13 @@ Author: Marielle Lautrou and Aurore David
 9. Trombinoscope + présentation équipe
 
 3. FOOTER
+
 */
 
-/*==================================================================== */
-/* -------------------------- IMAGES TOP PAGE ----------------------- */
-/*==================================================================== */
 
+/************************************************/
+/*              IMAGES TOP PAGE                 */
+/************************************************/
 
 /*Top image*/
 .header-bandeau{
@@ -52,9 +56,10 @@ Author: Marielle Lautrou and Aurore David
     }
 }
 
-/*==================================================================== */
-/* -------------------------- BODY RURALIS --------------------------- */
-/*==================================================================== */
+
+/************************************************/
+/*              BODY RURALIS                    */
+/************************************************/
 
 // Description
 .description{
@@ -92,6 +97,7 @@ Author: Marielle Lautrou and Aurore David
     text-align: center;
 }
 
+// Responsive arpenteurs
 @media screen and (max-width: 600px) {
     .arpenteurs.valign-wrapper{
         display: block;
@@ -116,6 +122,7 @@ Author: Marielle Lautrou and Aurore David
         color: $orange;
     }
 }
+
 .abonnes{
     p{
         text-align: center;
@@ -145,6 +152,7 @@ Author: Marielle Lautrou and Aurore David
     @include multiple_img_line();
 }
 
+// Responsive abonnement
 @media screen and (max-width: 600px) {
     .abonnement_ruralis{
         div:last-child{
@@ -184,6 +192,7 @@ Author: Marielle Lautrou and Aurore David
         width: 100%;
     }
 
+    // Responsive trombi
     @media all and (max-width:992px) and (min-width: 865px){
         .m4:nth-child(1), .m4:nth-child(2) {
             height: 375px;
@@ -211,9 +220,11 @@ Author: Marielle Lautrou and Aurore David
     }
 
 }
-/*==================================================================== */
-/* ----------------------------- FOOTER ------------------------------ */
-/*==================================================================== */
+
+
+/************************************************/
+/*                    FOOTER                    */
+/************************************************/
 
 footer{
     background-color: $orange !important;
@@ -243,6 +254,7 @@ footer{
     }
 }
 
+// Responsive footer
 @media screen and (max-width: 600px) {
     footer{
         .valign-wrapper{
