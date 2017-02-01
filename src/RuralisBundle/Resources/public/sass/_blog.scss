@@ -84,6 +84,9 @@ Authors: Marielle Lautrou and Aurore David
 
     .carre {
         min-height: 300px;
+        .cardCarre {
+            min-height: 200px !important;
+        }
         .card-image {
             img {
                 display: block;
@@ -92,6 +95,7 @@ Authors: Marielle Lautrou and Aurore David
                 width: auto;
                 height: auto;
                 min-height: 200px;
+                max-height: 300px !important;
             }
         }
     }
