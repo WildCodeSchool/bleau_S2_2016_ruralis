@@ -788,6 +788,10 @@ Authors: Marielle Lautrou and Aurore David
   font-size: inherit;
 }
 /* line 49, ../sass/_admin.scss */
+.adminmodel .input-field label.active {
+  font-size: 1.3rem !important;
+}
+/* line 53, ../sass/_admin.scss */
 .adminmodel input:not([type]),
 .adminmodel input[type="text"],
 .adminmodel input[type="password"],
@@ -803,45 +807,45 @@ Authors: Marielle Lautrou and Aurore David
 .adminmodel textarea.materialize-textarea {
   font-size: inherit;
 }
-/* line 65, ../sass/_admin.scss */
+/* line 69, ../sass/_admin.scss */
 .adminmodel .input-field label {
   color: white;
   left: 4px;
 }
-/* line 70, ../sass/_admin.scss */
+/* line 74, ../sass/_admin.scss */
 .adminmodel .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
-/* line 75, ../sass/_admin.scss */
+/* line 79, ../sass/_admin.scss */
 .adminmodel .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
-/* line 79, ../sass/_admin.scss */
+/* line 83, ../sass/_admin.scss */
 .adminmodel .file-path {
   color: white;
 }
-/* line 83, ../sass/_admin.scss */
+/* line 87, ../sass/_admin.scss */
 .adminmodel .imageAdmin {
   height: 150px;
 }
-/* line 87, ../sass/_admin.scss */
+/* line 91, ../sass/_admin.scss */
 .adminmodel img.responsive-img, .adminmodel video.responsive-video {
   max-width: 350px;
 }
-/* line 93, ../sass/_admin.scss */
+/* line 97, ../sass/_admin.scss */
 .adminmodel .middleText {
   margin-top: 30px;
 }
-/* line 97, ../sass/_admin.scss */
+/* line 101, ../sass/_admin.scss */
 .adminmodel textarea {
   background-color: #ebebeb !important;
 }
-/* line 101, ../sass/_admin.scss */
+/* line 105, ../sass/_admin.scss */
 .adminmodel label {
   color: white;
 }
-/* line 105, ../sass/_admin.scss */
+/* line 109, ../sass/_admin.scss */
 .adminmodel .input-field label,
 .adminmodel label,
 .adminmodel .dropdown-content li > a,
@@ -849,7 +853,7 @@ Authors: Marielle Lautrou and Aurore David
 .adminmodel .descimg {
   color: #ea640c;
 }
-/* line 113, ../sass/_admin.scss */
+/* line 117, ../sass/_admin.scss */
 .adminmodel .adminImg {
   width: 50px;
 }
@@ -857,32 +861,32 @@ Authors: Marielle Lautrou and Aurore David
 /********************************/
 /*         MENU ADMIN           */
 /********************************/
-/* line 124, ../sass/_admin.scss */
+/* line 128, ../sass/_admin.scss */
 .menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
   justify-content: center;
 }
-/* line 131, ../sass/_admin.scss */
+/* line 135, ../sass/_admin.scss */
 .menuAdmin div .jaune {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 137, ../sass/_admin.scss */
+/* line 141, ../sass/_admin.scss */
 .menuAdmin div .vert {
   background-image: url("../images/fond_texture_vert.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 143, ../sass/_admin.scss */
+/* line 147, ../sass/_admin.scss */
 .menuAdmin div .orange {
   background-image: url("../images/fond_texture_orange.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 149, ../sass/_admin.scss */
+/* line 153, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;

@@ -46,6 +46,10 @@ Authors: Marielle Lautrou and Aurore David
         font-size: inherit;
     }
 
+    .input-field label.active {
+        font-size: 1.3rem !important;
+    }
+
     input:not([type]),
     input[type="text"],
     input[type="password"],
