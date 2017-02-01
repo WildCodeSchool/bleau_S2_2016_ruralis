@@ -67,7 +67,18 @@ h5 {
   color: #ea640c;
 }
 
-/* line 82, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
+.btn {
+  background-color: #00B82B;
+  font-size: 15px;
+}
+
+/* line 86, ../sass/main.scss */
+.btn:hover {
+  background-color: #00f138;
+}
+
+/* line 91, ../sass/main.scss */
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:focus:not([readonly]) + label,
 input[type=password]:focus:not([readonly]) + label,
@@ -84,7 +95,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #ea640c;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -102,7 +113,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #ea640c;
 }
 
-/* line 113, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 input:not([type]),
 input[type="text"],
 input[type="password"],
@@ -119,7 +130,7 @@ textarea.materialize-textarea {
   color: #414141;
 }
 
-/* line 128, ../sass/main.scss */
+/* line 140, ../sass/main.scss */
 [type="checkbox"]:checked + label:before {
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -127,12 +138,12 @@ textarea.materialize-textarea {
   border-bottom: 2px solid #ea640c;
 }
 
-/* line 134, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 .input-field label {
   color: #ea640c;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
 .btn.nl {
   background-color: #ea640c;
   height: 25px;
@@ -143,9 +154,9 @@ textarea.materialize-textarea {
   padding-right: 20px;
 }
 
-/* line 149, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .btn.nl:hover {
-  background-color: rgba(255, 132, 54, 0.19);
+  background-color: rgba(248, 106, 12, 0.83);
 }
 
 /*Theme Name: Ruralis
@@ -288,7 +299,7 @@ Author: Marielle Lautrou and Aurore David
 }
 /* line 130, ../sass/_ruralis.scss */
 .abonnes a:hover {
-  background-color: rgba(255, 132, 54, 0.19);
+  background-color: rgba(248, 106, 12, 0.83);
 }
 /* line 133, ../sass/_ruralis.scss */
 .abonnes span {
@@ -697,7 +708,10 @@ div .titreRuralis {
     z-index: 1 !important;
   }
 }
-/* line 3, ../sass/_admin.scss */
+/********************************/
+/*         ADMIN GENERAL        */
+/********************************/
+/* line 5, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: #B3AFAF;
@@ -705,61 +719,87 @@ div .titreRuralis {
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
+  font-family: 'Time New Roman', Regular;
+  font-size: 20px;
 }
-/* line 11, ../sass/_admin.scss */
+/* line 16, ../sass/_admin.scss */
+.adminmodel label {
+  font-size: inherit;
+}
+/* line 20, ../sass/_admin.scss */
+.adminmodel input:not([type]),
+.adminmodel input[type="text"],
+.adminmodel input[type="password"],
+.adminmodel input[type="email"],
+.adminmodel input[type="url"],
+.adminmodel input[type="time"],
+.adminmodel input[type="date"],
+.adminmodel input[type="datetime"],
+.adminmodel input[type="datetime-local"],
+.adminmodel input[type="tel"],
+.adminmodel input[type="number"],
+.adminmodel input[type="search"],
+.adminmodel textarea.materialize-textarea {
+  font-size: inherit;
+}
+/* line 40, ../sass/_admin.scss */
 .adminmodel h1 {
   color: #4c4c4c;
   text-align: center;
   font-family: 'majalla';
   font-size: 55px;
 }
-/* line 18, ../sass/_admin.scss */
+/* line 47, ../sass/_admin.scss */
 .adminmodel a {
   color: white !important;
 }
-/* line 22, ../sass/_admin.scss */
+/* line 51, ../sass/_admin.scss */
 .adminmodel a:hover {
   font-weight: bold;
 }
-/* line 26, ../sass/_admin.scss */
+/* line 55, ../sass/_admin.scss */
 .adminmodel a .lienAction {
   color: #00B82B;
 }
-/* line 30, ../sass/_admin.scss */
+/* line 59, ../sass/_admin.scss */
 .adminmodel .container .row {
   margin-left: 2.25rem;
   margin-right: 2.25rem;
 }
-/* line 35, ../sass/_admin.scss */
+/* line 64, ../sass/_admin.scss */
 .adminmodel .input-field label {
   color: white;
   left: 4px;
 }
-/* line 40, ../sass/_admin.scss */
+/* line 69, ../sass/_admin.scss */
 .adminmodel .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
-/* line 44, ../sass/_admin.scss */
+/* line 73, ../sass/_admin.scss */
 .adminmodel .file-path {
   color: white;
 }
-/* line 48, ../sass/_admin.scss */
+/* line 77, ../sass/_admin.scss */
 .adminmodel .imageAdmin {
   height: 150px;
 }
-/* line 53, ../sass/_admin.scss */
-.adminmodel .middleText {
-  margin-top: 75px;
+/* line 81, ../sass/_admin.scss */
+.adminmodel img.responsive-img, .adminmodel video.responsive-video {
+  max-width: 350px;
 }
-/* line 57, ../sass/_admin.scss */
+/* line 87, ../sass/_admin.scss */
+.adminmodel .middleText {
+  margin-top: 30px;
+}
+/* line 91, ../sass/_admin.scss */
 .adminmodel textarea {
   background-color: #ebebeb !important;
 }
-/* line 61, ../sass/_admin.scss */
+/* line 95, ../sass/_admin.scss */
 .adminmodel label {
   color: white;
 }
-/* line 65, ../sass/_admin.scss */
+/* line 99, ../sass/_admin.scss */
 .adminmodel .input-field label,
 .adminmodel label,
 .adminmodel .dropdown-content li > a,
@@ -767,45 +807,45 @@ div .titreRuralis {
 .adminmodel .descimg {
   color: #ea640c;
 }
-/* line 73, ../sass/_admin.scss */
+/* line 107, ../sass/_admin.scss */
 .adminmodel .adminImg {
   width: 50px;
 }
-/* line 77, ../sass/_admin.scss */
+/* line 111, ../sass/_admin.scss */
 .adminmodel .btn {
   background-color: #00B82B;
 }
-/* line 81, ../sass/_admin.scss */
+/* line 115, ../sass/_admin.scss */
 .adminmodel .btn:hover {
   background-color: #00f138;
 }
 
-/* line 90, ../sass/_admin.scss */
+/* line 124, ../sass/_admin.scss */
 .menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
   justify-content: center;
 }
-/* line 97, ../sass/_admin.scss */
+/* line 131, ../sass/_admin.scss */
 .menuAdmin div .jaune {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 103, ../sass/_admin.scss */
+/* line 137, ../sass/_admin.scss */
 .menuAdmin div .vert {
   background-image: url("../images/fond_texture_vert.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 109, ../sass/_admin.scss */
+/* line 143, ../sass/_admin.scss */
 .menuAdmin div .orange {
   background-image: url("../images/fond_texture_orange.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 115, ../sass/_admin.scss */
+/* line 149, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;
@@ -815,109 +855,83 @@ div .titreRuralis {
 /* line 1, ../sass/_abonnement.scss */
 .abonnement {
   font-size: 26px;
+  /**********************************/
+  /*        PAGE ABONNEMENT         */
+  /**********************************/
 }
 /* line 5, ../sass/_abonnement.scss */
 .abonnement .row .col {
   padding: 0;
 }
-/* line 12, ../sass/_abonnement.scss */
+/* line 13, ../sass/_abonnement.scss */
 .abonnement .options {
   position: fixed;
   top: 45%;
   text-align: center;
   z-index: 1;
 }
-/* line 19, ../sass/_abonnement.scss */
+/* line 20, ../sass/_abonnement.scss */
 .abonnement .abotop {
   margin-top: 30px;
   padding-top: 20px;
 }
-/* line 24, ../sass/_abonnement.scss */
+/* line 25, ../sass/_abonnement.scss */
 .abonnement .abovert {
   margin-top: 40px;
   z-index: 99999999999999999999999999;
 }
-/* line 29, ../sass/_abonnement.scss */
+/* line 30, ../sass/_abonnement.scss */
 .abonnement .lhsmall {
   line-height: 1;
 }
-/* line 33, ../sass/_abonnement.scss */
+/* line 34, ../sass/_abonnement.scss */
 .abonnement .logoabt {
   position: relative;
   z-index: 2;
   max-width: 120px;
 }
-/* line 41, ../sass/_abonnement.scss */
-.abonnement .margtop {
-  margin-top: 30px;
-  color: grey;
-  font-family: 'Time New Roman', Regular;
-  font-size: 18px;
-}
-
-/* line 50, ../sass/_abonnement.scss */
-.abomodel {
-  margin-left: 5%;
-  max-width: 90%;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  margin-top: 3%;
-  padding-left: 6%;
-  font-size: 18px;
-  font-family: 'Time New Roman', Regular;
-}
-/* line 61, ../sass/_abonnement.scss */
-.abomodel p {
-  line-height: 20px !important;
-}
-/* line 65, ../sass/_abonnement.scss */
-.abomodel .row {
-  margin-bottom: 0 !important;
-}
-/* line 68, ../sass/_abonnement.scss */
-.abomodel .recaptitres {
-  font-weight: bold;
-  margin-top: 30px;
+/* line 42, ../sass/_abonnement.scss */
+.abonnement .greytxt {
+  color: #414141;
 }
 
 /******************************/
 /*         Responsive         */
 /******************************/
 @media screen and (max-width: 640px) {
-  /* line 79, ../sass/_abonnement.scss */
+  /* line 54, ../sass/_abonnement.scss */
   .fixed {
     display: none;
   }
 
-  /* line 82, ../sass/_abonnement.scss */
+  /* line 58, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: block;
   }
 
-  /* line 101, ../sass/_abonnement.scss */
+  /* line 62, ../sass/_abonnement.scss */
   p {
     line-height: 20px !important;
   }
 
-  /* line 105, ../sass/_abonnement.scss */
+  /* line 66, ../sass/_abonnement.scss */
   .row {
     margin-bottom: 0 !important;
   }
 
-  /* line 108, ../sass/_abonnement.scss */
+  /* line 69, ../sass/_abonnement.scss */
   .recaptitres {
     font-weight: bold;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 115, ../sass/_abonnement.scss */
+  /* line 76, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: none;
   }
 
-  /* line 118, ../sass/_abonnement.scss */
+  /* line 79, ../sass/_abonnement.scss */
   .fixed {
     display: block;
   }
@@ -1101,15 +1115,15 @@ div .titreRuralis {
   border-radius: 10px !important;
 }
 
-/* line 3, ../sass/_formulaireAbonnement.scss */
+/* line 5, ../sass/_formulaireAbonnement.scss */
 .formulaire label {
   color: #414141;
 }
-/* line 6, ../sass/_formulaireAbonnement.scss */
+/* line 9, ../sass/_formulaireAbonnement.scss */
 .formulaire .input-field label {
   color: #414141 !important;
 }
-/* line 10, ../sass/_formulaireAbonnement.scss */
+/* line 13, ../sass/_formulaireAbonnement.scss */
 .formulaire input:not([type]):focus:not([readonly]),
 .formulaire input[type=text]:focus:not([readonly]),
 .formulaire input[type=password]:focus:not([readonly]),
@@ -1126,11 +1140,11 @@ div .titreRuralis {
   border-bottom: 1px solid rgba(220, 220, 220, 0.5);
   box-shadow: 0 1px 0 0 #414141;
 }
-/* line 26, ../sass/_formulaireAbonnement.scss */
+/* line 30, ../sass/_formulaireAbonnement.scss */
 .formulaire input.validate .active {
   border-bottom-color: black;
 }
-/* line 30, ../sass/_formulaireAbonnement.scss */
+/* line 34, ../sass/_formulaireAbonnement.scss */
 .formulaire input:not([type]),
 .formulaire input[type="text"],
 .formulaire input[type="password"],
@@ -1146,18 +1160,47 @@ div .titreRuralis {
 .formulaire extarea.materialize-textarea {
   border-bottom: 1px solid #414141;
 }
-/* line 47, ../sass/_formulaireAbonnement.scss */
+/* line 52, ../sass/_formulaireAbonnement.scss */
 .formulaire span {
   color: #414141;
   font-weight: bold;
 }
-/* line 62, ../sass/_formulaireAbonnement.scss */
+/* line 58, ../sass/_formulaireAbonnement.scss */
 .formulaire .champsForm {
   font-size: 18px !important;
 }
-/* line 64, ../sass/_formulaireAbonnement.scss */
+/* line 61, ../sass/_formulaireAbonnement.scss */
 .formulaire .champsForm p {
   color: #414141;
+}
+
+/*************************************************************/
+/*         BOX FORMULAIRE ABONNEMENT ET RECAPITULATIF        */
+/*************************************************************/
+/* line 72, ../sass/_formulaireAbonnement.scss */
+.abomodel {
+  margin-left: 5%;
+  max-width: 90%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-top: 3%;
+  padding-left: 6%;
+  font-size: 18px;
+  font-family: 'Time New Roman', Regular;
+}
+/* line 83, ../sass/_formulaireAbonnement.scss */
+.abomodel p {
+  line-height: 20px !important;
+}
+/* line 87, ../sass/_formulaireAbonnement.scss */
+.abomodel .row {
+  margin-bottom: 0 !important;
+}
+/* line 90, ../sass/_formulaireAbonnement.scss */
+.abomodel .recaptitres {
+  font-weight: bold;
+  margin-top: 30px;
 }
 
 /* line 1, ../sass/_newsletter.scss */

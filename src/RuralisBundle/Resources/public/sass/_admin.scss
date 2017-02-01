@@ -1,16 +1,45 @@
-// Admin Général
+/********************************/
+/*         ADMIN GENERAL        */
+/********************************/
 
 .adminmodel {
+
     max-width: 90%;
     background-color: #B3AFAF;
     padding-bottom: 5px;
     margin-bottom: 20px;
     border-radius: 15px;
     margin-top: 3%;
+    font-family:  'Time New Roman', Regular;
+    font-size: 20px;
+
+    label {
+        font-size: inherit;
+    }
+
+    input:not([type]),
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="time"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    textarea.materialize-textarea {
+        font-size: inherit;
+    }
+    
+    //.btn {
+    //    font-size: 15px;
+    //}
 
     h1{
         color: #4c4c4c;
-        text-align:center;
+        text-align: center;
         font-family: 'majalla';
         font-size: 55px;
     }
@@ -38,20 +67,25 @@
     }
 
     .select-wrapper input.select-dropdown{
-        border-bottom-color:white;
+        border-bottom-color: white;
     }
 
     .file-path {
-        color:white;
+        color: white;
     }
 
     .imageAdmin{
-        height:150px;
+        height: 150px;
     }
 
-    // Texte 'image actuelle' dans les édit partenaires et article
+    img.responsive-img, video.responsive-video{
+        max-width: 350px;
+    }
+
+// Texte 'image actuelle' dans les édit partenaires et article
+
     .middleText{
-        margin-top:75px;
+        margin-top: 30px;
     }
 
     textarea {
