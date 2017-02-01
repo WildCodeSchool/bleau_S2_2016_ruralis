@@ -21,4 +21,4 @@ newsletter_edit:
 newsletter_delete:
     path:     /{id}/delete
     defaults: { _controller: "RuralisBundle:Newsletter:delete" }
-    methods:  DELETE
+    methods:  GET

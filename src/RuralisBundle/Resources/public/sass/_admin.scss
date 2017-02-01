@@ -151,12 +151,17 @@
         font-size: 50px;
         font-family: 'majalla';
         }
+
     //Couleur à garder
     //a:hover {
     //    color: $orange !important;
     //}
 }
 
-
+.file-path{
+    input:-ms-input-placeholder, input::-webkit-input-placeholder, input::-moz-placeholder {
+        color:black !important ;
+    }
+}
 // Abonnés Admin
 

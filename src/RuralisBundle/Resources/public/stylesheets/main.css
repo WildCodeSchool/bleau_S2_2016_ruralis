@@ -852,6 +852,11 @@ div .titreRuralis {
   font-family: 'majalla';
 }
 
+/* line 162, ../sass/_admin.scss */
+.file-path input:-ms-input-placeholder, .file-path input::-webkit-input-placeholder, .file-path input::-moz-placeholder {
+  color: black !important;
+}
+
 /* line 1, ../sass/_abonnement.scss */
 .abonnement {
   font-size: 26px;
