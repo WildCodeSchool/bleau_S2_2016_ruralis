@@ -122,13 +122,10 @@ class NewsletterController extends Controller
             return $this->redirectToRoute('newsletter_index');
     }
 
-    public function sendAction($id, Newsletter $newsletters)
+    public function sendAction(Newsletter $newsletter)
     {
         $em = $this->getDoctrine()->getManager();
-        $abonnesNl = $em->getRepository('RuralisBundle:Abonnement')->findByNewsletter(true);
         $mailAboNl = $em->getRepository('RuralisBundle:Abonnement')->ContactAboNewsletter();
-        $newsletter = $em->getRepository('RuralisBundle:Newsletter')->findOneById($id);
-
 
         //Structure du mail à enovyer
         $from = $this->getParameter('mailer_user');
@@ -169,7 +166,7 @@ class NewsletterController extends Controller
 
         //Renvoie vers la vue index, avec "newsletter envoyée cochée"
         return $this->redirectToRoute('newsletter_index', array(
-            'newsletters' => $newsletters
+            'newsletter' => $newsletter
             ));
     }
 
