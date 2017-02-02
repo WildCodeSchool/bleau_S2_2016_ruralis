@@ -3,5 +3,5 @@ RuralisBundle\Entity\Image:
         file:
             - File:
                 maxSize: 2M
-                mimeTypes: [application/pdf, application/x-pdf]
-                mimeTypesMessage: "Merci de proposer un fichier PDF valide"
+                mimeTypes: [image/*]
+                mimeTypesMessage: "Merci de proposer une image valide"
