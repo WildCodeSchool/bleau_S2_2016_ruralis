@@ -79,14 +79,13 @@ class ArticleController extends Controller
      */
     public function editAction(Request $request, Article $article)
     {
-        $em = $this->getDoctrine()->getManager();
-        $image = $em->getRepository('RuralisBundle:Image')->findOneById($article->getImage()->getId());
         $editForm = $this->createForm('RuralisBundle\Form\ArticleType', $article);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $image->preUpload();
+            $article->getImage()->preUpload();
+
             $em->persist($article);
             $em->flush();
             return $this->redirectToRoute('article_show', array('id' => $article->getId()));

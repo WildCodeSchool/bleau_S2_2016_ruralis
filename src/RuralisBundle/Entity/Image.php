@@ -4,6 +4,8 @@ namespace RuralisBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
+
 
 /**
  * Image
@@ -15,12 +17,9 @@ class Image
         return $this->url;
     }
 
+
     /**
-     * @Assert\Image(
-     *     maxSize = "2k",
-     *     mimeTypes = {"image/*"},
-     *     maxSizeMessage = "The maximum allowed file size is 2MB.",
-     *     mimeTypesMessage = "Please upload a valid Image.")
+     * @var file
      */
     public $file;
 

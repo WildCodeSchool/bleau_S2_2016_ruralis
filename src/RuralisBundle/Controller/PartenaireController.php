@@ -38,6 +38,7 @@ class PartenaireController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($partenaire);
             $em->flush($partenaire);
@@ -72,6 +73,7 @@ class PartenaireController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $partenaire->getImage()->preUpload();
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('partenaire_show', array('id' => $partenaire->getId()));
