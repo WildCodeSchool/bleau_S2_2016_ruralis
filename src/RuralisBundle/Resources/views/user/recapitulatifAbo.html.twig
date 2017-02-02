@@ -63,14 +63,21 @@
                         Vous ne souhaitez pas vous abonner à la Newsletter.
                     </p>
                     {% else %}
+                        {% if alert == 1 %}
+                            <p>
+                                Vous êtes déjà abonné à la Newsletter
+                            </p>
+                        {% else %}
                         <p>
                             Vous souhaitez vous abonner à la Newsletter.
                         </p>
+                        {% endif %}
                 {% endif %}
 
                 {# Boutons #}
                 <div class="row">
                     <div class="col s2 offset-s5 center">
+                        <a href="{{ path('ruralis_abosend') }}">Send abo</a>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input  class="acheter" type="hidden" name="hosted_button_id" value="TYJXWFXKWDMPN">
