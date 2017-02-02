@@ -1077,7 +1077,11 @@ Authors: Marielle Lautrou and Aurore David
 .blog .carre {
   min-height: 300px;
 }
-/* line 88, ../sass/_blog.scss */
+/* line 87, ../sass/_blog.scss */
+.blog .carre .cardCarre {
+  min-height: 200px !important;
+}
+/* line 91, ../sass/_blog.scss */
 .blog .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -1085,45 +1089,46 @@ Authors: Marielle Lautrou and Aurore David
   width: auto;
   height: auto;
   min-height: 200px;
+  max-height: 300px !important;
 }
-/* line 104, ../sass/_blog.scss */
+/* line 108, ../sass/_blog.scss */
 .blog .horizontal {
   min-height: 265px;
   max-height: 300px;
 }
-/* line 107, ../sass/_blog.scss */
+/* line 111, ../sass/_blog.scss */
 .blog .horizontal .card-image img {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
 }
-/* line 114, ../sass/_blog.scss */
+/* line 118, ../sass/_blog.scss */
 .blog .horizontal .card-stacked .card-content {
   overflow-y: auto;
 }
-/* line 123, ../sass/_blog.scss */
+/* line 127, ../sass/_blog.scss */
 .blog .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
-/* line 128, ../sass/_blog.scss */
+/* line 132, ../sass/_blog.scss */
 .blog .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
 }
-/* line 137, ../sass/_blog.scss */
+/* line 141, ../sass/_blog.scss */
 .blog .logoabt {
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 640px) {
-  /* line 147, ../sass/_blog.scss */
+  /* line 151, ../sass/_blog.scss */
   .blog .fixedSideNav {
     display: block;
     visibility: hidden;
   }
-  /* line 152, ../sass/_blog.scss */
+  /* line 156, ../sass/_blog.scss */
   .blog .card.horizontal {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1136,11 +1141,11 @@ Authors: Marielle Lautrou and Aurore David
     flex: 1;
     position: relative;
   }
-  /* line 165, ../sass/_blog.scss */
+  /* line 169, ../sass/_blog.scss */
   .blog .carre {
     min-height: 300px;
   }
-  /* line 168, ../sass/_blog.scss */
+  /* line 172, ../sass/_blog.scss */
   .blog .carre .card-image img {
     width: 100%;
     height: inherit;
@@ -1163,14 +1168,6 @@ Authors: Marielle Lautrou and Aurore David
 /* line 14, ../sass/_partenaire.scss */
 .partenaire .photoPart {
   height: 150px;
-}
-/* line 18, ../sass/_partenaire.scss */
-.partenaire .photoPart img {
-  display: inline-flex;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 150px;
-  max-height: 150px;
 }
 /* line 26, ../sass/_partenaire.scss */
 .partenaire img {
