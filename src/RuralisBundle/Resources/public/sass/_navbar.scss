@@ -1,54 +1,31 @@
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+
+
 // ATTENTION ==> DES MIXINS ET VARIABLE SONT DEFINIE DANS MAIN.SCSS
 
 
-/*==================================================================== */
-/* ----------------------- NAVIGATION BAR ----------------------- */
-/*==================================================================== */
+/*****************************************/
+/*         BARRE DE NAVIGATION           */
+/*****************************************/
 
-//ERASE MATERIALIZE CSS
+
+/*********************************************/
+/*         ERASE MATERIALIZE CSS             */
+/*********************************************/
+
 .navigation .col {
     padding: initial !important;
 }
+
 .navigation .row{
     margin-bottom: 0 !important;
 }
 
-//NAV BAR
-.nav_responsive{
-    display: none;
-}
-.fixed_nav {
-    position: fixed;
-    width: 100%;
-    height: auto;
-}
-
-.navigation{
-    a, li{
-        color : $orange;
-    }
-    li{
-        text-align: center;
-    }
-    a, .nl {
-        font-weight: 800;
-    }
-}
-.logoArbre{
-    margin-left:15px;
-    display:block;
-}
-@media only screen and (min-width: 993px)
-{
-    .majallaSmallItalic{
-        margin-left:3% !important;
-    }
-}
-@media only screen and (max-width: 1200px){
-    .logoArbre{
-        display:none;
-    }
-}
+/************************************/
+/*         GENERAL                  */
+/************************************/
 
 .majalla, .majallaSmall, .majallaSmallItalic {
     font-family: 'majalla';
@@ -82,7 +59,45 @@ div .titreRuralis {
     max-height: 33px;
     margin-top:-15px;
 }
-//First line nav bar
+
+/************************************/
+/*         NAVBAR                   */
+/************************************/
+
+.nav_responsive{
+    display: none;
+}
+
+.fixed_nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.navigation{
+    a, li{
+        color : $orange;
+    }
+
+    li{
+        text-align: center;
+    }
+
+    a, .nl {
+        font-weight: 800;
+    }
+
+    .logoArbre{
+        margin-left: 15px;
+        display: block;
+    }
+}
+
+
+/**************************************/
+/*         1ST LINE NAVBAR            */
+/**************************************/
+
 .first_line {
     background-color: $orange;
     max-height: 56px;
@@ -119,13 +134,19 @@ div .titreRuralis {
     width: 0;
 }
 
-//Second line nav bar
+
+/**************************************/
+/*         2ND LINE NAVBAR            */
+/**************************************/
+
 .second_line{
     background-color: rgba(255,255,255,0.75);
+
     a:hover {
         background-color : rgba(234, 100, 12, 0.48);
         color : rgb(234, 76, 10);
     }
+
     ul li{
         float: left;
     }
@@ -135,11 +156,13 @@ div .titreRuralis {
     margin-top: -15px;
     margin-bottom: 0;
     list-style: none;
+
     li {
         margin-bottom: 1em;
         padding-left: 1em;
         position: relative;
         margin-left: 10%;
+
         &:after {
             content: '';
             height: .4em;
@@ -152,20 +175,24 @@ div .titreRuralis {
             left: 2px;
         }
     }
+
     li:first-child{
         margin-left: 0px;
     }
 }
+
 .navlinks_on_scroll{
     margin-top: -15px;
     margin-bottom: 0;
     list-style: none;
     height: 30px;
+
     .li_nav_menu {
         margin-bottom: 1em;
         padding-left: 1em;
         position: relative;
         margin-left: 60px;
+
         &:after {
             content: '';
             height: .4em;
@@ -178,23 +205,31 @@ div .titreRuralis {
             left: 2px;
         }
     }
+
     .last{
         margin-right: 2% !important;
     }
 }
 
-//Third line nav bar
+
+/**************************************/
+/*         3RD LINE NAVBAR            */
+/**************************************/
+
 .third_line {
     background-color: rgba(255, 255, 255, 0.75);
+
     ul{
         margin-bottom: 0px;
     }
 }
+
 .mailbox {
     margin-top: -22px;
     margin-right: 3%;
     list-style: none;
 }
+
 .navigation .input-field label{
     color: $orange;
     top: 1.8rem;
@@ -205,7 +240,10 @@ div .titreRuralis {
 }
 
 
-//Responsive navbar
+/**************************************/
+/*         RESPONSIVE NAVBAR          */
+/**************************************/
+
 @media screen and (max-width: 600px) {
     header{
         .nav_responsive{
@@ -225,9 +263,21 @@ div .titreRuralis {
             }
         }
     }
+
     #sidenav-overlay {
         z-index: 1 !important;
     }
-
-
 }
+
+@media only screen and (min-width: 993px) {
+    .majallaSmallItalic{
+        margin-left:3% !important;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .logoArbre{
+        display:none;
+    }
+}
+
