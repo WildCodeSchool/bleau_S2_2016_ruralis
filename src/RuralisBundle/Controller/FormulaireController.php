@@ -29,7 +29,7 @@ class FormulaireController extends Controller
         ));
     }
 
-    public function recapAboAction($cadeau)
+    public function recapAboAction()
     {
         $newsByNav = false;
 
