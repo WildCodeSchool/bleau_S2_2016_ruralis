@@ -11,6 +11,10 @@ Authors: Marielle Lautrou and Aurore David
         padding: 0;
     }
 
+    p {
+        margin-bottom:0 !important;
+    }
+
 /**********************************/
 /*        PAGE ABONNEMENT         */
 /**********************************/
@@ -39,7 +43,8 @@ Authors: Marielle Lautrou and Aurore David
     .logoabt {
         position: relative;
         z-index: 2;
-        max-width: 120px;
+        max-width: 80px;
+        margin-bottom:0;
     }
 
     // Texte hoverable de DON et CADEAU

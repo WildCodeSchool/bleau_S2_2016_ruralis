@@ -83,7 +83,7 @@ div .titreRuralis {
         text-align: center;
     }
 
-    a, .nl {
+    .nl {
         font-weight: 800;
     }
 
@@ -156,6 +156,7 @@ div .titreRuralis {
     margin-top: -15px;
     margin-bottom: 0;
     list-style: none;
+    font-weight: 800;
 
     li {
         margin-bottom: 1em;
@@ -192,6 +193,7 @@ div .titreRuralis {
         padding-left: 1em;
         position: relative;
         margin-left: 60px;
+        font-weight: 800;
 
         &:after {
             content: '';

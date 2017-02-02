@@ -26,9 +26,9 @@ ruralis_recapitulatif_abo:
     defaults: { _controller:  RuralisBundle:Formulaire:recapAbo}
     methods:  [POST]
 
-ruralis_abonnes:
-    path:     /admin/abonnes
-    defaults: { _controller:  RuralisBundle:Admin:abonnes }
+ruralis_cadeau:
+    path:     /formulaire/cadeau
+    defaults: { _controller: RuralisBundle:ViewsUser:cadeau, cadeau: true }
 
 # PARTENAIRES
 ruralis_partenaire:
@@ -89,6 +89,10 @@ ruralis_admin_newsletter:
 ruralis_send_newsletter:
     path:     /{id}/sendnewsletter
     defaults: { _controller:  RuralisBundle:Newsletter:send }
+
+ruralis_abonnes:
+    path:     /admin/abonnes
+    defaults: { _controller:  RuralisBundle:Admin:abonnes }
 
 #FOS USER
 fos_user_security:
