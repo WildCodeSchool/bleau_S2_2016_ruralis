@@ -1169,6 +1169,14 @@ Authors: Marielle Lautrou and Aurore David
 .partenaire .photoPart {
   height: 150px;
 }
+/* line 18, ../sass/_partenaire.scss */
+.partenaire .photoPart img {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
 /* line 26, ../sass/_partenaire.scss */
 .partenaire img {
   border-radius: 10px !important;
