@@ -51,7 +51,19 @@ class ViewsUserController extends Controller
 
     public function abonnementAction()
     {
-        return $this->render('@Ruralis/user/abonnement.html.twig');
+        return $this->render('@Ruralis/user/abonnement.html.twig', array(
+        ));
+    }
+
+    public function cadeauAction(){
+        $cadeau = true;
+        $notice = $this->container->get('session')->getFlashBag()->set(
+            'notice', 'Merci de remplir les informations du bénéficiaire'
+        );
+        return $this->render("@Ruralis/user/formulaireAbonnement.html.twig", array(
+            'cadeau' => $cadeau,
+            'notice' => $notice
+        ));
     }
 
     public function ruralisAction()
