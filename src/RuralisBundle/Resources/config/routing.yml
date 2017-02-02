@@ -59,6 +59,14 @@ ruralis_template_newsletter:
     path:     /{id}/newsletter
     defaults: { _controller:  RuralisBundle:ViewsUser:templateNewsletter, id: null}
 
+ruralis_desinscription_news:
+    path:     /desinscriptionNewsletter
+    defaults:  { _controller: RuralisBundle:Contact:desinscriptionNews }
+
+ruralis_confirmation_desinscription_news:
+    path:     /confirmationDesinscriptionNewsletter
+    defaults:  { _controller: RuralisBundle:Contact:confirmDesinscriptionNews }
+
 # Routes
 
 # Routes Admin

@@ -8,7 +8,6 @@ Authors: Marielle Lautrou and Aurore David
 /********************************/
 
 .adminmodel {
-
     max-width: 90%;
     background-color: #B3AFAF;
     padding-bottom: 5px;
@@ -25,7 +24,7 @@ Authors: Marielle Lautrou and Aurore David
 
     h1{
         color: #4c4c4c;
-        text-align: center;
+        text-align:center;
         font-family: 'majalla';
         font-size: 55px;
     }
@@ -77,25 +76,25 @@ Authors: Marielle Lautrou and Aurore David
     }
 
     .select-wrapper input.select-dropdown{
-        border-bottom-color: white;
+        border-bottom-color:white;
     }
 
     .file-path {
-        color: white;
+        color:white;
     }
 
     .imageAdmin{
-        height: 150px;
+        height:150px;
     }
 
-    img.responsive-img, video.responsive-video{
+    img.responsive-img {
         max-width: 350px;
     }
-
+    
     // Texte 'image actuelle' dans les édit partenaires et article
 
     .middleText{
-        margin-top: 30px;
+        margin-top:75px;
     }
 
     textarea {
@@ -142,17 +141,17 @@ Authors: Marielle Lautrou and Aurore David
         background-image: url("../images/fond_texture_vert.png");
         background-size: 0.7%;
         background-repeat: repeat;
-        }
+    }
 
     div .orange{
         background-image: url("../images/fond_texture_orange.png");
         background-size: 0.7%;
         background-repeat: repeat;
-        }
+    }
 
     a {
         color:  #4c4c4c !important;
         font-size: 50px;
         font-family: 'majalla';
-        }
+    }
 }

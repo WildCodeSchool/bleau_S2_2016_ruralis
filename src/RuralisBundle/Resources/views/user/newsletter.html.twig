@@ -11,6 +11,10 @@
             width: 10%;
             margin-left: 45%;
         }
+
+        .orange{
+            color:rgb(234,100,12);
+        }
         .container {
             margin-top: 15px;
             padding: 10px;
@@ -20,6 +24,10 @@
 
         .center {
             text-align: center;
+        }
+
+        .site {<
+            margin-top:10px;
         }
 
         .small{
@@ -34,7 +42,7 @@
             font-size: 18px;
         }
         .message {
-            text-align: justify; N
+            text-align: justify;
             margin-top: 25px;
             font-size: 15px;
         }
@@ -45,15 +53,21 @@
 {% block body %}
 <div class="container">
     <img src="{{ cid }}" alt="logo" class="logo">
-    <div>
+    <div class="orange">
         <h1>{{ titre }}</h1>
     </div>
     <div class="justify message">
         {{ contenu | raw }}
     </div>
+    <div class="site">
+        Pour continuer la lecture, <a class="orange" href="{{ url('ruralis_homepage') }}">Le site de Ruralis Magazine</a>
+    </div>
     <div class="center small">
         <p>
-            Pour nous contacter : contact@ruralismagazine.com
+            Pour nous contacter : <a class="orange" href="mailto:contact@ruralismagazine.com">contact@ruralismagazine.com</a>contact@ruralismagazine.com
+        </p>
+        <p>
+            Pour vous désinscrire <a class="orange" href="{{ url('ruralis_desinscription_news') }}">cliquez ici</a>
         </p>
     </div>
 </div>

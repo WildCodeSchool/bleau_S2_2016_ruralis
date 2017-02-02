@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <form action="{{ path('ruralis_confirmation_desinscription_news') }}" method="post">
+            <div class="col offset-m3 m9">
+                <div class="col m2 offset-m1 nl">
+                    Si vous souhaitez vous désinscrire de la newsletter, merci de saisir votre email
+                </div>
+                <div class="col m4 input-field mailbox">
+                    <input id="email" type="email" class="validate" name="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col m1">
+                    <button class="btn waves-effect waves-light nl" type="submit" name="action">
+                        Confirmer
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock body %}

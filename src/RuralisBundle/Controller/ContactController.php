@@ -7,6 +7,8 @@
 namespace RuralisBundle\Controller;
 
 use RuralisBundle\Entity\Abonne;
+use RuralisBundle\Entity\Contact;
+use RuralisBundle\Entity\Abonnement;
 use RuralisBundle\Entity\TypeAbo;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -121,5 +123,29 @@ class ContactController extends Controller
         return $this->render('@Ruralis/user/annulationAbonnement.html.twig', array(
             'details' => $details,
         ));
+    }
+
+    //Quand un abonné souhaite se désinscrire de la newsletter renvoyé vers cette page pour saisir son adresse
+    public function desinscriptionNewsAction() {
+        return $this->render('@Ruralis/user/desinscriptionNewsletter.html.twig');
+    }
+
+    public function confirmDesinscriptionNewsAction() {
+        $em = $this->getDoctrine()->getManager();
+
+        $email = $_POST['email'];
+
+        $contact = $em->getRepository('RuralisBundle:Contact')->findOneByEmail($email);
+
+        $abonnement = $em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
+        $abonnement->getContact()->getEmail();
+
+        $abonnement->setNewsletter(null);
+
+        $em->persist($abonnement);
+        $em->flush();
+
+        return $this->render('@Ruralis/Default/index.html.twig');
+
     }
 }
