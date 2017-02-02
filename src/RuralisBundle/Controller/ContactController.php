@@ -20,7 +20,11 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class ContactController extends Controller
 {
-    public function inscriptionAction(Request $request)
+
+    /*
+     * Inscription à la newsletter via le formulaire de la navigation
+     */
+    public function inscriptionAction()
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -31,14 +35,34 @@ class ContactController extends Controller
         $lastUrl = $this->get('request')->headers->get('referer');
         $newsletter = "on";
         $type = false;
+        $newsByNav = true;
         //Appel du service CheckEmail
-        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email, $newsletter, $type);
+        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email, $newsletter, $type, $newsByNav);
 
-        $em->persist($abonnement);
+        $em->persist($abonnement['abonnement']);
         $em->flush();
 
         //Affiche l'URL depuis laquelle on s'est inscrit à la newsletter
         return $this->redirect($lastUrl);
+    }
+
+    private function createAbo($em)
+    {
+        $lecteur = new TypeAbo();
+        $donateur = new TypeAbo();
+        $ambassadeur = new TypeAbo();
+
+        $lecteur->setType('lecteur');
+        $donateur->setType('donateur');
+        $ambassadeur->setType('ambassadeur');
+
+        $em->persist($lecteur);
+        $em->persist($donateur);
+        $em->persist($ambassadeur);
+
+        $em->flush();
+
+        return ;
     }
 
     public function abosendAction()
@@ -46,72 +70,63 @@ class ContactController extends Controller
         $em = $this->getDoctrine()->getManager();
         $typeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findAll();
 
+        if(empty($typeAbo)){
+            $this->createAbo($em);
+        }
+
         $session = $this->get('request')->getSession();
         $details = $session->get('details');
 
         $prenom =  $details['prenom'];
         $nom =  $details['nom'];
-        $email = $details['email'];
         $tel =  $details['tel'];
         $rue =  $details['rue'];
         $cp =  $details['cp'];
         $ville =  $details['ville'];
         $pays =  $details['pays'];
-        $newsletter = $details['newsletter'];
+        $contact = $details['contact'];
+        $abonnement = $details['abonnement'];
 
-        $type = true;
-        if (empty($typeAbo)){
-            $lecteur = new TypeAbo();
-            $donateur = new TypeAbo();
-            $ambassadeur = new TypeAbo();
-
-            $lecteur->setType('lecteur');
-            $donateur->setType('donateur');
-            $ambassadeur->setType('ambassadeur');
-
-            $em->persist($lecteur);
-            $em->persist($donateur);
-            $em->persist($ambassadeur);
-
-            $em->flush();
+        if ($details['oldabo'] == true){
+            $abonnement = $em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
         }
 
-        //Appel du service CheckEmail
-        $abonnement = $this->container->get('ruralis.checkemail')->checkEmail($email, $newsletter, $type);
+        if ($details['alert'] == 3){
+            $abonnement->setNewsletter(true);
+        }
+        else{
+            $abonnement->setNewsletter(false);
+        }
 
-/*        if ($abonnement == 400){
-            return $this->render('@Ruralis/admin/accueilAdmin.html.twig');
-        }*/
+        //Je créé un nouvel abonné avec les infos de $details
+        $newAbonne = new Abonne();
+        $newAbonne->setNom($nom);
+        $newAbonne->setPrenom($prenom);
+        $newAbonne->setRue($rue);
+        $newAbonne->setTelephone($tel);
+        $newAbonne->setCp($cp);
+        $newAbonne->setVille($ville);
+        $newAbonne->setPays($pays);
+        //Je récupère la date d'abonnement
+        $newAbonne->setDateAbonnement(new \DateTime());
 
-/*        else {*/
-            //Je créé un nouvel abonné avec les infos de $details
-            $newAbonne = new Abonne();
-            $newAbonne->setNom($nom);
-            $newAbonne->setPrenom($prenom);
-            $newAbonne->setRue($rue);
-            $newAbonne->setTelephone($tel);
-            $newAbonne->setCp($cp);
-            $newAbonne->setVille($ville);
-            $newAbonne->setPays($pays);
-            //Je récupère la date d'abonnement
-            $newAbonne->setDateAbonnement(new \DateTime());
+        //Je créé un nouveau TypeAbo avec les données de $type
+        $type = $session->get('type');
+        $newTypeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findOneByType($type);
 
-            //Je créé un nouveau TypeAbo avec les données de $type
-            $type = $session->get('type');
-            $newTypeAbo = $em->getRepository('RuralisBundle:TypeAbo')->findOneByType($type);
+        $abonnement->setAbonne($newAbonne);
+        $abonnement->setTypeAbo($newTypeAbo);
+        $abonnement->setStatus(true);
 
-            $abonnement->setAbonne($newAbonne);
-            $abonnement->setTypeAbo($newTypeAbo);
+        $em->persist($abonnement);
+        $em->flush();
 
-            $em->persist($abonnement);
-            $em->flush();
+        $session->remove('details');
+        // Si abonnement et paiement validé sur Paypal vue "validation"
 
-            // Si abonnement et paiement validé sur Paypal vue "validation"
-
-            return $this->render('@Ruralis/user/validationAbonnement.html.twig', array(
-                'details' => $details,
-            ));
-/*        }*/
+        return $this->render('@Ruralis/user/validationAbonnement.html.twig', array(
+            'details' => $details,
+        ));
     }
 
     public function aboannulAction()
