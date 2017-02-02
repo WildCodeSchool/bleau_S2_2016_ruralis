@@ -101,36 +101,3 @@
     </script>
 
 {% endblock %}
-
-{# Test Jquery couleurs ailleurs #}
-{#{% block javascripts %}#}
-    {#{{ parent() }}#}
-    {#<script>#}
-        {#$(document).ready(function() {#}
-            {#Materialize.updateTextFields();#}
-            {#if ('{{ app.session.get("type") }}' == 'lecteur'){#}
-                {#$('.formulaire').css(' box-shadow', '0 4px 5px 0 rgba(234,100,12, 0.65), 0 1px 10px 0  rgba(234,100,12, 0.94), 0 2px 4px -1px rgba(234,100,12, 0.65)');#}
-                {#$('.btn').css('background-color', 'green').hover(function() {#}
-                    {#$(this).css('background-color', 'rgb(0,184,43)');#}
-                {#})#}
-            {#}#}
-            {#else if ('{{ app.session.get("type") }}' == 'donateur'){#}
-                {#$(".abomodel").css(' box-shadow', 'rgba(239,255,0,0.55)');#}
-                {#$('.btn').css({#}
-                    {#'background-color':'yellow',#}
-                    {#'color': 'rgb(65, 65, 65)'#}
-                {#})#}
-                {#.hover(function() {#}
-                    {#$(this).css('background-color', 'rgb(255,242,21)')#}
-                {#})#}
-            {#}#}
-            {#else if ('{{ app.session.get("type") }}' == 'ambassadeur'){#}
-                {#$(".abomodel").css(' box-shadow', 'rgba(247,113,24,0.75)');#}
-                {#$('.btn').css('background-color', 'orange').hover(function() {#}
-                    {#$(this).css('background-color', 'rgb(255,109,13)');#}
-                {#})#}
-            {#}#}
-        {#});#}
-    {#</script>#}
-
-{#{% endblock %}#}
