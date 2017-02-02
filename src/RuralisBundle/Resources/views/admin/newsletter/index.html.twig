@@ -1,51 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Newsletters</h1>
 
-    <div class="row">
-        <div class="col m8 offset-m2">
-            <table>
-                <thead>
+<div class="row adminmodel">
+    <div class="col m8 offset-m2">
+
+        <h1>Newsletters</h1>
+
+        <table>
+
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Envoyée ?</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for newsletter in newsletters %}
                 <tr>
-                    <th>Titre</th>
-                    <th>Envoyée ?</th>
-                    <th>Actions</th>
+                    <td>{{ newsletter.titre }}</td>
+                    <td>{% if newsletter.envoi == true %}
+                            newsletter déjà envoyée
+                        {% endif %}
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">voir</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">éditer</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        {# Si newsletter envoyée, case à cocher #}
+
+                    </td>
                 </tr>
-                </thead>
-                <tbody>
-                {% for newsletter in newsletters %}
-                    <tr>
-                        <td>{{ newsletter.titre }}</td>
-                        <td>{% if newsletter.envoi == true %}
-                                newsletter déjà envoyée
-                            {% endif %}
-                        </td>
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="{{ path('newsletter_show', { 'id': newsletter.id }) }}">voir</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('newsletter_edit', { 'id': newsletter.id }) }}">éditer</a>
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            {# Si newsletter envoyée, case à cocher #}
+            {% endfor %}
+            </tbody>
 
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+        </table>
+
+        {# Boutons #}
+        <div class="row">
+            <div class="col offset-s4 s4">
+                <a  class="waves-effect waves-light btn" href="{{ path('newsletter_new') }}">Ajouter une newsletter</a>
+            </div>
         </div>
+
     </div>
+</div>
 
-
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_new') }}">Ajouter une newsletter</a>
-        </li>
-    </ul>
 {% endblock %}
