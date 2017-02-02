@@ -530,7 +530,7 @@ div .titreRuralis {
   text-align: center;
 }
 /* line 86, ../sass/_navbar.scss */
-.navigation a, .navigation .nl {
+.navigation .nl {
   font-weight: 800;
 }
 /* line 90, ../sass/_navbar.scss */
@@ -612,15 +612,16 @@ div .titreRuralis {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
+  font-weight: 800;
 }
-/* line 160, ../sass/_navbar.scss */
+/* line 161, ../sass/_navbar.scss */
 .navlinks li {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 10%;
 }
-/* line 166, ../sass/_navbar.scss */
+/* line 167, ../sass/_navbar.scss */
 .navlinks li:after {
   content: '';
   height: .4em;
@@ -632,26 +633,27 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 179, ../sass/_navbar.scss */
+/* line 180, ../sass/_navbar.scss */
 .navlinks li:first-child {
   margin-left: 0px;
 }
 
-/* line 184, ../sass/_navbar.scss */
+/* line 185, ../sass/_navbar.scss */
 .navlinks_on_scroll {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
   height: 30px;
 }
-/* line 190, ../sass/_navbar.scss */
+/* line 191, ../sass/_navbar.scss */
 .navlinks_on_scroll .li_nav_menu {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 60px;
+  font-weight: 800;
 }
-/* line 196, ../sass/_navbar.scss */
+/* line 198, ../sass/_navbar.scss */
 .navlinks_on_scroll .li_nav_menu:after {
   content: '';
   height: .4em;
@@ -663,7 +665,7 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 209, ../sass/_navbar.scss */
+/* line 211, ../sass/_navbar.scss */
 .navlinks_on_scroll .last {
   margin-right: 2% !important;
 }
@@ -671,29 +673,29 @@ div .titreRuralis {
 /**************************************/
 /*         3RD LINE NAVBAR            */
 /**************************************/
-/* line 219, ../sass/_navbar.scss */
+/* line 221, ../sass/_navbar.scss */
 .third_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 222, ../sass/_navbar.scss */
+/* line 224, ../sass/_navbar.scss */
 .third_line ul {
   margin-bottom: 0px;
 }
 
-/* line 227, ../sass/_navbar.scss */
+/* line 229, ../sass/_navbar.scss */
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
 
-/* line 233, ../sass/_navbar.scss */
+/* line 235, ../sass/_navbar.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 238, ../sass/_navbar.scss */
+/* line 240, ../sass/_navbar.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
@@ -702,43 +704,43 @@ div .titreRuralis {
 /*         RESPONSIVE NAVBAR          */
 /**************************************/
 @media screen and (max-width: 600px) {
-  /* line 248, ../sass/_navbar.scss */
+  /* line 250, ../sass/_navbar.scss */
   header {
     height: 56px !important;
   }
-  /* line 249, ../sass/_navbar.scss */
+  /* line 251, ../sass/_navbar.scss */
   header .nav_responsive {
     display: block;
     background-color: #ea640c;
     position: fixed;
     z-index: 998;
   }
-  /* line 256, ../sass/_navbar.scss */
+  /* line 258, ../sass/_navbar.scss */
   header .fixed_nav {
     display: none;
   }
-  /* line 259, ../sass/_navbar.scss */
+  /* line 261, ../sass/_navbar.scss */
   header nav .brand-logo {
     height: 100%;
   }
-  /* line 261, ../sass/_navbar.scss */
+  /* line 263, ../sass/_navbar.scss */
   header nav .brand-logo img {
     height: 100%;
   }
 
-  /* line 267, ../sass/_navbar.scss */
+  /* line 269, ../sass/_navbar.scss */
   #sidenav-overlay {
     z-index: 1 !important;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 273, ../sass/_navbar.scss */
+  /* line 275, ../sass/_navbar.scss */
   .majallaSmallItalic {
     margin-left: 3% !important;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 279, ../sass/_navbar.scss */
+  /* line 281, ../sass/_navbar.scss */
   .logoArbre {
     display: none;
   }

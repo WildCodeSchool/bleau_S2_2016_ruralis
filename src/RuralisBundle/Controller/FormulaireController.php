@@ -29,7 +29,7 @@ class FormulaireController extends Controller
         ));
     }
 
-    public function recapAboAction()
+    public function recapAboAction($cadeau)
     {
         $newsByNav = false;
 
@@ -82,11 +82,14 @@ class FormulaireController extends Controller
         ));
 
         $details = $session->get('details');
+        $cadeau = $session->get('cadeau');
 
         //Lien vers l'API
         return $this->render('@Ruralis/user/recapitulatifAbo.html.twig', array(
             'details' => $details,
-            'alert' => $abonnement['alert']
+            'alert' => $abonnement['alert'],
+            'type' => $type,
+            'cadeau' => $cadeau
         ));
     }
 }
