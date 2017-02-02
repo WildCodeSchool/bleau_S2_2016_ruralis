@@ -11,6 +11,7 @@ RuralisBundle\Entity\Abonnement:
     fields:
         newsletter:
             type: boolean
+            nullable: true
     lifecycleCallbacks: {  }
     manyToOne:
         contact:
