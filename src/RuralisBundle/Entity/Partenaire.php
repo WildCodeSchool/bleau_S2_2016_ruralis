@@ -6,6 +6,9 @@
 
 namespace RuralisBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
+
 /**
  * Partenaire
  */
@@ -85,8 +88,11 @@ class Partenaire
     {
         return $this->descriptif;
     }
+
+
     /**
      * @var \RuralisBundle\Entity\Image
+     * @Assert\Valid()
      */
     private $image;
 

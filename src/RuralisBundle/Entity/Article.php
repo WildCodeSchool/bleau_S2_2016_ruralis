@@ -6,6 +6,9 @@
 
 namespace RuralisBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
+
 /**
  * Article
  */
@@ -52,6 +55,7 @@ class Article
 
     /**
      * @var \RuralisBundle\Entity\Image
+     * @Assert\Valid()
      */
     private $image;
 
