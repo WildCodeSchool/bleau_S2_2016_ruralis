@@ -5,69 +5,32 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Newsletter Ruralis Magazine</title>
     <style>
-        .logo {
-            width: 10%;
-            margin-left: 45%;
-        }
-
-        .orange{
-            color:rgb(234,100,12);
-        }
-        .container {
-            margin-top: 15px;
-            padding: 10px;
-            margin-left:5%;
-            margin-right:5%;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .site {<
-            margin-top:10px;
-        }
-
-        .small{
-            font-size:12px;
-        }
-
-        .justify {
-            text-align: justify;
-        }
-        h1{
-            font-family: 'majalla', 'Arial', 'Times New Roman';
-            font-size: 18px;
-        }
-        .message {
-            text-align: justify;
-            margin-top: 25px;
-            font-size: 15px;
+        h1 {
+            font-family: 'majalla', 'Arial', 'Times New Roman' !important;
         }
     </style>
 </head>
 
-
 {% block body %}
-<div class="container">
-    <img src="{{ cid }}" alt="logo" class="logo">
-    <div class="orange">
-        <h1>{{ titre }}</h1>
+<div style="margin-top: 15px !important; padding: 10px !important; margin-left:5% !important; margin-right:5% !important;">
+    <img src="{{ cid }}" alt="logo" style="width: 10% !important; margin-left: 45% !important">
+    <div style="color:rgb(234,100,12) !important">
+        <h1 style="font-family: 'majalla', 'Arial', 'Times New Roman' !important; font-size: 18px !important;">{{ titre }}</h1>
     </div>
-    <div class="justify message">
+    <div style="text-align: justify !important; margin-top: 25px !important; font-size: 15px !important;">
         {{ contenu | raw }}
     </div>
-    <div class="site">
-        Pour continuer la lecture, <a class="orange" href="{{ url('ruralis_homepage') }}">Le site de Ruralis Magazine</a>
+    <div style="margin-top:10px !important;">
+        Pour continuer la lecture, <a style="color:rgb(234,100,12) !important" href="{{ url('ruralis_homepage') }}">Le site de Ruralis Magazine</a>
     </div>
-    <div class="center small">
+    <div  style="text-align: center !important; font-size:12px !important;">
         <p>
-            Pour nous contacter : <a class="orange" href="mailto:contact@ruralismagazine.com">contact@ruralismagazine.com</a>contact@ruralismagazine.com
+            Pour nous contacter : <a style="color:rgb(234,100,12) !important" href="mailto:contact@ruralismagazine.com">contact@ruralismagazine.com</a>contact@ruralismagazine.com
         </p>
         <p>
-            Pour vous désinscrire <a class="orange" href="{{ url('ruralis_desinscription_news') }}">cliquez ici</a>
+            Pour vous désinscrire <a style="color:rgb(234,100,12) !important" href="{{ url('ruralis_desinscription_news') }}">cliquez ici</a>
         </p>
     </div>
 </div>
