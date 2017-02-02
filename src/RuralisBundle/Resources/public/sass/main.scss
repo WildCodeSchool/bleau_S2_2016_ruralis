@@ -1,11 +1,11 @@
-/* Welcome to Compass.
-* In this file you should write your main styles. (or centralize your imports)
-* Import this file using the following HTML or equivalent:
-* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
 
-/*==================================================================== */
-/* ----------------------- Mixins + Variables ----------------------- */
-/*==================================================================== */
+
+/***********************************************************************/
+/*                         Mixins + Variables                          */
+/***********************************************************************/
 
 @mixin multiple_img_line(){
     img{
@@ -24,18 +24,19 @@
 }
 
 $orange: rgb(234,100,12);
-$orange_pale: rgba(255, 132, 54, 0.19);
+$orange_pale: rgba(248, 106, 12, 0.83);
 $gris: rgba(220, 220, 220, 0.5);
 $darkgrey: rgb(65, 65, 65);
 $greenbg: rgba(138,225,58,0.75);
 $yellowbg: rgba(239,255,0,0.55);
 $orangebg: rgba(247,113,24,0.75);
 
-    /*==================================================================== */
-/* ----------------------- GENERAL CSS ----------------------- */
-/*==================================================================== */
 
-//Permet de garder le footer on the button
+/***********************************************************************/
+/*                        GENERAL CSS                                  */
+/***********************************************************************/
+
+// Permet de garder le footer on the button
 body {
     display: flex;
     min-height: 100vh;
@@ -78,6 +79,15 @@ h5{
     color: $orange;
 }
 
+.btn{
+    background-color: #00B82B;
+    font-size: 15px;
+}
+
+.btn:hover{
+    background-color: #00f138;
+}
+
 // Mise en forme form
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:focus:not([readonly]) + label,
@@ -94,6 +104,7 @@ input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
     color: $orange;
 }
+
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -110,6 +121,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid $orange;
     box-shadow: 0 1px 0 0 $orange;
 }
+
 input:not([type]),
 input[type="text"],
 input[type="password"],
@@ -125,17 +137,29 @@ input[type="search"],
 textarea.materialize-textarea {
     color: $darkgrey;
 }
+
 [type="checkbox"]:checked + label:before {
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
     border-right: 2px solid $orange;
     border-bottom: 2px solid $orange;
 }
+
 .input-field label {
     color: $orange;
 }
 
-// Style bouton
+// Style boutons
+
+
+.btn{
+    margin-top: 20px;
+    background-color: #00B82B;
+}
+
+.btn:hover{
+    background-color: #00f138;
+}
 
 .btn.nl {
     background-color: $orange;
@@ -150,7 +174,7 @@ textarea.materialize-textarea {
     background-color: $orange_pale;
 }
 
-//Import des feuille de style
+//Import des feuilles de style
 @import "_ruralis";
 @import "_navbar";
 @import "_admin";

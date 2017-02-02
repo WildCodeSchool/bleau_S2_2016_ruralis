@@ -1,21 +1,87 @@
+<<<<<<< HEAD
+/*
+Error: Invalid CSS after "    }": expected selector or at-rule, was "}"
+        on line 131 of /var/www/html/bleau_S2_2016_ruralis/src/RuralisBundle/Resources/public/sass/_admin.scss
+        from line 169 of /var/www/html/bleau_S2_2016_ruralis/src/RuralisBundle/Resources/public/sass/main.scss
+
+126: .file-path{
+127:     input:-ms-input-placeholder, input::-webkit-input-placeholder, input::-moz-placeholder {
+128:         color:black !important ;
+129:     }
+130:     }
+131: }
+132: // Abonnés Admin
+
+Backtrace:
+/var/www/html/bleau_S2_2016_ruralis/src/RuralisBundle/Resources/public/sass/_admin.scss:131
+/var/www/html/bleau_S2_2016_ruralis/src/RuralisBundle/Resources/public/sass/main.scss:169
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+/var/lib/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/var/lib/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/var/lib/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    }\": expected selector or at-rule, was \"}\"\A         on line 131 of /var/www/html/bleau_S2_2016_ruralis/src/RuralisBundle/Resources/public/sass/_admin.scss\A         from line 169 of /var/www/html/bleau_S2_2016_ruralis/src/RuralisBundle/Resources/public/sass/main.scss\A \A 126: .file-path{\A 127:     input:-ms-input-placeholder, input::-webkit-input-placeholder, input::-moz-placeholder {\A 128:         color:black !important ;\A 129:     }\A 130:     }\A 131: }\A 132: // Abonnés Admin"; }
+=======
 @charset "UTF-8";
-/* Welcome to Compass.
-* In this file you should write your main styles. (or centralize your imports)
-* Import this file using the following HTML or equivalent:
-* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*==================================================================== */
-/* ----------------------- Mixins + Variables ----------------------- */
-/*==================================================================== */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/***********************************************************************/
+/*                         Mixins + Variables                          */
+/***********************************************************************/
 @font-face {
   font-family: 'majalla';
   src: local("majjala"), url("../fonts/majalla.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-/*==================================================================== */
-/* ----------------------- GENERAL CSS ----------------------- */
-/*==================================================================== */
-/* line 39, ../sass/main.scss */
+/***********************************************************************/
+/*                        GENERAL CSS                                  */
+/***********************************************************************/
+/* line 40, ../sass/main.scss */
 body {
   display: flex;
   min-height: 100vh;
@@ -24,42 +90,42 @@ body {
   background-repeat: repeat;
 }
 
-/* line 46, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 main {
   flex: 1 0 auto;
 }
 
-/* line 51, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 .col {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .size-large {
   width: 100%;
 }
 
-/* line 60, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 header {
   height: 168px !important;
   z-index: 3;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 p {
   font-size: 18px;
   font-family: 'Time New Roman', Regular !important;
 }
 
-/* line 68, ../sass/main.scss */
+/* line 69, ../sass/main.scss */
 h1 {
   font-family: 'Arial Bold';
   text-align: center;
   font-size: 35px;
 }
 
-/* line 74, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 h5 {
   text-align: center;
   font-size: 25px;
@@ -68,6 +134,17 @@ h5 {
 }
 
 /* line 82, ../sass/main.scss */
+.btn {
+  background-color: #00B82B;
+  font-size: 15px;
+}
+
+/* line 87, ../sass/main.scss */
+.btn:hover {
+  background-color: #00f138;
+}
+
+/* line 92, ../sass/main.scss */
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:focus:not([readonly]) + label,
 input[type=password]:focus:not([readonly]) + label,
@@ -84,7 +161,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #ea640c;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -102,7 +179,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #ea640c;
 }
 
-/* line 113, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 input:not([type]),
 input[type="text"],
 input[type="password"],
@@ -119,7 +196,7 @@ textarea.materialize-textarea {
   color: #414141;
 }
 
-/* line 128, ../sass/main.scss */
+/* line 141, ../sass/main.scss */
 [type="checkbox"]:checked + label:before {
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -127,12 +204,23 @@ textarea.materialize-textarea {
   border-bottom: 2px solid #ea640c;
 }
 
-/* line 134, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 .input-field label {
   color: #ea640c;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
+.btn {
+  margin-top: 20px;
+  background-color: #00B82B;
+}
+
+/* line 160, ../sass/main.scss */
+.btn:hover {
+  background-color: #00f138;
+}
+
+/* line 164, ../sass/main.scss */
 .btn.nl {
   background-color: #ea640c;
   height: 25px;
@@ -143,18 +231,19 @@ textarea.materialize-textarea {
   padding-right: 20px;
 }
 
-/* line 149, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 .btn.nl:hover {
-  background-color: rgba(255, 132, 54, 0.19);
+  background-color: rgba(248, 106, 12, 0.83);
 }
 
-/*Theme Name: Ruralis
-Author: Marielle Lautrou and Aurore David
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
 */
-/*==================================================================== */
-/* ------------------------------ MENU ------------------------------- */
-/*==================================================================== */
+/************************************************/
+/*                   MENU                       */
+/************************************************/
 /*
+
 1. IMAGES TOP
 
 2. BODY RURALIS
@@ -169,16 +258,17 @@ Author: Marielle Lautrou and Aurore David
 9. Trombinoscope + présentation équipe
 
 3. FOOTER
+
 */
-/*==================================================================== */
-/* -------------------------- IMAGES TOP PAGE ----------------------- */
-/*==================================================================== */
+/************************************************/
+/*              IMAGES TOP PAGE                 */
+/************************************************/
 /*Top image*/
-/* line 35, ../sass/_ruralis.scss */
+/* line 39, ../sass/_ruralis.scss */
 .header-bandeau .ruralis_img_top {
   margin-bottom: 0;
 }
-/* line 38, ../sass/_ruralis.scss */
+/* line 42, ../sass/_ruralis.scss */
 .header-bandeau .logo {
   position: relative;
   bottom: 565px;
@@ -187,31 +277,31 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 49, ../sass/_ruralis.scss */
+  /* line 53, ../sass/_ruralis.scss */
   .header-bandeau .logo {
     display: none;
   }
 }
-/*==================================================================== */
-/* -------------------------- BODY RURALIS --------------------------- */
-/*==================================================================== */
-/* line 60, ../sass/_ruralis.scss */
+/************************************************/
+/*              BODY RURALIS                    */
+/************************************************/
+/* line 65, ../sass/_ruralis.scss */
 .description {
   text-align: center;
   margin-top: -20px;
   padding-top: -20px;
 }
-/* line 64, ../sass/_ruralis.scss */
+/* line 69, ../sass/_ruralis.scss */
 .description p {
   color: #ea640c;
 }
 
-/* line 70, ../sass/_ruralis.scss */
+/* line 75, ../sass/_ruralis.scss */
 .territoire {
   padding: 0;
   width: 100%;
 }
-/* line 73, ../sass/_ruralis.scss */
+/* line 78, ../sass/_ruralis.scss */
 .territoire h4 {
   padding: 15px 0;
 }
@@ -224,16 +314,16 @@ Author: Marielle Lautrou and Aurore David
   padding: 0 0.30rem !important;
 }
 
-/* line 80, ../sass/_ruralis.scss */
+/* line 85, ../sass/_ruralis.scss */
 .editorial {
   text-align: center;
 }
-/* line 82, ../sass/_ruralis.scss */
+/* line 87, ../sass/_ruralis.scss */
 .editorial .edit {
   padding-left: 5px !important;
 }
 
-/* line 88, ../sass/_ruralis.scss */
+/* line 93, ../sass/_ruralis.scss */
 .arpenteurs {
   padding: 8px 0;
   margin-top: 7%;
@@ -242,16 +332,16 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 96, ../sass/_ruralis.scss */
+  /* line 102, ../sass/_ruralis.scss */
   .arpenteurs.valign-wrapper {
     display: block;
   }
-  /* line 98, ../sass/_ruralis.scss */
+  /* line 104, ../sass/_ruralis.scss */
   .arpenteurs.valign-wrapper img {
     width: 50%;
   }
 }
-/* line 105, ../sass/_ruralis.scss */
+/* line 111, ../sass/_ruralis.scss */
 .peuple {
   text-align: center;
 }
@@ -264,42 +354,42 @@ Author: Marielle Lautrou and Aurore David
   padding: 0 0.30rem !important;
 }
 
-/* line 112, ../sass/_ruralis.scss */
+/* line 118, ../sass/_ruralis.scss */
 .objectifs div:first-child {
   text-align: center;
 }
-/* line 115, ../sass/_ruralis.scss */
+/* line 121, ../sass/_ruralis.scss */
 .objectifs .txtorange {
   color: #ea640c;
 }
 
-/* line 120, ../sass/_ruralis.scss */
+/* line 127, ../sass/_ruralis.scss */
 .abonnes p {
   text-align: center;
   font-weight: bold;
 }
-/* line 124, ../sass/_ruralis.scss */
+/* line 131, ../sass/_ruralis.scss */
 .abonnes img {
   width: 50%;
 }
-/* line 127, ../sass/_ruralis.scss */
+/* line 134, ../sass/_ruralis.scss */
 .abonnes a {
   background-color: #ea640c;
 }
-/* line 130, ../sass/_ruralis.scss */
+/* line 137, ../sass/_ruralis.scss */
 .abonnes a:hover {
-  background-color: rgba(255, 132, 54, 0.19);
+  background-color: rgba(248, 106, 12, 0.83);
 }
-/* line 133, ../sass/_ruralis.scss */
+/* line 140, ../sass/_ruralis.scss */
 .abonnes span {
   color: #ea640c;
 }
-/* line 136, ../sass/_ruralis.scss */
+/* line 143, ../sass/_ruralis.scss */
 .abonnes .btn_en_savoir_plus {
   height: inherit;
 }
 
-/* line 142, ../sass/_ruralis.scss */
+/* line 149, ../sass/_ruralis.scss */
 .abonnement_ruralis {
   padding: 0 5%;
   background-color: rgba(220, 220, 220, 0.5);
@@ -314,285 +404,290 @@ Author: Marielle Lautrou and Aurore David
 }
 
 @media screen and (max-width: 600px) {
-  /* line 150, ../sass/_ruralis.scss */
+  /* line 158, ../sass/_ruralis.scss */
   .abonnement_ruralis div:last-child {
     margin-left: 25% !important;
   }
 }
-/* line 158, ../sass/_ruralis.scss */
+/* line 166, ../sass/_ruralis.scss */
 .citation {
   color: #ea640c;
 }
-/* line 160, ../sass/_ruralis.scss */
+/* line 168, ../sass/_ruralis.scss */
 .citation img {
   width: 7%;
 }
-/* line 163, ../sass/_ruralis.scss */
+/* line 171, ../sass/_ruralis.scss */
 .citation span {
   font-size: 80%;
   color: black;
 }
 
-/* line 171, ../sass/_ruralis.scss */
+/* line 179, ../sass/_ruralis.scss */
 .trombi h6 {
   color: #ea640c;
 }
-/* line 175, ../sass/_ruralis.scss */
+/* line 183, ../sass/_ruralis.scss */
 .trombi p {
   font-family: 'Courier New', sans-serif !important;
 }
-/* line 179, ../sass/_ruralis.scss */
+/* line 187, ../sass/_ruralis.scss */
 .trombi .col {
   padding: 0 0.50rem !important;
 }
-/* line 183, ../sass/_ruralis.scss */
+/* line 191, ../sass/_ruralis.scss */
 .trombi img {
   width: 100%;
 }
 @media all and (max-width: 992px) and (min-width: 865px) {
-  /* line 188, ../sass/_ruralis.scss */
+  /* line 197, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 375px;
   }
 }
 @media only screen and (max-width: 864px) and (min-width: 805px) {
-  /* line 193, ../sass/_ruralis.scss */
+  /* line 202, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 425px;
   }
 }
 @media only screen and (max-width: 804px) and (min-width: 771px) {
-  /* line 198, ../sass/_ruralis.scss */
+  /* line 207, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 450px;
   }
 }
 @media only screen and (max-width: 770px) and (min-width: 738px) {
-  /* line 203, ../sass/_ruralis.scss */
+  /* line 212, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 475px;
   }
 }
 @media only screen and (max-width: 737px) and (min-width: 601px) {
-  /* line 208, ../sass/_ruralis.scss */
+  /* line 217, ../sass/_ruralis.scss */
   .trombi .m4:nth-child(1), .trombi .m4:nth-child(2) {
     height: 550px;
   }
 }
 
-/*==================================================================== */
-/* ----------------------------- FOOTER ------------------------------ */
-/*==================================================================== */
-/* line 218, ../sass/_ruralis.scss */
+/************************************************/
+/*                    FOOTER                    */
+/************************************************/
+/* line 229, ../sass/_ruralis.scss */
 footer {
   background-color: #ea640c !important;
   padding-top: 20px;
   bottom: 0;
   text-align: center;
 }
-/* line 224, ../sass/_ruralis.scss */
+/* line 235, ../sass/_ruralis.scss */
 footer a {
   color: white;
 }
-/* line 228, ../sass/_ruralis.scss */
+/* line 239, ../sass/_ruralis.scss */
 footer a:hover {
   font-weight: bold;
 }
-/* line 232, ../sass/_ruralis.scss */
+/* line 243, ../sass/_ruralis.scss */
 footer img {
   width: 30%;
 }
-/* line 236, ../sass/_ruralis.scss */
+/* line 247, ../sass/_ruralis.scss */
 footer p {
   font-size: 14px;
 }
-/* line 240, ../sass/_ruralis.scss */
+/* line 251, ../sass/_ruralis.scss */
 footer .valign-wrapper {
   margin-top: -25px;
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 248, ../sass/_ruralis.scss */
+  /* line 260, ../sass/_ruralis.scss */
   footer .valign-wrapper {
     display: block;
   }
-  /* line 251, ../sass/_ruralis.scss */
+  /* line 263, ../sass/_ruralis.scss */
   footer .logowcs {
     margin-top: 35px;
   }
 }
-/*==================================================================== */
-/* ----------------------- NAVIGATION BAR ----------------------- */
-/*==================================================================== */
-/* line 9, ../sass/_navbar.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/*****************************************/
+/*         BARRE DE NAVIGATION           */
+/*****************************************/
+/*********************************************/
+/*         ERASE MATERIALIZE CSS             */
+/*********************************************/
+/* line 18, ../sass/_navbar.scss */
 .navigation .col {
   padding: initial !important;
 }
 
-/* line 12, ../sass/_navbar.scss */
+/* line 22, ../sass/_navbar.scss */
 .navigation .row {
   margin-bottom: 0 !important;
 }
 
-/* line 17, ../sass/_navbar.scss */
-.nav_responsive {
-  display: none;
-}
-
-/* line 20, ../sass/_navbar.scss */
-.fixed_nav {
-  position: fixed;
-  width: 100%;
-  height: auto;
-}
-
-/* line 27, ../sass/_navbar.scss */
-.navigation a, .navigation li {
-  color: #ea640c;
-}
+/************************************/
+/*         GENERAL                  */
+/************************************/
 /* line 30, ../sass/_navbar.scss */
-.navigation li {
-  text-align: center;
-}
-/* line 33, ../sass/_navbar.scss */
-.navigation a, .navigation .nl {
-  font-weight: 800;
-}
-
-/* line 37, ../sass/_navbar.scss */
-.logoArbre {
-  margin-left: 15px;
-  display: block;
-}
-
-@media only screen and (min-width: 993px) {
-  /* line 43, ../sass/_navbar.scss */
-  .majallaSmallItalic {
-    margin-left: 3% !important;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  /* line 48, ../sass/_navbar.scss */
-  .logoArbre {
-    display: none;
-  }
-}
-/* line 53, ../sass/_navbar.scss */
 .majalla, .majallaSmall, .majallaSmallItalic {
   font-family: 'majalla';
   color: white !important;
 }
 
-/* line 58, ../sass/_navbar.scss */
+/* line 35, ../sass/_navbar.scss */
 a.majalla {
   font-size: 50px;
   font-weight: 100;
   margin-left: 10px;
 }
 
-/* line 64, ../sass/_navbar.scss */
+/* line 41, ../sass/_navbar.scss */
 div.majallaSmall {
   margin-top: 12px;
   margin-left: 5px !important;
 }
 
-/* line 69, ../sass/_navbar.scss */
+/* line 46, ../sass/_navbar.scss */
 a.majallaSmall {
   font-weight: 100 !important;
   font-size: 20px;
   letter-spacing: 2.5px !important;
 }
 
-/* line 75, ../sass/_navbar.scss */
+/* line 52, ../sass/_navbar.scss */
 .majallaSmallItalic {
   font-style: italic;
   font-size: 25px;
   margin-top: 27px;
 }
 
-/* line 81, ../sass/_navbar.scss */
+/* line 58, ../sass/_navbar.scss */
 div .titreRuralis {
   max-height: 33px;
   margin-top: -15px;
 }
 
+/************************************/
+/*         NAVBAR                   */
+/************************************/
+/* line 67, ../sass/_navbar.scss */
+.nav_responsive {
+  display: none;
+}
+
+/* line 71, ../sass/_navbar.scss */
+.fixed_nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+
+/* line 78, ../sass/_navbar.scss */
+.navigation a, .navigation li {
+  color: #ea640c;
+}
+/* line 82, ../sass/_navbar.scss */
+.navigation li {
+  text-align: center;
+}
 /* line 86, ../sass/_navbar.scss */
+.navigation a, .navigation .nl {
+  font-weight: 800;
+}
+/* line 90, ../sass/_navbar.scss */
+.navigation .logoArbre {
+  margin-left: 15px;
+  display: block;
+}
+
+/**************************************/
+/*         1ST LINE NAVBAR            */
+/**************************************/
+/* line 101, ../sass/_navbar.scss */
 .first_line {
   background-color: #ea640c;
   max-height: 56px;
   margin-bottom: 0;
 }
 
-/* line 91, ../sass/_navbar.scss */
+/* line 106, ../sass/_navbar.scss */
 .nav_logo {
   width: 100%;
   max-height: 56px;
 }
 
-/* line 96, ../sass/_navbar.scss */
+/* line 111, ../sass/_navbar.scss */
 .logoFb {
   height: 45px;
   padding-top: 5px;
 }
 
-/* line 101, ../sass/_navbar.scss */
+/* line 116, ../sass/_navbar.scss */
 .logoTw {
   height: 45px;
   padding-top: 5px;
 }
 
-/* line 106, ../sass/_navbar.scss */
+/* line 121, ../sass/_navbar.scss */
 .logoIn {
   height: 45px;
   padding-top: 5px;
 }
 
-/* line 110, ../sass/_navbar.scss */
+/* line 125, ../sass/_navbar.scss */
 .smallarbre {
   max-width: 64%;
 }
 
-/* line 113, ../sass/_navbar.scss */
+/* line 128, ../sass/_navbar.scss */
 #animation {
   background-repeat: no-repeat;
 }
 
-/* line 116, ../sass/_navbar.scss */
+/* line 131, ../sass/_navbar.scss */
 #bottommark {
   position: absolute;
   bottom: 0;
   width: 0;
 }
 
-/* line 123, ../sass/_navbar.scss */
+/**************************************/
+/*         2ND LINE NAVBAR            */
+/**************************************/
+/* line 142, ../sass/_navbar.scss */
 .second_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 125, ../sass/_navbar.scss */
+/* line 145, ../sass/_navbar.scss */
 .second_line a:hover {
   background-color: rgba(234, 100, 12, 0.48);
   color: #ea4c0a;
 }
-/* line 129, ../sass/_navbar.scss */
+/* line 150, ../sass/_navbar.scss */
 .second_line ul li {
   float: left;
 }
 
-/* line 134, ../sass/_navbar.scss */
+/* line 155, ../sass/_navbar.scss */
 .navlinks {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
 }
-/* line 138, ../sass/_navbar.scss */
+/* line 160, ../sass/_navbar.scss */
 .navlinks li {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 10%;
 }
-/* line 143, ../sass/_navbar.scss */
+/* line 166, ../sass/_navbar.scss */
 .navlinks li:after {
   content: '';
   height: .4em;
@@ -604,26 +699,26 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 155, ../sass/_navbar.scss */
+/* line 179, ../sass/_navbar.scss */
 .navlinks li:first-child {
   margin-left: 0px;
 }
 
-/* line 159, ../sass/_navbar.scss */
+/* line 184, ../sass/_navbar.scss */
 .navlinks_on_scroll {
   margin-top: -15px;
   margin-bottom: 0;
   list-style: none;
   height: 30px;
 }
-/* line 164, ../sass/_navbar.scss */
+/* line 190, ../sass/_navbar.scss */
 .navlinks_on_scroll .li_nav_menu {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
   margin-left: 60px;
 }
-/* line 169, ../sass/_navbar.scss */
+/* line 196, ../sass/_navbar.scss */
 .navlinks_on_scroll .li_nav_menu:after {
   content: '';
   height: .4em;
@@ -635,69 +730,93 @@ div .titreRuralis {
   top: .5em;
   left: 2px;
 }
-/* line 181, ../sass/_navbar.scss */
+/* line 209, ../sass/_navbar.scss */
 .navlinks_on_scroll .last {
   margin-right: 2% !important;
 }
 
-/* line 187, ../sass/_navbar.scss */
+/**************************************/
+/*         3RD LINE NAVBAR            */
+/**************************************/
+/* line 219, ../sass/_navbar.scss */
 .third_line {
   background-color: rgba(255, 255, 255, 0.75);
 }
-/* line 189, ../sass/_navbar.scss */
+/* line 222, ../sass/_navbar.scss */
 .third_line ul {
   margin-bottom: 0px;
 }
 
-/* line 193, ../sass/_navbar.scss */
+/* line 227, ../sass/_navbar.scss */
 .mailbox {
   margin-top: -22px;
   margin-right: 3%;
   list-style: none;
 }
 
-/* line 198, ../sass/_navbar.scss */
+/* line 233, ../sass/_navbar.scss */
 .navigation .input-field label {
   color: #ea640c;
   top: 1.8rem;
 }
 
-/* line 203, ../sass/_navbar.scss */
+/* line 238, ../sass/_navbar.scss */
 .navigation input[type="email"] {
   border-bottom: 1px solid #ea640c;
 }
 
+/**************************************/
+/*         RESPONSIVE NAVBAR          */
+/**************************************/
 @media screen and (max-width: 600px) {
-  /* line 210, ../sass/_navbar.scss */
+  /* line 248, ../sass/_navbar.scss */
   header {
     height: 56px !important;
   }
-  /* line 211, ../sass/_navbar.scss */
+  /* line 249, ../sass/_navbar.scss */
   header .nav_responsive {
     display: block;
     background-color: #ea640c;
     position: fixed;
     z-index: 998;
   }
-  /* line 218, ../sass/_navbar.scss */
+  /* line 256, ../sass/_navbar.scss */
   header .fixed_nav {
     display: none;
   }
-  /* line 221, ../sass/_navbar.scss */
+  /* line 259, ../sass/_navbar.scss */
   header nav .brand-logo {
     height: 100%;
   }
-  /* line 223, ../sass/_navbar.scss */
+  /* line 261, ../sass/_navbar.scss */
   header nav .brand-logo img {
     height: 100%;
   }
 
-  /* line 228, ../sass/_navbar.scss */
+  /* line 267, ../sass/_navbar.scss */
   #sidenav-overlay {
     z-index: 1 !important;
   }
 }
-/* line 3, ../sass/_admin.scss */
+@media only screen and (min-width: 993px) {
+  /* line 273, ../sass/_navbar.scss */
+  .majallaSmallItalic {
+    margin-left: 3% !important;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* line 279, ../sass/_navbar.scss */
+  .logoArbre {
+    display: none;
+  }
+}
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/********************************/
+/*         ADMIN GENERAL        */
+/********************************/
+/* line 10, ../sass/_admin.scss */
 .adminmodel {
   max-width: 90%;
   background-color: #B3AFAF;
@@ -705,61 +824,95 @@ div .titreRuralis {
   margin-bottom: 20px;
   border-radius: 15px;
   margin-top: 3%;
+  font-family: 'Time New Roman', Regular;
+  font-size: 18px;
 }
-/* line 11, ../sass/_admin.scss */
+/* line 22, ../sass/_admin.scss */
+.adminmodel .datewidth {
+  width: 150px;
+}
+/* line 26, ../sass/_admin.scss */
 .adminmodel h1 {
   color: #4c4c4c;
   text-align: center;
   font-family: 'majalla';
   font-size: 55px;
 }
-/* line 18, ../sass/_admin.scss */
+/* line 33, ../sass/_admin.scss */
 .adminmodel a {
   color: white !important;
 }
-/* line 22, ../sass/_admin.scss */
+/* line 37, ../sass/_admin.scss */
 .adminmodel a:hover {
   font-weight: bold;
 }
-/* line 26, ../sass/_admin.scss */
+/* line 41, ../sass/_admin.scss */
 .adminmodel a .lienAction {
   color: #00B82B;
 }
-/* line 30, ../sass/_admin.scss */
-.adminmodel .container .row {
-  margin-left: 2.25rem;
-  margin-right: 2.25rem;
+/* line 45, ../sass/_admin.scss */
+.adminmodel label {
+  font-size: inherit;
 }
-/* line 35, ../sass/_admin.scss */
+/* line 49, ../sass/_admin.scss */
+.adminmodel .input-field label.active {
+  font-size: 1.3rem !important;
+}
+/* line 53, ../sass/_admin.scss */
+.adminmodel input:not([type]),
+.adminmodel input[type="text"],
+.adminmodel input[type="password"],
+.adminmodel input[type="email"],
+.adminmodel input[type="url"],
+.adminmodel input[type="time"],
+.adminmodel input[type="date"],
+.adminmodel input[type="datetime"],
+.adminmodel input[type="datetime-local"],
+.adminmodel input[type="tel"],
+.adminmodel input[type="number"],
+.adminmodel input[type="search"],
+.adminmodel textarea.materialize-textarea {
+  font-size: inherit;
+}
+/* line 69, ../sass/_admin.scss */
 .adminmodel .input-field label {
   color: white;
   left: 4px;
 }
-/* line 40, ../sass/_admin.scss */
+/* line 74, ../sass/_admin.scss */
+.adminmodel .container .row {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+/* line 79, ../sass/_admin.scss */
 .adminmodel .select-wrapper input.select-dropdown {
   border-bottom-color: white;
 }
-/* line 44, ../sass/_admin.scss */
+/* line 83, ../sass/_admin.scss */
 .adminmodel .file-path {
   color: white;
 }
-/* line 48, ../sass/_admin.scss */
+/* line 87, ../sass/_admin.scss */
 .adminmodel .imageAdmin {
   height: 150px;
 }
-/* line 53, ../sass/_admin.scss */
-.adminmodel .middleText {
-  margin-top: 75px;
+/* line 91, ../sass/_admin.scss */
+.adminmodel img.responsive-img, .adminmodel video.responsive-video {
+  max-width: 350px;
 }
-/* line 57, ../sass/_admin.scss */
+/* line 97, ../sass/_admin.scss */
+.adminmodel .middleText {
+  margin-top: 30px;
+}
+/* line 101, ../sass/_admin.scss */
 .adminmodel textarea {
   background-color: #ebebeb !important;
 }
-/* line 61, ../sass/_admin.scss */
+/* line 105, ../sass/_admin.scss */
 .adminmodel label {
   color: white;
 }
-/* line 65, ../sass/_admin.scss */
+/* line 109, ../sass/_admin.scss */
 .adminmodel .input-field label,
 .adminmodel label,
 .adminmodel .dropdown-content li > a,
@@ -767,163 +920,150 @@ div .titreRuralis {
 .adminmodel .descimg {
   color: #ea640c;
 }
-/* line 73, ../sass/_admin.scss */
+/* line 117, ../sass/_admin.scss */
 .adminmodel .adminImg {
   width: 50px;
 }
-/* line 77, ../sass/_admin.scss */
-.adminmodel .btn {
-  background-color: #00B82B;
-}
-/* line 81, ../sass/_admin.scss */
-.adminmodel .btn:hover {
-  background-color: #00f138;
-}
 
-/* line 90, ../sass/_admin.scss */
+/********************************/
+/*         MENU ADMIN           */
+/********************************/
+/* line 128, ../sass/_admin.scss */
 .menuAdmin .valign-wrapper {
   border: 2px solid #4c4c4c;
   border-radius: 20px;
   height: 200px;
   justify-content: center;
 }
-/* line 97, ../sass/_admin.scss */
+/* line 135, ../sass/_admin.scss */
 .menuAdmin div .jaune {
   background-image: url("../images/fond_texture_jaune.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 103, ../sass/_admin.scss */
+/* line 141, ../sass/_admin.scss */
 .menuAdmin div .vert {
   background-image: url("../images/fond_texture_vert.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 109, ../sass/_admin.scss */
+/* line 147, ../sass/_admin.scss */
 .menuAdmin div .orange {
   background-image: url("../images/fond_texture_orange.png");
   background-size: 0.7%;
   background-repeat: repeat;
 }
-/* line 115, ../sass/_admin.scss */
+/* line 153, ../sass/_admin.scss */
 .menuAdmin a {
   color: #4c4c4c !important;
   font-size: 50px;
   font-family: 'majalla';
 }
 
-/* line 1, ../sass/_abonnement.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/* line 6, ../sass/_abonnement.scss */
 .abonnement {
   font-size: 26px;
+  /**********************************/
+  /*        PAGE ABONNEMENT         */
+  /**********************************/
 }
-/* line 5, ../sass/_abonnement.scss */
+/* line 10, ../sass/_abonnement.scss */
 .abonnement .row .col {
   padding: 0;
 }
-/* line 12, ../sass/_abonnement.scss */
+/* line 18, ../sass/_abonnement.scss */
 .abonnement .options {
   position: fixed;
   top: 45%;
   text-align: center;
   z-index: 1;
 }
-/* line 19, ../sass/_abonnement.scss */
+/* line 25, ../sass/_abonnement.scss */
 .abonnement .abotop {
   margin-top: 30px;
   padding-top: 20px;
 }
-/* line 24, ../sass/_abonnement.scss */
+/* line 30, ../sass/_abonnement.scss */
 .abonnement .abovert {
   margin-top: 40px;
   z-index: 99999999999999999999999999;
 }
-/* line 29, ../sass/_abonnement.scss */
+/* line 35, ../sass/_abonnement.scss */
 .abonnement .lhsmall {
   line-height: 1;
 }
-/* line 33, ../sass/_abonnement.scss */
+/* line 39, ../sass/_abonnement.scss */
 .abonnement .logoabt {
   position: relative;
   z-index: 2;
   max-width: 120px;
 }
-/* line 41, ../sass/_abonnement.scss */
-.abonnement .margtop {
-  margin-top: 30px;
-  color: grey;
-  font-family: 'Time New Roman', Regular;
-  font-size: 18px;
-}
-
-/* line 50, ../sass/_abonnement.scss */
-.abomodel {
-  margin-left: 5%;
-  max-width: 90%;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  margin-top: 3%;
-  padding-left: 6%;
-  font-size: 18px;
-  font-family: 'Time New Roman', Regular;
-}
-/* line 61, ../sass/_abonnement.scss */
-.abomodel p {
-  line-height: 20px !important;
-}
-/* line 65, ../sass/_abonnement.scss */
-.abomodel .row {
-  margin-bottom: 0 !important;
-}
-/* line 68, ../sass/_abonnement.scss */
-.abomodel .recaptitres {
-  font-weight: bold;
-  margin-top: 30px;
+/* line 46, ../sass/_abonnement.scss */
+.abonnement .greytxt {
+  color: #414141;
 }
 
 /******************************/
 /*         Responsive         */
 /******************************/
 @media screen and (max-width: 640px) {
-  /* line 79, ../sass/_abonnement.scss */
+  /* line 58, ../sass/_abonnement.scss */
   .fixed {
     display: none;
   }
 
-  /* line 82, ../sass/_abonnement.scss */
+  /* line 62, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: block;
   }
 
-  /* line 101, ../sass/_abonnement.scss */
+  /* line 66, ../sass/_abonnement.scss */
   p {
     line-height: 20px !important;
   }
 
-  /* line 105, ../sass/_abonnement.scss */
+  /* line 70, ../sass/_abonnement.scss */
   .row {
     margin-bottom: 0 !important;
   }
 
-  /* line 108, ../sass/_abonnement.scss */
+  /* line 73, ../sass/_abonnement.scss */
   .recaptitres {
     font-weight: bold;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 115, ../sass/_abonnement.scss */
+  /* line 80, ../sass/_abonnement.scss */
   .fixedResponsive {
     display: none;
   }
 
-  /* line 118, ../sass/_abonnement.scss */
+  /* line 83, ../sass/_abonnement.scss */
   .fixed {
     display: block;
   }
 }
-/* line 3, ../sass/_blog.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/***********************************/
+/*         USER BLOG CARDS         */
+/***********************************/
+/* line 10, ../sass/_blog.scss */
 .blog {
+  /***************************************/
+  /*        // CARTE LARGE (UNE)         */
+  /***************************************/
+  /**********************************/
+  /*        CARTE CARREE            */
+  /**********************************/
+  /**********************************/
+  /*        CARTE HORIZONTALE       */
+  /**********************************/
   /****************************/
   /*        row  & col        */
   /****************************/
@@ -934,57 +1074,57 @@ div .titreRuralis {
   /*        SideNav Responsive       */
   /***********************************/
 }
-/* line 4, ../sass/_blog.scss */
+/* line 11, ../sass/_blog.scss */
 .blog h4, .blog .card-content {
   color: black;
 }
-/* line 8, ../sass/_blog.scss */
+/* line 15, ../sass/_blog.scss */
 .blog a.cardLink {
   color: #ffd8a6;
 }
-/* line 11, ../sass/_blog.scss */
+/* line 19, ../sass/_blog.scss */
 .blog .fixedSideNav .row {
   position: fixed;
   width: 16.6666666667%;
   height: auto;
 }
-/* line 12, ../sass/_blog.scss */
+/* line 20, ../sass/_blog.scss */
 .blog .fixedSideNav .row img {
   width: 70%;
 }
-/* line 15, ../sass/_blog.scss */
+/* line 23, ../sass/_blog.scss */
 .blog .fixedSideNav .row .paypal {
   width: 30% !important;
 }
-/* line 24, ../sass/_blog.scss */
+/* line 32, ../sass/_blog.scss */
 .blog .current a {
   background-color: rgba(234, 100, 12, 0.8) !important;
 }
-/* line 28, ../sass/_blog.scss */
+/* line 36, ../sass/_blog.scss */
 .blog .hoverable.header, .blog .hoverable.card {
   height: 2% !important;
 }
-/* line 32, ../sass/_blog.scss */
+/* line 40, ../sass/_blog.scss */
 .blog .article {
   max-height: 311px;
   margin-bottom: 20px;
 }
-/* line 37, ../sass/_blog.scss */
+/* line 45, ../sass/_blog.scss */
 .blog .card-image {
   min-width: 260px;
 }
-/* line 41, ../sass/_blog.scss */
+/* line 49, ../sass/_blog.scss */
 .blog .card img {
   margin-left: 5px;
   margin-top: 5px;
 }
-/* line 46, ../sass/_blog.scss */
+/* line 54, ../sass/_blog.scss */
 .blog .card-image > img, .blog .card-content {
   max-width: 90%;
   max-height: 90%;
   width: auto;
 }
-/* line 52, ../sass/_blog.scss */
+/* line 60, ../sass/_blog.scss */
 .blog .la_une .card-image img {
   display: block;
   margin-left: auto;
@@ -992,19 +1132,19 @@ div .titreRuralis {
   width: auto;
   height: auto;
 }
-/* line 60, ../sass/_blog.scss */
+/* line 73, ../sass/_blog.scss */
 .blog .large {
   max-height: 500px !important;
 }
-/* line 62, ../sass/_blog.scss */
+/* line 75, ../sass/_blog.scss */
 .blog .large img {
   max-height: 410px;
 }
-/* line 68, ../sass/_blog.scss */
+/* line 85, ../sass/_blog.scss */
 .blog .carre {
   min-height: 300px;
 }
-/* line 71, ../sass/_blog.scss */
+/* line 88, ../sass/_blog.scss */
 .blog .carre .card-image img {
   display: block;
   margin-left: auto;
@@ -1013,44 +1153,44 @@ div .titreRuralis {
   height: auto;
   min-height: 200px;
 }
-/* line 83, ../sass/_blog.scss */
+/* line 104, ../sass/_blog.scss */
 .blog .horizontal {
   min-height: 265px;
   max-height: 300px;
 }
-/* line 86, ../sass/_blog.scss */
+/* line 107, ../sass/_blog.scss */
 .blog .horizontal .card-image img {
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
 }
-/* line 93, ../sass/_blog.scss */
+/* line 114, ../sass/_blog.scss */
 .blog .horizontal .card-stacked .card-content {
   overflow-y: auto;
 }
-/* line 102, ../sass/_blog.scss */
+/* line 123, ../sass/_blog.scss */
 .blog .rowCustom {
   padding: 0px !important;
   margin-bottom: 45px;
 }
-/* line 107, ../sass/_blog.scss */
+/* line 128, ../sass/_blog.scss */
 .blog .colCustom {
   padding: 0px !important;
   margin-bottom: 19px !important;
 }
-/* line 116, ../sass/_blog.scss */
+/* line 137, ../sass/_blog.scss */
 .blog .logoabt {
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 640px) {
-  /* line 126, ../sass/_blog.scss */
+  /* line 147, ../sass/_blog.scss */
   .blog .fixedSideNav {
     display: block;
     visibility: hidden;
   }
-  /* line 130, ../sass/_blog.scss */
+  /* line 152, ../sass/_blog.scss */
   .blog .card.horizontal {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1063,11 +1203,11 @@ div .titreRuralis {
     flex: 1;
     position: relative;
   }
-  /* line 143, ../sass/_blog.scss */
+  /* line 165, ../sass/_blog.scss */
   .blog .carre {
     min-height: 300px;
   }
-  /* line 146, ../sass/_blog.scss */
+  /* line 168, ../sass/_blog.scss */
   .blog .carre .card-image img {
     width: 100%;
     height: inherit;
@@ -1075,20 +1215,23 @@ div .titreRuralis {
   }
 }
 
-/* line 1, ../sass/_partenaire.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/* line 6, ../sass/_partenaire.scss */
 .partenaire {
   text-align: center;
 }
-/* line 4, ../sass/_partenaire.scss */
+/* line 9, ../sass/_partenaire.scss */
 .partenaire .nomPart {
   font-weight: bold;
   color: #EF651B;
 }
-/* line 9, ../sass/_partenaire.scss */
+/* line 14, ../sass/_partenaire.scss */
 .partenaire .photoPart {
   height: 150px;
 }
-/* line 13, ../sass/_partenaire.scss */
+/* line 18, ../sass/_partenaire.scss */
 .partenaire .photoPart img {
   display: inline-flex;
   margin-left: auto;
@@ -1096,20 +1239,32 @@ div .titreRuralis {
   max-width: 150px;
   max-height: 150px;
 }
-/* line 20, ../sass/_partenaire.scss */
+/* line 26, ../sass/_partenaire.scss */
 .partenaire img {
   border-radius: 10px !important;
 }
 
-/* line 3, ../sass/_formulaireAbonnement.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/* line 6, ../sass/_formulaireAbonnement.scss */
+.formulaire {
+  /************************************/
+  /*         INPUTS                   */
+  /************************************/
+  /************************************************/
+  /*         RECAPITULATIF ABONNEMENT             */
+  /************************************************/
+}
+/* line 13, ../sass/_formulaireAbonnement.scss */
 .formulaire label {
   color: #414141;
 }
-/* line 6, ../sass/_formulaireAbonnement.scss */
+/* line 17, ../sass/_formulaireAbonnement.scss */
 .formulaire .input-field label {
   color: #414141 !important;
 }
-/* line 10, ../sass/_formulaireAbonnement.scss */
+/* line 21, ../sass/_formulaireAbonnement.scss */
 .formulaire input:not([type]):focus:not([readonly]),
 .formulaire input[type=text]:focus:not([readonly]),
 .formulaire input[type=password]:focus:not([readonly]),
@@ -1126,11 +1281,11 @@ div .titreRuralis {
   border-bottom: 1px solid rgba(220, 220, 220, 0.5);
   box-shadow: 0 1px 0 0 #414141;
 }
-/* line 26, ../sass/_formulaireAbonnement.scss */
+/* line 38, ../sass/_formulaireAbonnement.scss */
 .formulaire input.validate .active {
   border-bottom-color: black;
 }
-/* line 30, ../sass/_formulaireAbonnement.scss */
+/* line 42, ../sass/_formulaireAbonnement.scss */
 .formulaire input:not([type]),
 .formulaire input[type="text"],
 .formulaire input[type="password"],
@@ -1146,27 +1301,62 @@ div .titreRuralis {
 .formulaire extarea.materialize-textarea {
   border-bottom: 1px solid #414141;
 }
-/* line 47, ../sass/_formulaireAbonnement.scss */
+/* line 59, ../sass/_formulaireAbonnement.scss */
 .formulaire span {
   color: #414141;
   font-weight: bold;
 }
-/* line 62, ../sass/_formulaireAbonnement.scss */
+/* line 69, ../sass/_formulaireAbonnement.scss */
 .formulaire .champsForm {
   font-size: 18px !important;
 }
-/* line 64, ../sass/_formulaireAbonnement.scss */
+/* line 72, ../sass/_formulaireAbonnement.scss */
 .formulaire .champsForm p {
   color: #414141;
 }
 
-/* line 1, ../sass/_newsletter.scss */
+/*************************************************************/
+/*         BOXS FORMULAIRE ABONNEMENT ET RECAPITULATIF        */
+/*************************************************************/
+/* line 83, ../sass/_formulaireAbonnement.scss */
+.abomodel {
+  margin-left: 5%;
+  max-width: 90%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin-top: 3%;
+  padding-left: 6%;
+  font-size: 18px;
+  font-family: 'Time New Roman', Regular;
+}
+/* line 94, ../sass/_formulaireAbonnement.scss */
+.abomodel p {
+  line-height: 20px !important;
+}
+/* line 98, ../sass/_formulaireAbonnement.scss */
+.abomodel .row {
+  margin-bottom: 0 !important;
+}
+/* line 102, ../sass/_formulaireAbonnement.scss */
+.abomodel .recaptitres {
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/* line 6, ../sass/_newsletter.scss */
 .small_image {
   width: 50px;
   margin-right: 10px;
 }
 
-/* line 1, ../sass/_erreurs.scss */
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+/* line 6, ../sass/_erreurs.scss */
 .erreur {
   max-width: 90%;
   padding-bottom: 5px;
@@ -1175,16 +1365,17 @@ div .titreRuralis {
   margin-top: 3%;
   height: 87%;
 }
-/* line 9, ../sass/_erreurs.scss */
+/* line 14, ../sass/_erreurs.scss */
 .erreur .orangetxt {
   color: #ea640c;
   font-weight: bold;
 }
-/* line 14, ../sass/_erreurs.scss */
+/* line 19, ../sass/_erreurs.scss */
 .erreur .btn {
   background-color: #00B82B;
 }
-/* line 18, ../sass/_erreurs.scss */
+/* line 23, ../sass/_erreurs.scss */
 .erreur .btn:hover {
   background-color: #00f138;
 }
+>>>>>>> 2f07ea2c0252ab0a9ca31ebfcb7c92d2a365727f

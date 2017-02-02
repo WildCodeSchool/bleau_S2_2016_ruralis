@@ -1,5 +1,9 @@
 <?php
 
+//Theme Name: Ruralis
+//Authors: Marielle Lautrou and Aurore David
+
+
 namespace RuralisBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;

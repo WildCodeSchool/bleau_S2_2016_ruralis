@@ -1,4 +1,11 @@
-// Admin Général
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+
+
+/********************************/
+/*         ADMIN GENERAL        */
+/********************************/
 
 .adminmodel {
     max-width: 90%;
@@ -7,6 +14,13 @@
     margin-bottom: 20px;
     border-radius: 15px;
     margin-top: 3%;
+    font-family:  'Time New Roman', Regular;
+    font-size: 18px;
+
+    // Permet que la date ne soit que sur une ligne
+    .datewidth {
+        width: 150px;
+    }
 
     h1{
         color: #4c4c4c;
@@ -27,14 +41,38 @@
         color: #00B82B;
     }
 
-    .container .row {
-        margin-left: 2.25rem;
-        margin-right: 2.25rem;
+    label {
+        font-size: inherit;
+    }
+
+    .input-field label.active {
+        font-size: 1.3rem !important;
+    }
+
+    input:not([type]),
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="time"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    textarea.materialize-textarea {
+        font-size: inherit;
     }
 
     .input-field label {
         color: white;
         left: 4px;
+    }
+
+    .container .row {
+        margin-left: 2.25rem;
+        margin-right: 2.25rem;
     }
 
     .select-wrapper input.select-dropdown{
@@ -49,7 +87,12 @@
         height:150px;
     }
 
+    img.responsive-img {
+        max-width: 350px;
+    }
+    
     // Texte 'image actuelle' dans les édit partenaires et article
+
     .middleText{
         margin-top:75px;
     }
@@ -73,18 +116,12 @@
     .adminImg{
         width:50px;
     }
-
-    .btn{
-        background-color: #00B82B;
-    }
-
-    .btn:hover{
-        background-color: #00f138;
-    }
 }
 
 
-// Menu Admin
+/********************************/
+/*         MENU ADMIN           */
+/********************************/
 
 .menuAdmin {
     .valign-wrapper {
@@ -104,25 +141,17 @@
         background-image: url("../images/fond_texture_vert.png");
         background-size: 0.7%;
         background-repeat: repeat;
-        }
+    }
 
     div .orange{
         background-image: url("../images/fond_texture_orange.png");
         background-size: 0.7%;
         background-repeat: repeat;
-        }
+    }
 
     a {
         color:  #4c4c4c !important;
         font-size: 50px;
         font-family: 'majalla';
-        }
-    //Couleur à garder
-    //a:hover {
-    //    color: $orange !important;
-    //}
+    }
 }
-
-
-// Abonnés Admin
-

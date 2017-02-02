@@ -1,3 +1,8 @@
+/* Theme Name: Ruralis
+Authors: Marielle Lautrou and Aurore David
+*/
+
+
 .abonnement {
 
     font-size: 26px;
@@ -6,8 +11,9 @@
         padding: 0;
     }
 
-
-    // NEW PROPOSITION MISE EN PAGE
+/**********************************/
+/*        PAGE ABONNEMENT         */
+/**********************************/
 
     .options {
         position: fixed;
@@ -36,67 +42,26 @@
         max-width: 120px;
     }
 
-    // Marge au dessus des lien dons et cadeau
-    // Ne Fontionne pas...
-    .margtop {
-        margin-top: 30px;
-        color: grey;
-        font-family: 'Time New Roman', Regular;
-        font-size: 18px;
+    // Texte hoverable de DON et CADEAU
+    .greytxt {
+        color: $darkgrey;
     }
 }
 
-// Modele en box = .abomodel
-.abomodel {
-    margin-left:5%;
-    max-width: 90%;
-    padding-bottom:20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    margin-top: 3%;
-    padding-left:6%;
-    font-size: 18px;
-    font-family: 'Time New Roman', Regular;
 
-    p {
-        line-height: 20px !important;
-    }
-
-    .row {
-        margin-bottom: 0 !important;
-    }
-    .recaptitres {
-        font-weight: bold;
-        margin-top: 30px;
-    }
-}
 /******************************/
 /*         Responsive         */
 /******************************/
 
-
 @media screen and (max-width: 640px) {
+
     .fixed {
-        display:none;
-    }
-    .fixedResponsive {
-        display:block;
+        display: none;
     }
 
-    // Orange shadow
-    //box-shadow: 0 4px 5px 0 rgba(234,100,12, 0.65), 0 1px 10px 0  rgba(234,100,12, 0.94), 0 2px 4px -1px rgba(234,100,12, 0.65);
-    // Green shadow
-    //box-shadow: 0 4px 5px 0 rgba(0,184,43, 0.65), 0 1px 10px 0  rgba(0,184,43, 0.94), 0 2px 4px -1px rgba(0,184,43, 0.65);
-    // Yellow shadow
-    //box-shadow: 0 4px 5px 0 rgba(239,255,0, 0.65), 0 1px 10px 0  rgba(239,255,0, 0.94), 0 2px 4px -1px rgba(239,255,0, 0.65);
-    //
-    //.btn{
-    //    background-color: #00B82B;
-    //}
-    //
-    //.btn:hover{
-    //    background-color: #00f138;
-    //}
+    .fixedResponsive {
+        display: block;
+    }
 
     p {
         line-height: 20px !important;

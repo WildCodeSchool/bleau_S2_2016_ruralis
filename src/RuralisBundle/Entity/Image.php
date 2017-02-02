@@ -1,5 +1,9 @@
 <?php
 
+//Theme Name: Ruralis
+//Authors: Marielle Lautrou and Aurore David
+
+
 namespace RuralisBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;

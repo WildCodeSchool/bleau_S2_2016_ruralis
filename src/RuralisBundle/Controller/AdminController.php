@@ -1,5 +1,10 @@
 <?php
 
+//Theme Name: Ruralis
+//Authors: Marielle Lautrou and Aurore David
+
+
+
 namespace RuralisBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

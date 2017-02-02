@@ -1,9 +1,14 @@
 <?php
 
+//Theme Name: Ruralis
+//Authors: Marielle Lautrou and Aurore David
+
+
 namespace RuralisBundle\Controller;
 
 use RuralisBundle\Entity\Contact;
 use RuralisBundle\Entity\Newsletter;
+use RuralisBundle\RuralisBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -50,7 +55,7 @@ class NewsletterController extends Controller
 //            Parcours de tous les éléments image de notre contenu
             foreach($imageTags as $tag) {
 //                Récupération du lien de de l'image sur notre serveur
-                $path = __DIR__ . '../../../../../..' .  $tag->getAttribute('src');
+                $path = __DIR__ . '/../../../..' .  $tag->getAttribute('src');
 //                Récupération de l'extension du fichier
                 $type = pathinfo($path, PATHINFO_EXTENSION);
 //                Récupération de l'image au "format txt"
@@ -80,11 +85,8 @@ class NewsletterController extends Controller
      */
     public function showAction(Newsletter $newsletter)
     {
-        $deleteForm = $this->createDeleteForm($newsletter);
-
         return $this->render('@Ruralis/admin/newsletter/show.html.twig', array(
             'newsletter' => $newsletter,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -94,7 +96,6 @@ class NewsletterController extends Controller
      */
     public function editAction(Request $request, Newsletter $newsletter)
     {
-        $deleteForm = $this->createDeleteForm($newsletter);
         $editForm = $this->createForm('RuralisBundle\Form\NewsletterType', $newsletter);
         $editForm->handleRequest($request);
 
@@ -107,51 +108,28 @@ class NewsletterController extends Controller
         return $this->render('@Ruralis/admin/newsletter/edit.html.twig', array(
             'newsletter' => $newsletter,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
-    /**
-     * Deletes a newsletter entity.
-     *
-     */
-    public function deleteAction(Request $request, Newsletter $newsletter)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($newsletter);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
+//        Si l'$id est définie alors :
+        if ($id) {
             $em = $this->getDoctrine()->getManager();
+            // Recherche LA NEWSLETTER à supprimer parmi LES ARTICLES
+            $newsletter = $em->getRepository('RuralisBundle:Newsletter')->findOneById($id);
             $em->remove($newsletter);
-            $em->flush($newsletter);
-        }
-
-        return $this->redirectToRoute('newsletter_index');
+            // Envoie la requête à la BDD
+            $em->flush();
+            return $this->redirectToRoute('newsletter_index');
+        } else
+            return $this->redirectToRoute('newsletter_index');
     }
 
-    /**
-     * Creates a form to delete a newsletter entity.
-     *
-     * @param Newsletter $newsletter The newsletter entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Newsletter $newsletter)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('newsletter_delete', array('id' => $newsletter->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
-    }
-
-    public function sendAction($id, Newsletter $newsletters)
+    public function sendAction(Newsletter $newsletter)
     {
         $em = $this->getDoctrine()->getManager();
-        $abonnesNl = $em->getRepository('RuralisBundle:Abonnement')->findByNewsletter(true);
         $mailAboNl = $em->getRepository('RuralisBundle:Abonnement')->ContactAboNewsletter();
-        $newsletter = $em->getRepository('RuralisBundle:Newsletter')->findOneById($id);
-
 
         //Structure du mail à enovyer
         $from = $this->getParameter('mailer_user');
@@ -192,7 +170,8 @@ class NewsletterController extends Controller
 
         //Renvoie vers la vue index, avec "newsletter envoyée cochée"
         return $this->redirectToRoute('newsletter_index', array(
-            'newsletters' => $newsletters
+            'newsletter' => $newsletter
             ));
     }
+
 }
