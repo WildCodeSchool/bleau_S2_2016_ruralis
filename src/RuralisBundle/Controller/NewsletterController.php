@@ -6,9 +6,7 @@
 
 namespace RuralisBundle\Controller;
 
-use RuralisBundle\Entity\Contact;
 use RuralisBundle\Entity\Newsletter;
-use RuralisBundle\RuralisBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -126,16 +124,16 @@ class NewsletterController extends Controller
             return $this->redirectToRoute('newsletter_index');
     }
 
+    /**
+     * Envoie d'une newsletter
+    */
     public function sendAction(Newsletter $newsletter)
     {
         $em = $this->getDoctrine()->getManager();
         $mailAboNl = $em->getRepository('RuralisBundle:Abonnement')->ContactAboNewsletter();
 
-        //Structure du mail à enovyer
+        // Récupération du mail de l'expéditeur
         $from = $this->getParameter('mailer_user');
-
-        // Instanciation des variables mail, titre, contenu pour récupérer la data
-/*        $email = $mailAboNl;*/
 
         $emails=[];
 
@@ -171,7 +169,7 @@ class NewsletterController extends Controller
         //Renvoie vers la vue index, avec "newsletter envoyée cochée"
         return $this->redirectToRoute('newsletter_index', array(
             'newsletter' => $newsletter
-            ));
+        ));
     }
 
 }

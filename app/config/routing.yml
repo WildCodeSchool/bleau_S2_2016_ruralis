@@ -1,6 +1,19 @@
-ruralis:
+###########################
+# Route général user app
+###########################
+ruralis_user:
     resource: "@RuralisBundle/Resources/config/routing.yml"
     prefix:   /
 
+###########################
+# Route général admin app
+###########################
+ruralis_admin:
+    resource: "@RuralisBundle/Resources/config/routingAdmin.yml"
+    prefix:   /
+
+###########################
+# Route pour uploads dans ckEditor
+###########################
 elfinder:
      resource: "@FMElfinderBundle/Resources/config/routing.yml"

@@ -66,6 +66,7 @@ class ArticleController extends Controller
             'form' => $form->createView(),
         ));
     }
+
     /**
      * Finds and displays a article entity.
      *

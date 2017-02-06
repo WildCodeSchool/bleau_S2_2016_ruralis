@@ -1,0 +1,7 @@
+ruralis_abonnes:
+    path:     /admin/abonnes
+    defaults: { _controller:  RuralisBundle:Admin:abonnes }
+
+ruralis_inscrits_magazine:
+    path:     /admin/inscritsmagazine
+    defaults: { _controller:  RuralisBundle:Admin:InscritsMagazine }

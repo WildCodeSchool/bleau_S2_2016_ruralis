@@ -7,11 +7,8 @@
 namespace RuralisBundle\Controller;
 
 use RuralisBundle\Entity\Abonne;
-use RuralisBundle\Entity\Contact;
-use RuralisBundle\Entity\Abonnement;
 use RuralisBundle\Entity\TypeAbo;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
 
 /**
@@ -21,7 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ContactController extends Controller
 {
 
-    /*
+    /**
      * Inscription à la newsletter via le formulaire de la navigation
      */
     public function inscriptionAction()
@@ -46,6 +43,9 @@ class ContactController extends Controller
         return $this->redirect($lastUrl);
     }
 
+    /**
+     * Private méthode pour créer les abonnements en base si ces derniers n'existent pas
+     */
     private function createAbo($em)
     {
         $lecteur = new TypeAbo();
@@ -65,6 +65,10 @@ class ContactController extends Controller
         return ;
     }
 
+    /**
+     * Enregistrement d'un nouvel abonné au magazine
+     * L'abonné est enregistré que si ses informations ont été validé dans FormulaireControlleur/recapAboAction()
+     */
     public function abosendAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -129,22 +133,29 @@ class ContactController extends Controller
         ));
     }
 
+    /**
+     * Vu renvoyer si le paiement via paypal a échoué
+     */
     public function aboannulAction()
     {
         $session = $this->get('request')->getSession();
         $details = $session->get('details');
 
-        // Si echec d'abonnement via Paypal : renvoie la vue "annulation"
         return $this->render('@Ruralis/user/annulationAbonnement.html.twig', array(
             'details' => $details,
         ));
     }
 
-    //Quand un abonné souhaite se désinscrire de la newsletter renvoyé vers cette page pour saisir son adresse
+    /**
+     * Formulaire de desinscription à la Newsletter
+     */
     public function desinscriptionNewsAction() {
         return $this->render('@Ruralis/user/desinscriptionNewsletter.html.twig');
     }
 
+    /**
+     * Confirmation de desinscription à la Newxsletter
+     */
     public function confirmDesinscriptionNewsAction() {
         $em = $this->getDoctrine()->getManager();
 
@@ -153,7 +164,6 @@ class ContactController extends Controller
         $contact = $em->getRepository('RuralisBundle:Contact')->findOneByEmail($email);
 
         $abonnement = $em->getRepository('RuralisBundle:Abonnement')->findOneByContact($contact);
-        $abonnement->getContact()->getEmail();
 
         $abonnement->setNewsletter(null);
 
@@ -161,6 +171,5 @@ class ContactController extends Controller
         $em->flush();
 
         return $this->render('@Ruralis/Default/index.html.twig');
-
     }
 }

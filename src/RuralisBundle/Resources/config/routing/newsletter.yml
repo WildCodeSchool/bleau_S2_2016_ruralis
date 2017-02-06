@@ -1,3 +1,4 @@
+#Administration des Newsletter
 newsletter_index:
     path:     /
     defaults: { _controller: "RuralisBundle:Newsletter:index" }
@@ -22,3 +23,12 @@ newsletter_delete:
     path:     /{id}/delete
     defaults: { _controller: "RuralisBundle:Newsletter:delete" }
     methods:  GET
+
+#Gestion abonnement/envoie Newsletter
+ruralis_send_newsletter:
+    path:     /{id}/sendnewsletter
+    defaults: { _controller:  RuralisBundle:Newsletter:send }
+
+ruralis_inscrits_newsletter:
+    path:     /admin/inscritsnewsletter
+    defaults: { _controller:  RuralisBundle:Admin:InscritsNewsletter }

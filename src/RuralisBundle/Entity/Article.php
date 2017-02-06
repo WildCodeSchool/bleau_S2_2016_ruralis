@@ -14,7 +14,11 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Article
 {
-
+    /**
+     * @var \RuralisBundle\Entity\Image
+     * @Assert\Valid()
+     */
+    private $image;
 
     /* ----------------------------------GENERATED CODE------------------------------------ */
     
@@ -52,12 +56,6 @@ class Article
      * @var string
      */
     private $typeAffichage;
-
-    /**
-     * @var \RuralisBundle\Entity\Image
-     * @Assert\Valid()
-     */
-    private $image;
 
 
     /**

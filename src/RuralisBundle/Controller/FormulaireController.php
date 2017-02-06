@@ -7,17 +7,13 @@
 namespace RuralisBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\Session;
-
 
 class FormulaireController extends Controller
 {
-    const ABO_LECTEUR = 'lecteur(trice)';
-    const ABO_DONATEUR = 'donateur(trice)';
-    const ABO_AMBASSADEUR = 'ambassadeur(drice)';
-
-    public function indexAction(Request $request, $type)
+    /**
+     * Affichage du fomulaire d'abonnement en fonction du type d'abonnement choisi
+    */
+    public function indexAction($type)
     {
         $session = $this->get('request')->getSession();
         $session->set('type', $type);
@@ -29,6 +25,9 @@ class FormulaireController extends Controller
         ));
     }
 
+    /**
+     * Récapitulatif des informations saisi par l'utilisateur + validation de son adresse mail (déja enregistré ou non)
+    */
     public function recapAboAction()
     {
         $newsByNav = false;
