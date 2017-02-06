@@ -54,15 +54,15 @@ class NewsletterController extends Controller
             foreach($imageTags as $tag) {
 //                Récupération du lien de de l'image sur notre serveur
                 $path = __DIR__ . '/../../../..' .  $tag->getAttribute('src');
+//                Récupération du nom du fichier
+                $name = pathinfo($path, PATHINFO_FILENAME);
 //                Récupération de l'extension du fichier
                 $type = pathinfo($path, PATHINFO_EXTENSION);
-//                Récupération de l'image au "format txt"
-                $data = file_get_contents($path);
-//                Encodage de l'image au format base64
-                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+//                Création de l'url vers le fichier
+                $url = $_SERVER['HTTP_ORIGIN'] . $_SERVER['BASE'] . '/uploads/images/' . $name . '.' . $type;
 
 //                Remplacement du lien de l'image a l'intérieur du contenu par l'image au format base64
-                $newsletter->setContenu(str_replace($tag->getAttribute('src'), $base64, $newsletter->getContenu()));
+                $newsletter->setContenu(str_replace($tag->getAttribute('src'), $url, $newsletter->getContenu()));
             }
 
             $em->persist($newsletter);

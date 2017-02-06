@@ -70,10 +70,9 @@ ivory_ck_editor:
     default_config:    my_custom_config
     configs:
         my_custom_config:
-            toolbar:                   [ [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], ['SpellChecker', 'Scayt' ], [ 'Source' ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript' ], [ 'NumberedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink' ], [ 'Image', 'SpecialChar','Iframe' ], '/', [ 'Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
+            toolbar: [ [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], ['SpellChecker', 'Scayt' ], [ 'Source' ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript' ], [ 'NumberedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink' ], [ 'Image', 'SpecialChar','Iframe' ], '/', [ 'Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
             language: %locale%
             filebrowserBrowseRoute: elfinder
-            filebrowserBrowseRouteParameters: []
 
 knp_paginator:
     page_range: 5                      # default page range used in pagination control
@@ -103,7 +102,7 @@ fm_elfinder:
                 roots:
                     uploads:
                         driver: LocalFileSystem
-                        path: uploads
+                        path: uploads/images
                         upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
                         upload_deny: ['all']
                         upload_max_size: 2M

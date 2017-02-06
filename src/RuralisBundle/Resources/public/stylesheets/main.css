@@ -26,7 +26,7 @@ body {
 /* line 47, ../sass/main.scss */
 main {
   flex: 1 0 auto;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 /* line 53, ../sass/main.scss */
@@ -1333,4 +1333,25 @@ Authors: Marielle Lautrou and Aurore David
 /* line 23, ../sass/_erreurs.scss */
 .erreur .btn:hover {
   background-color: #00f138;
+}
+
+/* line 4, ../sass/_resetCssMaterialize.scss */
+.cke_browser_webkit select {
+  display: block !important;
+}
+/* line 7, ../sass/_resetCssMaterialize.scss */
+.cke_browser_webkit input[type=text] {
+  background-color: transparent;
+  border: solid 1px black;
+  border-bottom: 1px;
+  border-radius: 0;
+  outline: none;
+  height: auto;
+  width: 100%;
+  font-size: medium;
+  margin: auto;
+  padding: inherit;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all 0.3s;
 }

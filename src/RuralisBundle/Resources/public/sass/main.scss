@@ -46,7 +46,7 @@ body {
 }
 main {
     flex: 1 0 auto;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 //Suppression du padding right and left sur les col (surcharge materialize)
@@ -185,3 +185,4 @@ textarea.materialize-textarea {
 @import "_formulaireAbonnement";
 @import "_newsletter" ;
 @import "_erreurs";
+@import "resetCssMaterialize";
