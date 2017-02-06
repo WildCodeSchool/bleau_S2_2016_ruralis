@@ -34,7 +34,6 @@
                         <div class="col m2">
                             <a href="{{ path ('ruralis_homepage') }}" class="majalla">
                                 Ruralis
-                                {#<img src="{{ asset ('bundles/ruralis/images/logonav2.png') }}" alt="Ruralis" class="nav_logo">#}
                             </a>
                         </div>
                     </div>
@@ -155,6 +154,7 @@
         {% endfor %}
         {% block body %}
         {% endblock %}
+
     </main>
 
     {% block footer %}
@@ -170,7 +170,7 @@
                     12, rue du Four-Dieu <br>
                     45200 Montargis<br>
                     06 80 73 88 34<br>
-                    contact@ruralismagazine.fr<br>
+                    <a href="mailto:">contact@ruralismagazine.fr</a><br>
                     <a href="#">Mentions légales</a><br>
                     <a href="{{ path('ruralis_admin') }}"><i class="material-icons">lock</i></a>
                 </p>

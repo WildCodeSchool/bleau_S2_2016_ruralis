@@ -21,7 +21,6 @@ class Image
         return $this->url;
     }
 
-
     /**
      * @var file
      */

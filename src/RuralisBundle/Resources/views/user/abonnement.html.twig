@@ -28,20 +28,20 @@
 				</p>
 			</div>
 
-			<div class="offset-s4 col s4">
-				<div class="col s12 abovert">
+			<div class="offset-m4 col m4 s12">
+				<div class="m12 s6 abovert">
 					<a href="{{ path('ruralis_formulaire_abonnement', {'type':'lecteur'}) }}">
 						<img class="hoverable responsive-img imgvert" src="{{ asset('bundles/ruralis/images/bouton-vert .png') }}"/>
 					</a>
 				</div>
 
-				<div class="col s12 abotop">
+				<div class="m12 s6 abotop">
 					<a href="{{ path('ruralis_formulaire_abonnement', {'type':'donateur'}) }}">
 						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-jaune .png') }}"/>
 					</a>
 				</div>
 
-				<div class="col s12 abotop">
+				<div class="m12 s6 abotop">
 					<a href="{{ path('ruralis_formulaire_abonnement', {'type':'ambassadeur'}) }}">
 						<img class="hoverable responsive-img" src="{{ asset('bundles/ruralis/images/bouton-orange .png') }}"/>
 					</a>
@@ -53,7 +53,7 @@
 					Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.<br/>
 				</p>
 				<p>
-					<a class="hoverable greytxt" href="{{ path('ruralis_cadeau', {'cadeau':'true'}) }}">
+					<a class="waves-effect waves-light btn nl" href="{{ path('ruralis_cadeau', {'cadeau':'true'}) }}">
 					J'offre un abonnement à un proche
 					</a>
 				</p>
@@ -63,14 +63,8 @@
         {# Si responsive#}
 		<div class="row center fixedResponsive ">
 			<div class="col s12 fixedResponsive">
-				<p>
-					Ce projet fait sens pous vous ?
-				</p>
-				<p>
-					<a class="hoverable greytxt" href="{{ path('ruralis_abonnement') }}">
-						J'encourage Ruralis Magazine
-					</a>
-				</p>
+				<p>Ce projet fait sens pous vous ?</p>
+				<p>J'encourage Ruralis Magazine</p>
 				<img class="logoabt" src="{{ asset('bundles/ruralis/images/logopaypal.png') }}" alt="logo Paypal"/>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -85,8 +79,8 @@
 					Offrir un abonnement à un proche, c'est soutenir Ruralis Magazine et participer au pluralisme de la presse.<br/>
 				</p>
 				<p>
-					<a class="hoverable greytxt" href="{{ path('ruralis_abonnement') }}">
-						J'offre un abonnement à un proche
+					<a class="waves-effect waves-light btn nl" href="{{ path('ruralis_cadeau', {'cadeau':'true'}) }}">
+						Offrir un abonnement
 					</a>
 				</p>
 			</div>

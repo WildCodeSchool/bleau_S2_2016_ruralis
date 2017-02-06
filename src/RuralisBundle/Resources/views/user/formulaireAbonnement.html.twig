@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {% if cadeau != true %}
         <h1>Vous abonner en tant que {{ app.session.get('type') }}</h1>
+    {% else %}
+        <h1>Abonner un proche en tant que lecteur</h1>
+    {% endif %}
 
     <div class="row abomodel z-depth-2">
         <form name="formAbo" class="formulaire" action="{{ path('ruralis_recapitulatif_abo') }}" method="post">
@@ -58,9 +62,11 @@
                     <p>En plus :</p>
                     <input type="checkbox" id="newsletter" name="newsletter" checked="checked" value="off"/>
                     <label for="newsletter">
-                        <span>
-                            Je m'abonne à la Newsletter
-                        </span>
+                        {% if cadeau != true %}
+                            <span>Je m'abonne à la Newsletter</span>
+                        {% else %}
+                            <span>L'abonner à la Newsletter</span>
+                        {% endif %}
                     </label>
                 </div>
             </div>

@@ -6,9 +6,7 @@
 
 namespace RuralisBundle\Controller;
 
-use RuralisBundle\Entity\Contact;
 use RuralisBundle\Entity\Newsletter;
-use RuralisBundle\RuralisBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -56,15 +54,15 @@ class NewsletterController extends Controller
             foreach($imageTags as $tag) {
 //                Récupération du lien de de l'image sur notre serveur
                 $path = __DIR__ . '/../../../..' .  $tag->getAttribute('src');
+//                Récupération du nom du fichier
+                $name = pathinfo($path, PATHINFO_FILENAME);
 //                Récupération de l'extension du fichier
                 $type = pathinfo($path, PATHINFO_EXTENSION);
-//                Récupération de l'image au "format txt"
-                $data = file_get_contents($path);
-//                Encodage de l'image au format base64
-                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+//                Création de l'url vers le fichier
+                $url = $_SERVER['HTTP_ORIGIN'] . $_SERVER['BASE'] . '/uploads/images/' . $name . '.' . $type;
 
 //                Remplacement du lien de l'image a l'intérieur du contenu par l'image au format base64
-                $newsletter->setContenu(str_replace($tag->getAttribute('src'), $base64, $newsletter->getContenu()));
+                $newsletter->setContenu(str_replace($tag->getAttribute('src'), $url, $newsletter->getContenu()));
             }
 
             $em->persist($newsletter);
@@ -126,16 +124,16 @@ class NewsletterController extends Controller
             return $this->redirectToRoute('newsletter_index');
     }
 
+    /**
+     * Envoie d'une newsletter
+    */
     public function sendAction(Newsletter $newsletter)
     {
         $em = $this->getDoctrine()->getManager();
         $mailAboNl = $em->getRepository('RuralisBundle:Abonnement')->ContactAboNewsletter();
 
-        //Structure du mail à enovyer
+        // Récupération du mail de l'expéditeur
         $from = $this->getParameter('mailer_user');
-
-        // Instanciation des variables mail, titre, contenu pour récupérer la data
-/*        $email = $mailAboNl;*/
 
         $emails=[];
 
@@ -171,7 +169,7 @@ class NewsletterController extends Controller
         //Renvoie vers la vue index, avec "newsletter envoyée cochée"
         return $this->redirectToRoute('newsletter_index', array(
             'newsletter' => $newsletter
-            ));
+        ));
     }
 
 }

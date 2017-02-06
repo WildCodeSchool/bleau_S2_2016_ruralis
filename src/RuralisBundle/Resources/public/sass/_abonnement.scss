@@ -59,33 +59,36 @@ Authors: Marielle Lautrou and Aurore David
 /******************************/
 
 @media screen and (max-width: 640px) {
+    .abonnement {
+        .fixed {
+            display: none;
+        }
 
-    .fixed {
-        display: none;
-    }
+        .fixedResponsive {
+            display: block;
+        }
 
-    .fixedResponsive {
-        display: block;
-    }
+        p {
+            line-height: 20px !important;
+        }
 
-    p {
-        line-height: 20px !important;
-    }
-
-    .row {
-        margin-bottom: 0 !important;
-    }
-    .recaptitres {
-        font-weight: bold;
-        margin-top: 30px;
+        .row {
+            margin-bottom: 0 !important;
+        }
+        .recaptitres {
+            font-weight: bold;
+            margin-top: 30px;
+        }
     }
 }
 
-@media screen and (min-width: 640px){
-    .fixedResponsive {
-        display:none;
-    }
-    .fixed {
-        display:block;
+@media screen and (min-width: 640px) {
+    .abonnement {
+        .fixedResponsive {
+            display: none;
+        }
+        .fixed {
+            display: block;
+        }
     }
 }

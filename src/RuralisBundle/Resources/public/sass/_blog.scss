@@ -144,15 +144,27 @@ Authors: Marielle Lautrou and Aurore David
     }
 
     /***********************************/
-    /*        SideNav Responsive       */
+    /*            Responsive           */
     /***********************************/
 
     @media screen and (max-width: 640px) {
         .fixedSideNav {
-            display: block;
-            visibility: hidden;
+            display: none;
         }
 
+        .article {
+            max-height: inherit;
+        }
+
+        .col{
+            padding: 0 0.75rem !important;
+        }
+        .horizontal{
+            max-height: inherit;
+        }
+        .card.horizontal .card-image{
+            max-width: inherit !important;
+        }
         .card.horizontal {
             display: -webkit-flex;
             display: -ms-flexbox;

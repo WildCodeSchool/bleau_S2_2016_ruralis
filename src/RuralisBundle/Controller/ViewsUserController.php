@@ -7,12 +7,14 @@
 namespace RuralisBundle\Controller;
 
 use RuralisBundle\Entity\Article;
-use RuralisBundle\Entity\Newsletter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class ViewsUserController extends Controller
 {
+    /**
+     * Liste tous les articles du blog
+    */
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -32,6 +34,9 @@ class ViewsUserController extends Controller
         ));
     }
 
+    /**
+     * Liste un article
+     */
     public function articleAction(Article $article)
     {
         return $this->render('@Ruralis/user/article.html.twig', array(
@@ -39,6 +44,9 @@ class ViewsUserController extends Controller
         ));
     }
 
+    /**
+     * Liste tous les partenaires
+     */
     public function partenairesAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -49,12 +57,18 @@ class ViewsUserController extends Controller
         ));
     }
 
+    /**
+     * Vue pour s'abonner au magazine
+     */
     public function abonnementAction()
     {
         return $this->render('@Ruralis/user/abonnement.html.twig', array(
         ));
     }
 
+    /**
+     * Offrir un abonnement
+     */
     public function cadeauAction(){
         $cadeau = true;
         $notice = $this->container->get('session')->getFlashBag()->set(
@@ -66,16 +80,11 @@ class ViewsUserController extends Controller
         ));
     }
 
+    /**
+     * Page de présentation du magazine
+     */
     public function ruralisAction()
     {
-        return $this->render('@RuralisBundle/Resources/views/user/ruralis.html.twig');
+        return $this->render('@Ruralis/user/ruralis.html.twig');
     }
-
-    public function templateNewsletterAction(Newsletter $newsletter)
-    {
-        return $this->render('@Ruralis/user/newsletter.html.twig', array(
-            'newsletter' => $newsletter)
-        );
-    }
-
 }
