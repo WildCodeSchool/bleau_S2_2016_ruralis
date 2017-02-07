@@ -18,3 +18,7 @@ ruralis_admin_newsletter:
 ruralis_admin_magazine:
     resource: "@RuralisBundle/Resources/config/routing/magazineAbo.yml"
     prefix:   /admin/magazine
+
+ruralis_fos_user:
+    resource: "@RuralisBundle/Resources/config/routing/fosUser.yml"
+    prefix:   /
