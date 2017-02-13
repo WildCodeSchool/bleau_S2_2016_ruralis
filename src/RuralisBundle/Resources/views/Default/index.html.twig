@@ -78,9 +78,9 @@
                 <div class="row article rowCustom">
                     {% set is_row = true %}
                     {% endif %}
-                    <div class="col offset-l2 l5 m12 carre card hoverable colCustom">
+                    <div class="col offset-l2 l5 m12 carre hoverable colCustom">
                         {# First card #}
-                        <div class="cardCarre">
+                        <div class="card cardCarre">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="{{ asset('/uploads/images/') }}{{ article.image.url }}"
                                      alt="{{ article.image.alt }}">
@@ -104,7 +104,6 @@
                         </div>
                     </div>
 
-
                     {# RECTANGLE + LIEN ABONNEMENT #}
                     {% elseif article.typeAffichage == 'Rectangle + lien abonnement' %}
                         {# Second card #}
@@ -120,7 +119,8 @@
                                     </div>
                                     <div class="card-stacked col s12">
                                         <div class="card-content">
-                                            <p>{{ article.descriptif }}</p>
+                                            <p style="font-weight: bold">{{ article.descriptif }}</p>
+                                            <p>{{ article.contenu|raw }}</p>
                                         </div>
                                         <div class="card-action col s12">
                                             <a href="{{ path('ruralis_abonnement') }}" class="cardLink">Pour en savoir
