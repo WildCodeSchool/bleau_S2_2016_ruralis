@@ -3,7 +3,8 @@
 # BLOG
 ruralis_homepage: #Liste tous les articles
     path:     /
-    defaults: { _controller: RuralisBundle:ViewsUser:index, page:1 }
+    defaults: { _controller: RuralisBundle:ViewsUser:ruralis }
+
 
 ruralis_article: #Affiche un article
     path:     /{id}/article
@@ -11,8 +12,8 @@ ruralis_article: #Affiche un article
 
 # RURALIS
 ruralis_presentation:
-    path:     /ruralis
-    defaults: { _controller: RuralisBundle:ViewsUser:ruralis }
+    path:     /blog
+    defaults: { _controller: RuralisBundle:ViewsUser:index, page:1 }
 
 # PARTENAIRES
 ruralis_partenaire:

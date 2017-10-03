@@ -26,7 +26,7 @@ class NewsletterType extends AbstractType
                     'filebrowserBrowseRoute' => 'elfinder',
                     'filebrowserBrowseRouteParameters' => array(
                         'instance' => 'default',
-                        'homeFolder' => ''
+                        'homeFolder' => 'uploads'
                     )
                 )))
         ;
